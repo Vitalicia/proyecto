@@ -37,7 +37,7 @@ class vitalicia extends Controller
             $claveusu = usuarios::orderBy('idu','desc')
                                             ->take(1)
                                             ->get();
-            $idus= $claveusu[1]->idu+1;
+            $idus= $claveusu[0]->idu+1;
                
                
                
@@ -45,7 +45,9 @@ class vitalicia extends Controller
                                     ->orderBy('tipo','asc')
                                     ->get();
             return view ('vitalicia.usuario')
-                ->with('tipos',$tipos);
+                ->with('tipos',$tipos)
+                ->with('idus',$idus);
+               
     } 
 
        public function bUsuario()
