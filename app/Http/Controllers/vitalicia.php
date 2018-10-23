@@ -114,11 +114,11 @@ class vitalicia extends Controller
     
       public function gusuario(Request $request)
     {   
-           // $request->all(); //Procesa los datos del formulario
+            $request->all(); //Procesa los datos del formulario
             
         
                 $usu = new usuarios;
-                $usu->idu = $request->idus;
+                $usu->idu = $request->idu;
                 $usu->usuario = $request->usuario;
                 $usu->contrasena = $request->contrasena;   
                 $usu->idt = $request->idt;
@@ -126,7 +126,6 @@ class vitalicia extends Controller
 
 
                 return redirect()->route('home');
-    } 
-    
+    }     
     
 }
