@@ -3,8 +3,10 @@
 <h3>Datos de inicio de sesi&oacute;n</h3>
 @stop
 @section('contenido2')
-        <form action="{{route('gusua')}}" method = "POST" >
+        <form action="{{route('gusua')}}" method = "POST" enctype="multipart/form-data"  >
             {{csrf_field()}}
+             
+                <input type="text" name='idu' value="{{$idus}}" readonly= 'readonly' style='visibility:hidden'>
             Nombre de usuario
             <br>{!! $errors->first('usuario','<span class=error>:message</span>')!!}
                 <input type="text" name="usuario" value="{{old('usuario')}}">
