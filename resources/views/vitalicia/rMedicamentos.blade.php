@@ -2,7 +2,7 @@
 @section('encabezado')
 <h3>Nuevo Medicamento</h3>
 @stop
-@section('form1')
+@section('contenido')
         <form action="{{route('gume')}}" method = "POST" enctype="multipart/form-data" >
             {{csrf_field()}}
             Clave 
@@ -37,7 +37,7 @@
             @endif
                 <input type="text" name="terminotx" value="{{old('terminotx')}}">
 
-                Seleccione carrera<select name = 'idh'>
+                Horario<select name = 'idh'>
             @foreach($horarios as $hr)
             <option value = '{{$hr->idh}}'>{{$hr->tipohorario}}</option>
             @endforeach
