@@ -8,6 +8,8 @@ use App\Http\Requests\formValidation;
 use App\tipos;
 use App\datos;
 use App\usuarios;
+use App\medicamentos;
+use App\horarios;
 
 class vitalicia extends Controller
 {
