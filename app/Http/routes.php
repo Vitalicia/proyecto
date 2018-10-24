@@ -30,5 +30,4 @@ Route::POST('/guardausuario', 'vitalicia@guardausuario')->name('gusu');
 
 //GUARDA LOS DATOS DE SESION DE USUARIO
 Route::POST('/gusuario', 'vitalicia@gusuario')->name('gusua');
-Route::POST('/gumedica', 'vitalicia@gumedica')->name('gumedi')
-
+Route::POST('/gumedica', 'vitalicia@gumedica')->name('gumedi');
