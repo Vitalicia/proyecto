@@ -35,3 +35,6 @@ Route::POST('/guardausuario', 'vitalicia@guardausuario')->name('gusu');
 //GUARDA LOS DATOS DE SESION DE USUARIO
 Route::POST('/gusuario', 'vitalicia@gusuario')->name('gusua');
 Route::POST('/gumedica', 'vitalicia@gumedica')->name('gumedi');
+
+//consulta de datos
+Route::get('/cdatos','vitalicia@getdatos')->name('getdatos');
