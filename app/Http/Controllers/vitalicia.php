@@ -10,6 +10,8 @@ use App\datos;
 use App\usuarios;
 use App\medicamentos;
 use App\horarios;
+use App\alimentaciones;
+use App\alimentos;
 
 class vitalicia extends Controller
 {
