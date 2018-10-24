@@ -129,5 +129,56 @@ class vitalicia extends Controller
 
                 return redirect()->route('home');
     }     
+
+    public function rmedicamento()
+    {
+        //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
+        $clavequesiguem =medicamentos::orderBy('idmedicamento','desc')
+                                            ->take(1)
+                                            ->get();
+        $iddm= $clavequesiguem[0]->idmedicamento+1;
+
+        $horarios = horarios::orderBy('tipohorario','asc')
+                          ->take(2)
+                          ->get();
+            
+        //return $carreras;
+        return view ('vitalicia.rMedicamentos')
+                    ->with('iddm',$iddm)
+                    ->with('horarios',$horarios);
+    } 
+
+    public function guardamedicamento(Request $request)
+    {   
+             // $request->all(); //Procesa los datos del formulario
+
+        $nombre =  $request->nombre;
+        $indicacion = $request->indicacion;
+        $presen= $request->presen;
+        $idmedicamento = $request->idmedicamento;
+        $terminotx= $request->terminotx;
+               
+           $this->validate($request,[
+                'nombre'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'terminotx'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'indicacion'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'presen'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'horario'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/']
+         ]);
+                $med = new medicamentos;
+                $med->idmedicamento = $request->idmedicamento;
+                $med->nombre = $request->nombre;
+                $med->indicacion = $request->indicacion;
+                $med->presen = $request->presen;    
+                $med->terminotx = $request->terminotx;
+                $med->idh= $request->idh;
+                $med->save();
+
+
+              
+                return redirect()->route('home');
+    } 
+
+
     
 }
