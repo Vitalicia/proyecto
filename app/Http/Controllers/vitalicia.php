@@ -231,6 +231,13 @@ class vitalicia extends Controller
               
                 return redirect()->route('home');
     } 
+    public function getdatos()
 
+    {
+   $datosd = datos::withTrashed()->orderBy('idd','asc')->get();
+   return view ('vitalicia.cdatos')
+   ->with('datosd',$datosd);
+   
+   }
     
 }
