@@ -7,6 +7,7 @@ Route::get('/','vitalicia@home')->name('home');
 //RUTA PAR LAS ALTAS
 Route::get('/registroUsuario','vitalicia@rUsuario')->name('rusu');
 Route::get('/usuario','vitalicia@usuario')->name('usu');
+Route::get('/registromedicamento','vitalicia@rmedicamento')->name('rmed');
 
 //RUTAS PARAS LAS BAJAS
 Route::get('/bajaUsuario','vitalicia@bUsuario')->name('busu');
