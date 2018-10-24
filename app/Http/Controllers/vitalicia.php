@@ -183,6 +183,23 @@ class vitalicia extends Controller
                 return redirect()->route('home');
     } 
 
+    public function ralimentacion()
+    {
+        //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
+        $claveali =alimentaciones::orderBy('idalimentacion','desc')
+                                            ->take(1)
+                                            ->get();
+        $idal= $claveali[0]->idalimentacion+1;
+
+        $alimentos = alimentos::orderBy('idalimentos','asc')
+                     
+                          ->get();
+            
+        //return $carreras;
+        return view ('vitalicia.rAlimentacion')
+                    ->with('idal',$idal)
+                    ->with('alimentos',$alimentos);
+    } 
 
     
 }
