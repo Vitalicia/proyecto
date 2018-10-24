@@ -201,5 +201,36 @@ class vitalicia extends Controller
                     ->with('alimentos',$alimentos);
     } 
 
+    public function guardalimento(Request $request)
+    {   
+             // $request->all(); //Procesa los datos del formulario
+
+        $hora =  $request->hora;
+        $menu = $request->menu;
+        $consumo= $request->consumo;
+        $idalimentacion = $request->idalimentacion;
+        $observaciones= $request->observaciones;
+               
+           $this->validate($request,[
+                'nombre'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'terminotx'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'indicacion'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'presen'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'horario'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/']
+         ]);
+                $ali = new alimentaciones;
+                $ali->idalimentacion = $request->idalimentacion;
+                $ali->hora = $request->hora;
+                $ali->menu = $request->menu;
+                $ali->consumo = $request->consumo;
+                $ali->observaciones = $request->observaciones;    
+                $ali->idalimentos= $request->idalimentos;
+                $ali->save();
+
+
+              
+                return redirect()->route('home');
+    } 
+
     
 }
