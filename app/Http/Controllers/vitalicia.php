@@ -259,5 +259,33 @@ class vitalicia extends Controller
                     ->with('gvalores',$gvalores);
     } 
 
+    public function guardageriatrico(Request $request)
+    {   
+             // $request->all(); //Procesa los datos del formulario
+
+        $valorg =  $request->valorg;
+        $valorg1 = $request->valorg1;
+        $valorg2= $request->valorg2;
+        $idgeriatricos = $request->idgeriatricos;
+       
+               
+           $this->validate($request,[
+                ''=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                ''=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                ''=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                ''=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                ''=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/']
+         ]);
+                $ger = new geriatricos;
+                $ger->idgeriatricos = $request->idgeriatricos;
+                $ger->valorg = $request->valorg;
+                $ger->valorg1 = $request->valorg1;
+                $ger->valorg2 = $request->valorg2;   
+                $ger->idvg= $request->idvg;
+                $ger->save();
+
+                return redirect()->route('home');
+    } 
+
 
 }
