@@ -188,7 +188,7 @@ class vitalicia extends Controller
     public function ralimentacion()
     {
         //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
-        $claveali =alimentaciones::orderBy('idalimentacion','desc')
+        $claveali =alimentaciones::withTrashed()->oorderBy('idalimentacion','desc')
                                             ->take(1)
                                             ->get();
         $idal= $claveali[0]->idalimentacion+1;
