@@ -191,7 +191,16 @@ class vitalicia extends Controller
         $claveali =alimentaciones::withTrashed()->orderBy('idalimentacion','desc')
                                             ->take(1)
                                             ->get();
-        $idal= $claveali[0]->idalimentacion+1;
+                                            if (count($claveali)==0)
+                                            {
+                                                    $idal = 1;
+                                            }
+                                            else
+                                            {
+                                       $idal = $claveali[0]->idalimentacion+1;
+                                        }
+                                                                   
+      
 
         $alimentos = alimentos::withTrashed()->orderBy('idalimentos','asc')
                      
