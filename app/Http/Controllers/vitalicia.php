@@ -268,39 +268,38 @@ class vitalicia extends Controller
                                             ->get();
         $idger= $claveger[0]->idgeriatricos+1;
 
-      //  $gvalores = gvalores::withTrashed()->orderBy('idvg','asc')
-        //              ->get();
+        $gvalores = gvalores::withTrashed()->orderBy('idvg','asc')
+                     
+                      ->get();
             
      
         return view ('vitalicia.rGeriatricos')
-                    ->with('idger',$idger);
-                   // ->with('gvalores',$gvalores);
+                    ->with('idger',$idger)
+                    ->with('gvalores',$gvalores);
     } 
 
     public function guardageriatrico(Request $request)
     {   
-           //  $request->all(); //Procesa los datos del formulario
+             // $request->all(); //Procesa los datos del formulario
 
         $valorg =  $request->valorg;
         $valorg1 = $request->valorg1;
         $valorg2= $request->valorg2;
         $idgeriatricos = $request->idgeriatricos;
-   
+        $idvg = $request->idvg;
       
        
                
            
-               $ger = new geriatricos;
+                $ger = new geriatricos;
                 $ger->idgeriatricos = $request->idgeriatricos;
                 $ger->valorg = $request->valorg;
                 $ger->valorg1 = $request->valorg1;
                 $ger->valorg2 = $request->valorg2;   
-             //   $ger->idvg= $request->idvg;
+                $ger->idvg= $request->idvg;
                 $ger->save();
 
-                return $request;
-
-                //return redirect()->route('home');
+                return redirect()->route('home');
     } 
 
 
