@@ -44,11 +44,7 @@
                     <li><a href="{{route('cpac')}}">Consulta</a></li>
                   </ul>
               </li>
-              <li>
-                  <a href="#">Consultar Datos</a>
-                  <ul class="menu">
-                    <li><a href="{{route('cdatos')}}">Consulta</a></li>
-                  </ul>
+              
               </li>
             </ul>
         </div>
