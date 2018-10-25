@@ -251,6 +251,7 @@ class vitalicia extends Controller
         $idger= $claveger[0]->idgeriatricos+1;
 
         $gvalores = gvalores::orderBy('idvg','asc')
+                     ->take(1)
                       ->get();
             
      
