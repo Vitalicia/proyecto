@@ -272,13 +272,7 @@ class vitalicia extends Controller
       
        
                
-           $this->validate($request,[
-                ''=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
-                ''=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
-                ''=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
-                ''=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
-                ''=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/']
-         ]);
+           
                 $ger = new geriatricos;
                 $ger->idgeriatricos = $request->idgeriatricos;
                 $ger->valorg = $request->valorg;
