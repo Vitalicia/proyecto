@@ -269,7 +269,6 @@ class vitalicia extends Controller
         $idger= $claveger[0]->idgeriatricos+1;
 
         $gvalores = gvalores::withTrashed()->orderBy('idvg','asc')
-                     ->take(1)
                       ->get();
             
      
@@ -280,7 +279,7 @@ class vitalicia extends Controller
 
     public function guardageriatrico(Request $request)
     {   
-             // $request->all(); //Procesa los datos del formulario
+             $request->all(); //Procesa los datos del formulario
 
         $valorg =  $request->valorg;
         $valorg1 = $request->valorg1;
