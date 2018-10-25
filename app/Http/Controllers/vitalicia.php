@@ -273,7 +273,7 @@ class vitalicia extends Controller
             
      
         return view ('vitalicia.rGeriatricos')
-                    ->with('idger',$idger)
+                    ->with('idger',$idger);
                    // ->with('gvalores',$gvalores);
     } 
 
