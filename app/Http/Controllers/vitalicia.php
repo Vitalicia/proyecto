@@ -142,7 +142,16 @@ class vitalicia extends Controller
         $clavequesiguem =medicamentos::withTrashed()->orderBy('idmedicamento','desc')
                                             ->take(1)
                                             ->get();
-        $iddm= $clavequesiguem[0]->idmedicamento+1;
+
+                                            if (count($clavequesiguem)==0)
+                                            {
+                                                    $iddm = 1;
+                                            }
+                                            else
+                                            {
+                                       $iddm = $clavequesiguem[0]->idmedicamento+1;
+                                        }
+    
 
         $horarios = horarios::withTrashed()->orderBy('tipohorario','asc')
                           ->take(2)
