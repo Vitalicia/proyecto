@@ -12,6 +12,8 @@ use App\medicamentos;
 use App\horarios;
 use App\alimentaciones;
 use App\alimentos;
+use App\geriatricos;
+use App\gvalores;
 
 class vitalicia extends Controller
 {
@@ -25,7 +27,7 @@ class vitalicia extends Controller
        public function rUsuario()
     {
         //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
-        $clavequesigue = datos::orderBy('idd','desc')
+        $clavequesigue = datos::withTrashed()->orderBy('idd','desc')
                                             ->take(1)
                                             ->get();
         $idds= $clavequesigue[0]->idd+1;
@@ -137,12 +139,21 @@ class vitalicia extends Controller
     public function rmedicamento()
     {
         //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
-        $clavequesiguem =medicamentos::orderBy('idmedicamento','desc')
+        $clavequesiguem =medicamentos::withTrashed()->orderBy('idmedicamento','desc')
                                             ->take(1)
                                             ->get();
-        $iddm= $clavequesiguem[0]->idmedicamento+1;
 
-        $horarios = horarios::orderBy('tipohorario','asc')
+                                            if (count($clavequesiguem)==0)
+                                            {
+                                                    $iddm = 1;
+                                            }
+                                            else
+                                            {
+                                       $iddm = $clavequesiguem[0]->idmedicamento+1;
+                                        }
+    
+
+        $horarios = horarios::withTrashed()->orderBy('tipohorario','asc')
                           ->take(2)
                           ->get();
             
@@ -186,12 +197,21 @@ class vitalicia extends Controller
     public function ralimentacion()
     {
         //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
-        $claveali =alimentaciones::orderBy('idalimentacion','desc')
+        $claveali =alimentaciones::withTrashed()->orderBy('idalimentacion','desc')
                                             ->take(1)
                                             ->get();
-        $idal= $claveali[0]->idalimentacion+1;
+                                            if (count($claveali)==0)
+                                            {
+                                                    $idal = 1;
+                                            }
+                                            else
+                                            {
+                                       $idal = $claveali[0]->idalimentacion+1;
+                                        }
+                                                                   
+      
 
-        $alimentos = alimentos::orderBy('idalimentos','asc')
+        $alimentos = alimentos::withTrashed()->orderBy('idalimentos','asc')
                      
                           ->get();
             
@@ -239,5 +259,48 @@ class vitalicia extends Controller
    ->with('datosd',$datosd);
    
    }
-    
+
+   public function rgeriatrico()
+    {
+        //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
+        $claveger =geriatricos::withTrashed()->orderBy('idgeriatricos','desc')
+                                            ->take(1)
+                                            ->get();
+        $idger= $claveger[0]->idgeriatricos+1;
+
+        $gvalores = gvalores::withTrashed()->orderBy('idvg','asc')
+                     
+                      ->get();
+            
+     
+        return view ('vitalicia.rGeriatricos')
+                    ->with('idger',$idger)
+                    ->with('gvalores',$gvalores);
+    } 
+
+    public function guardageriatrico(Request $request)
+    {   
+             // $request->all(); //Procesa los datos del formulario
+
+        $valorg =  $request->valorg;
+        $valorg1 = $request->valorg1;
+        $valorg2= $request->valorg2;
+        $idgeriatricos = $request->idgeriatricos;
+        $idvg = $request->idvg;
+      
+       
+               
+           
+                $ger = new geriatricos;
+                $ger->idgeriatricos = $request->idgeriatricos;
+                $ger->valorg = $request->valorg;
+                $ger->valorg1 = $request->valorg1;
+                $ger->valorg2 = $request->valorg2;   
+                $ger->idvg= $request->idvg;
+                $ger->save();
+
+                return redirect()->route('home');
+    } 
+
+
 }

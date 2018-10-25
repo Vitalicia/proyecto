@@ -5,10 +5,9 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class alimentos extends Model
+class gvalores extends Model
 {
     use SoftDeletes;
-    protected $primaryKey ='idalimentos';
-    protected $fillable = ['idalimentos','tipoalimento'];
-  
+    protected $primarykey ='idvg';
+    protected $fillable = ['idvg','tipogvalor'];
 }

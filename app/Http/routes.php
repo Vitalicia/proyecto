@@ -7,8 +7,9 @@ Route::get('/','vitalicia@home')->name('home');
 //RUTA PAR LAS ALTAS
 Route::get('/registroUsuario','vitalicia@rUsuario')->name('rusu');
 Route::get('/usuario','vitalicia@usuario')->name('usu');
-Route::get('/registromedicamento','vitalicia@rmedicamento')->name('rmed');
-Route::get('/registroalimentacion','vitalicia@ralimentacion')->name('rali');
+Route::get('/registromedicamento','vitalicia@rmedicamento')->name('rmed');//dar de alta un medicamento
+Route::get('/registroalimentacion','vitalicia@ralimentacion')->name('rali');//dar de alta un alimento
+Route::get('/registrogeriatrico','vitalicia@rgeriatrico')->name('rger');//dar de alta un geriatrico
 
 //RUTAS PARAS LAS BAJAS
 Route::get('/bajaUsuario','vitalicia@bUsuario')->name('busu');
@@ -27,6 +28,10 @@ Route::POST('/guardamedicamento', 'vitalicia@guardamedicamento')->name('gume');
 
 //GUARDA DATOS DEL ALIMENTO
 Route::POST('/guardalimento', 'vitalicia@guardalimento')->name('guali');
+
+//GUARDA DATOS DEL GERIATRICO
+Route::POST('/guardageriatrico', 'vitalicia@guardageriatrico')->name('guager');
+
 
 
 //GUARDA DATOS DE USUARIO
