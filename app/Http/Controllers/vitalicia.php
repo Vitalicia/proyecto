@@ -139,12 +139,12 @@ class vitalicia extends Controller
     public function rmedicamento()
     {
         //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
-        $clavequesiguem =medicamentos::orderBy('idmedicamento','desc')
+        $clavequesiguem =medicamentos::withTrashed()->orderBy('idmedicamento','desc')
                                             ->take(1)
                                             ->get();
         $iddm= $clavequesiguem[0]->idmedicamento+1;
 
-        $horarios = horarios::orderBy('tipohorario','asc')
+        $horarios = horarios::withTrashed()->orderBy('tipohorario','asc')
                           ->take(2)
                           ->get();
             
