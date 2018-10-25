@@ -285,7 +285,7 @@ class vitalicia extends Controller
         $valorg1 = $request->valorg1;
         $valorg2= $request->valorg2;
         $idgeriatricos = $request->idgeriatricos;
-        $idvg = $request->idvg;
+   
       
        
                
@@ -295,7 +295,7 @@ class vitalicia extends Controller
                 $ger->valorg = $request->valorg;
                 $ger->valorg1 = $request->valorg1;
                 $ger->valorg2 = $request->valorg2;   
-                $ger->idvg= $request->idvg;
+             //   $ger->idvg= $request->idvg;
                 $ger->save();
 
                 return $request;
