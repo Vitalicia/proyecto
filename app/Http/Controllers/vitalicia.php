@@ -27,7 +27,7 @@ class vitalicia extends Controller
        public function rUsuario()
     {
         //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
-        $clavequesigue = datos::orderBy('idd','desc')
+        $clavequesigue = datos::withTrashed()->orderBy('idd','desc')
                                             ->take(1)
                                             ->get();
         $idds= $clavequesigue[0]->idd+1;
