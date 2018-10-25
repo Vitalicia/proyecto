@@ -280,14 +280,14 @@ class vitalicia extends Controller
 
     public function guardageriatrico(Request $request)
     {   
-             // $request->all(); //Procesa los datos del formulario
+              $request->all(); //Procesa los datos del formulario
 
-        $valorg =  $request->valorg;
+        /*$valorg =  $request->valorg;
         $valorg1 = $request->valorg1;
         $valorg2= $request->valorg2;
         $idgeriatricos = $request->idgeriatricos;
         $idvg = $request->idvg;
-      
+      */
        
                
            
