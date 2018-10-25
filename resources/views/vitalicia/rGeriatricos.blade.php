@@ -30,12 +30,7 @@
                 
         
 
-                Gvalor<select name = 'gvalores'>
-            @foreach($gvalores as $gv)
-            <option value = '{{$gv->idvg}}'>{{$gv->tipogvalor}}</option>
-            @endforeach
-                  </select>
-<br>
+            
 
             
             <input type="submit" class="button" value="Guardar">
