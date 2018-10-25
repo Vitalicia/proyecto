@@ -16,35 +16,61 @@
         <div class="top-bar-left">
 	       <a class="navbar-brand" href="{{route('home')}}"><img src="/images/vitalicia.jpg"  alt="Vitalicia"></a>  
         </div>
+          
+
+
  
         <div class="top-bar-right">
             <ul class="dropdown menu" data-dropdown-menu>
               <li>
-                <a class="{{ request()->is('/') ? 'active' : '' }}" 
-                    href="{{route('home')}}">Inicio</a>
+                <a href="{{route('home')}}">Inicio</a>
               </li>
-              <li> 
-                  <a href="#">Usuarios</a>
-                  <ul class="menu">
-                    <li><a href="{{route('rusu')}}">Alta</a></li>
-                    <li><a href="{{route('busu')}}">Baja</a></li>
-                    <li><a href="{{route('musu')}}">Modificaci&oacute;n</a></li>
-                  </ul>
-              </li>
+                
               <li>
-                  <a href="#">Pacientes</a>
-                  <ul class="menu">
-                    <li><a href="{{route('rpac')}}">Registro</a></li>
-                    <li><a href="{{route('cpac')}}">Consulta</a></li>
-                  </ul>
+                <a href="#">Acerca de Nosotros</a>
               </li>
+                
               <li>
-                  <a href="#">Familiares</a>
-                  <ul class="menu">
-                    <li><a href="{{route('cpac')}}">Consulta</a></li>
-                  </ul>
+                <a href="#">Galer&iacute;a</a>
               </li>
+                
+              <li>
+                <a href="#">Contacto</a>
+              </li>
+            
+                <li>
+                    <a href="#">Vitalicia</a>
+                    <ul class="menu">
+                      <li><a href="#">Usuarios</a>
+                            <ul class="menu">
+                                   <li><a href="{{route('rusu')}}">Alta</a></li>
+                                    <li><a href="{{route('busu')}}">Baja</a></li> 
+                                    <li><a href="{{route('musu')}}">Modificaci&oacute;n</a></li>
+                            </ul>   
+                      </li>
+
+                      <li><a href="#">Pacientes</a>
+                            <ul class="menu">
+                                   <li><a href="{{route('rpac')}}">Registro</a></li>
+                                   <li><a href="{{route('cpac')}}">Consulta</a></li>
+                            </ul>   
+                      </li>
+
+                      <li><a href="#">Consultas</a>
+                            <ul class="menu">
+                                   <li><a href="{{route('cpac')}}">Consulta</a></li>
+                            </ul>   
+                      </li>
+
+                    </ul>
+                </li>
               
+              <li>
+                <a href="#">Iniciar Sesi&oacute;n</a>
+              </li>
+                
+              <li>
+                <a href="#">Cerrar Sesi&oacute;n</a>
               </li>
             </ul>
         </div>
