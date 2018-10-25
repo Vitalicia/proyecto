@@ -249,14 +249,13 @@ class vitalicia extends Controller
         $idger= $claveger[0]->idgeriatricos+1;
 
         $gvalores = gvalores::orderBy('idvg','asc')
-                     
-                          ->get();
+                      ->get();
             
-        //return $carreras;
+     
         return view ('vitalicia.rGeriatricos')
                     ->with('idger',$idger)
                     ->with('gvalores',$gvalores);
     } 
 
-    
+
 }
