@@ -239,5 +239,24 @@ class vitalicia extends Controller
    ->with('datosd',$datosd);
    
    }
+
+   public function rgeriatrico()
+    {
+        //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
+        $claveger =geriatricos::orderBy('idgeriatricos','desc')
+                                            ->take(1)
+                                            ->get();
+        $idger= $claveger[0]->idgeriatricos+1;
+
+        $gvalores = gvalores::orderBy('idvg','asc')
+                     
+                          ->get();
+            
+        //return $carreras;
+        return view ('vitalicia.rGeriatricos')
+                    ->with('idger',$idger)
+                    ->with('gvalores',$gvalores);
+    } 
+
     
 }
