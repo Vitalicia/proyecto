@@ -12,6 +12,8 @@ use App\medicamentos;
 use App\horarios;
 use App\alimentaciones;
 use App\alimentos;
+use App\geriatricos;
+use App\gvalores;
 
 class vitalicia extends Controller
 {
