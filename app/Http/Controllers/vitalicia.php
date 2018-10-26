@@ -355,7 +355,7 @@ class vitalicia extends Controller
                     ->with('datoss',$datoss);
     } 
 
-      public function guardacuidador()
+      public function guardacuidador(Request $request)
     {   
              // $request->all(); //Procesa los datos del formulario
 
