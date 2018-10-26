@@ -8,6 +8,7 @@
 
 <h1>Reporte de usuarios</h1>
 <br>
+<div style="overflow-x:auto;">
 <table border= 1>
 <tr><td>ID</td>
 <td>Usuario</td>
