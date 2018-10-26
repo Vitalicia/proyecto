@@ -6,7 +6,7 @@
         <html>
 <body>
 
-<h1>Reporte de usuarios</h1>
+<h1>Reporte de usuarios completo</h1>
 <br>
 <table border= 1>
 <tr><td>ID</td>
