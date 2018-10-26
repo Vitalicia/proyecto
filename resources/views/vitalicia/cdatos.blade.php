@@ -2,7 +2,7 @@
 @section('encabezado')
 <h1>Consulta de datos</h1>
 @stop
-@section('contenido 2')
+@section('complete')
 <form action = "{{route('getdatos')}}" method = "POST">
         {{csrf_field()}}
 <table border= 1>
