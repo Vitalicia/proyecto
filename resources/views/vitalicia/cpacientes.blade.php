@@ -11,6 +11,7 @@
 <h1>Consulta de Pacientes</h1>
 
 <br>
+<div style="overflow-x:auto;">
 <table border= 1>
 <tr><td>ID</td>
 <td>Fecha Pacientes</td>
