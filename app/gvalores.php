@@ -10,4 +10,5 @@ class gvalores extends Model
     use SoftDeletes;
     protected $primarykey ='idvg';
     protected $fillable = ['idvg','tipogvalor'];
+    protected $date=['deleted_at'];
 }
