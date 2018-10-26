@@ -19,7 +19,7 @@
                min="2018-06-07T00:00" max="2020-06-14T00:00" />
     </div>
 
-    
+    <div>
     @if($errors->first('nombre')) 
                <br>{!! $errors->first('nombre','<span class=error>:message</span>')!!}
           @endif 
