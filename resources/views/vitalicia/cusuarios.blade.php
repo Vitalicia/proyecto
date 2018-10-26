@@ -14,7 +14,7 @@
 
 <td>Contraseña</td>
 <td>Turno</td>
-
+<td>Correo</td>
 
 
 @foreach($usuariosd as $usu)
@@ -24,6 +24,7 @@
 <td>{{$usu->usuario}}</td>
 <td>{{$usu->contraseña}}</td>
 <td>{{$usu->idt}}</td>
+<td>{{$usu->correo}}</td>
 
 
 
