@@ -23,7 +23,7 @@
 @foreach($pacientesd as $patt)
 
 
-<tr><td>{{$patt->idpacientes}}</td>
+<tr><td>{{$patt->idpaciente}}</td>
 <td>{{$patt->fechapaciente}}</td>
 <td>{{$patt->idd}}</td>
 <td>{{$patt->idmedicamento}}</td>
