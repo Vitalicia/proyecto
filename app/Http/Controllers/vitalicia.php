@@ -455,7 +455,7 @@ class vitalicia extends Controller
 
     {
 
-    $pacientesd = datos::withTrashed()->orderBy('idpaciente','asc')
+    $pacientesd = pacientes::withTrashed()->orderBy('idpaciente','asc')
     ->get();
    return view ('vitalicia.cpacientes')
    ->with('pacientesd',$pacientesd);
@@ -465,7 +465,7 @@ class vitalicia extends Controller
    public function getusuarios()
 
    {
-  $usuariosd = datos::withTrashed()->orderBy('idu','asc')->get();
+  $usuariosd = usuarios::withTrashed()->orderBy('idu','asc')->get();
   return view ('vitalicia.cusuarios')
   ->with('usuariosd',$usuariosd);
 }
