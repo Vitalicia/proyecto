@@ -327,5 +327,70 @@ class vitalicia extends Controller
                 return redirect()->route('home');
     } 
 
+    public function rcuidador()
+    {
+        //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
+        $clavecui =cuidadores::withTrashed()->orderBy('idcuidador','desc')
+                                            ->take(1)
+                                            ->get();
+                                            if (count($clavecui)==0)
+                                            {
+                                                    $idcu = 1;
+                                            }
+                                            else
+                                            {
+                                       $idcu = $clavecui[0]->idcuidador+1;
+                                        }
+                                                                   
+      
+
+        $datoss =datos::withTrashed()->orderBy('idd','asc')
+                     
+                          ->get();
+            
+        //return $carreras;
+        return view ('vitalicia.rCuidador')
+                    ->with('idcu',$idcu)
+                    ->with('datoss',$datoss);
+    } 
+
+      public function guardacuidador()
+    {   
+             // $request->all(); //Procesa los datos del formulario
+
+        $horaentrada =  $request->horaentrada;
+        $horasalida = $request->horasalida;
+      
+        $idcuidador = $request->idcuidaor;
+        $observaciones= $request->observaciones;
+               
+           $this->validate($request,[
+                'nombre'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'terminotx'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'indicacion'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'presen'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'horario'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/']
+         ]);
+                $cui = new cuidadores;
+                $cui->idcuidador = $request->idcuidador;
+                $cui->horaentrada = $request->horaentrada;
+                $cui->horasalida = $request->horasalida;
+                $cui->idd= $request->idd;
+                $cui->save();
+
+
+              
+                return redirect()->route('home');
+    } 
+    
+    public function getdatos()
+
+    {
+   $datosd = datos::withTrashed()->orderBy('idd','asc')->get();
+   return view ('vitalicia.cdatos')
+   ->with('datosd',$datosd);
+   
+   }
+
 
 }
