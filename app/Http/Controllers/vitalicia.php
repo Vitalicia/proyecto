@@ -302,11 +302,11 @@ class vitalicia extends Controller
                
            
                 $ger = new geriatricos;
-                $ger->idgeriatricos = $request->idgeriatricos;
-                $ger->valorg = $request->valorg;
-                $ger->valorg1 = $request->valorg1;
-                $ger->valorg2 = $request->valorg2;   
-                $ger->idvg= $request->idvg;
+                $ger->idgeriatricos = $request->input('idvgeriatricos');
+                $ger->valorg = $request->input('valorg');
+                $ger->valorg1 = $request->input('valorg1');
+                $ger->valorg2 = $request->input('valorg2');  
+                $ger->idvg= $request->input('idvg');
                 $ger->save();
 
                 return redirect()->route('home');
