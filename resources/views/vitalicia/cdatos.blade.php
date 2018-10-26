@@ -8,7 +8,7 @@
         <html>
 <body>
 
-<h1>Reporte de datos</h1>
+<h1>Consulta de datos</h1>
 <br>
 <table border= 1>
 <tr><td>ID</td><td>Nombre</td><td>Apellido Paterno</td>
