@@ -266,7 +266,17 @@ class vitalicia extends Controller
         $claveger =geriatricos::withTrashed()->orderBy('idgeriatricos','desc')
                                             ->take(1)
                                             ->get();
-        $idger= $claveger[0]->idgeriatricos+1;
+
+                                            if (count($claveger)==0)
+                                            {
+                                                    $idger = 1;
+                                            }
+                                            else
+                                            {
+                                       $idger = $claveger[0]->idgeriatricos+1;
+                                        }
+
+ 
 
         $gvalores = gvalores::withTrashed()->orderBy('idvg','asc')
                      
@@ -282,10 +292,10 @@ class vitalicia extends Controller
     {   
              // $request->all(); //Procesa los datos del formulario
 
+        $idgeriatricos = $request->idgeriatricos;
         $valorg =  $request->valorg;
         $valorg1 = $request->valorg1;
         $valorg2= $request->valorg2;
-        $idgeriatricos = $request->idgeriatricos;
         $idvg = $request->idvg;
       
        
