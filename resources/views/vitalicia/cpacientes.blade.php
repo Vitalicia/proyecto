@@ -8,7 +8,7 @@
         <html>
 <body>
 
-<h1>Reporte de Pacientes</h1>
+<h1>Consulta de Pacientes</h1>
 
 <br>
 <table border= 1>
