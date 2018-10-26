@@ -18,9 +18,8 @@
 
 
 @foreach($usuariosd as $usu)
-
-
-<tr><td>{{$usu->idu}}</td>
+<tr>
+<td>{{$usu->idu}}</td>
 <td>{{$usu->usuario}}</td>
 <td>{{$usu->contrasena}}</td>
 <td>{{$usu->idt}}</td>
@@ -29,7 +28,7 @@
 
 
 
-</td></tr>
+</tr>
 @endforeach
 </table>
 </body>

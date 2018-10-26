@@ -1,12 +1,15 @@
+@extends('vitalicia.principal')
+@section('contenido')
 <form action = "{{route('getpacientes')}}" method = "POST">
         {{csrf_field()}}
         
         
-        
+   
         <html>
 <body>
 
 <h1>Reporte de Pacientes</h1>
+
 <br>
 <table border= 1>
 <tr><td>ID</td>
@@ -41,3 +44,4 @@
 </body>
 </html>
 
+     @stop
