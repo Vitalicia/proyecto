@@ -1,16 +1,10 @@
 @extends('vitalicia.principal')
+@section('encabezado')
+<h1>Consulta de Pacientes</h1>
+@stop
 @section('contenido')
 <form action = "{{route('getpacientes')}}" method = "POST">
         {{csrf_field()}}
-        
-        
-   
-        <html>
-<body>
-
-<h1>Consulta de Pacientes</h1>
-
-<br>
 <div style="overflow-x:auto;">
 <table border= 1>
 <tr><td>ID</td>
