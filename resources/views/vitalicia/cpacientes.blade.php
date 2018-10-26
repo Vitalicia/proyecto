@@ -2,7 +2,7 @@
 @section('encabezado')
 <h1>Consulta de Pacientes</h1>
 @stop
-@section('contenido')
+@section('complete')
 <form action = "{{route('getpacientes')}}" method = "POST">
         {{csrf_field()}}
 <div style="overflow-x:auto;">
