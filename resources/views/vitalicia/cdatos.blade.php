@@ -1,8 +1,8 @@
 @extends('vitalicia.principal')
 @section('encabezado')
 <h1>Consulta de datos</h1>
-
-@section('')
+@stop
+@section('complete')
 <form action = "{{route('getdatos')}}" method = "POST">
         {{csrf_field()}}
 <table border= 1>
