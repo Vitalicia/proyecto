@@ -5,6 +5,8 @@
 @section('complete')
 <form action = "{{route('getdatos')}}" method = "POST">
         {{csrf_field()}}
+        
+<div style="overflow-x:auto;">
 <table border= 1>
 <tr><td>ID</td><td>Nombre</td><td>Apellido Paterno</td>
 <td>Apellido materno</td><td>Edad</td><td>Telefono</td><td>Calle</td><td>Numero</td>
