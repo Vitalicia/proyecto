@@ -173,7 +173,7 @@ class vitalicia extends Controller
     
 
         $horarios = horarios::withTrashed()->orderBy('tipohorario','asc')
-                          ->take(2)
+                        
                           ->get();
             
         //return $carreras;
