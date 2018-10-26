@@ -312,5 +312,12 @@ class vitalicia extends Controller
                 return redirect()->route('home');
     } 
 
+    public function getpacientes()
 
+    {
+   $pacientesd = pacientes::withTrashed()->orderBy('idpaciente','asc')->get();
+   return view ('vitalicia.cpacientes')
+   ->with('pacientesd',$pacientesd);
+   
+   }
 }
