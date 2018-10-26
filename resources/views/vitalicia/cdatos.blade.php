@@ -2,14 +2,14 @@
 @section('encabezado')
 <h1>Consulta de datos</h1>
 @stop
-@section('contenido')
+@section('')
 <form action = "{{route('getdatos')}}" method = "POST">
         {{csrf_field()}}
 <table border= 1>
 <tr><td>ID</td><td>Nombre</td><td>Apellido Paterno</td>
 <td>Apellido materno</td><td>Edad</td><td>Telefono</td><td>Calle</td><td>Numero</td>
 <td>Calle1</td><td>Calle2</td><td>Colonia</td><td>Municipio</td><td>Ciudad</td><td>Cp</td><td>Referencia</td>
-@stop
+
 @foreach($datosd as $datt)
 
 
@@ -32,4 +32,4 @@
 
 </td></tr>
 @endforeach
-
+@stop
