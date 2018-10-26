@@ -11,7 +11,7 @@
 <table border= 1>
 <tr><td>ID</td>
 <td>Fecha Pacientes</td>
-<td>Apellido Paterno</td>
+
 <td>Datos</td>
 <td>Medicamentos</td>
 <td>Alimentacion</td>
