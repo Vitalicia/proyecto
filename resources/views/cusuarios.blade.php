@@ -17,17 +17,14 @@
 
 
 
-@foreach($pacientesd as $patt)
+@foreach($usuariosd as $usu)
 
 
-<tr><td>{{$patt->idpaciente}}</td>
-<td>{{$patt->fechapaciente}}</td>
-<td>{{$patt->idd}}</td>
-<td>{{$patt->idmedicamento}}</td>
-<td>{{$patt->idalimentacion}}</td>
-<td>{{$patt->ids}}</td>
-<td>{{$patt->idgeriatricos}}</td>
-<td>{{$patt->idactividades}}</td>
+<tr><td>{{$usu->idu}}</td>
+<td>{{$usu->usuario}}</td>
+<td>{{$usu->contraseña}}</td>
+<td>{{$usu->idt}}</td>
+
 
 
 
