@@ -117,7 +117,7 @@ class vitalicia extends Controller
                 $dat->save();
 
 
-                return redirect()->route('rpac');
+                return redirect()->route('usu');
     } 
     
       public function gusuario(Request $request)
