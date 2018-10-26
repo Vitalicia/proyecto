@@ -409,7 +409,7 @@ class vitalicia extends Controller
                           ->get();
             
         //return $carreras;
-        return view ('vitalicia.rCuidador')
+        return view ('vitalicia.rSignos')
                     ->with('idsi',$idsi)
                     ->with('turnos',$turnos);
     } 
