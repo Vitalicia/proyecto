@@ -1,6 +1,6 @@
 @extends('vitalicia.principal')
 @section('encabezado')
-<h1>Consulta de Pacientes</h1>
+<h1>Consulta Pacientes</h1>
 @stop
 @section('complete')
 <form action = "{{route('getpacientes')}}" method = "POST">
