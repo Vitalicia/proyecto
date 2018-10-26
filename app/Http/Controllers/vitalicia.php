@@ -134,11 +134,16 @@ class vitalicia extends Controller
     {   
             $request->all(); //Procesa los datos del formulario
             
-        
+        $this->validate($request,[
+                'usuario' => 'required',
+                'contrasena' => 'required',
+                'correo' => 'required|email'
+         ]);
                 $usu = new usuarios;
                 $usu->idu = $request->idu;
                 $usu->usuario = $request->usuario;
-                $usu->contrasena = $request->contrasena;   
+                $usu->contrasena = $request->contrasena;
+                $usu->correo = $request->correo;
                 $usu->idt = $request->idt;
                 $usu->save();
 
