@@ -15,6 +15,8 @@ use App\alimentos;
 use App\geriatricos;
 use App\gvalores;
 use App\pacientes;
+
+
 class vitalicia extends Controller
 {
     //INICIO
@@ -318,6 +320,14 @@ class vitalicia extends Controller
    $pacientesd = pacientes::withTrashed()->orderBy('idpaciente','asc')->get();
    return view ('vitalicia.cpacientes')
    ->with('pacientesd',$pacientesd);
+   
+   }
+   public function getusuarios()
+
+    {
+   $usuariosd = usuarios::withTrashed()->orderBy('idu','asc')->get();
+   return view ('vitalicia.cusuarios')
+   ->with('usuariosd',$usuariosd);
    
    }
 }
