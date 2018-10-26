@@ -460,5 +460,11 @@ class vitalicia extends Controller
    
    }
 
+   public function getusuarios()
 
+   {
+  $usuariosd = datos::withTrashed()->orderBy('idu','asc')->get();
+  return view ('vitalicia.cusuarios')
+  ->with('usuariosd',$usuariosd);
+}
 }
