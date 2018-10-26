@@ -383,6 +383,70 @@ class vitalicia extends Controller
               
                 return redirect()->route('home');
     } 
+
+    public function rsignos()
+    {
+        //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
+        $clavesig =signos::withTrashed()->orderBy('ids','desc')
+                                            ->take(1)
+                                            ->get();
+                                            if (count($clavesig)==0)
+                                            {
+                                                    $idsi = 1;
+                                            }
+                                            else
+                                            {
+                                       $idsi = $clavesig[0]->ids+1;
+                                        }
+                                                                   
+      
+
+        $turnos =turnos::withTrashed()->orderBy('idturno','asc')
+                     
+                          ->get();
+            
+        //return $carreras;
+        return view ('vitalicia.rCuidador')
+                    ->with('idsi',$idsi)
+                    ->with('turnos',$turnos);
+    } 
+
+      public function guardasignos(Request $request)
+    {   
+             // $request->all(); //Procesa los datos del formulario
+
+        $ta =  $request->ta;
+        $fc = $request->fc;
+        $ids = $request->ids;
+        $fr= $request->fr;
+        $temp= $request->temp;
+        $spo2= $request->spo2;
+        $glucosa= $request->glucosa;
+        $protesis= $request->protresis;
+               
+           $this->validate($request,[
+                'nombre'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'terminotx'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'indicacion'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'presen'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'horario'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/']
+         ]);
+                $sig = new signos;
+                $sig->ids = $request->ids;
+                $sig->ta = $request->ta;
+                $sig->fc = $request->fc;
+                $sig->fr = $request->fr;
+                $sig->temp = $request->temp;
+                $sig->spo2 = $request->spo2;
+                $sig->glucosa = $request->glucosa;
+                $sig->protesis = $request->protesis;
+                $sig->idturno= $request->idturno;
+                $sig->save();
+
+
+              
+                return redirect()->route('home');
+    } 
    
    
 
