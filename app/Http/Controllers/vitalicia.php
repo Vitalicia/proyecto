@@ -282,10 +282,10 @@ class vitalicia extends Controller
     {   
              // $request->all(); //Procesa los datos del formulario
 
+        $idgeriatricos = $request->idgeriatricos;
         $valorg =  $request->valorg;
         $valorg1 = $request->valorg1;
         $valorg2= $request->valorg2;
-        $idgeriatricos = $request->idgeriatricos;
         $idvg = $request->idvg;
       
        
