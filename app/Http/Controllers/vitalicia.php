@@ -14,6 +14,8 @@ use App\alimentaciones;
 use App\alimentos;
 use App\geriatricos;
 use App\gvalores;
+use App\pacientes;
+
 
 class vitalicia extends Controller
 {
@@ -40,11 +42,19 @@ class vitalicia extends Controller
            public function usuario()
     {
             //EN LA VISTA DE USUARIO NOS MUESTRA EL SELECT DE LOS TIPOS DE USUARIOS
-            $claveusu = usuarios::orderBy('idu','desc')
+            $claveusu = usuarios::withTrashed()->orderBy('idu','desc')
                                             ->take(1)
                                             ->get();
+                        
+
+            if (count($claveusu)==0)
+            {
+                    $idus = 1;
+            }
+            else
+            {
             $idus= $claveusu[0]->idu+1;
-               
+            }
                
                
             $tipos = tipos::where('activo','=','SI')
@@ -117,18 +127,23 @@ class vitalicia extends Controller
                 $dat->save();
 
 
-                return redirect()->route('rpac');
+                return redirect()->route('usu');
     } 
     
       public function gusuario(Request $request)
     {   
             $request->all(); //Procesa los datos del formulario
             
-        
+        $this->validate($request,[
+                'usuario' => 'required',
+                'contrasena' => 'required',
+                'correo' => 'required|email'
+         ]);
                 $usu = new usuarios;
                 $usu->idu = $request->idu;
                 $usu->usuario = $request->usuario;
-                $usu->contrasena = $request->contrasena;   
+                $usu->contrasena = $request->contrasena;
+                $usu->correo = $request->correo;
                 $usu->idt = $request->idt;
                 $usu->save();
 

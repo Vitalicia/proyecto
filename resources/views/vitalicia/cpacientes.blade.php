@@ -1,17 +1,20 @@
+@extends('vitalicia.principal')
+@section('contenido')
 <form action = "{{route('getpacientes')}}" method = "POST">
         {{csrf_field()}}
         
         
-        
+   
         <html>
 <body>
 
-<h1>Reporte de Pacientes</h1>
+<h1>Consulta de Pacientes</h1>
+
 <br>
 <table border= 1>
 <tr><td>ID</td>
 <td>Fecha Pacientes</td>
-<td>Apellido Paterno</td>
+
 <td>Datos</td>
 <td>Medicamentos</td>
 <td>Alimentacion</td>
@@ -23,7 +26,7 @@
 @foreach($pacientesd as $patt)
 
 
-<tr><td>{{$patt->idpacientes}}</td>
+<tr><td>{{$patt->idpaciente}}</td>
 <td>{{$patt->fechapaciente}}</td>
 <td>{{$patt->idd}}</td>
 <td>{{$patt->idmedicamento}}</td>
@@ -41,3 +44,4 @@
 </body>
 </html>
 
+     @stop
