@@ -11,6 +11,7 @@ Route::get('/registromedicamento','vitalicia@rmedicamento')->name('rmed');//dar 
 Route::get('/registroalimentacion','vitalicia@ralimentacion')->name('rali');//dar de alta un alimento
 Route::get('/registrogeriatrico','vitalicia@rgeriatrico')->name('rger');//dar de alta un geriatrico
 Route::get('/registrocuidador','vitalicia@rcuidador')->name('rcui');//dar de alta un cuidador
+Route::get('/registrosignos','vitalicia@rsignos')->name('rsig');//dar de alta los signos
 
 //RUTAS PARAS LAS BAJAS
 Route::get('/bajaUsuario','vitalicia@bUsuario')->name('busu');
@@ -35,6 +36,9 @@ Route::POST('/guardageriatrico', 'vitalicia@guardageriatrico')->name('guager');
 
 //GUARDA DATOS DEL CUIDADOR
 Route::POST('/guardacuidador', 'vitalicia@guardacuidador')->name('guacui');
+
+//GUARDA DATOS DE LOS SIGNOS
+Route::POST('/guardasignos', 'vitalicia@guardasignos')->name('guasi');
 
 
 
