@@ -36,3 +36,5 @@
 @endforeach
 @stop
 @section('pie')
+<h1>Consulta de datos</h1>
+@stop
