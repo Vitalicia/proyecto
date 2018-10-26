@@ -15,6 +15,10 @@
             <br>{!! $errors->first('contrasena','<span class=error>:message</span>')!!}
                 <input type="password" name="contrasena">
             
+            Correo Electr&oacute;nico
+            <br>{!! $errors->first('usuario','<span class=error>:message</span>')!!}
+                <input type="text" name="correo" value="{{old('correo')}}">
+                
             Tipo de usuario <select name = 'idt'>
                                     @foreach($tipos as $tp)
                                     <option value ='{{$tp->idt}}'>{{$tp->tipo}}</option>
