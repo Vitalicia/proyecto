@@ -14,6 +14,7 @@ use App\alimentaciones;
 use App\alimentos;
 use App\geriatricos;
 use App\gvalores;
+use App\cuidadores;
 use App\pacientes;
 
 
