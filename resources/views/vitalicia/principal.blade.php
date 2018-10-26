@@ -127,6 +127,7 @@
         <div class="row">
             <div class="small-12 medium-6 columns">
                 <p>Copyright &reg; {{date('Y')}} | Vitalicia</p>
+                @yield('pie')
             </div>
         </div>
     </footer>
