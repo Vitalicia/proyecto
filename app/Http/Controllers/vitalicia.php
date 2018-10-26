@@ -14,6 +14,8 @@ use App\alimentaciones;
 use App\alimentos;
 use App\geriatricos;
 use App\gvalores;
+use App\pacientes;
+
 
 class vitalicia extends Controller
 {
@@ -266,7 +268,17 @@ class vitalicia extends Controller
         $claveger =geriatricos::withTrashed()->orderBy('idgeriatricos','desc')
                                             ->take(1)
                                             ->get();
-        $idger= $claveger[0]->idgeriatricos+1;
+
+                                            if (count($claveger)==0)
+                                            {
+                                                    $idger = 1;
+                                            }
+                                            else
+                                            {
+                                       $idger = $claveger[0]->idgeriatricos+1;
+                                        }
+
+ 
 
         $gvalores = gvalores::withTrashed()->orderBy('idvg','asc')
                      
@@ -282,25 +294,40 @@ class vitalicia extends Controller
     {   
              // $request->all(); //Procesa los datos del formulario
 
+        $idgeriatricos = $request->idgeriatricos;
         $valorg =  $request->valorg;
         $valorg1 = $request->valorg1;
         $valorg2= $request->valorg2;
-        $idgeriatricos = $request->idgeriatricos;
         $idvg = $request->idvg;
       
        
                
            
                 $ger = new geriatricos;
-                $ger->idgeriatricos = $request->idgeriatricos;
-                $ger->valorg = $request->valorg;
-                $ger->valorg1 = $request->valorg1;
-                $ger->valorg2 = $request->valorg2;   
-                $ger->idvg= $request->idvg;
+                $ger->idgeriatricos = $request->input('idvgeriatricos');
+                $ger->valorg = $request->input('valorg');
+                $ger->valorg1 = $request->input('valorg1');
+                $ger->valorg2 = $request->input('valorg2');  
+                $ger->idvg= $request->input('idvg');
                 $ger->save();
 
                 return redirect()->route('home');
     } 
 
+    public function getpacientes()
 
+    {
+   $pacientesd = pacientes::withTrashed()->orderBy('idpaciente','asc')->get();
+   return view ('vitalicia.cpacientes')
+   ->with('pacientesd',$pacientesd);
+   
+   }
+   public function getusuarios()
+
+    {
+   $usuariosd = usuarios::withTrashed()->orderBy('idu','asc')->get();
+   return view ('vitalicia.cusuarios')
+   ->with('usuariosd',$usuariosd);
+   
+   }
 }

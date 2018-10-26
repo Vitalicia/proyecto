@@ -43,3 +43,9 @@ Route::POST('/gumedica', 'vitalicia@gumedica')->name('gumedi');
 
 //consulta de datos
 Route::get('/cdatos','vitalicia@getdatos')->name('getdatos');
+
+//consulta pacientes
+Route::get('/cpacientes','vitalicia@getpacientes')->name('getpacientes');
+
+//consulta usuarios
+Route::get('/cusuarios','vitalicia@getusuarios')->name('getusuarios');
