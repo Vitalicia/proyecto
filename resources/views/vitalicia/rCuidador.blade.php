@@ -13,7 +13,7 @@
             @if($errors->first('nombre')) 
                <br>{!! $errors->first('nombre','<span class=error>:message</span>')!!}
           @endif 
-        <label for="party-time"> Hora:</label>
+        <label for="party-time"> Hora entrada:</label>
         <input type="datetime-local" id="party-time"
                name="horaentrada" value="2018-10-24T00:00"
                min="2018-06-07T00:00" max="2020-06-14T00:00" />
@@ -23,7 +23,7 @@
     @if($errors->first('nombre')) 
                <br>{!! $errors->first('nombre','<span class=error>:message</span>')!!}
           @endif 
-        <label for="party-time"> Hora:</label>
+        <label for="party-time"> Hora Salida:</label>
         <input type="datetime-local" id="party-time"
                name="horasalida" value="2018-10-24T00:00"
                min="2018-06-07T00:00" max="2020-06-14T00:00" />
