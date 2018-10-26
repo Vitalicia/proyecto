@@ -15,7 +15,10 @@ use App\alimentos;
 use App\geriatricos;
 use App\gvalores;
 use App\cuidadores;
+use App\turnos;
+use App\signos;
 use App\pacientes;
+
 
 
 class vitalicia extends Controller
