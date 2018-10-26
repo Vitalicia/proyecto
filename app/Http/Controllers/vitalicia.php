@@ -42,11 +42,19 @@ class vitalicia extends Controller
            public function usuario()
     {
             //EN LA VISTA DE USUARIO NOS MUESTRA EL SELECT DE LOS TIPOS DE USUARIOS
-            $claveusu = usuarios::orderBy('idu','desc')
+            $claveusu = usuarios::withTrashed()->orderBy('idu','desc')
                                             ->take(1)
                                             ->get();
+                        
+
+            if (count($claveusu)==0)
+            {
+                    $idus = 1;
+            }
+            else
+            {
             $idus= $claveusu[0]->idu+1;
-               
+            }
                
                
             $tipos = tipos::where('activo','=','SI')

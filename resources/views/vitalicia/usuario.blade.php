@@ -16,7 +16,7 @@
                 <input type="password" name="contrasena">
             
             Correo Electr&oacute;nico
-            <br>{!! $errors->first('usuario','<span class=error>:message</span>')!!}
+            <br>{!! $errors->first('correo','<span class=error>:message</span>')!!}
                 <input type="text" name="correo" value="{{old('correo')}}">
                 
             Tipo de usuario <select name = 'idt'>
