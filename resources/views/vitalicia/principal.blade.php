@@ -44,21 +44,23 @@
                       <li><a href="#">Usuarios</a>
                             <ul class="menu">
                                    <li><a href="{{route('rusu')}}">Alta</a></li>
-                                    <li><a href="{{route('getdatos')}}">Consultas</a></li> 
+                                    <li><a href="#">Modificaciones</a></li> 
                                     <!--li><a href="">Modificaci&oacute;n</a></li-->
                             </ul>   
                       </li>
 
                       <li><a href="#">Pacientes</a>
                             <ul class="menu">
-                                   <li><a href="{{route('rpac')}}">Registro</a></li>
-                                   <li><a href="{{route('cpac')}}">Consulta</a></li>
+                                   <li><a href="#">Registro</a></li>
+                                   <li><a href="#">Consulta</a></li>
                             </ul>   
                       </li>
 
                       <li><a href="#">Consultas</a>
                             <ul class="menu">
-                                   <li><a href="{{route('cpac')}}">Consulta</a></li>
+                                    <li><a href="{{route('getdatos')}}">Datos</a></li>
+                                    <li><a href="{{route('getusuarios')}}">Usuarios</a></li>
+                                    <li><a href="{{route('getpacientes')}}">Pacientes</a></li>
                             </ul>   
                       </li>
 
@@ -112,6 +114,12 @@
         @yield('espacio')
         </div> 
     </div> 
+    
+    <div class="row">
+        <div class="large-12 large-!2 columns">
+        @yield('complete')
+        </div> 
+    </div>
       
     <hr>
       
