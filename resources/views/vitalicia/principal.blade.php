@@ -44,8 +44,8 @@
                       <li><a href="#">Usuarios</a>
                             <ul class="menu">
                                    <li><a href="{{route('rusu')}}">Alta</a></li>
-                                    <li><a href="{{route('busu')}}">Baja</a></li> 
-                                    <li><a href="{{route('musu')}}">Modificaci&oacute;n</a></li>
+                                    <li><a href="{{route('getdatos')}}">Consultas</a></li> 
+                                    <!--li><a href="">Modificaci&oacute;n</a></li-->
                             </ul>   
                       </li>
 
