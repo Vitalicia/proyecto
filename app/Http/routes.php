@@ -2,6 +2,7 @@
 
 //RUTA PARA INICIO
 Route::get('/','vitalicia@home')->name('home');
+Route::get('/inicio','vitalicia@main')->name('main');
 
 
 //RUTA PAR LAS ALTAS

@@ -29,6 +29,12 @@ class vitalicia extends Controller
             return view ('vitalicia.home');
     } 
     
+    //INICIO
+       public function main()
+    {
+            return view ('vitalicia.main');
+    } 
+    
     //USUARIOS
        public function rUsuario()
     {
