@@ -332,7 +332,8 @@ class vitalicia extends Controller
                 $ger->valorg1 = $request->input('valorg1');
                 $ger->valorg2 = $request->input('valorg2');  
                 $ger->idvg= $request->input('idvg');
-                $ger->save();
+                $ger->save($ger);
+
 
                 return redirect()->route('home');
     } 
