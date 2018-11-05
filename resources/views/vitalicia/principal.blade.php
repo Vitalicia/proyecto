@@ -24,20 +24,19 @@
             <ul class="dropdown menu" data-dropdown-menu>
               <li>
                 <a href="{{route('home')}}">Vitalicia</a>
-              </li>
+              </li>    
                 
               <li>
                 <a href="#">Usuarios</a>
                     <ul class="menu">
                         <li><a href="{{route('rusu')}}">Alta</a></li>
-                        <li><a href="{{route('getdatos')}}">Datos</a></li>
                     </ul>
               </li>
               
               <li>
                 <a href="#">Pacientes</a>
                   <ul class="menu">
-                        <li><a href="{{route('getpacientes')}}">Pacientes</a></li>
+                        <li><a href="{{route('getpacientes')}}">Seguimiento</a></li>
                   </ul>
               </li>
               
@@ -46,17 +45,12 @@
               </li>
                             
                 <li>
-                    <a href="#">Vitalicia</a>
+                    <a href="#">Consultas</a>
                     <ul class="menu">
-                      <li><a href="#">Consultas</a>
-                            <ul class="menu">
-                                    <li><a href="{{route('getdatos')}}">Datos</a></li>
-                                    <li><a href="{{route('getusuarios')}}">Usuarios</a></li>
-                                    
-                            </ul>   
-                      </li>
-
-                    </ul>
+                        <li><a href="{{route('getdatos')}}">Datos</a></li>
+                        <li><a href="{{route('getusuarios')}}">Usuarios</a></li> 
+                        <li><a href="{{route('getpacientes')}}">Pacientes</a></li>
+                    </ul>   
                 </li>
               
               <li>
