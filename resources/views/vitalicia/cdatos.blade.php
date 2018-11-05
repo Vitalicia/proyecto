@@ -31,6 +31,7 @@
 
 <td>{{$datt->referencia}}</td>
 
-</td></tr>
+</tr>
 @endforeach
+</table>
 @stop
