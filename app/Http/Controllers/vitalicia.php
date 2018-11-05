@@ -327,20 +327,24 @@ class vitalicia extends Controller
         $valorg =  $request->valorg;
         $valorg1 = $request->valorg1;
         $valorg2= $request->valorg2;
-        $idvg = $request->idvg;
       
        
                
            
                 $ger = new geriatricos;
-                $ger->idgeriatricos = $request->input('idvgeriatricos');
-                $ger->valorg = $request->input('valorg');
-                $ger->valorg1 = $request->input('valorg1');
-                $ger->valorg2 = $request->input('valorg2');  
-                $ger->idvg= $request->input('idvg');
+                $ger->idgeriatricos = $request->idgeriatricos;
+                $ger->valorg = $request->valorg;
+                $ger->valorg1 = $request->valorg1;
+                $ger->valorg2 = $request->valorg2;  
+                $ger->idvg= $request->idvg;
                 $ger->save();
 
+<<<<<<< HEAD
                 return redirect()->route('paci');
+=======
+
+                return redirect()->route('home');
+>>>>>>> 65eafe6695de7b7ef0435106cd6e4bd46808827b
     } 
 
     public function rcuidador()
