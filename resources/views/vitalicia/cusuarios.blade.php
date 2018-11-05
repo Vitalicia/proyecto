@@ -3,7 +3,6 @@
 <h1>Usuarios</h1>
 @stop
 @section('complete')
-
 <form action = "{{route('getusuarios')}}" method = "POST">
         {{csrf_field()}}
  <div style="overflow-x:auto;">
