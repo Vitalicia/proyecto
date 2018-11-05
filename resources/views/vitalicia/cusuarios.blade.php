@@ -1,6 +1,6 @@
 @extends('vitalicia.principal')
 @section('encabezado')
-<h1>Consulta Pacientes</h1>
+<h1>Usuarios</h1>
 @stop
 @section('complete')
 
@@ -9,7 +9,7 @@
  <div style="overflow-x:auto;">
         
 
-<h1>Reporte de usuarios</h1>
+
 <br>
 <div style="overflow-x:auto;">
 <table border= 1>
@@ -17,7 +17,7 @@
 <td>Usuario</td>
 
 <td>Contraseña</td>
-<td>Turno</td>
+<td>Tipo</td>
 <td>Correo</td>
 
 
@@ -34,9 +34,8 @@
 
 
 
-</td></tr>
+</tr>
 @endforeach
 </table>
-</body>
-</html>
+@stop
 

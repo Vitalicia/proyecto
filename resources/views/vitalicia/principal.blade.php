@@ -42,6 +42,9 @@
               
               <li>
                 <a href="#">Familiares</a>
+                  <ul class="menu">
+                  <li><a href="{{route('getpacientes')}}">Pacientes</a></li>
+                  </ul>
               </li>
                             
                 <li>
@@ -54,11 +57,11 @@
                 </li>
               
               <li>
-                <a href="#">Iniciar Sesi&oacute;n</a>
+                <a href="{{route('usu')}}">Iniciar Sesi&oacute;n</a>
               </li>
                 
               <li>
-                <a href="#">Cerrar Sesi&oacute;n</a>
+                <a href="{{route('usu')}}">Cerrar Sesi&oacute;n</a>
               </li>
             </ul>
         </div>
