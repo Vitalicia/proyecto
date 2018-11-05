@@ -36,7 +36,7 @@
               <li>
                 <a href="#">Pacientes</a>
                   <ul class="menu">
-                        <li><a href="{{route('getpacientes')}}">Seguimiento</a></li>
+                        <li><a href="{{route('paci')}}">Seguimiento</a></li>
                   </ul>
               </li>
               
