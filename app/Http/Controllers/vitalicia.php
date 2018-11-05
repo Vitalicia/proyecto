@@ -339,12 +339,11 @@ class vitalicia extends Controller
                 $ger->idvg= $request->idvg;
                 $ger->save();
 
-<<<<<<< HEAD
-                return redirect()->route('paci');
-=======
 
-                return redirect()->route('home');
->>>>>>> 65eafe6695de7b7ef0435106cd6e4bd46808827b
+                return redirect()->route('paci');
+
+//                return redirect()->route('home');
+
     } 
 
     public function rcuidador()
