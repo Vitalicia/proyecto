@@ -10,7 +10,7 @@ Paciente
 </select>
 @stop
 
-@section('contenido3')
+@section('complete')
 <br>
 <br>
 <br>
