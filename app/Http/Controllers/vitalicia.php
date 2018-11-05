@@ -36,7 +36,7 @@ class vitalicia extends Controller
     } 
     
     //INICIO
-       public function pacientes()
+       public function spaciente()
     {
             return view ('vitalicia.pacientes');
     } 

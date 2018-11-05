@@ -3,7 +3,7 @@
 //RUTA PARA INICIO
 Route::get('/','vitalicia@home')->name('home');
 Route::get('/inicio','vitalicia@main')->name('main');
-Route::get('/pacientes','vitalicia@pacientes')->name('paci');
+Route::get('/spacientes','vitalicia@spaciente')->name('paci');
 
 //RUTA PAR LAS ALTAS
 Route::get('/registroUsuario','vitalicia@rUsuario')->name('rusu');
