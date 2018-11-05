@@ -23,44 +23,36 @@
         <div class="top-bar-right">
             <ul class="dropdown menu" data-dropdown-menu>
               <li>
-                <a href="{{route('home')}}">Inicio</a>
+                <a href="{{route('home')}}">Vitalicia</a>
               </li>
                 
               <li>
-                <a href="#">Acerca de Nosotros</a>
+                <a href="#">Usuarios</a>
+                    <ul class="menu">
+                        <li><a href="{{route('rusu')}}">Alta</a></li>
+                        <li><a href="{{route('getdatos')}}">Datos</a></li>
+                    </ul>
               </li>
-                
+              
               <li>
-                <a href="#">Galer&iacute;a</a>
+                <a href="#">Pacientes</a>
+                  <ul class="menu">
+                        <li><a href="{{route('getpacientes')}}">Pacientes</a></li>
+                  </ul>
               </li>
-                
+              
               <li>
-                <a href="#">Contacto</a>
+                <a href="#">Familiares</a>
               </li>
-            
+                            
                 <li>
                     <a href="#">Vitalicia</a>
                     <ul class="menu">
-                      <li><a href="#">Usuarios</a>
-                            <ul class="menu">
-                                   <li><a href="{{route('rusu')}}">Alta</a></li>
-                                    <li><a href="#">Modificaciones</a></li> 
-                                    <!--li><a href="">Modificaci&oacute;n</a></li-->
-                            </ul>   
-                      </li>
-
-                      <li><a href="#">Pacientes</a>
-                            <ul class="menu">
-                                   <li><a href="#">Registro</a></li>
-                                   <li><a href="#">Consulta</a></li>
-                            </ul>   
-                      </li>
-
                       <li><a href="#">Consultas</a>
                             <ul class="menu">
                                     <li><a href="{{route('getdatos')}}">Datos</a></li>
                                     <li><a href="{{route('getusuarios')}}">Usuarios</a></li>
-                                    <li><a href="{{route('getpacientes')}}">Pacientes</a></li>
+                                    
                             </ul>   
                       </li>
 

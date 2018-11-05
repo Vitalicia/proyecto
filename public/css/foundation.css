@@ -2247,7 +2247,8 @@ select {
   .callout > :last-child {
     margin-bottom: 0; }
   .callout.primary {
-    background-color: #d7ecfa;
+    background: #fefefe;
+    background-color: #fefefe;
     color: #0a0a0a; }
   .callout.secondary {
     background-color: #eaeaea;
@@ -2490,7 +2491,7 @@ select {
     content: '';
     border-right-width: 0;
     border-left-style: solid;
-    border-color: transparent transparent transparent #1779ba;
+    border-color: transparent transparent transparent #fefefe;
     position: absolute;
     top: 50%;
     margin-top: -6px;
@@ -2504,7 +2505,7 @@ select {
   content: '';
   border-left-width: 0;
   border-right-style: solid;
-  border-color: transparent #1779ba transparent transparent;
+  border-color: transparent #fefefe transparent transparent;
   border-left-width: 0;
   display: inline-block;
   vertical-align: middle;
@@ -2598,7 +2599,7 @@ select {
   content: '';
   border-right-width: 0;
   border-left-style: solid;
-  border-color: transparent transparent transparent #1779ba; }
+  border-color: transparent transparent transparent #fefefe; }
 
 @media print, screen and (min-width: 40em) {
   .dropdown.menu.medium-horizontal > li.opens-left > .is-dropdown-submenu {
@@ -2693,7 +2694,7 @@ select {
     content: '';
     border-left-width: 0;
     border-right-style: solid;
-    border-color: transparent #1779ba transparent transparent; }
+    border-color: transparent #fefefe transparent transparent; }
   .dropdown.menu.large-vertical > li.opens-right > a::after {
     display: block;
     width: 0;
@@ -3645,7 +3646,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   transition: all 0.5s ease; }
 
 .tabs-content.vertical {
-  border: 1px solid #e6e6e6;
+  border: 1px solid #fefefe;
   border-left: 0; }
 
 .tabs-panel {
