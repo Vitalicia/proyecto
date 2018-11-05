@@ -61,7 +61,7 @@
               </li>
                 
               <li>
-                <a href="{{route('usu')}}">Cerrar Sesi&oacute;n</a>
+                <!--a href="#">Cerrar Sesi&oacute;n</a-->
               </li>
             </ul>
         </div>
