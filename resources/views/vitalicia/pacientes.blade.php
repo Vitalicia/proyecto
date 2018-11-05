@@ -3,11 +3,7 @@
 <h2>Datos de Pacientes</h2>
 @stop
 @section('contenido')
-        
-Paciente
-<select>
 
-</select>
 @stop
 
 @section('complete')
@@ -15,16 +11,19 @@ Paciente
 <br>
 <br>
 <br>
-<a href="{{route('home')}}"><input class="button" value="Datos"></a> 
-<a href="{{route('home')}}"><input class="button" value="Medicamentos"></a> 
-<a href="{{route('home')}}"><input class="button" value="Datos"></a>
-<a href="{{route('home')}}"><input class="button" value="Datos"></a>
-<a href="{{route('home')}}"><input class="button" value="Datos"></a>
-<a href="{{route('home')}}"><input class="button" value="Datos"></a>
+<div align="center">
+<a href="{{route('rmed')}}"><input class="button" value="Medicamentos"></a> 
+<a href="{{route('rali')}}"><input class="button" value="Alimentos"></a> 
+<a href="{{route('rger')}}"><input class="button" value="Geriatricos"></a>
+<a href="{{route('rcui')}}"><input class="button" value="Cuidador"></a>
+<a href="{{route('rsig')}}"><input class="button" value="Signos"></a>
+</div>
 
 
 <br>
 
+<br>
+<br>
 <br>
 <br>
 <br>

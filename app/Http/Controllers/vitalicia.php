@@ -222,7 +222,7 @@ class vitalicia extends Controller
 
 
               
-                return redirect()->route('home');
+                return redirect()->route('paci');
     } 
 
     public function ralimentacion()
@@ -280,7 +280,7 @@ class vitalicia extends Controller
 
 
               
-                return redirect()->route('home');
+                return redirect()->route('paci');
     } 
     public function getdatos()
 
@@ -340,7 +340,7 @@ class vitalicia extends Controller
                 $ger->idvg= $request->input('idvg');
                 $ger->save();
 
-                return redirect()->route('home');
+                return redirect()->route('paci');
     } 
 
     public function rcuidador()
@@ -396,7 +396,7 @@ class vitalicia extends Controller
 
 
               
-                return redirect()->route('home');
+                return redirect()->route('paci');
     } 
 
     public function rsignos()
@@ -460,7 +460,7 @@ class vitalicia extends Controller
 
 
               
-                return redirect()->route('home');
+                return redirect()->route('paci');
     } 
    
     public function getpacientes()
