@@ -14,7 +14,7 @@
     <div class="top-bar">
       <div class="row">
         <div class="top-bar-left">
-	       <a class="navbar-brand" href="{{route('home')}}"><img src="vitalicia.jpg" width="100" height="100" alt="Vitalicia"></a>  
+	       <a class="navbar-brand" href="{{route('home')}}"><img src="vitalicia.jpg" width="200" height="200" alt="Vitalicia"></a>  
         </div>
           
 
