@@ -483,5 +483,16 @@ class vitalicia extends Controller
   $usuariosd = usuarios::withTrashed()->orderBy('idu','asc')->get();
   return view ('vitalicia.cusuarios')
   ->with('usuariosd',$usuariosd);
-}
+   }
+    
+    
+        //Catalogo alta de medicamentos
+       public function cmedicamentos()
+    {
+            return view ('vitalicia.amedicamentos');
+    } 
+    
+    
+    
+    
 }

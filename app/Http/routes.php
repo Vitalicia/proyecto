@@ -59,3 +59,11 @@ Route::get('/cpacientes','vitalicia@getpacientes')->name('getpacientes');
 
 //consulta usuarios
 Route::get('/cusuarios','vitalicia@getusuarios')->name('getusuarios');
+
+//Catalogo de alta de Medicamentos
+Route::get('/altaMedicamentos','vitalicia@cmedicamentos')->name('cmedicamentos');
+
+
+
+
+
