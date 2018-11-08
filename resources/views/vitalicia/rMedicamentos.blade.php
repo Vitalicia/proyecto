@@ -10,11 +10,10 @@
           
 
             Medicamento
-
-            @if($errors->first('nombre')) 
-               <br>{!! $errors->first('nombre','<span class=error>:message</span>')!!}
-          @endif  
-                <input type="text" name="nombre" value="{{old('nombre')}}">
+            
+            <select></select>  
+                
+            <!--input type="text" name="nombre" value="#"-->
                 
 
             Indicación 
@@ -35,7 +34,7 @@
             @endif
                 <input type="text" name="terminotx" value="{{old('terminotx')}}">
 
-                Horario<select name = 'idh'>
+            Horario<select name = 'idh'>
             @foreach($horarios as $hr)
             <option value = '{{$hr->idh}}'>{{$hr->tipohorario}}</option>
             @endforeach

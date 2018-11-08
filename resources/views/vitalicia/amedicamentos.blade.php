@@ -6,7 +6,7 @@
         <form action="#" method = "POST" enctype="multipart/form-data" >
             {{csrf_field()}}
             <!--Clave--> 
-                <input type="text" name='idmedicamento' value="" readonly= 'readonly' style='visibility:hidden'>
+                <input type="text" name='idamedicamento' value="" readonly= 'readonly' style='visibility:hidden'>
             Nombre de Medicamento
 
             @if($errors->first('nmedica')) 
@@ -15,24 +15,18 @@
                 <input type="text" name="nmedica" value="{{old('nmedica')}}">       
 
             Tipo de indicación 
-            @if($errors->first('indicacion')) 
+            @if($errors->first('mindicacion')) 
             <br>{!! $errors->first('indicacion','<span class=error>:message</span>')!!}
             @endif  
-                <input type="text" name="indicacion" value="{{old('indicacion')}}">
+                <input type="text" name="mindicacion" value="{{old('mindicacion')}}">
             
             
             Presentación
-            @if($errors->first('presen')) 
-            <br>{!! $errors->first('presen','<span class=error>:message</span>')!!}
+            @if($errors->first('mpresen')) 
+            <br>{!! $errors->first('mpresen','<span class=error>:message</span>')!!}
             @endif
-                <input type="text" name="presen" value="{{old('presen')}}">
+                <input type="text" name="mpresen" value="{{old('mpresen')}}">
                 
-            Termino TX (Tipo Enfermedad)
-            @if($errors->first('terminotx')) 
-            <br>{!! $errors->first('terminotx','<span class=error>:message</span>')!!}
-            @endif
-                <input type="text" name="terminotx" value="{{old('terminotx')}}">
-
             <input type="submit" class="button" value="Guardar">
             </form>
 @stop
