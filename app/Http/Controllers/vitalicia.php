@@ -18,7 +18,7 @@ use App\cuidadores;
 use App\turnos;
 use App\signos;
 use App\pacientes;
-
+use App\amedicamentos;
 
 
 class vitalicia extends Controller

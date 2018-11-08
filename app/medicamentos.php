@@ -9,5 +9,5 @@ class medicamentos extends Model
 {
     use SoftDeletes;
     protected $primaryKey ='idmedicamento';
-    protected $fillable = ['idmedicamento','nombre','indicacion','presen','terminotx','idh'];
+    protected $fillable = ['idmedicamento','nombre','indicacion','presen','terminotx','idh','idamedicamento'];
 }
