@@ -5,8 +5,8 @@
 @section('contenido')
         <form action="{{route('gume')}}" method = "POST" enctype="multipart/form-data" >
             {{csrf_field()}}
-            Clave 
-                <input type="text" name='idmedicamento' value="{{$iddm}}" readonly= 'readonly' >
+            <!--Clave--> 
+                <input type="text" name='idmedicamento' value="{{$iddm}}" readonly= 'readonly' style='visibility:hidden'>
           
 
             Medicamento
@@ -16,8 +16,6 @@
           @endif  
                 <input type="text" name="nombre" value="{{old('nombre')}}">
                 
-                   
-
 
             Indicación 
             @if($errors->first('indicacion')) 

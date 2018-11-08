@@ -42,8 +42,6 @@ Route::POST('/guardacuidador', 'vitalicia@guardacuidador')->name('guacui');
 Route::POST('/guardasignos', 'vitalicia@guardasignos')->name('guasi');
 
 
-
-
 //GUARDA DATOS DE USUARIO
 Route::POST('/guardausuario', 'vitalicia@guardausuario')->name('gusu');
 
