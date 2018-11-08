@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/foundation.min.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="shortcut icon" href="/images/favicon.ico">  
+    <link rel="shortcut icon" href="favicon.ico">  
   </head>
   <body>
     
     <div class="top-bar">
       <div class="row">
         <div class="top-bar-left">
-	       <a class="navbar-brand" href="{{route('home')}}"><img src="/images/vitalicia.jpg"  alt="Vitalicia"></a>  
+	       <a class="navbar-brand" href="{{route('home')}}"><img src="vitalicia.jpg" width="200" height="200" alt="Vitalicia"></a>  
         </div>
           
 
