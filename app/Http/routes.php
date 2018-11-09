@@ -29,6 +29,9 @@ Route::get('/cPaciente','vitalicia@cPaciente')->name('cpac');
 //GUARDA DATOS DEL MEDICAMENTO
 Route::POST('/guardamedicamento', 'vitalicia@guardamedicamento')->name('gume');
 
+//GUARDA DATOS DE ALTA DE MEDICAMENTO
+Route::POST('/gmedicamento', 'vitalicia@gmedicamento')->name('gamedi');
+
 //GUARDA DATOS DEL ALIMENTO
 Route::POST('/guardalimento', 'vitalicia@guardalimento')->name('guali');
 

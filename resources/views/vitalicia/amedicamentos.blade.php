@@ -3,7 +3,7 @@
 <h3>NUEVO MEDICAMENTO PARA PACIENTES</h3>
 @stop
 @section('contenido')
-        <form action="#" method = "POST" enctype="multipart/form-data" >
+        <form action="{{route('gamedi')}}" method = "POST" enctype="multipart/form-data" >
             {{csrf_field()}}
             <!--Clave--> 
                 <input type="text" name='idamedicamento' value="" readonly= 'readonly' style='visibility:hidden'>

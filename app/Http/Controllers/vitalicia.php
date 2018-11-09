@@ -492,6 +492,33 @@ class vitalicia extends Controller
             return view ('vitalicia.amedicamentos');
     } 
     
+    //falta generar combo de medicamentos
+    public function gmedicamento(Request $request)
+    {   
+             // $request->all(); //Procesa los datos del formulario
+
+        $nmedica =  $request->nombre;
+        $mindicacion = $request->indicacion;
+        $mpresen= $request->presen;
+        $idamedicamento = $request->idamedicamento;
+        
+               
+           $this->validate($request,[
+                'nmdeica'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'mindicacion'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'mpresen'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/']
+         ]);
+                $amed = new amedicamentos;
+                $amed->idamedicamento = $request->idamedicamento;
+                $amed->nmdica = $request->nombre;
+                $amed->mindicacion = $request->indicacion;
+                $amed->mpresen = $request->presen;    
+                $amed->save();
+
+
+              
+                return redirect()->route('paci');
+    } 
     
     
     
