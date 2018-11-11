@@ -209,15 +209,10 @@ class vitalicia extends Controller
 
     public function guardamedicamento(Request $request)
     {   
-             // $request->all(); //Procesa los datos del formulario
+              $request->all(); //Procesa los datos del formulario
 
         
-        $idamedicamento =  $request->idamedicamento;
-        $indicacion = $request->indicacion;
-        $presen= $request->presen;
-        $idmedicamento = $request->idmedicamento;
-        $terminotx= $request->terminotx;
-        $idh= $request->idh;
+
         
                
            $this->validate($request,[
