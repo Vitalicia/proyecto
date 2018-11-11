@@ -212,7 +212,7 @@ class vitalicia extends Controller
              // $request->all(); //Procesa los datos del formulario
 
         
-        $medica =  $request->medica;
+        $idamedicamento =  $request->idamedicamento;
         $indicacion = $request->indicacion;
         $presen= $request->presen;
         $idmedicamento = $request->idmedicamento;
@@ -229,7 +229,7 @@ class vitalicia extends Controller
                 $med->presen = $request->presen;
                 $med->terminotx = $request->terminotx;
                 $med->idh = $request->idh;
-                $med->idamedicamento = $request->medica;
+                $med->idamedicamento = $request->idamedicamento;
                 $med->save();
 
 
