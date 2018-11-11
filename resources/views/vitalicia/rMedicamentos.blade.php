@@ -9,11 +9,11 @@
                 <input type="text" name='idmedicamento' value="{{$iddm}}" readonly= 'readonly' style='visibility:hidden'>
           
 
-            Medicamento
-            
-            <select></select>  
-                
-            <!--input type="text" name="nombre" value="#"-->
+            Medicamento<select name = 'idamed'>
+            @foreach($amedicamentos as $amed)
+            <option value = '{{$amed->idamedicamento}}'>{{$amed->nmedica}}</option>
+            @endforeach
+                  </select>
                 
 
             Indicación 

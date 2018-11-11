@@ -187,11 +187,16 @@ class vitalicia extends Controller
         $horarios = horarios::withTrashed()->orderBy('tipohorario','asc')
                         
                           ->get();
+        
+        $amedicamentos = amedicamentos::withTrashed()->orderBy('nmedica','asc')
+                        
+                          ->get();
             
         //return $carreras;
         return view ('vitalicia.rMedicamentos')
                     ->with('iddm',$iddm)
-                    ->with('horarios',$horarios);
+                    ->with('horarios',$horarios)
+                    ->with('amedicamentos',$amedicamentos);
     } 
 
     public function guardamedicamento(Request $request)
