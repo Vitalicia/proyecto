@@ -9,7 +9,7 @@
                 <input type="text" name='idmedicamento' value="{{$iddm}}" readonly= 'readonly' style='visibility:hidden'>
           
 
-            Medicamento<select name = 'idamed'>
+            Medicamento<select name = 'medica'>
             @foreach($amedicamentos as $amed)
             <option value = '{{$amed->idamedicamento}}'>{{$amed->nmedica}}</option>
             @endforeach
@@ -26,7 +26,22 @@
             @if($errors->first('presen')) 
             <br>{!! $errors->first('presen','<span class=error>:message</span>')!!}
             @endif
-                <input type="text" name="presen" value="{{old('presen')}}">
+                <select name="presen">
+                  <option name="presen" value="Solida">Solida</option>
+                  <option name="presen" value="Polvos">Polvos</option>
+                  <option name="presen" value="Capsulas">Capsulas o Comprimidos</option>
+                  <option name="presen" value="Tabletas">Tabletas</option>
+                  <option name="presen" value="Pildoras">Pildoras</option>
+                  <option name="presen" value="Grageas">Grageas</option>
+                  <option name="presen" value="Supositorios">Supositorios</option>
+                  <option name="presen" value="Óvulos">Óvulos</option>
+                  <option name="presen" value="Pomada">Pomada</option>
+                  <option name="presen" value="Crema">Crema</option>
+                  <option name="presen" value="Líquida">Líquida</option>
+                  <option name="presen" value="Soluciones">Soluciones</option>
+                  <option name="presen" value="Jarabe">Jarabe</option>
+                  <option name="presen" value="Enemas">Enemas</option>
+                </select>
                 
             Terminotx
             @if($errors->first('terminotx')) 

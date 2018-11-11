@@ -198,6 +198,7 @@ class vitalicia extends Controller
         $amedicamentos = amedicamentos::withTrashed()->orderBy('nmedica','asc')
                         
                           ->get();
+        
             
         //return $carreras;
         return view ('vitalicia.rMedicamentos')
@@ -210,31 +211,30 @@ class vitalicia extends Controller
     {   
              // $request->all(); //Procesa los datos del formulario
 
-        $nombre =  $request->nombre;
+        
+        $medica =  $request->medica;
         $indicacion = $request->indicacion;
         $presen= $request->presen;
         $idmedicamento = $request->idmedicamento;
         $terminotx= $request->terminotx;
+        $idh= $request->idh;
+        
                
            $this->validate($request,[
-                'nombre'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
                 'terminotx'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
-                'indicacion'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
-                'presen'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
-                'horario'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/']
+                'indicacion'=> ['regex:/^[0-9]{1}[A-Z,a-z, , ñ,á,é,í,ó,ú]+$/']
          ]);
                 $med = new medicamentos;
-                $med->idmedicamento = $request->idmedicamento;
-                $med->nombre = $request->nombre;
                 $med->indicacion = $request->indicacion;
-                $med->presen = $request->presen;    
+                $med->presen = $request->presen;
                 $med->terminotx = $request->terminotx;
-                $med->idh= $request->idh;
+                $med->idh = $request->idh;
+                $med->idamedicamento = $request->medica;
                 $med->save();
 
 
               
-                return redirect()->route('paci');
+                return redirect()->route('confirmacion');
     } 
 
     public function ralimentacion()
@@ -530,14 +530,11 @@ class vitalicia extends Controller
 
         $idamedicamento = $request->idamedicamento;
         $nmedica =  $request->nmedica;
-        $mindicacion = $request->mindicacion;
         $mpresen= $request->mpresen;
         
         $this->validate($request,[
                 'nmedica'=> ['regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
                 'nmedica'=> 'required',
-                'mindicacion'=> ['regex:/^[0-9]{1}[A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
-                'mindicacion'=> 'required',
                 'mpresen'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
                 'mpresen'=> 'required'
          ]);
@@ -546,7 +543,6 @@ class vitalicia extends Controller
                 $amed = new amedicamentos;
                 $amed->idamedicamento = $request->idamedicamento;
                 $amed->nmedica = $request->nmedica;
-                $amed->mindicacion = $request->mindicacion;
                 $amed->mpresen = $request->mpresen;    
                 $amed->save();
 
