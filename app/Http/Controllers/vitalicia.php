@@ -55,7 +55,16 @@ class vitalicia extends Controller
         $clavequesigue = datos::withTrashed()->orderBy('idd','desc')
                                             ->take(1)
                                             ->get();
-        $idds= $clavequesigue[0]->idd+1;
+            if (count($clavequesigue)==0)
+            {
+                    $idds = 1;
+            }
+            else
+            {
+            $idus= $clavequesigue[0]->idd+1;
+            }
+        
+        
             
         //return $carreras;
         return view ('vitalicia.rUsuario')
@@ -500,7 +509,7 @@ class vitalicia extends Controller
 
                                             if (count($cmedicalta)==0)
                                             {
-                                                    $iddm = 1;
+                                                    $idamedica = 1;
                                             }
                                             else
                                             {
