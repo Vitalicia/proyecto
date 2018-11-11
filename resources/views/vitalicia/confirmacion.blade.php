@@ -39,9 +39,9 @@
     <div class="row large-8" align="center">
     <br>
     <br>
-        <a><img src="ok.jpg" width="400" height="200" alt="Vitalicia"></a>  
+        <img src="ok.jpg" width="400" height="200" alt="Vitalicia">
         <H2>DATOS GUARDADOS EXITOSAMENTE</H2>
-    <br>
+        <a href="{{route('home')}}"><input class="button" value="Continuar"></a>
     <br>
     <br>
     </div>

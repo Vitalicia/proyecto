@@ -552,7 +552,7 @@ class vitalicia extends Controller
 
 
               
-                return redirect()->route('paci');
+                return redirect()->route('confirmacion');
     } 
     
     

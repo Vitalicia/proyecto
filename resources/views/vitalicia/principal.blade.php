@@ -27,11 +27,16 @@
               </li>    
                 
               <li>
+                <a href="{{route('cmedicamentos')}}">Nuevo Medicamento</a>
+              </li>    
+                
+              <li>
                 <a href="#">Usuarios</a>
                     <ul class="menu">
                         <li><a href="{{route('rusu')}}">Alta</a></li>
                     </ul>
               </li>
+                
               
               <li>
                 <a href="#">Pacientes</a>
