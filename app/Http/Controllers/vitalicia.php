@@ -159,7 +159,7 @@ class vitalicia extends Controller
                 $dat->save();
 
 
-                return redirect()->route('home');
+                return redirect()->route('confirmacion');
     } 
     
       public function gusuario(Request $request)
@@ -180,7 +180,7 @@ class vitalicia extends Controller
                 $usu->save();
 
 
-                return redirect()->route('home');
+                return redirect()->route('confirmacion');
     }     
 
     public function rmedicamento()
@@ -289,7 +289,7 @@ class vitalicia extends Controller
 
 
               
-                return redirect()->route('paci');
+                return redirect()->route('confirmacion');
     } 
     public function getdatos()
 
@@ -349,7 +349,7 @@ class vitalicia extends Controller
                 $ger->save();
 
 
-                return redirect()->route('paci');
+                return redirect()->route('confirmacion');
 
 //                return redirect()->route('home');
 
@@ -408,7 +408,7 @@ class vitalicia extends Controller
 
 
               
-                return redirect()->route('paci');
+                return redirect()->route('confirmacion');
     } 
 
     public function rsignos()
@@ -472,7 +472,7 @@ class vitalicia extends Controller
 
 
               
-                return redirect()->route('paci');
+                return redirect()->route('confirmacion');
     } 
    
     public function getpacientes()
