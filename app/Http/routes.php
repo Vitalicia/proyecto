@@ -4,6 +4,7 @@
 Route::get('/','vitalicia@home')->name('home');
 Route::get('/inicio','vitalicia@main')->name('main');
 Route::get('/spacientes','vitalicia@spaciente')->name('paci');
+Route::get('/confirmacion','vitalicia@confirmacion')->name('confirmacion'); // Confirma el guardado de los datos
 
 //RUTA PAR LAS ALTAS
 Route::get('/registroUsuario','vitalicia@rUsuario')->name('rusu');

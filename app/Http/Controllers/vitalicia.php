@@ -35,6 +35,13 @@ class vitalicia extends Controller
             return view ('vitalicia.main');
     } 
     
+        //INICIO
+       public function confirmacion()
+    {
+            return view ('vitalicia.confirmacion');
+    }
+    
+    
     //INICIO
        public function spaciente()
     {
