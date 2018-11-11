@@ -486,33 +486,56 @@ class vitalicia extends Controller
    }
     
     
-        //Catalogo alta de medicamentos
+  
+            
+    
+    
+      //Catalogo alta de medicamentos
        public function cmedicamentos()
     {
-            return view ('vitalicia.amedicamentos');
+        //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
+        $cmedicalta =amedicamentos::withTrashed()->orderBy('idamedicamento','desc')
+                                            ->take(1)
+                                            ->get();
+
+                                            if (count($cmedicalta)==0)
+                                            {
+                                                    $iddm = 1;
+                                            }
+                                            else
+                                            {
+                                       $idamedica = $cmedicalta[0]->idamedicamento+1;
+                                        }
+    
+
+             return view ('vitalicia.amedicamentos')
+                    ->with('idamedica',$idamedica);
     } 
     
-    //falta generar combo de medicamentos
     public function gmedicamento(Request $request)
     {   
              // $request->all(); //Procesa los datos del formulario
 
-        $nmedica =  $request->nombre;
-        $mindicacion = $request->indicacion;
-        $mpresen= $request->presen;
         $idamedicamento = $request->idamedicamento;
+        $nmedica =  $request->nmedica;
+        $mindicacion = $request->mindicacion;
+        $mpresen= $request->mpresen;
         
-               
-           $this->validate($request,[
-                'nmdeica'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
-                'mindicacion'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
-                'mpresen'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/']
+        $this->validate($request,[
+                'nmedica'=> ['regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
+                'nmedica'=> 'required',
+                'mindicacion'=> ['regex:/^[0-9]{1}[A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'mindicacion'=> 'required',
+                'mpresen'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'mpresen'=> 'required'
          ]);
+               
+
                 $amed = new amedicamentos;
                 $amed->idamedicamento = $request->idamedicamento;
-                $amed->nmdica = $request->nombre;
-                $amed->mindicacion = $request->indicacion;
-                $amed->mpresen = $request->presen;    
+                $amed->nmedica = $request->nmedica;
+                $amed->mindicacion = $request->mindicacion;
+                $amed->mpresen = $request->mpresen;    
                 $amed->save();
 
 

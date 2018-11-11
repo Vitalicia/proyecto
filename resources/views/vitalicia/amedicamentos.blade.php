@@ -6,7 +6,7 @@
         <form action="{{route('gamedi')}}" method = "POST" enctype="multipart/form-data" >
             {{csrf_field()}}
             <!--Clave--> 
-                <input type="text" name='idamedicamento' value="" readonly= 'readonly' style='visibility:hidden'>
+                <input type="text" name='idamedicamento' value="{{$idamedica}}" readonly= 'readonly' style='visibility:hidden' >
             Nombre de Medicamento
 
             @if($errors->first('nmedica')) 
@@ -16,7 +16,7 @@
 
             Tipo de indicación 
             @if($errors->first('mindicacion')) 
-            <br>{!! $errors->first('indicacion','<span class=error>:message</span>')!!}
+            <br>{!! $errors->first('mindicacion','<span class=error>:message</span>')!!}
             @endif  
                 <input type="text" name="mindicacion" value="{{old('mindicacion')}}">
             
