@@ -13,9 +13,8 @@ class Usuarios extends Migration
                         $table->increments('idu');
                         $table->string('usuario',40);
                         $table->string('contrasena',20);
-                        $table->integer('idd')->unsigned();
+                        $table->string('correo',40);
                         $table->integer('idt')->unsigned();
-                        $table->foreign('idd')->references('idd')->on('datos');
                         $table->foreign('idt')->references('idt')->on('tipos');
             
                         $table->rememberToken();

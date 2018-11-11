@@ -16,7 +16,9 @@ class Medicamentos extends Migration
                         $table->string('presen',40);
                         $table->string('terminotx',40);
                         $table->integer('idh')->unsigned();
+                        $table->integer('idamedicamento')->unsigned();
                         $table->foreign('idh')->references('idh')->on('horarios');
+                        $table->foreign('idamedicamento')->references('idamedicamento')->on('amedicamentos');
             
                         $table->rememberToken();
                         $table->timestamps();

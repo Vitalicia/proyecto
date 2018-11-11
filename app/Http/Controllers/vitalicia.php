@@ -211,20 +211,13 @@ class vitalicia extends Controller
     {   
               $request->all(); //Procesa los datos del formulario
 
-        
 
-        
-               
-           $this->validate($request,[
-                'terminotx'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
-                'indicacion'=> ['regex:/^[0-9]{1}[A-Z,a-z, , ñ,á,é,í,ó,ú]+$/']
-         ]);
                 $med = new medicamentos;
                 $med->indicacion = $request->indicacion;
                 $med->presen = $request->presen;
                 $med->terminotx = $request->terminotx;
                 $med->idh = $request->idh;
-                $med->idamedicamento = $request->idamedicamento;
+                $med->idamedicamento = $request->medicam;
                 $med->save();
 
 

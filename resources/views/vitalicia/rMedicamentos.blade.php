@@ -9,7 +9,7 @@
                 <input type="text" name='idmedicamento' value="{{$iddm}}" readonly= 'readonly' style='visibility:hidden'>
           
 
-            Medicamento<select name = 'idamedicamento'>
+            Medicamento<select name = 'medicam'>
             @foreach($amedicamentos as $amed)
             <option value = '{{$amed->idamedicamento}}'>{{$amed->nmedica}}</option>
             @endforeach

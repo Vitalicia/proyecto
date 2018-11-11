@@ -13,8 +13,8 @@ class Cuidadores extends Migration
                         $table->increments('idcuidador');
                         $table->time('horaentrada');
                         $table->time('horasalida');
-                        $table->integer('idd')->unsigned();
-                        $table->foreign('idd')->references('idd')->on('datos');
+                        $table->integer('idt')->unsigned();
+                        $table->foreign('idt')->references('idt')->on('tipos');
             
                         $table->rememberToken();
                         $table->timestamps();
