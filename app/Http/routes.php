@@ -21,6 +21,9 @@ Route::get('/bajaUsuario','vitalicia@bUsuario')->name('busu');
 //RUTAS PARAS LAS MODIFICACIONES
 Route::get('/modUsuario','vitalicia@mUsuario')->name('musu');
 
+Route::get('/modificadat/{idd}','curso@modificadat')->name('modificadat'); //modificar el registro de datos 
+Route::POST('/guardamodificadat','curso@guardamodificadat')->name('guardamodificadat'); // guardar la modificacion de datos
+
 
 //RUTAS PARA REGISTRO DE PACIENTE Y CONSULTAS
 Route::get('/rPaciente','vitalicia@rPaciente')->name('rpac');

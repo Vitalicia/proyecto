@@ -300,6 +300,74 @@ class vitalicia extends Controller
    
    }
 
+   public function modificadat($idd)
+	{
+		$datos = datos::where('idd','=',$idd)
+		                     ->get();
+	
+		return view ('vitalicia.modificadatos')
+		->with('datos',$datos[0]);
+        }
+        
+    public function guardamodificadat(Request $request)
+	{
+        $idd =  $request->idd;
+        $nombre = $request->nombre;
+        $ap = $request->ap;
+        $am = $request->am;
+        $edad = $request->edad;
+	$telefono = $request->telefono;
+        $calle = $request->calle;
+        $numero = $request->numero;
+        $calle1 = $request->calle1;
+        $calle2 = $request->calle2;
+        $colonia = $request->colonia;
+        $municipio = $request->municipio;
+        $ciudad = $request->ciudad;
+        $cp = $request->cp;
+        $referencia = $request->referencia;
+      
+        
+        
+        
+		 $this->validate($request,[
+         'nombre'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+         'edad'=>'required|integer|min:18',
+		 'cp'=>['regex:/^[0-9]{5}$/'],
+		 'beca'=>['regex:/^[0-9]+[.][0-9]{2}$/'],
+		 'archivo'=>'image|mimes:jpeg,png,gif'
+	     ]);
+		  
+	        $dat = datos::find($idd);
+	        $dato->idd = $request->idd;
+		$dato->nombre = $request->nombre;
+		$dato->ap =$request->ap;
+		$dato->am= $request->am;
+                $dato->edad=$request->edad;
+                $dato->telefono=$request->telefono;
+                $dato->calle=$request->calle;
+                $dato->numero=$request->numero;
+                $dato->calle1=$request->calle1;
+                $dato->calle2=$request->calle2;
+                $dato->colonia=$request->colonia;
+                $dato->municipio=$request->municipio;
+                $dato->ciudad=$request->ciudad;
+                $dato->cp=$request->cp;
+                $dato->referencia=$request->referencia;
+                $dato->save();
+                        
+                       /* $proceso = "MODIFICA MAESTRO";
+			$mensaje = "REgistro ha sido modificado correctamente";
+			->with('proceso',$proceso)
+			->with('mensaje',$mensaje);*/
+	 
+	 
+	 
+	 
+	 
+		 echo "Listo para modificar";
+	}
+
    public function rgeriatrico()
     {
         //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
