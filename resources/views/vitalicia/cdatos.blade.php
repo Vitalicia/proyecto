@@ -6,12 +6,11 @@
 
         <div style="overflow-x:auto;">
 <table border= 1>
-<tr><td>ID</td><td>Nombre</td><td>Apellido Paterno</td>
-<td>Apellido materno</td><td>Edad</td><td>Telefono</td>
-<td>Calle</td><td>Numero</td><td>Calle1</td><td>Calle2</td>
-<td>Colonia</td><td>Municipio</td><td>Ciudad</td><td>Cp</td>
-<td>Referencia</td>
-<td>Operaciones</td>
+<tr><td>ID</td><td>Nombre</td><td>Imagen</td>
+<td>Apellido Paterno</td><td>Apellido materno</td><td>Edad</td>
+<td>Telefono</td><td>Calle</td><td>Numero</td><td>Calle1</td>
+<td>Calle2</td><td>Colonia</td><td>Municipio</td><td>Ciudad</td>
+<td>Cp</td><td>Referencia</td><td>Operaciones</td>
 
 @foreach($datosd as $datt)
 
@@ -31,6 +30,9 @@
 <td>{{$datt->ciudad}}</td>
 <td>{{$datt->cp}}</td>
 <td>{{$datt->referencia}}</td>
+<td><img src = "{{asset('archivos/'.$datt->archivo)}}"
+        height =50 width=50>
+    </td>
 
 <td>
 
