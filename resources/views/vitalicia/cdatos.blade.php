@@ -39,8 +39,8 @@
 	</a> -->
    <a href="{{URL::action('curso@modificadat',['idd'=>$datt->idd])}}"> 
    Modificar</a>
-@else
-	<!-- <a href="{{URL::action('curso@restauradat',['idd'=>$datt>idd])}}"> 
+	<!-- @else
+    <a href="{{URL::action('curso@restauradat',['idd'=>$datt>idd])}}"> 
 	Restaurar  
 	</a> 
     <a href="{{URL::action('curso@efisicadat',['idm'=>$datt->idd])}}"> 
