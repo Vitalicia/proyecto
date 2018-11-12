@@ -3,8 +3,7 @@
 <h1>Consulta de datos</h1>
 @stop
 @section('complete')
-<form action = "{{route('getdatos')}}" method = "POST">
-        {{csrf_field()}}
+
         <div style="overflow-x:auto;">
 <table border= 1>
 <tr><td>ID</td><td>Nombre</td><td>Apellido Paterno</td>
