@@ -6,7 +6,7 @@
         <form action="{{route('guardamodificadat')}}" method = "POST" enctype="multipart/form-data" >
             {{csrf_field()}}
             Clave 
-                <input type="text" name='idd' value="{{$idds}}" readonly= 'readonly' >
+                <input type="text" name='idd' value="{{$idd}}" readonly= 'readonly' >
             
             Nombre
             <br>{!! $errors->first('nombre','<span class=error>:message</span>')!!}
