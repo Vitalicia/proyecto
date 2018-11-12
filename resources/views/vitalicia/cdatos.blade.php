@@ -34,18 +34,18 @@
 
 <td>
 @if($datt->deleted_at=="")
-   <a href="{{URL::action('curso@eliminadat',['idd'=>$datt->idd])}}"> 
+   <!--<a href="{{URL::action('curso@eliminadat',['idd'=>$datt->idd])}}"> 
 	Inhabilitar 
-	</a> 
+	</a> -->
    <a href="{{URL::action('curso@modificadat',['idd'=>$datt->idd])}}"> 
    Modificar</a>
 @else
-	 <a href="{{URL::action('curso@restauradat',['idd'=>$datt>idd])}}"> 
+	<!-- <a href="{{URL::action('curso@restauradat',['idd'=>$datt>idd])}}"> 
 	Restaurar  
 	</a> 
     <a href="{{URL::action('curso@efisicadat',['idm'=>$datt->idd])}}"> 
 	Eliminar 
-	</a> 
+	</a> -->
 @endif
 </td>
 </tr>
