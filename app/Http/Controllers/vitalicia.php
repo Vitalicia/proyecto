@@ -316,7 +316,7 @@ class vitalicia extends Controller
         $ap = $request->ap;
         $am = $request->am;
         $edad = $request->edad;
-	$telefono = $request->telefono;
+	    $telefono = $request->telefono;
         $calle = $request->calle;
         $numero = $request->numero;
         $calle1 = $request->calle1;
