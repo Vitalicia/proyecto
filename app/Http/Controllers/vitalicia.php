@@ -557,9 +557,21 @@ class vitalicia extends Controller
    public function getusuarios()
 
    {
-  $usuariosd = usuarios::withTrashed()->orderBy('idu','asc')->get();
-  return view ('vitalicia.cusuarios')
-  ->with('usuariosd',$usuariosd);
+  //$usuariosd = usuarios::withTrashed()->orderBy('idu','asc')->get();
+ // return view ('vitalicia.cusuarios')
+  //->with('usuariosd',$usuariosd);
+   
+       
+    $usuariosd=\DB::select("SELECT u.idu,u.usuario,u.contrasena,u.correo,t.tipo as tip
+        FROM usuarios AS u
+        INNER JOIN tipos AS t ON t.idt =  u.idt");
+	    return view ('vitalicia.cusuarios')
+        ->with('usuariosd',$usuariosd);
+       //return view('sistema.reporte')
+	 // ->with('maestros',$getusu);    
+   
+   
+   
    }
     
     

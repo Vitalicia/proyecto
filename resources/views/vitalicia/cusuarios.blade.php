@@ -2,15 +2,12 @@
 @section('encabezado')
 <h1>Usuarios</h1>
 @stop
-@section('complete')
+@section('contenido')
 <form action = "{{route('getusuarios')}}" method = "POST">
         {{csrf_field()}}
- <div style="overflow-x:auto;">
-        
-
 
 <br>
-<div style="overflow-x:auto;">
+
 <table border= 1>
 <tr><td>ID</td>
 <td>Usuario</td>
@@ -22,19 +19,20 @@
 
 @foreach($usuariosd as $usu)
 
-
+</tr>
 <tr><td>{{$usu->idu}}</td>
 <td>{{$usu->usuario}}</td>
 <td>{{$usu->contrasena}}</td>
-<td>{{$usu->idt}}</td>
+<td>{{$usu->tip}}</td>
 <td>{{$usu->correo}}</td>
 
 
 
 
 
-</tr>
 @endforeach
+
+</tr>
 </table>
 @stop
 
