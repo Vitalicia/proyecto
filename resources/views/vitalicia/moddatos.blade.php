@@ -58,7 +58,7 @@
 @section('form3')                
             Municipio
             <br>{!! $errors->first('municipio','<span class=error>:message</span>')!!}
-                <input type="text" name="municipio" value="{{$datosm->municipio}">
+                <input type="text" name="municipio" value="{{$datosm->municipio}}">
                 
             Ciudad
             <br>{!! $errors->first('ciudad','<span class=error>:message</span>')!!}
