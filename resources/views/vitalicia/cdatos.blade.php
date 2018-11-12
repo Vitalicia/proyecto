@@ -33,12 +33,12 @@
 <td>{{$datt->referencia}}</td>
 
 <td>
-@if($datt->deleted_at=="")
+
   
    <a href="{{URL::action('vitalicia@modificadat',['idd'=>$datt->idd])}}"> 
    Modificar</a>
 	
-@endif
+
 </td>
 </tr>
 
