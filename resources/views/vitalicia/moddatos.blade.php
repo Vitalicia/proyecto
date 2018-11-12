@@ -72,6 +72,6 @@
             <br>{!! $errors->first('referencia','<span class=error>:message</span>')!!}
                 <input type="text" name="referencia" value="{{$datosm->idd}}">
                 
-           
+                <input type="submit" class="button" value="Guardar">
         </form>
 @stop
