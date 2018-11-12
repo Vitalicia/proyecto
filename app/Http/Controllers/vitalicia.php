@@ -306,7 +306,7 @@ class vitalicia extends Controller
 		                     ->get();
 	
 		return view ('vitalicia.modificadatos')
-		->with('datos',$datos[0])
+		->with('datos',$datos[0]);
         }
         
     public function guardamodificadat(Request $request)
