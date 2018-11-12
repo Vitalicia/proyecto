@@ -3,8 +3,7 @@
 <h1>Consulta de datos</h1>
 @stop
 @section('complete')
-<form action = "{{route('getdatos')}}" method = "POST">
-        {{csrf_field()}}
+
         <div style="overflow-x:auto;">
 <table border= 1>
 <tr><td>ID</td><td>Nombre</td><td>Apellido Paterno</td>
@@ -12,6 +11,7 @@
 <td>Calle</td><td>Numero</td><td>Calle1</td><td>Calle2</td>
 <td>Colonia</td><td>Municipio</td><td>Ciudad</td><td>Cp</td>
 <td>Referencia</td>
+<td>Operaciones</td>
 
 @foreach($datosd as $datt)
 
@@ -34,18 +34,10 @@
 
 <td>
 @if($datt->deleted_at=="")
-   <a href="{{URL::action('curso@eliminadat',['idd'=>$datt->idd])}}"> 
-	Inhabilitar 
-	</a> 
+  
    <a href="{{URL::action('curso@modificadat',['idd'=>$datt->idd])}}"> 
    Modificar</a>
-@else
-	 <a href="{{URL::action('curso@restauradat',['idd'=>$datt>idd])}}"> 
-	Restaurar  
-	</a> 
-    <a href="{{URL::action('curso@efisicadat',['idm'=>$datt->idd])}}"> 
-	Eliminar 
-	</a> 
+	
 @endif
 </td>
 </tr>
