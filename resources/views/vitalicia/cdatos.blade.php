@@ -11,6 +11,7 @@
 <td>Calle</td><td>Numero</td><td>Calle1</td><td>Calle2</td>
 <td>Colonia</td><td>Municipio</td><td>Ciudad</td><td>Cp</td>
 <td>Referencia</td>
+<td>Operaciones</td>
 
 @foreach($datosd as $datt)
 
