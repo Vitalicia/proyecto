@@ -305,7 +305,7 @@ class vitalicia extends Controller
 		$datos = datos::where('idd','=',$idd)
 		                     ->get();
 	
-		return view ('vitalicia.modificadatos')
+		return view ('vitalicia.mdatos')
 		->with('datos',$datos[0]);
         }
         
