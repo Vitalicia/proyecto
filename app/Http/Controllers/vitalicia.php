@@ -304,9 +304,9 @@ class vitalicia extends Controller
 	{
 		$datosm = datos::where('idd','=',$idd)
 		                     ->get();
-	return $datosm;
-		//return view ('vitalicia.modatos')
-		//->with('datosm',$datosm[0]);
+	             //return $datosm;
+		return view ('vitalicia.modatos')
+		->with('datosm',$datosm[0]);
         }
         
     public function guardamodificadat(Request $request)
