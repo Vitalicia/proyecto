@@ -33,7 +33,7 @@
 <td>{{$datt->referencia}}</td>
 
 <td>
-@if($idd->deleted_at=="")
+@if($datt->deleted_at=="")
    <a href="{{URL::action('curso@eliminadat',['idd'=>$datt->idd])}}"> 
 	Inhabilitar 
 	</a> 
