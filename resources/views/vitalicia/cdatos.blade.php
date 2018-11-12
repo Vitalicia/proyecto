@@ -8,8 +8,10 @@
         <div style="overflow-x:auto;">
 <table border= 1>
 <tr><td>ID</td><td>Nombre</td><td>Apellido Paterno</td>
-<td>Apellido materno</td><td>Edad</td><td>Telefono</td><td>Calle</td><td>Numero</td>
-<td>Calle1</td><td>Calle2</td><td>Colonia</td><td>Municipio</td><td>Ciudad</td><td>Cp</td><td>Referencia</td>
+<td>Apellido materno</td><td>Edad</td><td>Telefono</td>
+<td>Calle</td><td>Numero</td><td>Calle1</td><td>Calle2</td>
+<td>Colonia</td><td>Municipio</td><td>Ciudad</td><td>Cp</td>
+<td>Referencia</td>
 
 @foreach($datosd as $datt)
 
@@ -28,8 +30,25 @@
 <td>{{$datt->municipio}}</td>
 <td>{{$datt->ciudad}}</td>
 <td>{{$datt->cp}}</td>
-
 <td>{{$datt->referencia}}</td>
+
+<td>
+@if($ma->deleted_at=="")
+   <a href="{{URL::action('curso@eliminadat',['idd'=>$datt->idd])}}"> 
+	Inhabilitar 
+	</a> 
+   <a href="{{URL::action('curso@modificadat',['idd'=>$datt->idd])}}"> 
+   Modificar</a>
+@else
+	 <a href="{{URL::action('curso@restauradat',['idd'=>$datt>idd])}}"> 
+	Restaurar  
+	</a> 
+    <a href="{{URL::action('curso@efisicadat',['idm'=>$datt->idd])}}"> 
+	Eliminar 
+	</a> 
+@endif
+</td>
+</tr>
 
 </tr>
 @endforeach
