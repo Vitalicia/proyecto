@@ -338,7 +338,7 @@ class vitalicia extends Controller
 		 'archivo'=>'image|mimes:jpeg,png,gif'
 	     ]);
 		  
-	        $dat = datos::find($idd);
+	        $dato = datos::find($idd);
 	        $dato->idd = $request->idd;
 		$dato->nombre = $request->nombre;
 		$dato->ap =$request->ap;
