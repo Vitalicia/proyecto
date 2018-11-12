@@ -302,11 +302,11 @@ class vitalicia extends Controller
 
    public function modificadat($idd)
 	{
-		$datos = datos::where('idd','=',$idd)
+		$datosm = datos::where('idd','=',$idd)
 		                     ->get();
 	
 		return view ('vitalicia.modatos')
-		->with('datos',$datos[0]);
+		->with('datosm',$datosm[0]);
         }
         
     public function guardamodificadat(Request $request)
