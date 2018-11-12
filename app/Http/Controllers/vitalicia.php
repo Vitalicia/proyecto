@@ -61,7 +61,7 @@ class vitalicia extends Controller
             }
             else
             {
-            $idus= $clavequesigue[0]->idd+1;
+            $idds= $clavequesigue[0]->idd+1;
             }
         
         

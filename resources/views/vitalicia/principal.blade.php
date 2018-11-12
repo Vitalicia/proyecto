@@ -31,25 +31,16 @@
               </li>    
                 
               <li>
-                <a href="#">Usuarios</a>
-                    <ul class="menu">
-                        <li><a href="{{route('rusu')}}">Alta</a></li>
-                    </ul>
+                <a href="{{route('rusu')}}">Datos de Usuarios</a>
               </li>
                 
               
               <li>
-                <a href="#">Pacientes</a>
-                  <ul class="menu">
-                        <li><a href="{{route('paci')}}">Seguimiento</a></li>
-                  </ul>
+                <a href="{{route('paci')}}">Pacientes</a>
               </li>
               
               <li>
-                <a href="#">Familiares</a>
-                  <ul class="menu">
-                  <li><a href="{{route('getpacientes')}}">Pacientes</a></li>
-                  </ul>
+                <a href="{{route('getpacientes')}}">Familiares</a>
               </li>
                             
                 <li>
