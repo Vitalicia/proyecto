@@ -35,7 +35,7 @@
 <td>
 @if($datt->deleted_at=="")
   
-   <a href="{{URL::action('curso@modificadat',['idd'=>$datt->idd])}}"> 
+   <a href="{{URL::action('vitalicia@modificadat',['idd'=>$datt->idd])}}"> 
    Modificar</a>
 	
 @endif
