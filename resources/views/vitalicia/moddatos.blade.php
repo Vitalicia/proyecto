@@ -71,6 +71,10 @@
             Referencia 
             <br>{!! $errors->first('referencia','<span class=error>:message</span>')!!}
                 <input type="text" name="referencia" value="{{$datosm->referencia}}">
+
+                <img src = "{{asset('archivos/'.$datosm->archivo)}}"  height =100 width=100>
+            <br>
+            Seleccione foto<input type='file' name ='archivo'>
                 
                 <input type="submit" class="button" value="Guardar">
         </form>
