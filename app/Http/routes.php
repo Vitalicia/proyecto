@@ -24,6 +24,8 @@ Route::get('/modUsuario','vitalicia@mUsuario')->name('musu');
 Route::get('/modificadat/{idd}','vitalicia@modificadat')->name('modificadat'); //modificar el registro de datos 
 Route::POST('/guardamodificadat','vitalicia@guardamodificadat')->name('guardamodificadat'); // guardar la modificacion de datos
 Route::get('/eliminam/{idd}','vitalicia@eliminam')->name('eliminam'); //eliminar los datos
+Route::get('/restauram/{idd}','vitalicia@restauram')->name('restauram');//restuaracion de los datos
+Route::get('/efisicam/{idd}','vitalicia@efisicam')->name('efisicam');//eliminacion fisica d elos datos
 
 
 //RUTAS PARA REGISTRO DE PACIENTE Y CONSULTAS

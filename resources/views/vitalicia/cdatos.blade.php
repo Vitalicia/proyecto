@@ -34,12 +34,19 @@
 
 <td><img src = "{{asset('archivos/'.$datt->archivo)}}" height =100 width=100></td>
 <td>
-@if($ma->deleted_at=="")
+@if($datt->deleted_at=="")
    <a href="{{URL::action('vitalicia@eliminam',['idd'=>$datt->idd])}}"> 
 	Inhabilitar 
 	</a> 
 <a href="{{URL::action('vitalicia@modificadat',['idd'=>$datt->idd])}}">
     Modificar</a></td>
+    @else
+	 <a href="{{URL::action('vitalicia@restauram',['idd'=>$datt->idd])}}"> 
+	Restaurar  
+	</a> 
+    <a href="{{URL::action('vitalicia@efisicam',['idd'=>$datt->idd])}}"> 
+	Eliminar 
+	</a> 
 
 @endif
 

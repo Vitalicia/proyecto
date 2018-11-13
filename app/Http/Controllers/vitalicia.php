@@ -384,7 +384,21 @@ class vitalicia extends Controller
 		//	$mensaje = "El maestro ha sido desactivado Correctamente";
 			//return view ('sistema.mensaje')
 			
-	}
+        }
+        
+        public function restauram($idd)
+	{
+	datos::withTrashed()->where('idd',$idd)->restore();
+
+        }
+        
+     public function efisicam($idd)
+	{
+		
+   datos::withTrashed()->where('idd',$idd)->forceDelete();
+
+    }
+    
 
    public function rgeriatrico()
     {
