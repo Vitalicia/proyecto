@@ -4,7 +4,7 @@
 @stop
 @section('complete')
 
-        {{csrf_field()}}
+{{csrf_field()}}
 <div style="overflow-x:auto;">
 <table border= 1>
 <tr>
@@ -29,10 +29,6 @@
 <td>{{$patt->ids}}</td>
 <td>{{$patt->idgeriatricos}}</td>
 <td>{{$patt->idactividades}}</td>
-
-
-
-
 
 @endforeach
 </tr>
