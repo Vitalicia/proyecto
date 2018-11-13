@@ -1,4 +1,4 @@
-@extends('vitalicia.welcome')
+@extends('vitalicia.principal.blade.php')
 @section('encabezado')
 <h3>Modifcar Datos</h3>
 @stop
