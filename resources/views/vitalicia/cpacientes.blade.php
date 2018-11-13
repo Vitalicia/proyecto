@@ -3,13 +3,13 @@
 <h1>Consulta Pacientes</h1>
 @stop
 @section('complete')
-<form action = "{{route('getpacientes')}}" method = "POST">
+
         {{csrf_field()}}
 <div style="overflow-x:auto;">
 <table border= 1>
-<tr><td>ID</td>
+<tr>
+<td>ID</td>
 <td>Fecha Pacientes</td>
-
 <td>Datos</td>
 <td>Medicamentos</td>
 <td>Alimentacion</td>
@@ -17,11 +17,11 @@
 <td>Geriatricos</td>
 <td>Actividades</td>
 
-
 @foreach($pacientesd as $patt)
+</tr>
 
-
-<tr><td>{{$patt->idpaciente}}</td>
+<tr>
+<td>{{$patt->idpaciente}}</td>
 <td>{{$patt->fechapaciente}}</td>
 <td>{{$patt->idd}}</td>
 <td>{{$patt->idmedicamento}}</td>
@@ -33,10 +33,9 @@
 
 
 
-</td></tr>
-@endforeach
-</table>
-</body>
-</html>
 
-     @stop
+@endforeach
+</tr>
+</table>
+</div>
+@stop
