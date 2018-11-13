@@ -41,7 +41,7 @@
 <a href="{{URL::action('vitalicia@modificadat',['idd'=>$datt->idd])}}">
     Modificar</a></td>
 
-
+@endif
 
 @endforeach
 </tr>
