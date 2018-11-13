@@ -1,7 +1,79 @@
-@extends('vitalicia.principal')
-@section('encabezado')
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vitalicia | Inicio</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="shortcut icon" href="favicon.ico">  
+  </head>
+  <body>
+    
+    <div class="top-bar">
+      <div class="row">
+        <div class="top-bar-left">
+	       <a class="navbar-brand" href="{{route('home')}}"><img src="vitalicia.jpg" width="70" height="200" alt="Vitalicia"></a>  
+        </div>
+          
+
+
+ 
+        <div class="top-bar-right">
+            <ul class="dropdown menu" data-dropdown-menu>
+              <li>
+                <a href="{{route('home')}}">Vitalicia</a>
+              </li>    
+                
+              <li>
+                <a href="{{route('cmedicamentos')}}">Nuevo Medicamento</a>
+              </li>    
+                
+              <li>
+                <a href="{{route('rusu')}}">Datos de Usuarios</a>
+              </li>
+                
+              
+              <li>
+                <a href="{{route('paci')}}">Pacientes</a>
+              </li>
+              
+              <li>
+                <a href="{{route('getpacientes')}}">Familiares</a>
+              </li>
+                            
+                <li>
+                    <a href="#">Consultas</a>
+                    <ul class="menu">
+                        <li><a href="{{route('getdatos')}}">Datos</a></li>
+                        <li><a href="{{route('getusuarios')}}">Usuarios</a></li> 
+                        <li><a href="{{route('getpacientes')}}">Pacientes</a></li>
+                    </ul>   
+                </li>
+              
+              <li>
+                <a href="{{route('usu')}}">Iniciar Sesi&oacute;n</a>
+              </li>
+                
+              <li>
+                <!--a href="#">Cerrar Sesi&oacute;n</a-->
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <br>
+  
+      
+    <hr>
+
+            
+    <div class="row large-8" align="center">
+          
+    </div>
 <h3>Modifcar Datos</h3>
-@stop
+
 @section('form1')
         <form action="{{route('guardamodificadat')}}" method = "POST" enctype="multipart/form-data" >
             {{csrf_field()}}
