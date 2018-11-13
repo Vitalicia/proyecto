@@ -316,7 +316,7 @@ class vitalicia extends Controller
         $ap = $request->ap;
         $am = $request->am;
         $edad = $request->edad;
-	    $telefono = $request->telefono;
+	$telefono = $request->telefono;
         $calle = $request->calle;
         $numero = $request->numero;
         $calle1 = $request->calle1;
@@ -368,8 +368,7 @@ class vitalicia extends Controller
                 $dato->cp=$request->cp;
                 $dato->referencia=$request->referencia;
                 $dato->save();
-                        
-                return view ('vitalicia.cdatos');
+                return redirect()->route('confirmacion');
                        /* $proceso = "MODIFICA MAESTRO";
 			$mensaje = "REgistro ha sido modificado correctamente";
 			->with('proceso',$proceso)
