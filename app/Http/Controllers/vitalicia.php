@@ -339,14 +339,14 @@ class vitalicia extends Controller
              ]);
              
              $file = $request->file('archivo');
-	 if($file!="")
-	 {	 
-	 $ldate = date('Ymd_His_');
-	 $img = $file->getClientOriginalName();
-	 $img2 = $ldate.$img;
-	 \Storage::disk('local')->put($img2, \File::get($file)); 
-	 }
-		  
+             if($file!="")
+             {	 
+             $ldate = date('Ymd_His_');
+             $img = $file->getClientOriginalName();
+             $img2 = $ldate.$img;
+             \Storage::disk('local')->put($img2, \File::get($file)); 
+             }
+
 	        $dato = datos::find($idd);
                 $dato->idd = $request->idd;
                 if($file!="")
@@ -369,13 +369,14 @@ class vitalicia extends Controller
                 $dato->referencia=$request->referencia;
                 $dato->save();
                         
-                return view ('vitalicia.cdatos')
+                return view ('vitalicia.cdatos');
                        /* $proceso = "MODIFICA MAESTRO";
 			$mensaje = "REgistro ha sido modificado correctamente";
 			->with('proceso',$proceso)
                         ->with('mensaje',$mensaje);*/
                         // echo "Listo para modificar";
-	}
+        
+}
 
    public function rgeriatrico()
     {
