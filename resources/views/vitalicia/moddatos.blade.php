@@ -1,4 +1,4 @@
-@extends('vitalicia.principal')
+@extends('vitalicia.welcome')
 @section('encabezado')
 <h3>Modifcar Datos</h3>
 @stop
