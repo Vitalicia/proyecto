@@ -31,8 +31,15 @@
 <td>{{$datt->ciudad}}</td>
 <td>{{$datt->cp}}</td>
 <td>{{$datt->referencia}}</td>
+
 <td><img src = "{{asset('archivos/'.$datt->archivo)}}" height =100 width=100></td>
-<td><a href="{{URL::action('vitalicia@modificadat',['idd'=>$datt->idd])}}">Modificar</a></td>
+<td>
+@if($ma->deleted_at=="")
+   <a href="{{URL::action('vitalicia@eliminam',['idd'=>$datt->idd])}}"> 
+	Inhabilitar 
+	</a> 
+<a href="{{URL::action('vitalicia@modificadat',['idd'=>$datt->idd])}}">
+    Modificar</a></td>
 
 
 

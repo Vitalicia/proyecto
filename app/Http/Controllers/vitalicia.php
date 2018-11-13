@@ -377,6 +377,15 @@ class vitalicia extends Controller
         
 }
 
+   public function eliminam($idd)
+	{
+		  datos::find($idd)->delete();
+		   // $proceso = "ELIMINAR MAESTROS";
+		//	$mensaje = "El maestro ha sido desactivado Correctamente";
+			//return view ('sistema.mensaje')
+			
+	}
+
    public function rgeriatrico()
     {
         //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
