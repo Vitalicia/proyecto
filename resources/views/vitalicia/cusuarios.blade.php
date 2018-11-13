@@ -1,13 +1,10 @@
 @extends('vitalicia.principal')
 @section('encabezado')
-<h1>Usuarios</h1>
+<h1>Consulta de usuarios</h1>
 @stop
-@section('contenido')
-<form action = "{{route('getusuarios')}}" method = "POST">
-        {{csrf_field()}}
 
-<br>
 
+@section('complete')
 
 <table class="hover">
 <tr>
@@ -16,24 +13,29 @@
 <th>Contraseña</th>
 <th>Tipo</th>
 <th>Correo</th>
-
+<th>Operaciones</th>
 
 @foreach($usuariosd as $usu)
 
 </tr>
 <tr><td>{{$usu->idu}}</td>
 <td>{{$usu->usuario}}</td>
-<td>{{$usu->contrasena}}</td>
+<td>{{$usu->contrasena='********'}}</td>
 <td>{{$usu->tip}}</td>
 <td>{{$usu->correo}}</td>
+<td>
 
-
-
-
+    <a href="#"> 
+	Inhabilitar 
+	</a> |
+     <a href="#">
+    Modificar</a></td>
+ 
 
 @endforeach
 
 </tr>
 </table>
-@stop
 
+<br><br><br><br><br><br>
+@stop
