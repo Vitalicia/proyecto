@@ -383,20 +383,20 @@ class vitalicia extends Controller
 		   // $proceso = "ELIMINAR MAESTROS";
 		//	$mensaje = "El maestro ha sido desactivado Correctamente";
 			//return view ('sistema.mensaje')
-			
+			return redirect()->route('confirmacion');
         }
         
         public function restauram($idd)
 	{
 	datos::withTrashed()->where('idd',$idd)->restore();
-
+        return redirect()->route('confirmacion');
         }
         
      public function efisicam($idd)
 	{
 		
    datos::withTrashed()->where('idd',$idd)->forceDelete();
-
+   return redirect()->route('confirmacion');
     }
     
 
