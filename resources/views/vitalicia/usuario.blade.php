@@ -30,11 +30,6 @@
 @stop
 @section('espacio')
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 @stop
 

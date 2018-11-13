@@ -31,7 +31,7 @@
               </li>    
                 
               <li>
-                <a href="{{route('rusu')}}">Datos de Generales</a>
+                <a href="{{route('rusu')}}">Datos Generales</a>
               </li>
                 
               
