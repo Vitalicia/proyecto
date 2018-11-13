@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vitalicia | Inicio</title>
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/foundation.min.css">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="shortcut icon" href="favicon.ico">  
+    <link rel="stylesheet" href="..css/foundation.css">
+    <link rel="stylesheet" href="..css/foundation.min.css">
+    <link rel="stylesheet" href="..css/app.css">
+    <link rel="shortcut icon" href="..favicon.ico">  
   </head>
   <body>
     
