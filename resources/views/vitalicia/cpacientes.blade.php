@@ -3,19 +3,20 @@
 <h1>Consulta Pacientes</h1>
 @stop
 @section('complete')
-
 {{csrf_field()}}
-<div style="overflow-x:auto;">
-<table border= 1>
+
+
+<div class="table-scroll">
+<table class="hover">
 <tr>
-<td>ID</td>
-<td>Fecha Pacientes</td>
-<td>Datos</td>
-<td>Medicamentos</td>
-<td>Alimentacion</td>
-<td>Signos</td>
-<td>Geriatricos</td>
-<td>Actividades</td>
+<th>ID</th>
+<th>Fecha Pacientes</th>
+<th>Datos</th>
+<th>Medicamentos</th>
+<th>Alimentacion</th>
+<th>Signos</th>
+<th>Geriatricos</th>
+<th>Actividades</th>
 
 @foreach($pacientesd as $patt)
 </tr>

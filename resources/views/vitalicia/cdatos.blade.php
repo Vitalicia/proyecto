@@ -4,14 +4,14 @@
 @stop
 @section('complete')
 
-        <div style="overflow-x:auto;">
-<table border= 1>
+<div class="table-scroll">
+<table class="hover">
 <tr>
-<td>ID</td><td>Nombre</td>
-<td>Apellido Paterno</td><td>Apellido materno</td><td>Edad</td>
-<td>Telefono</td><td>Calle</td><td>Numero</td><td>Calle1</td>
-<td>Calle2</td><td>Colonia</td><td>Municipio</td><td>Ciudad</td>
-<td>Cp</td><td>Referencia</td><td>Foto</td><td>Operaciones</td>
+<th>ID</th><th>Nombre</th>
+<th>Apellido Paterno</th><th>Apellido materno</th><th>Edad</th>
+<th>Telefono</th><th>Calle</th><th>Numero</th><th>Calle1</th>
+<th>Calle2</th><th>Colonia</th><th>Municipio</th><th>Ciudad</th>
+<th>Cp</th><th>Referencia</th><th>Foto</th><th>Operaciones</th>
 
 @foreach($datosd as $datt)
 </tr>

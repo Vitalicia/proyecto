@@ -8,13 +8,14 @@
 
 <br>
 
-<table border= 1>
-<tr><td>ID</td>
-<td>Usuario</td>
 
-<td>Contraseña</td>
-<td>Tipo</td>
-<td>Correo</td>
+<table class="hover">
+<tr>
+<th>ID</th>
+<th>Usuario</th>
+<th>Contraseña</th>
+<th>Tipo</th>
+<th>Correo</th>
 
 
 @foreach($usuariosd as $usu)
