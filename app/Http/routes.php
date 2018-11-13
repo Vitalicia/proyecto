@@ -21,7 +21,7 @@ Route::get('/bajaUsuario','vitalicia@bUsuario')->name('busu');
 //RUTAS PARAS LAS MODIFICACIONES
 Route::get('/modUsuario','vitalicia@mUsuario')->name('musu');
 
-Route::get('/modificadat/{idd}','vitalicia@modificadat')->name('modificadat'); //modificar el registro de datos 
+Route::get('/modificadat','vitalicia@modificadat')->name('modificadat'); //modificar el registro de datos 
 Route::POST('/guardamodificadat','vitalicia@guardamodificadat')->name('guardamodificadat'); // guardar la modificacion de datos
 
 
