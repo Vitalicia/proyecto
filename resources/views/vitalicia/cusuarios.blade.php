@@ -29,6 +29,7 @@
  <a href="{{URL::action('vitalicia@modificausua',['idu'=>$usu->idu])}}">
     Modificar</a></td>
  
+ 
 
 @endforeach
 
