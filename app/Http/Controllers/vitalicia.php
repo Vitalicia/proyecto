@@ -663,7 +663,7 @@ class vitalicia extends Controller
     
     public function modificausua($idu)
     {
-            $usuario = usuario::where('idu','=',$idu)
+            $usuario = usuarios::where('idu','=',$idu)
                                  ->get();
 
            $idt= $usuario[0]->idt;
