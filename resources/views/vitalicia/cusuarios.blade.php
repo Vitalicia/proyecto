@@ -25,10 +25,8 @@
 <td>{{$usu->correo}}</td>
 <td>
 
-    <a href="#"> 
-	Inhabilitar 
-	</a> |
-     <a href="#">
+ <td>
+ <a href="{{URL::action('vitalicia@modificausua',['idu'=>$usu->idu])}}">
     Modificar</a></td>
  
 
