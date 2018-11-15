@@ -661,5 +661,18 @@ class vitalicia extends Controller
     } 
     
     
+    public function modificausu($idu)
+    {
+            $usua = usuarios::where('idu','=',$idu)
+                                 ->get();
+
+           $idt= $usuarios[0]->idt;
+           $turnos = $turnos::where('idt','!=',$idt)->get();
+                 //return $datosm;
+            return view ('vitalicia.modusuarios')
+            ->with('usua',$usua[0])
+            ->with('idt',$idt)
+            ->with('turnos',$turnos[0]->tipoturno);
+    }
     
 }
