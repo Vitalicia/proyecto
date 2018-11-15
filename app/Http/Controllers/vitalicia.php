@@ -661,7 +661,7 @@ class vitalicia extends Controller
     } 
     
     
-    public function modificausu($idu)
+    public function modificausua($idu)
     {
             $usua = usuarios::where('idu','=',$idu)
                                  ->get();
