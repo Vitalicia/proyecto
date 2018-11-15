@@ -663,14 +663,14 @@ class vitalicia extends Controller
     
     public function modificausua($idu)
     {
-            $usua = usuario::where('idu','=',$idu)
+            $usuario = usuario::where('idu','=',$idu)
                                  ->get();
 
            $idt= $usuario[0]->idt;
            $turnos = turnos::where('idturno','!=',$idt)->get();
                  //return $datosm;
             return view ('vitalicia.modusuarios')
-            ->with('usua',$usua[0])
+            ->with('usuario',$usuario[0])
             ->with('idt',$idt)
             ->with('turnos',$turnos[0]->tipoturno);
     }
