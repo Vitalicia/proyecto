@@ -667,7 +667,7 @@ class vitalicia extends Controller
                                  ->get();
 
            $idt= $usuarios[0]->idt;
-           $turnos = $turnos::where('idt','!=',$idt)->get();
+           $turnos = turnos::where('idturno','!=',$idt)->get();
                  //return $datosm;
             return view ('vitalicia.modusuarios')
             ->with('usua',$usua[0])
@@ -675,4 +675,31 @@ class vitalicia extends Controller
             ->with('turnos',$turnos[0]->tipoturno);
     }
     
+    public function guardamodificausua(Request $request)
+    {
+    $idu =  $request->idu;
+    $usuario = $request->usuario;
+    $contrasena= $request->contrasena;
+    $correo= $request->correo;
+    $idt = $request->idt;
+    
+  
+    
+
+            $usu = usuarios::find($idu);
+            $usu->idu = $request->idu;
+            
+            $usu->usuario = $request->usuario;
+            $usu->contrasena =$request->contrasena;
+            $usu->correo= $request->correo;
+            $usu->idt= $request->idt;
+            $dato->save();
+            return redirect()->route('confirmacion');
+                   /* $proceso = "MODIFICA MAESTRO";
+                    $mensaje = "REgistro ha sido modificado correctamente";
+                    ->with('proceso',$proceso)
+                    ->with('mensaje',$mensaje);*/
+                    // echo "Listo para modificar";
+    
+}
 }
