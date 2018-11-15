@@ -27,7 +27,7 @@ Route::get('/eliminam/{idd}','vitalicia@eliminam')->name('eliminam'); //eliminar
 Route::get('/restauram/{idd}','vitalicia@restauram')->name('restauram');//restuaracion de los datos
 Route::get('/efisicam/{idd}','vitalicia@efisicam')->name('efisicam');//eliminacion fisica d elos datos
 
-Route::get('/modificausu/{idu}','vitalicia@modificausu')->name('modificausu'); //modificar el registro de datos 
+Route::get('/modificausua/{idu}','vitalicia@modificausua')->name('modificausua'); //modificar el registro de datos 
 Route::POST('/guardamodificausua','vitalicia@guardamodificausua')->name('guardamodificausua'); // guardar la modificacion de datos
 
 
