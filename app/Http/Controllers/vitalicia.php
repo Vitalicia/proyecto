@@ -693,7 +693,7 @@ class vitalicia extends Controller
             $usu->contrasena =$request->contrasena;
             $usu->correo= $request->correo;
             $usu->idt= $request->idt;
-            $dato->save();
+            $usu->save();
             return redirect()->route('confirmacion');
                    /* $proceso = "MODIFICA MAESTRO";
                     $mensaje = "REgistro ha sido modificado correctamente";
