@@ -705,7 +705,7 @@ class vitalicia extends Controller
 
 public function eliminausu($idu)
 	{
-		  datos::find($idu)->delete();
+		  usuarios::find($idu)->delete();
 		   // $proceso = "ELIMINAR MAESTROS";
 		//	$mensaje = "El maestro ha sido desactivado Correctamente";
 			//return view ('sistema.mensaje')
