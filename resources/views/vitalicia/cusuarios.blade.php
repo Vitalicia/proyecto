@@ -23,14 +23,15 @@
 <td>{{$usu->contrasena='********'}}</td>
 <td>{{$usu->tip}}</td>
 <td>{{$usu->correo}}</td>
+<td>
+@if($usuariosd->deleted_at=="")
 
- <td>
- ($usu->deleted_at=="")
    <a href="{{URL::action('vitalicia@eliminausu',['idu'=>$usu->idu])}}"> 
 	Inhabilitar 
 	</a> 
  <a href="{{URL::action('vitalicia@modificausua',['idu'=>$usu->idu])}}">
     Modificar</a></td>
+    @else
   
 	 <a href="{{URL::action('vitalicia@restaurusu',['idu'=>$usu->idu])}}"> 
 	Restaurar  
@@ -38,7 +39,7 @@
     <a href="{{URL::action('vitalicia@efisicausu',['idu'=>$usu->idu])}}"> 
 	Eliminar 
 	</a> 
-
+endif
 @endforeach
 
 </tr>
