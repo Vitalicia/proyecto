@@ -25,7 +25,7 @@
 <td>{{$usu->correo}}</td>
 
  <td>
- @if($datt->deleted_at=="")
+ @if($usu->deleted_at=="")
    <a href="{{URL::action('vitalicia@eliminausu',['idu'=>$usu->idu])}}"> 
 	Inhabilitar 
 	</a> 
