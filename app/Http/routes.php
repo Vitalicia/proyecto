@@ -29,9 +29,9 @@ Route::get('/efisicam/{idd}','vitalicia@efisicam')->name('efisicam');//eliminaci
 
 Route::get('/modificausua/{idu}','vitalicia@modificausua')->name('modificausua'); //modificar el registro de datos 
 Route::POST('/guardamodificausua','vitalicia@guardamodificausua')->name('guardamodificausua'); // guardar la modificacion de datos
-Route::get('/eliminausu/{idu}','vitalicia@eliminausu')->name('eliminausu'); //eliminar los datos
-Route::get('/restaurusu/{idu}','vitalicia@restaurusu')->name('restaurusu');//restuaracion de los datos
-Route::get('/efisicausu/{idu}','vitalicia@efisicausu')->name('efisicausu');//eliminacion fisica d elos datos
+Route::get('/eliminausu/{idu}','vitalicia@eliminausu')->name('eliminausu'); //eliminar los ususrios
+Route::get('/restaurusu/{idu}','vitalicia@restaurusu')->name('restaurusu');//restuaracion de los ususros
+Route::get('/efisicausu/{idu}','vitalicia@efisicausu')->name('efisicausu');//eliminacion fisica de usuarios
 
 //RUTAS PARA REGISTRO DE PACIENTE Y CONSULTAS
 Route::get('/rPaciente','vitalicia@rPaciente')->name('rpac');

@@ -702,4 +702,27 @@ class vitalicia extends Controller
                     // echo "Listo para modificar";
     
 }
+
+public function eliminausu($idu)
+	{
+		  datos::find($idu)->delete();
+		   // $proceso = "ELIMINAR MAESTROS";
+		//	$mensaje = "El maestro ha sido desactivado Correctamente";
+			//return view ('sistema.mensaje')
+			return redirect()->route('confirmacion');
+        }
+        
+        public function restaurusu($idu)
+	{
+	usuarios::withTrashed()->where('idu',$idu)->restore();
+        return redirect()->route('confirmacion');
+        }
+        
+     public function efisicausu($idu)
+	{
+		
+   usuarios::withTrashed()->where('idu',$idu)->forceDelete();
+   return redirect()->route('confirmacion');
+    }
+
 }
