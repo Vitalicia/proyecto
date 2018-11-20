@@ -39,7 +39,7 @@
     <a href="{{URL::action('vitalicia@efisicausu',['idu'=>$usu->idu])}}"> 
 	Eliminar 
 	</a> 
-endif
+@endif
 
 @endforeach
 
