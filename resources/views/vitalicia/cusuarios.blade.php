@@ -24,7 +24,7 @@
 <td>{{$usu->tip}}</td>
 <td>{{$usu->correo}}</td>
 <td>
-@if($usuariosd->deleted_at=="")
+@if($usu->deleted_at=="")
 
    <a href="{{URL::action('vitalicia@eliminausu',['idu'=>$usu->idu])}}"> 
 	Inhabilitar 
@@ -40,6 +40,7 @@
 	Eliminar 
 	</a> 
 endif
+
 @endforeach
 
 </tr>
