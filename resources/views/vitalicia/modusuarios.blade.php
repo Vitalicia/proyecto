@@ -25,6 +25,8 @@
             seleccione turno <select name ='idt'>
             <option value ='{{$idt}}'>{{$turnos}}</option>
             <br>
-         
+           
+                
+                <input type="submit" class="button" value="Guardar">
            
 @stop
