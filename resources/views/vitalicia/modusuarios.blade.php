@@ -25,9 +25,6 @@
             seleccione turno <select name ='idt'>
             <option value ='{{$idt}}'>{{$turnos}}</option>
             <br>
-            <br>{!! $errors->first('edad','<span class=error>:message</span>')!!}
-                <input type="text" name="edad" value="{{$usuario->edad}}">
-                
-                <input type="submit" class="button" value="Guardar">
+         
            
 @stop
