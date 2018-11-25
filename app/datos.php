@@ -9,7 +9,7 @@ class datos extends Model
 {
 	use SoftDeletes;
     protected $primaryKey ='idd';
-    protected $fillable = ['idd','nombre','ap','am','edad','telefono','calle','numero','calle1','calle2','colonia','municipio','ciudad','cp','referencia','archivo'];
+    protected $fillable = ['idd','idu','nombre','ap','am','edad','telefono','calle','numero','calle1','calle2','colonia','municipio','ciudad','cp','referencia','archivo'];
     protected $date=['deleted_at'];
 
 }

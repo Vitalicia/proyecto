@@ -8,8 +8,12 @@
             
             Usuario
             <br>
-            <select></select>
-            
+                <select name = 'idu'>
+                @foreach($usuarios as $usua)
+                <option value ='{{$usua->idu}}'>{{$usua->usuario}}</option>
+                @endforeach
+                </select>
+
             Nombre
             <br>{!! $errors->first('nombre','<span class=error>:message</span>')!!}
                 <input type="text" name="nombre" value="{{old('nombre')}}">

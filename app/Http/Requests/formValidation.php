@@ -25,6 +25,7 @@ class formValidation extends Request
     {
         return [
                 'idd'=>'required|numeric',
+                'idu'=>'required|numeric',
                 'nombre' => ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
                 'ap' => ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
                 'am' => ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],

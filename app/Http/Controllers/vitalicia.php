@@ -65,10 +65,17 @@ class vitalicia extends Controller
             }
         
         
+        $rdusu = usuarios::withTrashed()->orderBy('usuario','asc')
+                        
+                          ->get();
+        
+            
+
             
         //return $carreras;
         return view ('vitalicia.rUsuario')
-                    ->with('idds',$idds);
+                    ->with('idds',$idds)
+                    ->with('usuarios',$rdusu);
     } 
     
            public function usuario()
@@ -156,6 +163,7 @@ class vitalicia extends Controller
                 $dat->cp = $request->cp;
                 $dat->referencia = $request->referencia;
                 $dat->archivo = $img2;
+                $dat->idu = $request->idu;
                 $dat->save();
 
 
