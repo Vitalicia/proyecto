@@ -30,9 +30,12 @@ class vitalicia extends Controller
         FROM usuarios AS u
         INNER JOIN tipos AS t ON t.idt =  u.idt");
 
-           
+        $datosd = datos::withTrashed()->orderBy('idd','asc')->get();
+
+  
             return view ('vitalicia.home')
-            ->with('usuariosd',$usuariosd);
+            ->with('usuariosd',$usuariosd)
+            ->with('datosd',$datosd);
     } 
     
     //INICIO
