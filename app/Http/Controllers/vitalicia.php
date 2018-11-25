@@ -32,10 +32,13 @@ class vitalicia extends Controller
 
         $datosd = datos::withTrashed()->orderBy('idd','asc')->get();
 
-  
+        $pacientesd = pacientes::withTrashed()->orderBy('idpaciente','asc')->get();
+
+     
             return view ('vitalicia.home')
             ->with('usuariosd',$usuariosd)
-            ->with('datosd',$datosd);
+            ->with('datosd',$datosd)
+            ->with('pacientesd',$pacientesd);
     } 
     
     //INICIO
