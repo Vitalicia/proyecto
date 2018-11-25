@@ -95,6 +95,15 @@
     </div>
     
     <div class="row">
+            <div class="large-4 columns">
+            @yield('box1')
+            </div>
+            <div class="large-8 columns">
+            @yield('box2')
+            </div>
+    </div>
+    
+    <div class="row">
         <div class="medium-8 large-5 columns">
         @yield('espacio')
         </div> 

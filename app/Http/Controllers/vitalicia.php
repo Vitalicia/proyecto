@@ -26,7 +26,13 @@ class vitalicia extends Controller
     //INICIO
        public function home()
     {
-            return view ('vitalicia.home');
+        $usuariosd=\DB::select("SELECT u.idu,u.usuario,u.contrasena,u.correo,t.tipo as tip
+        FROM usuarios AS u
+        INNER JOIN tipos AS t ON t.idt =  u.idt");
+
+           
+            return view ('vitalicia.home')
+            ->with('usuariosd',$usuariosd);
     } 
     
     //INICIO
