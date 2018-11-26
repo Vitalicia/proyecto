@@ -45,11 +45,20 @@ class vitalicia extends Controller
   INNER JOIN geriatricos AS g ON g.idgeriatricos=p.idgeriatricos
   INNER JOIN actividades AS v ON v.idactividades=p.idactividades");
 
+$medicamentosm=\DB::select("SELECT m.`idmedicamento`,m.`nombre`,m.`indicacion`,m.`presen`,m.`terminotx`,h.`tipohorario`,am.`nmedica`
+FROM medicamentos AS m
+INNER JOIN horarios AS h ON h.idh=m.`idh`
+INNER JOIN amedicamentos AS am ON am.idamedicamento=m.`idamedicamento`");
+          return view ('vitalicia.cmedicamentos')
+
+       
+
 
      
             return view ('vitalicia.home')
             ->with('usuariosd',$usuariosd)
             ->with('datosd',$datosd)
+            ->with('medicamentosm',$medicamentosm)
             ->with('pacientesd',$pacientesd);
     } 
     
