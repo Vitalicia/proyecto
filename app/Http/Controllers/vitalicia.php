@@ -44,7 +44,7 @@ class vitalicia extends Controller
   INNER JOIN signos AS s ON s.ids=p.ids
   INNER JOIN geriatricos AS g ON g.idgeriatricos=p.idgeriatricos
   INNER JOIN actividades AS v ON v.idactividades=p.idactividades");
-	    return view ('vitalicia.cpacientes');
+
 
      
             return view ('vitalicia.home')
