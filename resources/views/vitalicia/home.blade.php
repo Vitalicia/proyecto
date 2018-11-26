@@ -106,12 +106,12 @@
         <tr>
         <td>{{$patt->idpaciente}}</td>
         <td>{{$patt->fechapaciente}}</td>
-        <td>{{$patt->idd}}</td>
-        <td>{{$patt->idmedicamento}}</td>
-        <td>{{$patt->idalimentacion}}</td>
-        <td>{{$patt->ids}}</td>
-        <td>{{$patt->idgeriatricos}}</td>
-        <td>{{$patt->idactividades}}</td>
+        <td>{{$patt->nombre}}</td>
+        <td>{{$patt->medicamento}}</td>
+        <td>{{$patt->alimentacion}}</td>
+        <td>{{$patt->signos}}</td>
+        <td>{{$patt->valorg}}</td>
+        <td>{{$patt->act1}}</td>
         @endforeach
         </tr>
         </table>
