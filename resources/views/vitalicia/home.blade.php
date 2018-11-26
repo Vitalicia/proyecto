@@ -83,7 +83,21 @@
             <td>{{$usu->correo}}</td>
              <td>
              <a href="{{URL::action('vitalicia@modificausua',['idu'=>$usu->idu])}}">
-                Modificar</a></td>
+                Modificar</a> 
+           
+            <a href="{{URL::action('vitalicia@eliminausu',['idu'=>$usu->idu])}}"> 
+            Inhabilitar 
+            </a>
+
+            <a href="{{URL::action('vitalicia@restaurusu',['idu'=>$usu->idu])}}"> 
+            Restaurar  
+            </a> 
+            <a href="{{URL::action('vitalicia@efisicausu',['idu'=>$usu->idu])}}"> 
+            Eliminar 
+            </a> 
+
+                
+                       
             @endforeach
             </tr>
             </table>
@@ -107,12 +121,12 @@
         <tr>
         <td>{{$patt->idpaciente}}</td>
         <td>{{$patt->fechapaciente}}</td>
-        <td>{{$patt->idd}}</td>
-        <td>{{$patt->idmedicamento}}</td>
-        <td>{{$patt->idalimentacion}}</td>
-        <td>{{$patt->ids}}</td>
-        <td>{{$patt->idgeriatricos}}</td>
-        <td>{{$patt->idactividades}}</td>
+        <td>{{$patt->nombre}}</td>
+        <td>{{$patt->medicamento}}</td>
+        <td>{{$patt->alimentacion}}</td>
+        <td>{{$patt->signos}}</td>
+        <td>{{$patt->valorg}}</td>
+        <td>{{$patt->act1}}</td>
         @endforeach
         </tr>
         </table>
@@ -121,12 +135,51 @@
     
   <!--Contenido de la Tab 4-->
   <div class="tabs-panel" id="panel4c">
+  <div class="table-scroll">
+        <table class="hover">
+<tr>
+<th>ID</th>
+<th>Medicamento</th>
+<th>Indicacion</th>
+<th>Presentación</th>
+<th>Terminotx</th>
+<th>Horario</th>
+<th>Nmedica</th>
+
+
+@foreach($medicamentosm as $medi)
+</tr>
+
+<tr>
+<td>{{$medi->idmedicamento}}</td>
+<td>{{$medi->nombre}}</td>
+<td>{{$medi->indicacion}}</td>
+<td>{{$medi->presen}}</td>
+<td>{{$medi->terminotx}}</td>
+<td>{{$medi->tipohorario}}</td>
+<td>{{$medi->nmedica}}</td>
+
+
+<td>
+
+   <a href="{{URL::action('vitalicia@eliminamedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
+	Inhabilitar 
+	</a>
+
+	 <a href="{{URL::action('vitalicia@restauramedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
+	Restaurar  
+	</a> 
+    <a href="{{URL::action('vitalicia@efisicamedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
+	Eliminar 
+	</a> 
+
+
+@endforeach
+</tr>
+</table>
+</div>
+@stop
     
   </div>
     
     
-</div>
-
-   
-            
-@stop
