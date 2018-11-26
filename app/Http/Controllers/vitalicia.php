@@ -824,5 +824,62 @@ public function eliminausu($idu)
    return redirect()->route('confirmacion');
     }
 
+    public function modificapac($idpaciente)
+    {
+            $paci = pacientes::where('idpaciente','=',$idpacien)
+                                 ->get();
+
+           $iddat= $paci[0]->iddat;
+           $datos = datos::where('idd','!=',$iddat)->get();
+                 //return $datosm;
+
+        $medi=medicamentos::where('idmedicamento','!=',$idamedicamento)
+                                 ->get();
+
+         $alim=alimentaciones::where('idalimentacion','!=',$idalimentacion)
+                                 ->get();           
+          $sign=signos::where('ids','=',$ids)
+                                 ->get();
+        $geri=geriatricos::where('idgeriatricos','!=',$idgeriatricos)
+                                 ->get();
+
+         $acti=actividades::where('idactividades','!=',$idactividades)
+                                 ->get();
+
+            return view ('vitalicia.modpacientes')
+            ->with('datos',$datos[0])
+            ->with('alim',$alim)
+            ->with('sig',$signos[0])
+            ->with('geri',$geri[0])
+            ->with('acti',$acti[0]);
+    }
     
+    public function guardamodificapac(Request $request)
+    {
+    $idpaciente =  $request->idpacientes;
+    $idd=$request->idd;
+    $idmedicamento = $request->idmedicamento;
+    $idalimentacion= $request->idalimentacion;
+    $ids= $request->ids;
+    $idgeriatricos = $request->idgeriatricos;
+    $idactividades = $request->idactividades;
+  
+    
+
+            $paci = pacientes::find($idpaciente);
+            $paci->idd= $request->idd;
+            $paci->idmedicamento = $request->idmedicamento;
+            $paci->idalimentacion= $request->idalimentacion;
+            $paci->ids= $request->ids;
+            $paci ->idgeriatricos= $request->idgeriatricos;
+            $paci->idactividades=$request->idactividades;
+            $paci->save();
+            return redirect()->route('confirmacion');
+                   /* $proceso = "MODIFICA MAESTRO";
+                    $mensaje = "REgistro ha sido modificado correctamente";
+                    ->with('proceso',$proceso)
+                    ->with('mensaje',$mensaje);*/
+                    // echo "Listo para modificar";
+    
+}
 }
