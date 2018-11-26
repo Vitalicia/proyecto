@@ -136,13 +136,13 @@
 </tr>
 
 <tr>
-<td>{{$medi->idpaciente}}</td>
-<td>{{$medi->fechapaciente}}</td>
+<td>{{$medi->idmedicamento}}</td>
 <td>{{$medi->nombre}}</td>
-<td>{{$medi->medicamento}}</td>
-<td>{{$medi->alimentacion}}</td>
-<td>{{$medi->signos}}</td>
-<td>{{$medi->valorg}}</td>
+<td>{{$medi->indicacion}}</td>
+<td>{{$medi->presen}}</td>
+<td>{{$medi->terminotx}}</td>
+<td>{{$medi->tipohorario}}</td>
+<td>{{$medi->nmedica}}</td>
 
 
 @endforeach
