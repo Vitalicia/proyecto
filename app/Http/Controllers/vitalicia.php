@@ -595,16 +595,7 @@ class vitalicia extends Controller
                 return redirect()->route('confirmacion');
     } 
    
-    public function getpacientes()
-
-    {
-
-    $pacientesd = pacientes::withTrashed()->orderBy('idpaciente','asc')
-    ->get();
-   return view ('vitalicia.cpacientes')
-   ->with('pacientesd',$pacientesd);
-   
-   }
+    
 
    public function getusuarios()
 
@@ -745,4 +736,33 @@ public function eliminausu($idu)
    return redirect()->route('confirmacion');
     }
 
+    public function getpacientes()
+
+   {
+  //$usuariosd = usuarios::withTrashed()->orderBy('idu','asc')->get();
+ // return view ('vitalicia.cusuarios')
+  //->with('usuariosd',$usuariosd);
+   
+       
+  $pacientesd=\DB::select("SELECT p.idpaciente,p.fechapaciente,
+  CONCAT(d.nombre,' ',d.ap,' ',d.am)AS 'nombre',m.nombre,
+  CONCAT(a.menu,' ',a.consumo)AS alimentacion,
+  CONCAT(s.ta,' ',s.`fc`,' ',s.`fr`,' ',s.`temp`,' ',s.`spo2`,' ',s.`glucosa`,s.`protesis`)AS signos,
+  g.valorg,v.act1
+  FROM pacientes AS p
+  INNER JOIN datos AS d  ON d.idd = p.idd
+  INNER JOIN medicamentos AS m ON m.idmedicamento=p.idmedicamento
+  INNER JOIN alimentaciones AS a ON a.idalimentacion=p.idalimentacion
+  INNER JOIN signos AS s ON s.ids=p.ids
+  INNER JOIN geriatricos AS g ON g.idgeriatricos=p.idgeriatricos
+  INNER JOIN actividades AS v ON v.idactividades=p.idactividades");
+	    return view ('vitalicia.cpacientes')
+        ->with('pacientesd',$pacientesd);
+       //return view('sistema.reporte')
+	 // ->with('maestros',$getusu);    
+   
+   
+   
+   }
+    
 }
