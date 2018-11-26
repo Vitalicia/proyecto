@@ -29,6 +29,18 @@
  <a href="{{URL::action('vitalicia@modificausua',['idu'=>$usu->idu])}}">
     Modificar</a></td>
  
+
+<a href="{{URL::action('vitalicia@eliminausu',['idu'=>$usu->idu])}}"> 
+ Inhabilitar 
+ </a>
+
+  <a href="{{URL::action('vitalicia@restaurusu',['idu'=>$usu->idu])}}"> 
+ Restaurar  
+ </a> 
+ <a href="{{URL::action('vitalicia@efisicausu',['idu'=>$usu->idu])}}"> 
+ Eliminar 
+ </a> 
+
  
 
 @endforeach
