@@ -2,7 +2,8 @@
 
 
 @section('complete')      
-
+<h1></h1>
+<hr>
 
 <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
   <li class="tabs-title is-active"><a href="#panel1c" aria-selected="true">Datos</a></li>
