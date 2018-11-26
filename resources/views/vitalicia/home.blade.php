@@ -143,7 +143,7 @@
 <td>{{$medi->terminotx}}</td>
 <td>{{$medi->tipohorario}}</td>
 <td>{{$medi->nmedica}}</td>
-<td>{{$medi->deleted_at}}</td>
+
 
 <td>
 
