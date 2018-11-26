@@ -49,10 +49,6 @@ $medicamentosm=\DB::select("SELECT m.`idmedicamento`,m.`nombre`,m.`indicacion`,m
 FROM medicamentos AS m
 INNER JOIN horarios AS h ON h.idh=m.`idh`
 INNER JOIN amedicamentos AS am ON am.idamedicamento=m.`idamedicamento`");
-          return view ('vitalicia.cmedicamentos')
-
-       
-
 
      
             return view ('vitalicia.home')
