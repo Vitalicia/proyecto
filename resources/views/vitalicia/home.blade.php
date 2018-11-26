@@ -145,11 +145,11 @@
 <td>{{$medi->nmedica}}</td>
 
 <td>
-@if($medi->deleted_at=="")
+
    <a href="{{URL::action('vitalicia@eliminamedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
 	Inhabilitar 
 	</a>
-    @else
+  
 	 <a href="{{URL::action('vitalicia@restauramedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
 	Restaurar  
 	</a> 
@@ -157,7 +157,6 @@
 	Eliminar 
 	</a> 
 
-@endif
 
 
 @endforeach
