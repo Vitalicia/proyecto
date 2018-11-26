@@ -776,5 +776,25 @@ public function eliminausu($idu)
    
    
    }
+
+   public function cmedicamento()
+
+   {
+  //$usuariosd = usuarios::withTrashed()->orderBy('idu','asc')->get();
+ // return view ('vitalicia.cusuarios')
+  //->with('usuariosd',$usuariosd);
+   
+       
+  $medicamentosm=\DB::select("SELECT m.`idmedicamento`,m.`nombre`,m.`indicacion`,m.`presen`,m.`terminotx`,h.`tipohorario`,am.`nmedica`
+  FROM medicamentos AS m
+  INNER JOIN horarios AS h ON h.idh=m.`idh`
+  INNER JOIN amedicamentos AS am ON am.idamedicamento=m.`idamedicamento`");
+	    return view ('vitalicia.cmedicamentos')
+        ->with('medicamentosm',$medicamentosm);
+         
+   
+   
+   
+   }
     
 }
