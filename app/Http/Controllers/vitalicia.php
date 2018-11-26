@@ -801,5 +801,28 @@ public function eliminausu($idu)
    
    
    }
+
+   public function eliminamedi($idmedicamento)
+	{
+		  medicamentos::find($idmedicamento)->delete();
+		   // $proceso = "ELIMINAR MAESTROS";
+		//	$mensaje = "El maestro ha sido desactivado Correctamente";
+			//return view ('sistema.mensaje')
+			return redirect()->route('confirmacion');
+        }
+        
+        public function restauramedi($idmedicamento)
+	{
+                medicamentos::withTrashed()->where('idmedicamento',$idmedicamento)->restore();
+        return redirect()->route('confirmacion');
+        }
+        
+     public function efisicamedi($idmedicamento)
+	{
+		
+                medicamentos::withTrashed()->where('idmedicamento',$idmedicamento)->forceDelete();
+   return redirect()->route('confirmacion');
+    }
+
     
 }
