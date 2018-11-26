@@ -144,6 +144,21 @@
 <td>{{$medi->tipohorario}}</td>
 <td>{{$medi->nmedica}}</td>
 
+<td>
+@if($datt->deleted_at=="")
+   <a href="{{URL::action('vitalicia@eliminammedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
+	Inhabilitar 
+	</a>
+    @else
+	 <a href="{{URL::action('vitalicia@restauramedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
+	Restaurar  
+	</a> 
+    <a href="{{URL::action('vitalicia@efisicamedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
+	Eliminar 
+	</a> 
+
+@endif
+
 
 @endforeach
 </tr>
