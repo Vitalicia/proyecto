@@ -24,8 +24,8 @@
 <tr>
 <td>{{$patt->idpaciente}}</td>
 <td>{{$patt->fechapaciente}}</td>
-<td>{{$patt->medicamento}}</td>
 <td>{{$patt->nombre}}</td>
+<td>{{$patt->medicamento}}</td>
 <td>{{$patt->alimentacion}}</td>
 <td>{{$patt->signos}}</td>
 <td>{{$patt->valorg}}</td>
