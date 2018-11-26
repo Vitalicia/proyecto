@@ -145,7 +145,7 @@
 <td>{{$medi->nmedica}}</td>
 
 <td>
-@if($datt->deleted_at=="")
+@if($medi->deleted_at=="")
    <a href="{{URL::action('vitalicia@eliminamedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
 	Inhabilitar 
 	</a>
