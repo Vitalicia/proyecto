@@ -744,8 +744,8 @@ public function eliminausu($idu)
   //->with('usuariosd',$usuariosd);
    
        
-  $pacientesd=\DB::select("SELECT p.idpaciente,p.fechapaciente,
-  CONCAT(d.nombre,' ',d.ap,' ',d.am)AS 'nombre',m.nombre,
+  $pacientesd=\DB::select(" SELECT p.idpaciente,p.fechapaciente,
+  CONCAT(d.nombre,' ',d.ap,' ',d.am)AS 'nombre',m.nombre AS medicamento,
   CONCAT(a.menu,' ',a.consumo)AS alimentacion,
   CONCAT(s.ta,' ',s.`fc`,' ',s.`fr`,' ',s.`temp`,' ',s.`spo2`,' ',s.`glucosa`,s.`protesis`)AS signos,
   g.valorg,v.act1
