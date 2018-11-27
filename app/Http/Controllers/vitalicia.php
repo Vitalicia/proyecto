@@ -826,7 +826,7 @@ public function eliminausu($idu)
 
     public function modificapac($idpaciente)
     {
-            $paci = pacientes::where('idpaciente','=',$idpacien)
+            $paci = pacientes::where('idpaciente','=',$idpaciente)
                                  ->get();
 
            $iddat= $paci[0]->iddat;
