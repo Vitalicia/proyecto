@@ -18,6 +18,12 @@ Route::get('/registrosignos','vitalicia@rsignos')->name('rsig');//dar de alta lo
 //RUTAS PARAS LAS BAJAS
 Route::get('/bajaUsuario','vitalicia@bUsuario')->name('busu');
 
+//RUTAS PARAS LAS BAJAS de medicamentos
+Route::get('/eliminamedi/{idmedicamento}','vitalicia@eliminamedi')->name('eliminamedi'); //eliminar los ususrios
+Route::get('/restauramedi/{idmedicamento}','vitalicia@restauramedi')->name('restauramedi');//restuaracion de los ususros
+Route::get('/efisicamedi/{idmedicamento}','vitalicia@efisicamedi')->name('efisicamedi');//eliminacion fisica de usuarios
+
+
 //RUTAS PARAS LAS MODIFICACIONES
 Route::get('/modUsuario','vitalicia@mUsuario')->name('musu');
 
