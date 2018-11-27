@@ -841,8 +841,8 @@ public function eliminausu($idu)
          $alim=alimentaciones::where('idalimentacion','!=',$idal)
                                  ->get(); 
           
-          $idsig= $idal[0]->idsig;                       
-          $sign=signos::where('ids','=',$idsig)
+          $sig= $idal[0]->sig;                       
+          $sign=signos::where('ids','=',$sig)
                                  ->get();
         $geri=geriatricos::where('idgeriatricos','!=',$idgeriatricos)
                                  ->get();
