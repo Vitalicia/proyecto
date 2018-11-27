@@ -857,9 +857,13 @@ public function eliminausu($idu)
             ->with('paci',$paci[0])
             ->with('iddat',$iddat)
             ->with('datos',$datos[0]->nombre)
+            ->with('idal',$idal)
             ->with('medi',$medi[0]->nombre)
+            ->with('sig',$sig)
             ->with('alim',$alim[0]->menu)
+            ->with('idger',$idger)
             ->with('sign',$sign[0]->glucosa)
+            ->with('idac',$idac)
             ->with('geri',$geri[0]->valorg)
             ->with('acti',$acti[0]->act1);
     }
