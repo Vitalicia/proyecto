@@ -833,24 +833,24 @@ public function eliminausu($idu)
            $iddat= $paci[0]->iddat;
            $datos = datos::where('idd','!=',$iddat)->get();
               
-           $idme= $datos[0]->idme;
-        $medi=medicamentos::where('idmedicamento','!=',$idme)
+        
+        $medi=medicamentos::where('idmedicamento','!=',$iddat)
                                  ->get();
 
-         $idal= $medi[0]->idal;
-         $alim=alimentaciones::where('idalimentacion','!=',$idal)
+      
+         $alim=alimentaciones::where('idalimentacion','!=',$iddat)
                                  ->get(); 
           
-          $si=$alim[0]->si;                     
-          $sign=signos::where('ids','=',$si)
+                             
+          $sign=signos::where('ids','=',$iddat)
                                  ->get();
 
-        $idger= $sign[0]->idger;
-        $geri=geriatricos::where('idgeriatricos','!=',$idger)
+   
+        $geri=geriatricos::where('idgeriatricos','!=',$iddat)
                                  ->get();
 
-         $idac= $geri[0]->idac;
-         $acti=actividades::where('idactividades','!=',$idac)
+        
+         $acti=actividades::where('idactividades','!=',$iddat)
                                  ->get();
 
             return view ('vitalicia.modpacientes')
