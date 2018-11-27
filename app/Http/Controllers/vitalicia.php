@@ -835,7 +835,7 @@ public function eliminausu($idu)
                  //return $datosm;
 
          $medicam=$iddat[0]->medicam;
-        $medi=medicamentos::where('idmedicamento','!=',$mmedicam)
+        $medi=medicamentos::where('idmedicamento','!=',$medicam)
                                  ->get();
 
          $alim=alimentaciones::where('idalimentacion','!=',$idalimentacion)
