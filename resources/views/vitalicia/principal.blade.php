@@ -4,10 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vitalicia | Inicio</title>
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/foundation.min.css">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="shortcut icon" href="favicon.ico">  
+    <!--link rel="stylesheet" href="css/foundation.css"-->
+      <link rel="stylesheet" href="{{ asset('css/foundation.css') }}">
+    <!--link rel="stylesheet" href="css/foundation.min.css"-->
+      <link rel="stylesheet" href="{{ asset('css/foundation.min.css') }}">
+    <!--link rel="stylesheet" href="css/app.css"-->
+      <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <!--link rel="shortcut icon" href="favicon.ico"-->  
+      <link rel="stylesheet" href="{{ asset('favicon.ico') }}">
   </head>
   <body>
     
@@ -126,10 +130,14 @@
         </div>
     </footer>
 
-     <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
+    <!--script src="js/vendor/jquery.js"></script-->
+    <script src="{{ asset('js/vendor/jquery.js') }}"></script>
+    <!--script src="js/vendor/what-input.js"></script-->
+    <script src="{{ asset('js/vendor/what-input.js') }}"></script>
+    <!--script src="js/vendor/foundation.js"></script-->
+    <script src="{{ asset('js/vendor/foundation.js') }}"></script>
+    <!--script src="js/app.js"></script-->
+    <script src="{{ asset('js/app.js') }}"></script>
       
       </body>
 </html>
