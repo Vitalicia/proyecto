@@ -832,17 +832,17 @@ public function eliminausu($idu)
 
            $iddat= $paci[0]->iddat;
            $datos = datos::where('idd','!=',$iddat)->get();
-                 //return $datosm;
-
-        $medi=medicamentos::where('idmedicamento','!=',$iddat)
+              
+           $idme= $datos[0]->idme;
+        $medi=medicamentos::where('idmedicamento','!=',$idme)
                                  ->get();
 
          $idal= $medi[0]->idal;
          $alim=alimentaciones::where('idalimentacion','!=',$idal)
                                  ->get(); 
           
-                               
-          $sign=signos::where('ids','=',$sig)
+          $si=$alim[0]->si;                     
+          $sign=signos::where('ids','=',$si)
                                  ->get();
 
         $idger= $sign[0]->idger;
