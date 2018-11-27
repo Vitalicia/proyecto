@@ -127,6 +127,8 @@
         <td>{{$patt->signos}}</td>
         <td>{{$patt->valorg}}</td>
         <td>{{$patt->act1}}</td>
+        <td><a href="{{URL::action('vitalicia@modificapac',['idpaciente'=>$patt->idpaciente])}}">
+                Modificar</a> 
         @endforeach
         </tr>
         </table>
@@ -169,6 +171,7 @@
 	 <a href="{{URL::action('vitalicia@restauramedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
 	Restaurar  
 	</a> 
+  
     <a href="{{URL::action('vitalicia@efisicamedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
 	Eliminar 
 	</a> 
