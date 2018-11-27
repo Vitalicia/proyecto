@@ -845,11 +845,12 @@ public function eliminausu($idu)
           $sign=signos::where('ids','=',$sig)
                                  ->get();
 
-         $idger= $sign[0]->idger;
+        $idger= $sign[0]->idger;
         $geri=geriatricos::where('idgeriatricos','!=',$idger)
                                  ->get();
 
-         $acti=actividades::where('idactividades','!=',$idactividades)
+         $idac= $geri[0]->idac;
+         $acti=actividades::where('idactividades','!=',$idac)
                                  ->get();
 
             return view ('vitalicia.modpacientes')
