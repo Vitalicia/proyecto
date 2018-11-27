@@ -841,11 +841,11 @@ public function eliminausu($idu)
          $alim=alimentaciones::where('idalimentacion','!=',$idal)
                                  ->get(); 
           
-          $sig= $alim[0]->sig;                       
+                               
           $sign=signos::where('ids','=',$sig)
                                  ->get();
 
-        $idger= $sign[1]->idger;
+        $idger= $sign[0]->idger;
         $geri=geriatricos::where('idgeriatricos','!=',$idger)
                                  ->get();
 
@@ -857,13 +857,9 @@ public function eliminausu($idu)
             ->with('paci',$paci[0])
             ->with('iddat',$iddat)
             ->with('datos',$datos[0]->nombre)
-            ->with('idal',$idal)
             ->with('medi',$medi[0]->nombre)
-            ->with('sig',$sig)
             ->with('alim',$alim[0]->menu)
-            ->with('idger',$idger)
             ->with('sign',$sign[0]->glucosa)
-            ->with('idac',$idac)
             ->with('geri',$geri[0]->valorg)
             ->with('acti',$acti[0]->act1);
     }
