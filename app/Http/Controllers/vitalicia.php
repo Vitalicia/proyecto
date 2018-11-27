@@ -824,7 +824,7 @@ public function eliminausu($idu)
    return redirect()->route('confirmacion');
     }
 
-
+    
     public function modificapac($idpaciente)
     {
             $paci = pacientes::where('idpaciente','=',$idpaciente)
@@ -834,8 +834,7 @@ public function eliminausu($idu)
            $datos = datos::where('idd','!=',$iddat)->get();
                  //return $datosm;
 
-         $medicam=$iddat[0]->medicam;
-        $medi=medicamentos::where('idmedicamento','!=',$medicam)
+        $medi=medicamentos::where('idmedicamento','!=',$iddat)
                                  ->get();
 
          $alim=alimentaciones::where('idalimentacion','!=',$idalimentacion)
