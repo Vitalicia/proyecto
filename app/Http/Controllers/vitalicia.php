@@ -844,7 +844,9 @@ public function eliminausu($idu)
           $sig= $alim[0]->sig;                       
           $sign=signos::where('ids','=',$sig)
                                  ->get();
-        $geri=geriatricos::where('idgeriatricos','!=',$idgeriatricos)
+
+         $idger= $sign[0]->idger;
+        $geri=geriatricos::where('idgeriatricos','!=',$idger)
                                  ->get();
 
          $acti=actividades::where('idactividades','!=',$idactividades)
