@@ -13,7 +13,7 @@
                 <input type="text" name="fechapaciente" value="{{$paci->fechapaciente}}">
                 
             Nombre
-            @foreach($datos as $dat)
+            @foreach($otrodato as $dat)
             <br>{!! $errors->first('contrasena','<span class=error>:message</span>')!!}
                 <input type="text" name="idd" value="{{$dat->idd}}">{{$dat->nombre}}
                 @endforeach
