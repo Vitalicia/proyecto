@@ -832,37 +832,17 @@ public function eliminausu($idu)
                                  ->get();
 
            $iddat= $paci[0]->iddat;
-           $datos = datos::where('idd','!=',$iddat)->get();
+           $datos = datos::where('idd','=',$iddat)->get();
+           $otrodato = datos::where('idd','!=',$iddat)->get();
               
         
-        $medi=medicamentos::where('idmedicamento','!=',$iddat)
-                                 ->get();
-
-      
-         $alim=alimentaciones::where('idalimentacion','!=',$iddat)
-                                 ->get(); 
-          
-                             
-          $sign=signos::where('ids','=',$iddat)
-                                 ->get();
-
-   
-        $geri=geriatricos::where('idgeriatricos','!=',$iddat)
-                                 ->get();
-
-        
-         $acti=actividades::where('idactividades','!=',$iddat)
-                                 ->get();
 
             return view ('vitalicia.modpacientes')
             ->with('paci',$paci[0])
             ->with('iddat',$iddat)
             ->with('datos',$datos[0]->nombre)
-            ->with('medi',$medi[0]->nombre)
-            ->with('alim',$alim[0]->menu)
-            ->with('sign',$sign[0]->glucosa)
-            ->with('geri',$geri[0]->valorg)
-            ->with('acti',$acti[0]->act1);
+            ->with('otrodato',$otrodato);
+           
     }
     public function guardamodificapac(Request $request)
     {
