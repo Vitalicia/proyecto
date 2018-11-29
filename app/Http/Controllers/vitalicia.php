@@ -830,8 +830,8 @@ public function eliminausu($idu)
     {
             $paci = pacientes::where('idpaciente','=',$idpaciente)->get();
             $iddat= $paci[0]->iddat;
-            $datos = datos::where('iddat','=',$iddat)->get();
-            $otrodato = datos::where('iddat','!=',$iddat)->get();
+            $datos = datos::where('idd','=',$iddat)->get();
+            $otrodato = datos::where('idd','!=',$iddat)->get();
               
         
 
