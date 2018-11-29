@@ -838,7 +838,7 @@ public function eliminausu($idu)
             return view ('vitalicia.modpacientes')
             ->with('paci',$paci[0])
             ->with('iddat',$iddat)
-            ->with('datos',$datos[2]->nombre)
+            ->with('datos',$datos)
             ->with('otrodato',$otrodato);
            
     }
