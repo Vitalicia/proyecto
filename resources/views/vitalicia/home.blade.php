@@ -127,8 +127,7 @@
         <td>{{$patt->signos}}</td>
         <td>{{$patt->valorg}}</td>
         <td>{{$patt->act1}}</td>
-        <td><a href="{{URL::action('vitalicia@modificapac',['idpaciente'=>$patt->idpaciente])}}">
-                Modificar</a> 
+        <td></td>
         @endforeach
         </tr>
         </table>
