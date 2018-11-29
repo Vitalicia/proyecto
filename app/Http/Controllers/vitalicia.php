@@ -823,10 +823,25 @@ public function eliminausu($idu)
 		
                 medicamentos::withTrashed()->where('idmedicamento',$idmedicamento)->forceDelete();
    return redirect()->route('confirmacion');
-    
+    }
 
     
+    public function modificapac($idpaciente)
+    {
+            $paci = pacientes::where('idpaciente','=',$idpaciente)->get();
+            $iddat= $paci[0]->iddat;
+            $datos = datos::where('idd','=',$iddat)->get();
+            $otrodato = datos::where('idd','!=',$iddat)->get();
+              
+        
 
+            return view ('vitalicia.modpacientes')
+            ->with('paci',$paci[0])
+            ->with('iddat',$iddat)
+            ->with('datos',$datos[0]->nombre)
+            ->with('otrodato',$otrodato);
+           
     
+   
 }
 }
