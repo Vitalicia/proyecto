@@ -823,51 +823,10 @@ public function eliminausu($idu)
 		
                 medicamentos::withTrashed()->where('idmedicamento',$idmedicamento)->forceDelete();
    return redirect()->route('confirmacion');
-    }
-
-    
-    public function modificapac($idpaciente)
-    {
-            $paci = pacientes::where('idpaciente','=',$idpaciente)->get();
-            $iddat= $paci[0]->iddat;
-            $datos = datos::where('idd','=',$iddat)->get();
-            $otrodato = datos::where('idd','!=',$iddat)->get();
-              
-        
-
-            return view ('vitalicia.modpacientes')
-            ->with('paci',$paci[0])
-            ->with('iddat',$iddat)
-            ->with('datos',$datos)
-            ->with('otrodato',$otrodato);
-           
-    }
-    public function guardamodificapac(Request $request)
-    {
-    $idpaciente =  $request->idpacientes;
-    $idd=$request->idd;
-    $idmedicamento = $request->idmedicamento;
-    $idalimentacion= $request->idalimentacion;
-    $ids= $request->ids;
-    $idgeriatricos = $request->idgeriatricos;
-    $idactividades = $request->idactividades;
-  
     
 
-            $paci = pacientes::find($idpaciente);
-            $paci->idd= $request->idd;
-            $paci->idmedicamento = $request->idmedicamento;
-            $paci->idalimentacion= $request->idalimentacion;
-            $paci->ids= $request->ids;
-            $paci ->idgeriatricos= $request->idgeriatricos;
-            $paci->idactividades=$request->idactividades;
-            $paci->save();
-            return redirect()->route('confirmacion');
-                   /* $proceso = "MODIFICA MAESTRO";
-                    $mensaje = "REgistro ha sido modificado correctamente";
-                    ->with('proceso',$proceso)
-                    ->with('mensaje',$mensaje);*/
-                    // echo "Listo para modificar";
+    
+
     
 }
 }
