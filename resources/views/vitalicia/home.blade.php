@@ -5,16 +5,16 @@
 <hr>
 
 <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
-  <li class="tabs-title is-active"><a href="#panel1c" aria-selected="true">Datos</a></li>
-  <li class="tabs-title"><a href="#panel2c">Usuarios</a></li>
-  <li class="tabs-title"><a href="#panel3c">Pacientes</a></li>
-  <li class="tabs-title"><a href="#panel4c">Medicamentos</a></li>
+  <li class="tabs-title is-active"><a href="#datos" aria-selected="true">Datos</a></li>
+  <li class="tabs-title"><a href="#usuarios">Usuarios</a></li>
+  <li class="tabs-title"><a href="#pacientes">Pacientes</a></li>
+  <li class="tabs-title"><a href="#medicamentos">Medicamentos</a></li>
 </ul>
 
 <div class="tabs-content" data-tabs-content="collapsing-tabs">
     
   <!--Contenido de la Tab 1-->
-  <div class="tabs-panel is-active" id="panel1c">
+  <div class="tabs-panel is-active" id="datos">
         <div class="table-scroll">
             <table class="hover">
             <tr>
@@ -61,7 +61,7 @@
   </div>
 
   <!--Contenido de la Tab 2-->
-  <div class="tabs-panel" id="panel2c">
+  <div class="tabs-panel" id="usuarios">
             <table class="hover">
                 <tr>
                     <th>ID</th>
@@ -99,7 +99,7 @@
   </div>
 
   <!--Contenido de la Tab 3-->
-  <div class="tabs-panel" id="panel3c">
+  <div class="tabs-panel" id="pacientes">
         <div class="table-scroll">
         <table class="hover">
                 <tr>
@@ -129,7 +129,7 @@
   </div>
     
   <!--Contenido de la Tab 4-->
-  <div class="tabs-panel" id="panel4c">
+  <div class="tabs-panel" id="medicamentos">
   <div class="table-scroll">
         <table class="hover">
             <tr>
