@@ -1,7 +1,7 @@
 @extends('vitalicia.principal')
 
 @section('complete')      
-<h1></h1>
+<h2 class="subheader">CONSULTAS <small>Vitalicia</small></h2>
 <hr>
 
 <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
@@ -44,13 +44,14 @@
                     <td><img src = "{{asset('archivos/'.$datt->archivo)}}" height =100 width=100></td>
                     @if($datt->deleted_at=="")
                         <td>
-                                <a href="{{URL::action('vitalicia@eliminam',['idd'=>$datt->idd])}}">Inhabilitar </a> 
-                                <a href="{{URL::action('vitalicia@modificadat',['idd'=>$datt->idd])}}">Modificar</a>
+                            <a href="{{URL::action('vitalicia@eliminam',['idd'=>$datt->idd])}}"> 
+                            <button type="button" class="button small secondary">Inhabilitar</button></a>
+                            <a href="{{URL::action('vitalicia@modificadat',['idd'=>$datt->idd])}}"><button type="button" class="button small success">Modificar</button></a>
                         </td>
                     @else
                         <td>
-                                <a href="{{URL::action('vitalicia@restauram',['idd'=>$datt->idd])}}">Restaurar </a> 
-                                <a href="{{URL::action('vitalicia@efisicam',['idd'=>$datt->idd])}}">Eliminar</a> 
+                            <a href="{{URL::action('vitalicia@restauram',['idd'=>$datt->idd])}}"><button type="button" class="button small primary">Restaurar</button></a> 
+                            <a href="{{URL::action('vitalicia@efisicam',['idd'=>$datt->idd])}}"><button type="button" class="button small alert">Eliminar</button></a> 
                         </td>
                     @endif
                 </tr>
@@ -79,17 +80,17 @@
                         <td>{{$usu->correo}}</td>
                         <td>
                             <a href="{{URL::action('vitalicia@modificausua',['idu'=>$usu->idu])}}">
-                            Modificar</a> 
+                                <button type="button" class="button small success">Modificar</button></a> 
 
                             <a href="{{URL::action('vitalicia@eliminausu',['idu'=>$usu->idu])}}"> 
-                            Inhabilitar 
+                                <button type="button" class="button small secondary">Inhabilitar</button>
                             </a>
 
                             <a href="{{URL::action('vitalicia@restaurusu',['idu'=>$usu->idu])}}"> 
-                            Restaurar  
+                                <button type="button" class="button small primary">Restaurar</button> 
                             </a> 
                             <a href="{{URL::action('vitalicia@efisicausu',['idu'=>$usu->idu])}}"> 
-                            Eliminar 
+                                <button type="button" class="button small alert">Eliminar</button> 
                             </a> 
                         </td>
                     </tr>           
@@ -151,13 +152,13 @@
                     <td>{{$medi->nmedica}}</td>
                     <td>
                    <a href="{{URL::action('vitalicia@eliminamedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
-                    Inhabilitar 
+                       <button type="button" class="button small secondary">Inhabilitar</button> 
                     </a>
                      <a href="{{URL::action('vitalicia@restauramedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
-                    Restaurar  
+                         <button type="button" class="button small primary">Restaurar</button>  
                     </a> 
                     <a href="{{URL::action('vitalicia@efisicamedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
-                    Eliminar 
+                        <button type="button" class="button small alert">Eliminar</button> 
                     </a> 
                     </td>
                 </tr>
