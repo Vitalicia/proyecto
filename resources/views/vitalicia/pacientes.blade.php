@@ -1,6 +1,6 @@
 @extends('vitalicia.principal')
 @section('encabezado')
-<h2>Datos de Pacientes</h2>
+<h2 class="subheader">Seguimiento de Pacientes</h2>
 @stop
 @section('contenido')
 

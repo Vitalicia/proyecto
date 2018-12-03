@@ -1,6 +1,7 @@
 @extends('vitalicia.principal')
 @section('encabezado')
-<h3>NUEVO MEDICAMENTO PARA PACIENTES</h3>
+<h2 class="subheader">Nuevo Medicamento <small>Vitalicia</small></h2>
+
 @stop
 @section('contenido')
         <form action="{{route('gamedi')}}" method = "POST" enctype="multipart/form-data" >

@@ -73,7 +73,7 @@
     <hr>
 
             
-    <div class="row large-8" align="center">
+    <div class="row large-10" align="center">
             @yield('encabezado')
     </div>
         
