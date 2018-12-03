@@ -669,19 +669,23 @@ INNER JOIN amedicamentos AS am ON am.idamedicamento=m.`idamedicamento`");
         $idamedicamento = $request->idamedicamento;
         $nmedica =  $request->nmedica;
         $mpresen= $request->mpresen;
+        $mindicacion= $request->mindicacion;
         
         $this->validate($request,[
                 'nmedica'=> ['regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
                 'nmedica'=> 'required',
                 'mpresen'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
-                'mpresen'=> 'required'
+                'mpresen'=> 'required',
+                'mindicacion'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'mindicacion'=> 'required'
          ]);
                
 
                 $amed = new amedicamentos;
                 $amed->idamedicamento = $request->idamedicamento;
                 $amed->nmedica = $request->nmedica;
-                $amed->mpresen = $request->mpresen;    
+                $amed->mpresen = $request->mpresen;
+                $amed->mindicacion = $request->mindicacion;
                 $amed->save();
 
 
