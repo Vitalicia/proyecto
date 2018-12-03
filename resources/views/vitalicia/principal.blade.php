@@ -34,9 +34,9 @@
                 <a href="{{route('cmedicamentos')}}">Nuevo Medicamento</a>
               </li>    
                 
-              <li>
-                <a href="{{route('rusu')}}">Datos Generales</a>
-              </li>
+              <!--li>
+                <a href="#">Datos Generales</a>
+              </li-->
                 
               
               <li>
