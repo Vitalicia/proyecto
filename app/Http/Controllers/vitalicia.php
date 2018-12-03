@@ -246,11 +246,17 @@ INNER JOIN amedicamentos AS am ON am.idamedicamento=m.`idamedicamento`");
                         
                           ->get();
         
+         $rdusu = usuarios::withTrashed()->where('idt','=',4)
+                        
+                          ->get();
+        
+
             
         //return $carreras;
         return view ('vitalicia.rMedicamentos')
                     ->with('iddm',$iddm)
                     ->with('horarios',$horarios)
+                    ->with('usuarios',$rdusu)
                     ->with('amedicamentos',$amedicamentos);
     } 
 
