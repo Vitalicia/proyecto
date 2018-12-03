@@ -1,6 +1,6 @@
 @extends('vitalicia.principal')
 @section('encabezado')
-<h3>Consulta de Pacientes</h3>
+<h2 class="subheader">Pacientes</h2>
 @stop
 @section('contenido')
         <form action = "#" method= 'POST'>
