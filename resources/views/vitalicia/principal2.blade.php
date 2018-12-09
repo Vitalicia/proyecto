@@ -26,57 +26,9 @@
  
         <div class="top-bar-right">
             <ul class="dropdown menu" data-dropdown-menu>
-              <li>@if (Session::has('sesionname'))
-                  <div><h5 class="subheader">¡Hola {{ Session::get('sesionname')}}!</h5></div>
-                  @endif
-              </li>
                 
               <li>
-                <a href="{{route('home')}}">Vitalicia</a>
-              </li>    
-                
-              @if(Session::get('sesiontipo')=="1")
-              <li>
-                <a href="{{route('cmedicamentos')}}">Nuevo Medicamento</a>
-              </li>    
-              @endif 
-              <!--li>
-                <a href="#">Datos Generales</a>
-              </li-->
-                
-              @if(Session::get('sesiontipo')=="1" or "2")
-              <li>
-                        <a href="{{route('paci')}}">Pacientes</a>
-              </li>
-              @endif
-                
-              <li>
-                <a href="{{route('getpacientes')}}">Familiares</a>
-              </li>
-                            
-              @if(Session::get('sesiontipo')=="1")
-              <li>
-                    
-                    <a href="#">Consultas</a>
-                    <ul class="menu">
-                        @if(Session::get('sesiontipo')=="1")
-                        <li><a href="{{route('getdatos')}}">Datos</a></li>
-                        <li><a href="{{route('getusuarios')}}">Usuarios</a></li>
-                        @endif
-                        <li><a href="{{route('getpacientes')}}">Pacientes</a></li>
-                    </ul>
-                    
-                </li>
-              @endif
-                
-              @if(Session::get('sesiontipo')=="1")
-              <li>
-                <a href="{{route('usu')}}">Nuevo Usuario</a>
-              </li>
-              @endif
-                
-              <li>
-                <a href="{{URL::action('usuariosc@cerrarsesion')}}">Cerrar Sesi&oacute;n</a>
+                <a href="{{URL::action('usuariosc@cerrarsesion')}}">Regresar</a>
               </li>
             </ul>
         </div>

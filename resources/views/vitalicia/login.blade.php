@@ -1,4 +1,4 @@
-@extends('vitalicia.principal')
+@extends('vitalicia.principal2')
 @section('encabezado')
 <h2 class="subheader">Iniciar de sesi&oacute;n <small>Vitalicia</small></h2>
 @stop
