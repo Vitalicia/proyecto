@@ -1,6 +1,6 @@
 @extends('vitalicia.principal')
 @section('encabezado')
-<h3>Datos de inicio de sesi&oacute;n</h3>
+<h2 class="subheader">Nuevo Usuario</h2>
 @stop
 @section('contenido2')
         <form action="{{route('gusua')}}" method = "POST" enctype="multipart/form-data"  >

@@ -18,7 +18,7 @@
     <div class="top-bar">
       <div class="row">
         <div class="top-bar-left">
-	       <a class="navbar-brand" href="{{route('home')}}"><img src="vitalicia.jpg" width="70" height="200" alt="Vitalicia"></a>  
+	       <a class="navbar-brand" href="{{route('home')}}"><img src="vitalicia.jpg" width="70" height="200" alt="Vitalicia"></a> 
         </div>
           
 
@@ -27,7 +27,7 @@
         <div class="top-bar-right">
             <ul class="dropdown menu" data-dropdown-menu>
               <li>@if (Session::has('sesionname'))
-                    <div>¡Hola {{ Session::get('sesionname')}}!</div>
+                  <div><h5 class="subheader">¡Hola {{ Session::get('sesionname')}}!</h5></div>
                   @endif
               </li>
                 
