@@ -28,7 +28,11 @@ class vitalicia extends Controller
 {
     //INICIO
        public function home()
-    {
+    { 
+        if( Session::get('sesionidu')!="")
+		 {
+
+         
         $usuariosd=\DB::select("SELECT u.idu,u.usuario,u.contrasena,u.correo,t.tipo as tip
         FROM usuarios AS u
         INNER JOIN tipos AS t ON t.idt =  u.idt");
@@ -59,12 +63,28 @@ class vitalicia extends Controller
             ->with('datosd',$datosd)
             ->with('medicamentosm',$medicamentosm)
             ->with('pacientesd',$pacientesd);
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
     
     //INICIO
        public function main()
     {
-            return view ('vitalicia.main');
+            if( Session::get('sesionidu')!="")
+		 {
+                return view ('vitalicia.main');
+         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
     
         //INICIO
@@ -78,6 +98,7 @@ class vitalicia extends Controller
        public function spaciente()
     {
             return view ('vitalicia.pacientes');
+        
     } 
     
     //USUARIOS

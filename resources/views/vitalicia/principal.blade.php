@@ -27,19 +27,19 @@
         <div class="top-bar-right">
             <ul class="dropdown menu" data-dropdown-menu>
               <li>@if (Session::has('sesionname'))
-    <div>BIENVENIDO {{ Session::get('sesionname')}}
-    <br>
-    {{Session::get('sesiontipo')}}</div>
-@endif</li>
+                    <div>¡Hola {{ Session::get('sesionname')}}!</div>
+                  @endif
+              </li>
                 
               <li>
                 <a href="{{route('home')}}">Vitalicia</a>
               </li>    
                 
+              @if(Session::get('sesiontipo')=="1")
               <li>
                 <a href="{{route('cmedicamentos')}}">Nuevo Medicamento</a>
               </li>    
-                
+              @endif 
               <!--li>
                 <a href="#">Datos Generales</a>
               </li-->
@@ -56,15 +56,19 @@
                 <li>
                     <a href="#">Consultas</a>
                     <ul class="menu">
+                        @if(Session::get('sesiontipo')=="1")
                         <li><a href="{{route('getdatos')}}">Datos</a></li>
-                        <li><a href="{{route('getusuarios')}}">Usuarios</a></li> 
+                        <li><a href="{{route('getusuarios')}}">Usuarios</a></li>
+                        @endif
                         <li><a href="{{route('getpacientes')}}">Pacientes</a></li>
                     </ul>   
                 </li>
               
+              @if(Session::get('sesiontipo')=="1")
               <li>
                 <a href="{{route('usu')}}">Nuevo Usuario</a>
               </li>
+              @endif
                 
               <li>
                 <a href="{{URL::action('usuariosc@cerrarsesion')}}">Cerrar Sesi&oacute;n</a>

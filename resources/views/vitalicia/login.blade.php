@@ -18,9 +18,11 @@
         </form>
 
         @if (Session::has('error'))
-            <div>{{ Session::get('error') }}</div>
+            <div>
+                    {{ Session::get('error') }}
+            </div>
             <script>
-            alert("{{Session::get('error')}}");
+                    alert("{{Session::get('error')}}");
             </script>
         @endif
 @stop

@@ -41,9 +41,9 @@ class usuariosc extends Controller
 		   }
 		   else
 		   {
-	      Session::put('sesionname',$consulta[0]->nombre);
+	      Session::put('sesionname',$consulta[0]->usuario);
 		  Session::put('sesionidu',$consulta[0]->idu);
-		  Session::put('sesiontipo',$consulta[0]->tipo);
+		  Session::put('sesiontipo',$consulta[0]->idt);
 	      
 		  $sname = Session::get('sesionname');
 		  $sidu = Session::get('sesionidu');
