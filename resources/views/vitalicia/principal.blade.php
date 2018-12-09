@@ -63,11 +63,11 @@
                 </li>
               
               <li>
-                <a href="{{route('usu')}}">Iniciar Sesi&oacute;n</a>
+                <a href="{{route('usu')}}">Nuevo Usuario</a>
               </li>
                 
               <li>
-                <!--a href="#">Cerrar Sesi&oacute;n</a-->
+                <a href="{{URL::action('usuariosc@cerrarsesion')}}">Cerrar Sesi&oacute;n</a>
               </li>
             </ul>
         </div>
