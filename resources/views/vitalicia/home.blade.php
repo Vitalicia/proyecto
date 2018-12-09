@@ -5,10 +5,16 @@
 <hr>
 
 <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
-  <li class="tabs-title is-active"><a href="#datos" aria-selected="true">Datos</a></li>
-  <li class="tabs-title"><a href="#usuarios">Usuarios</a></li>
+  @if(Session::get('sesiontipo')=="1" or "2")
+    <li class="tabs-title is-active"><a href="#datos" aria-selected="true">Datos</a></li>
+  @endif
+  @if(Session::get('sesiontipo')=="1")
+    <li class="tabs-title"><a href="#usuarios">Usuarios</a></li>
+  @endif
   <li class="tabs-title"><a href="#pacientes">Pacientes</a></li>
-  <li class="tabs-title"><a href="#medicamentos">Medicamentos</a></li>
+  @if(Session::get('sesiontipo')=="1")
+    <li class="tabs-title"><a href="#medicamentos">Medicamentos</a></li>
+  @endif
 </ul>
 
 <div class="tabs-content" data-tabs-content="collapsing-tabs">
