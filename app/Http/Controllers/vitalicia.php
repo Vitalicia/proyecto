@@ -73,18 +73,10 @@ class vitalicia extends Controller
     } 
     
     //INICIO
-       public function main()
+       public function inicio()
     {
-            if( Session::get('sesionidu')!="")
-		 {
-                return view ('vitalicia.main');
-         }
-        else
-		 {
-			 Session::flash('error', 'Favor de loguearse antes de 
-		continuar');
-		 return redirect()->route('login');
-		 }
+                return view ('vitalicia.inicio');
+         
     } 
     
         //INICIO

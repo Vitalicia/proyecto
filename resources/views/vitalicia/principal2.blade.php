@@ -28,7 +28,7 @@
             <ul class="dropdown menu" data-dropdown-menu>
                 
               <li>
-                <a href="{{URL::action('usuariosc@cerrarsesion')}}">Regresar</a>
+                <a href="{{URL::action('vitalicia@inicio')}}">Regresar</a>
               </li>
             </ul>
         </div>
