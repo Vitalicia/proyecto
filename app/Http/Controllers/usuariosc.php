@@ -57,7 +57,7 @@ class usuariosc extends Controller
    public function principal()
    {
 	   if( Session::get('sesionidu')!="")
-	   return view ('vitalicia.principal');
+	   return redirect()->route('home');
        else
 	   {
 		Session::flash('error', 'Favor de loguearse antes de 
