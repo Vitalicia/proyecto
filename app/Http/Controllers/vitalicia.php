@@ -34,22 +34,22 @@ class vitalicia extends Controller
         $datosd = datos::withTrashed()->orderBy('idd','asc')->get();
 
         $pacientesd=\DB::select(" SELECT p.idpaciente,p.fechapaciente,
-  CONCAT(d.nombre,' ',d.ap,' ',d.am)AS 'nombre',m.nombre AS medicamento,
-  CONCAT(a.menu,' ',a.consumo)AS alimentacion,
-  CONCAT(s.ta,' ',s.`fc`,' ',s.`fr`,' ',s.`temp`,' ',s.`spo2`,' ',s.`glucosa`,s.`protesis`)AS signos,
-  g.valorg,v.act1
-  FROM pacientes AS p
-  INNER JOIN datos AS d  ON d.idd = p.idd
-  INNER JOIN medicamentos AS m ON m.idmedicamento=p.idmedicamento
-  INNER JOIN alimentaciones AS a ON a.idalimentacion=p.idalimentacion
-  INNER JOIN signos AS s ON s.ids=p.ids
-  INNER JOIN geriatricos AS g ON g.idgeriatricos=p.idgeriatricos
-  INNER JOIN actividades AS v ON v.idactividades=p.idactividades");
+          CONCAT(d.nombre,' ',d.ap,' ',d.am)AS 'nombre',m.nombre AS medicamento,
+          CONCAT(a.menu,' ',a.consumo)AS alimentacion,
+          CONCAT(s.ta,' ',s.`fc`,' ',s.`fr`,' ',s.`temp`,' ',s.`spo2`,' ',s.`glucosa`,s.`protesis`)AS signos,
+          g.valorg,v.act1
+          FROM pacientes AS p
+          INNER JOIN datos AS d  ON d.idd = p.idd
+          INNER JOIN medicamentos AS m ON m.idmedicamento=p.idmedicamento
+          INNER JOIN alimentaciones AS a ON a.idalimentacion=p.idalimentacion
+          INNER JOIN signos AS s ON s.ids=p.ids
+          INNER JOIN geriatricos AS g ON g.idgeriatricos=p.idgeriatricos
+          INNER JOIN actividades AS v ON v.idactividades=p.idactividades");
 
-$medicamentosm=\DB::select("SELECT m.`idmedicamento`,m.`nombre`,m.`indicacion`,m.`presen`,m.`terminotx`,h.`tipohorario`,am.`nmedica`
-FROM medicamentos AS m
-INNER JOIN horarios AS h ON h.idh=m.`idh`
-INNER JOIN amedicamentos AS am ON am.idamedicamento=m.`idamedicamento`");
+        $medicamentosm=\DB::select("SELECT m.`idmedicamento`,m.`nombre`,m.`indicacion`,m.`presen`,m.`terminotx`,h.`tipohorario`,am.`nmedica`
+        FROM medicamentos AS m
+        INNER JOIN horarios AS h ON h.idh=m.`idh`
+        INNER JOIN amedicamentos AS am ON am.idamedicamento=m.`idamedicamento`");
 
      
             return view ('vitalicia.home')
