@@ -26,6 +26,12 @@
  
         <div class="top-bar-right">
             <ul class="dropdown menu" data-dropdown-menu>
+              <li>@if (Session::has('sesionname'))
+    <div>BIENVENIDO {{ Session::get('sesionname')}}
+    <br>
+    {{Session::get('sesiontipo')}}</div>
+@endif</li>
+                
               <li>
                 <a href="{{route('home')}}">Vitalicia</a>
               </li>    

@@ -20,6 +20,8 @@ use App\signos;
 use App\pacientes;
 use App\amedicamentos;
 use App\actividades;
+use Session;
+
 
 
 class vitalicia extends Controller
