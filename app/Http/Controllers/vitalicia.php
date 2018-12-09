@@ -90,20 +90,39 @@ class vitalicia extends Controller
         //INICIO
        public function confirmacion()
     {
-            return view ('vitalicia.confirmacion');
+            if( Session::get('sesionidu')!="")
+		 {
+                return view ('vitalicia.confirmacion');
+         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     }
     
     
     //INICIO
        public function spaciente()
     {
+           if( Session::get('sesionidu')!="")
+		 {
             return view ('vitalicia.pacientes');
-        
+         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
     
     //USUARIOS
        public function rUsuario()
-    {
+    { 
+      if( Session::get('sesionidu')!="")
+		 {
         //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
         $clavequesigue = datos::withTrashed()->orderBy('idd','desc')
                                             ->take(1)
@@ -129,11 +148,20 @@ class vitalicia extends Controller
         return view ('vitalicia.rUsuario')
                     ->with('idds',$idds)
                     ->with('usuarios',$rdusu);
+      }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
     
            public function usuario()
     {
-            //EN LA VISTA DE USUARIO NOS MUESTRA EL SELECT DE LOS TIPOS DE USUARIOS
+        if( Session::get('sesionidu')!="")
+		 {
+                //EN LA VISTA DE USUARIO NOS MUESTRA EL SELECT DE LOS TIPOS DE USUARIOS
             $claveusu = usuarios::withTrashed()->orderBy('idu','desc')
                                             ->take(1)
                                             ->get();
@@ -155,36 +183,80 @@ class vitalicia extends Controller
             return view ('vitalicia.usuario')
                 ->with('tipos',$tipos)
                 ->with('idus',$idus);
-               
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }       
     } 
 
        public function bUsuario()
     {
-            return view ('vitalicia.bUsuario');
+         if( Session::get('sesionidu')!="")
+		 {
+             return view ('vitalicia.bUsuario');
+         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
 
        public function mUsuario()
     {
-            return view ('vitalicia.mUsuario');
+            if( Session::get('sesionidu')!="")
+		 {
+                return view ('vitalicia.mUsuario');
+         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     }
     
     //PACIENTES
 
        public function cPaciente()
     {
+           if( Session::get('sesionidu')!="")
+		 {
             return view ('vitalicia.cPaciente');
+         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
 
        public function rPaciente()
     {
-            return view ('vitalicia.rPaciente');
+         if( Session::get('sesionidu')!="")
+		 {
+             return view ('vitalicia.rPaciente');
+         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
 
     //
     
            public function guardausuario(formValidation $request)
     {   
-            $request->all(); //Procesa los datos del formulario
+        if( Session::get('sesionidu')!="")
+        {
+                $request->all(); //Procesa los datos del formulario
             
                     
             $file = $request->file('archivo');
@@ -221,11 +293,20 @@ class vitalicia extends Controller
 
 
                 return redirect()->route('confirmacion');
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
     
       public function gusuario(Request $request)
     {   
-            $request->all(); //Procesa los datos del formulario
+       if( Session::get('sesionidu')!="")
+		 {
+           $request->all(); //Procesa los datos del formulario
             
         $this->validate($request,[
                 'usuario' => 'required',
@@ -242,11 +323,20 @@ class vitalicia extends Controller
 
 
                 return redirect()->route('confirmacion');
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     }     
 
     public function rmedicamento()
     {
-        //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
+        if( Session::get('sesionidu')!="")
+		 {
+            //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
         $clavequesiguem =medicamentos::withTrashed()->orderBy('idmedicamento','desc')
                                             ->take(1)
                                             ->get();
@@ -275,17 +365,26 @@ class vitalicia extends Controller
         
 
             
-        //return $carreras;
+        
         return view ('vitalicia.rMedicamentos')
                     ->with('iddm',$iddm)
                     ->with('horarios',$horarios)
                     ->with('usuarios',$rdusu)
                     ->with('amedicamentos',$amedicamentos);
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
 
     public function guardamedicamento(Request $request)
     {   
-              $request->all(); //Procesa los datos del formulario
+        if( Session::get('sesionidu')!="")
+		 {
+            $request->all(); //Procesa los datos del formulario
 
 
                 $med = new medicamentos;
@@ -299,11 +398,20 @@ class vitalicia extends Controller
 
               
                 return redirect()->route('confirmacion');
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
 
     public function ralimentacion()
     {
-        //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
+        if( Session::get('sesionidu')!="")
+		 {
+            //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
         $claveali =alimentaciones::withTrashed()->orderBy('idalimentacion','desc')
                                             ->take(1)
                                             ->get();
@@ -326,11 +434,20 @@ class vitalicia extends Controller
         return view ('vitalicia.rAlimentacion')
                     ->with('idal',$idal)
                     ->with('alimentos',$alimentos);
+       }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
 
     public function guardalimento(Request $request)
     {   
-             // $request->all(); //Procesa los datos del formulario
+      if( Session::get('sesionidu')!="")
+		 {
+          // $request->all(); //Procesa los datos del formulario
 
         $hora =  $request->hora;
         $menu = $request->menu;
@@ -357,120 +474,179 @@ class vitalicia extends Controller
 
               
                 return redirect()->route('confirmacion');
-    } 
+      }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }  
+    }
+        
+        
     public function getdatos()
 
     {
-   $datosd = datos::withTrashed()->orderBy('idd','asc')->get();
-   return view ('vitalicia.cdatos')
-   ->with('datosd',$datosd);
-   
+        if( Session::get('sesionidu')!="")
+		 {
+               $datosd = datos::withTrashed()->orderBy('idd','asc')->get();
+               return view ('vitalicia.cdatos')
+               ->with('datosd',$datosd);
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
    }
 
    public function modificadat($idd)
 	{
-		$datosm = datos::where('idd','=',$idd)
+       if( Session::get('sesionidu')!="")
+		 {
+            $datosm = datos::where('idd','=',$idd)
 		                     ->get();
 	             //return $datosm;
-		return view ('vitalicia.moddatos')
-		->with('datosm',$datosm[0]);
+                return view ('vitalicia.moddatos')
+                ->with('datosm',$datosm[0]);
         }
-        
-    public function guardamodificadat(Request $request)
-	{
-        $idd =  $request->idd;
-        $nombre = $request->nombre;
-        $ap = $request->ap;
-        $am = $request->am;
-        $edad = $request->edad;
-	$telefono = $request->telefono;
-        $calle = $request->calle;
-        $numero = $request->numero;
-        $calle1 = $request->calle1;
-        $calle2 = $request->calle2;
-        $colonia = $request->colonia;
-        $municipio = $request->municipio;
-        $ciudad = $request->ciudad;
-        $cp = $request->cp;
-        $referencia = $request->referencia;
-      
-        
-        
-        
-		 $this->validate($request,[
-         'nombre'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
-         'edad'=>'required|integer|min:18',
-		 'cp'=>['regex:/^[0-9]{5}$/'],
-		 'beca'=>['regex:/^[0-9]+[.][0-9]{2}$/'],
-		 'archivo'=>'image|mimes:jpeg,png,gif'
-             ]);
-             
-             $file = $request->file('archivo');
-             if($file!="")
-             {	 
-             $ldate = date('Ymd_His_');
-             $img = $file->getClientOriginalName();
-             $img2 = $ldate.$img;
-             \Storage::disk('local')->put($img2, \File::get($file)); 
-             }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }            
+    }
 
-	        $dato = datos::find($idd);
-                $dato->idd = $request->idd;
-                if($file!="")
-	        {	
-			$dato->archivo = $img2;
-	        }
-		$dato->nombre = $request->nombre;
-		$dato->ap =$request->ap;
-		$dato->am= $request->am;
-                $dato->edad=$request->edad;
-                $dato->telefono=$request->telefono;
-                $dato->calle=$request->calle;
-                $dato->numero=$request->numero;
-                $dato->calle1=$request->calle1;
-                $dato->calle2=$request->calle2;
-                $dato->colonia=$request->colonia;
-                $dato->municipio=$request->municipio;
-                $dato->ciudad=$request->ciudad;
-                $dato->cp=$request->cp;
-                $dato->referencia=$request->referencia;
-                $dato->save();
-                return redirect()->route('confirmacion');
-                       /* $proceso = "MODIFICA MAESTRO";
-			$mensaje = "REgistro ha sido modificado correctamente";
-			->with('proceso',$proceso)
-                        ->with('mensaje',$mensaje);*/
-                        // echo "Listo para modificar";
+  public function guardamodificadat(Request $request)
+    {
+       if( Session::get('sesionidu')!="")
+		 {
+                $idd =  $request->idd;
+                $nombre = $request->nombre;
+                $ap = $request->ap;
+                $am = $request->am;
+                $edad = $request->edad;
+                $telefono = $request->telefono;
+                $calle = $request->calle;
+                $numero = $request->numero;
+                $calle1 = $request->calle1;
+                $calle2 = $request->calle2;
+                $colonia = $request->colonia;
+                $municipio = $request->municipio;
+                $ciudad = $request->ciudad;
+                $cp = $request->cp;
+                $referencia = $request->referencia;
+
+
+
+
+                 $this->validate($request,[
+                 'nombre'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
+                 'edad'=>'required|integer|min:18',
+                 'cp'=>['regex:/^[0-9]{5}$/'],
+                 'beca'=>['regex:/^[0-9]+[.][0-9]{2}$/'],
+                 'archivo'=>'image|mimes:jpeg,png,gif'
+                     ]);
+
+                     $file = $request->file('archivo');
+                     if($file!="")
+                     {	 
+                     $ldate = date('Ymd_His_');
+                     $img = $file->getClientOriginalName();
+                     $img2 = $ldate.$img;
+                     \Storage::disk('local')->put($img2, \File::get($file)); 
+                     }
+
+                    $dato = datos::find($idd);
+                        $dato->idd = $request->idd;
+                        if($file!="")
+                    {	
+                    $dato->archivo = $img2;
+                    }
+                $dato->nombre = $request->nombre;
+                $dato->ap =$request->ap;
+                $dato->am= $request->am;
+                        $dato->edad=$request->edad;
+                        $dato->telefono=$request->telefono;
+                        $dato->calle=$request->calle;
+                        $dato->numero=$request->numero;
+                        $dato->calle1=$request->calle1;
+                        $dato->calle2=$request->calle2;
+                        $dato->colonia=$request->colonia;
+                        $dato->municipio=$request->municipio;
+                        $dato->ciudad=$request->ciudad;
+                        $dato->cp=$request->cp;
+                        $dato->referencia=$request->referencia;
+                        $dato->save();
+                        return redirect()->route('confirmacion');
+       }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
         
 }
 
    public function eliminam($idd)
 	{
-		  datos::find($idd)->delete();
-		   // $proceso = "ELIMINAR MAESTROS";
-		//	$mensaje = "El maestro ha sido desactivado Correctamente";
-			//return view ('sistema.mensaje')
+       if( Session::get('sesionidu')!="")
+		 {
+            datos::find($idd)->delete();
+		  
 			return redirect()->route('confirmacion');
-        }
+         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
+    }
         
+    
         public function restauram($idd)
 	{
-	datos::withTrashed()->where('idd',$idd)->restore();
-        return redirect()->route('confirmacion');
-        }
+        if( Session::get('sesionidu')!="")
+		 {    
+                datos::withTrashed()->where('idd',$idd)->restore();
+                    return redirect()->route('confirmacion');
+            
+         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }    
+    }
         
      public function efisicam($idd)
-	{
-		
-   datos::withTrashed()->where('idd',$idd)->forceDelete();
-   return redirect()->route('confirmacion');
+	
+    {
+	   if( Session::get('sesionidu')!="")
+        {
+           datos::withTrashed()->where('idd',$idd)->forceDelete();
+           return redirect()->route('confirmacion');
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     }
     
 
    public function rgeriatrico()
     {
-        //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
-        $claveger =geriatricos::withTrashed()->orderBy('idgeriatricos','desc')
+        if( Session::get('sesionidu')!="")
+		 {
+            //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
+            $claveger =geriatricos::withTrashed()->orderBy('idgeriatricos','desc')
                                             ->take(1)
                                             ->get();
 
@@ -493,11 +669,19 @@ class vitalicia extends Controller
         return view ('vitalicia.rGeriatricos')
                     ->with('idger',$idger)
                     ->with('gvalores',$gvalores);
+         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
 
     public function guardageriatrico(Request $request)
     {   
-             // $request->all(); //Procesa los datos del formulario
+         if( Session::get('sesionidu')!="")
+		 {
 
         $idgeriatricos = $request->idgeriatricos;
         $valorg =  $request->valorg;
@@ -517,15 +701,21 @@ class vitalicia extends Controller
 
 
                 return redirect()->route('confirmacion');
-
-//                return redirect()->route('home');
-
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
 
     public function rcuidador()
     {
-        //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
-        $clavecui =cuidadores::withTrashed()->orderBy('idcuidador','desc')
+        if( Session::get('sesionidu')!="")
+		 {
+            //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
+            $clavecui =cuidadores::withTrashed()->orderBy('idcuidador','desc')
                                             ->take(1)
                                             ->get();
                                             if (count($clavecui)==0)
@@ -547,11 +737,19 @@ class vitalicia extends Controller
         return view ('vitalicia.rCuidador')
                     ->with('idcu',$idcu)
                     ->with('datoss',$datoss);
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
 
       public function guardacuidador(Request $request)
     {   
-             // $request->all(); //Procesa los datos del formulario
+      if( Session::get('sesionidu')!="")
+		 {       // $request->all(); //Procesa los datos del formulario
 
         $horaentrada =  $request->horaentrada;
         $horasalida = $request->horasalida;
@@ -576,11 +774,20 @@ class vitalicia extends Controller
 
               
                 return redirect()->route('confirmacion');
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
 
     public function rsignos()
     {
-        //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
+        if( Session::get('sesionidu')!="")
+		 {
+            //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
         $clavesig =signos::withTrashed()->orderBy('ids','desc')
                                             ->take(1)
                                             ->get();
@@ -603,11 +810,20 @@ class vitalicia extends Controller
         return view ('vitalicia.rSignos')
                     ->with('idsi',$idsi)
                     ->with('turnos',$turnos);
+      }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
 
       public function guardasignos(Request $request)
     {   
-             // $request->all(); //Procesa los datos del formulario
+       if( Session::get('sesionidu')!="")
+		 {
+           // $request->all(); //Procesa los datos del formulario
 
         $ta =  $request->ta;
         $fc = $request->fc;
@@ -640,6 +856,13 @@ class vitalicia extends Controller
 
               
                 return redirect()->route('confirmacion');
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
    
     
@@ -647,20 +870,22 @@ class vitalicia extends Controller
    public function getusuarios()
 
    {
-  //$usuariosd = usuarios::withTrashed()->orderBy('idu','asc')->get();
- // return view ('vitalicia.cusuarios')
-  //->with('usuariosd',$usuariosd);
+     if( Session::get('sesionidu')!="")
+		 {
    
        
-    $usuariosd=\DB::select("SELECT u.idu,u.usuario,u.contrasena,u.correo,t.tipo as tip
-        FROM usuarios AS u
-        INNER JOIN tipos AS t ON t.idt =  u.idt");
-	    return view ('vitalicia.cusuarios')
-        ->with('usuariosd',$usuariosd);
-       //return view('sistema.reporte')
-	 // ->with('maestros',$getusu);    
-   
-   
+        $usuariosd=\DB::select("SELECT u.idu,u.usuario,u.contrasena,u.correo,t.tipo as tip
+            FROM usuarios AS u
+            INNER JOIN tipos AS t ON t.idt =  u.idt");
+            return view ('vitalicia.cusuarios')
+            ->with('usuariosd',$usuariosd);
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
    
    }
     
@@ -672,8 +897,10 @@ class vitalicia extends Controller
       //Catalogo alta de medicamentos
        public function cmedicamentos()
     {
-        //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
-        $cmedicalta =amedicamentos::withTrashed()->orderBy('idamedicamento','desc')
+       if( Session::get('sesionidu')!="")
+		 {
+           //INCREMENTA EL IDD PARA MOSTRAR EN LA VISTA    
+            $cmedicalta =amedicamentos::withTrashed()->orderBy('idamedicamento','desc')
                                             ->take(1)
                                             ->get();
 
@@ -689,11 +916,20 @@ class vitalicia extends Controller
 
              return view ('vitalicia.amedicamentos')
                     ->with('idamedica',$idamedica);
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
     
     public function gmedicamento(Request $request)
     {   
-             // $request->all(); //Procesa los datos del formulario
+       if( Session::get('sesionidu')!="")
+		 {
+           // $request->all(); //Procesa los datos del formulario
 
         $idamedicamento = $request->idamedicamento;
         $nmedica =  $request->nmedica;
@@ -720,11 +956,20 @@ class vitalicia extends Controller
 
               
                 return redirect()->route('confirmacion');
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
     
     
     public function modificausua($idu)
     {
+        if( Session::get('sesionidu')!="")
+		 {
             $usuario = usuarios::where('idu','=',$idu)
                                  ->get();
 
@@ -735,15 +980,24 @@ class vitalicia extends Controller
             ->with('usuario',$usuario[0])
             ->with('idt',$idt)
             ->with('turnos',$turnos[0]->tipoturno);
+      }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     }
     
     public function guardamodificausua(Request $request)
     {
-    $idu =  $request->idu;
-    $usuario = $request->usuario;
-    $contrasena= $request->contrasena;
-    $correo= $request->correo;
-    $idt = $request->idt;
+      if( Session::get('sesionidu')!="")
+		 {  
+            $idu =  $request->idu;
+            $usuario = $request->usuario;
+            $contrasena= $request->contrasena;
+            $correo= $request->correo;
+            $idt = $request->idt;
     
   
     
@@ -757,61 +1011,92 @@ class vitalicia extends Controller
             $usu->idt= $request->idt;
             $usu->save();
             return redirect()->route('confirmacion');
-                   /* $proceso = "MODIFICA MAESTRO";
-                    $mensaje = "REgistro ha sido modificado correctamente";
-                    ->with('proceso',$proceso)
-                    ->with('mensaje',$mensaje);*/
-                    // echo "Listo para modificar";
+       }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     
 }
 
 public function eliminausu($idu)
 	{
-		  usuarios::find($idu)->delete();
-		   // $proceso = "ELIMINAR MAESTROS";
-		//	$mensaje = "El maestro ha sido desactivado Correctamente";
-			//return view ('sistema.mensaje')
+		if( Session::get('sesionidu')!="")
+		 {
+            usuarios::find($idu)->delete();
 			return redirect()->route('confirmacion');
         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
+    }
         
         public function restaurusu($idu)
 	{
-	usuarios::withTrashed()->where('idu',$idu)->restore();
-        return redirect()->route('confirmacion');
+        if( Session::get('sesionidu')!="")
+		 {
+            usuarios::withTrashed()->where('idu',$idu)->restore();
+            return redirect()->route('confirmacion');
         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
+    }
         
      public function efisicausu($idu)
 	{
-		
-   usuarios::withTrashed()->where('idu',$idu)->forceDelete();
-   return redirect()->route('confirmacion');
+      if( Session::get('sesionidu')!="")
+		 {
+          
+           usuarios::withTrashed()->where('idu',$idu)->forceDelete();
+           return redirect()->route('confirmacion');
+      
+         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 } 
     }
 
     public function getpacientes()
 
    {
-  //$usuariosd = usuarios::withTrashed()->orderBy('idu','asc')->get();
- // return view ('vitalicia.cusuarios')
-  //->with('usuariosd',$usuariosd);
-   
-       
-  $pacientesd=\DB::select(" SELECT p.idpaciente,p.fechapaciente,
-  CONCAT(d.nombre,' ',d.ap,' ',d.am)AS 'nombre',m.nombre AS medicamento,
-  CONCAT(a.menu,' ',a.consumo)AS alimentacion,
-  CONCAT(s.ta,' ',s.`fc`,' ',s.`fr`,' ',s.`temp`,' ',s.`spo2`,' ',s.`glucosa`,s.`protesis`)AS signos,
-  g.valorg,v.act1
-  FROM pacientes AS p
-  INNER JOIN datos AS d  ON d.idd = p.idd
-  INNER JOIN medicamentos AS m ON m.idmedicamento=p.idmedicamento
-  INNER JOIN alimentaciones AS a ON a.idalimentacion=p.idalimentacion
-  INNER JOIN signos AS s ON s.ids=p.ids
-  INNER JOIN geriatricos AS g ON g.idgeriatricos=p.idgeriatricos
-  INNER JOIN actividades AS v ON v.idactividades=p.idactividades");
-	    return view ('vitalicia.cpacientes')
-        ->with('pacientesd',$pacientesd);
-       //return view('sistema.reporte')
-	 // ->with('maestros',$getusu);    
-   
+
+        if( Session::get('sesionidu')!="")
+		 {
+
+          $pacientesd=\DB::select(" SELECT p.idpaciente,p.fechapaciente,
+          CONCAT(d.nombre,' ',d.ap,' ',d.am)AS 'nombre',m.nombre AS medicamento,
+          CONCAT(a.menu,' ',a.consumo)AS alimentacion,
+          CONCAT(s.ta,' ',s.`fc`,' ',s.`fr`,' ',s.`temp`,' ',s.`spo2`,' ',s.`glucosa`,s.`protesis`)AS signos,
+          g.valorg,v.act1
+          FROM pacientes AS p
+          INNER JOIN datos AS d  ON d.idd = p.idd
+          INNER JOIN medicamentos AS m ON m.idmedicamento=p.idmedicamento
+          INNER JOIN alimentaciones AS a ON a.idalimentacion=p.idalimentacion
+          INNER JOIN signos AS s ON s.ids=p.ids
+          INNER JOIN geriatricos AS g ON g.idgeriatricos=p.idgeriatricos
+          INNER JOIN actividades AS v ON v.idactividades=p.idactividades");
+                return view ('vitalicia.cpacientes')
+                ->with('pacientesd',$pacientesd);
+               
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
    
    
    }
@@ -819,43 +1104,73 @@ public function eliminausu($idu)
    public function cmedicamento()
 
    {
-  //$usuariosd = usuarios::withTrashed()->orderBy('idu','asc')->get();
- // return view ('vitalicia.cusuarios')
-  //->with('usuariosd',$usuariosd);
+      
+        if( Session::get('sesionidu')!="")
+		 {
    
        
-  $medicamentosm=\DB::select("SELECT m.`idmedicamento`,m.`nombre`,m.`indicacion`,m.`presen`,m.`terminotx`,h.`tipohorario`,am.`nmedica`
-  FROM medicamentos AS m
-  INNER JOIN horarios AS h ON h.idh=m.`idh`
-  INNER JOIN amedicamentos AS am ON am.idamedicamento=m.`idamedicamento`");
-	    return view ('vitalicia.cmedicamentos')
-        ->with('medicamentosm',$medicamentosm);
-         
-   
-   
+          $medicamentosm=\DB::select("SELECT m.`idmedicamento`,m.`nombre`,m.`indicacion`,m.`presen`,m.`terminotx`,h.`tipohorario`,am.`nmedica`
+          FROM medicamentos AS m
+          INNER JOIN horarios AS h ON h.idh=m.`idh`
+          INNER JOIN amedicamentos AS am ON am.idamedicamento=m.`idamedicamento`");
+                return view ('vitalicia.cmedicamentos')
+                ->with('medicamentosm',$medicamentosm);
+
+
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
    
    }
 
    public function eliminamedi($idmedicamento)
 	{
-		  medicamentos::find($idmedicamento)->delete();
-		   // $proceso = "ELIMINAR MAESTROS";
-		//	$mensaje = "El maestro ha sido desactivado Correctamente";
-			//return view ('sistema.mensaje')
-			return redirect()->route('confirmacion');
+       
+        if( Session::get('sesionidu')!="")
+		 {
+                medicamentos::find($idmedicamento)->delete();
+                return redirect()->route('confirmacion');
         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
+    }
         
         public function restauramedi($idmedicamento)
 	{
+         if( Session::get('sesionidu')!="")
+		 {
                 medicamentos::withTrashed()->where('idmedicamento',$idmedicamento)->restore();
-        return redirect()->route('confirmacion');
+                return redirect()->route('confirmacion');
         }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
+    }
         
      public function efisicamedi($idmedicamento)
 	{
-		
+		 if( Session::get('sesionidu')!="")
+		 {
                 medicamentos::withTrashed()->where('idmedicamento',$idmedicamento)->forceDelete();
-   return redirect()->route('confirmacion');
+                return redirect()->route('confirmacion');
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     }
 
   
