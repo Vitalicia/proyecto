@@ -134,17 +134,14 @@
 					</div>
 				</div>
 				<div class="col-md-8 to-animate">
-					<img src="vitalicia/images/vitalicia2.jpg" class="img-responsive img-rounded" alt="Free HTML5 Template">
+					<img src="vitalicia/images/vitalicia2.jpg" class="img-responsive img-rounded" alt="Vitalicia">
 				</div>
-				<div class="col-md-4 to-animate">
+				<div class="col-md-4 to-animate text-justify">
 					<h2>Vitalicia</h2>
-                    <p>Debido al incremento del n&uacute;mero poblacional de adultos mayores</p>
-                    <p>Entre las consecuencias</p>
+                    <p>Debido al incremento del n&uacute;mero poblacional de adultos mayores, las necesidades de salud han ido en aumento, existiendo una mayor prevalencia del problema m&aacute;s temido de la vejez: <b>la dependencia funcional.</b></p>
+                    <p>Entre las consecuencias que conlleva dicha problem&aacute;tica, destacan: disminuci&oacute;n de la autoestima, cambio de rutina, necesidades de cuidados especiales, desgaste emocional y f&iacute;sico del cuidador, la institucionalizaci&oacute;n, implicaciones econ&oacute;micas,, entre otras.</p>
 				</div>
-                <!--div class="col-md-12 to-animate section-heading text-justify">
-                <p>Contamos con un amplio catalogo de servicios, </p>
-                    
-                </div-->
+                
 			</div>
 			<div class="row" id="team">
 				<div class="col-md-12 section-heading text-center to-animate">
@@ -156,8 +153,8 @@
 							<div class="person">
 								<img src="vitalicia/images/Cax.jpg" class="img-responsive img-rounded" alt="Person">
 								<h3 class="name">Lic. Maritza Garc&iacute;a Palomares</h3>
-								<div class="position">lemun</div>
-								<p>Redes</p>
+								<!--div class="position">lemun</div-->
+								<p>S&iota;guela en Redes Socialess</p>
 								<ul class="social social-circle">
 									<li><a href="#"><i class="icon-facebook"></i></a></li>
 									<li><a href="#"><i class="icon-instagram"></i></a></li>
@@ -168,10 +165,9 @@
 							<div class="person">
 								<img src="vitalicia/images/Victor.jpg" class="img-responsive img-rounded" alt="Person">
 								<h3 class="name">Lic. Gabriela Garc&iacute;a Palomares</h3>
-								<div class="position">Directora.</div>
-								<p>Siguele en Redes Sociales</p>
+								<!--div class="position">Directora.</div-->
+								<p>S&iota;guela en Redes Sociales</p>
 								<ul class="social social-circle">
-									<li><a href="#"><i class="icon-twitter"></i></a></li>
 									<li><a href="#"><i class="icon-facebook"></i></a></li>
 									<li><a href="#"><i class="icon-instagram"></i></a></li>	
 								</ul>
@@ -205,63 +201,65 @@
 			</div>
 			<div class="row">
 				<div class="col-md-4">
-					<div class="box to-animate">
+					<div class="box to-animate text-justify">
 						
-						<h3>Diseño y desarrollo de sitios web.</h3>
+						<h3>Nuestros objetivos</h3>
 						<ul>
-                            <li>Trabajos de Calidad</li>
-                            <li>Posicionamiento Web</li>
-                            <li>Diseños Responsivos</li>
-                            <li>Estilos</li>
+                            <li>Conservar y reforzar la independencia del <b>Adulto Mayor</b></li>
+                            <li>Mantener e incrementar la autoestima</li>
+                            <li>Mejorar el esstrado y sentido de Salud</li>
+                            <li>Estimular las capacidades cognitivas, motoras y funcionales</li>
+                            <li>Mejorar la calidad de vida del <b>Adulto Mayor</b> y de su familia</li>
+                            <li>Brindar confort y seguridad al <b>Adulto Mayor</b> y de su familia</li>
                         </ul>
 					</div>
-					<div class="box to-animate">
+					<div class="box to-animate ">
 						
-						<h3>Diseño de Redes</h3>
-						<p>Diseño, cotización e instalación de Redes para instituciones y empresas.</p>
+						<h3>Consulta Gerontol&oacute;gica</h3>
+						<div class="text-justify"><p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p></div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="box to-animate">
 						
-						<h3>Cableado Estructurado</h3>
-						<p>Infraestructuras con las mejores normas, por lo que se garantiza un servicio óptimo.</p>
+						<h3>Consulta Gerontol&oacute;gica</h3>
+						<div class="text-justify"><p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p></div>
 					</div>
 					<div class="box to-animate">
 						
-						<h3>Soporte Técnico</h3>
-						<p>Cursos y capacitación de software a empresas:</p>
+						<h3>Consulta Gerontol&oacute;gica</h3>
+                              <div class="text-justify"><p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p></div>
                         <ul>
-                            <li>Office</li>
-                            <li>Windows</li>
-                            <li>Linux</li>
-                            <li>Java</li>
-                            <li>Php</li>
-                            <li>Base de Datos</li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
                         </ul>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="box to-animate">
 						
-						<h3>Seguridad</h3>
-						<p>Administración de sistemas, ofreciendo seguridad y protección a servidores de empresas.</p>
+						<h3>Consulta Gerontol&oacute;gica</h3>
+						      <div class="text-justify"><p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p></div>
                         <ul>
-                            <li>Windows Server</li>
-                            <li>Debian</li>
+                            <li></li>
+                            <li></li>
                         </ul>
 					</div>
 					<div class="box to-animate">
 						
-						<h3>Servidores</h3>
-						<p>Soporte y administración de los siguientes servidores:</p>
+						<h3>Consulta Gerontol&oacute;gica</h3>
+						      <div class="text-justify"><p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p></div>
                         <ul>
-                            <li>Correo</li>
-                            <li>DNS</li>
-                            <li>DHCP</li>
-                            <li>FTP</li>
-                            <li>WEB</li>
-                            <li>SSH</li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
                         </ul>
 					</div>
 				</div>
@@ -280,7 +278,7 @@
 				<div class="col-md-12 section-heading text-center">
 					<h2>Cont&aacute;ctanos</h2>
 					<div class="row">
-                   <h3><strong>Oficinas</strong></h3>
+                   <h3><strong>Oficina</strong></h3>
                 <ul class="list-icons">        
                 <h3><li>
                     <i class="icon-direction"></i>
