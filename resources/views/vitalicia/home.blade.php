@@ -84,21 +84,23 @@
                         <td>{{$usu->contrasena='********'}}</td>
                         <td>{{$usu->tip}}</td>
                         <td>{{$usu->correo}}</td>
-                        <td>
-                            <a href="{{URL::action('vitalicia@modificausua',['idu'=>$usu->idu])}}">
-                                <button type="button" class="button small success">Modificar</button></a> 
+                        @if($datt->deleted_at=="")
+                                <td>
+                                    <a href="{{URL::action('vitalicia@modificausua',['idu'=>$usu->idu])}}">
+                                        <button type="button" class="button small success">Modificar</button></a> 
 
-                            <a href="{{URL::action('vitalicia@eliminausu',['idu'=>$usu->idu])}}"> 
-                                <button type="button" class="button small secondary">Inhabilitar</button>
-                            </a>
-
-                            <a href="{{URL::action('vitalicia@restaurusu',['idu'=>$usu->idu])}}"> 
-                                <button type="button" class="button small primary">Restaurar</button> 
-                            </a> 
-                            <a href="{{URL::action('vitalicia@efisicausu',['idu'=>$usu->idu])}}"> 
-                                <button type="button" class="button small alert">Eliminar</button> 
-                            </a> 
-                        </td>
+                                    <a href="{{URL::action('vitalicia@eliminausu',['idu'=>$usu->idu])}}"> 
+                                        <button type="button" class="button small secondary">Inhabilitar</button>
+                                    </a>
+                        @else
+                                    <a href="{{URL::action('vitalicia@restaurusu',['idu'=>$usu->idu])}}"> 
+                                        <button type="button" class="button small primary">Restaurar</button> 
+                                    </a> 
+                                    <a href="{{URL::action('vitalicia@efisicausu',['idu'=>$usu->idu])}}"> 
+                                        <button type="button" class="button small alert">Eliminar</button> 
+                                    </a> 
+                                </td>
+                        @endif
                     </tr>           
                 @endforeach
             </table>
