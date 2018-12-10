@@ -215,8 +215,20 @@
 					</div>
 					<div class="box to-animate ">
 						
-						<h3>Consulta Gerontol&oacute;gica</h3>
-						<div class="text-justify"><p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p></div>
+						<h3>Acupuntura</h3>
+						            <ul>
+                                        <li>Depresi&oacute;n</li>
+                                        <li>Insomnio</li>
+                                        <li>Estr&eacute;s</li>
+                                        <li>Ansiedad</li>
+                                        <li>Colitis</li>
+                                        <li>Gastritis</li>
+                                        <li>Fibromialgia</li>
+                                        <li>Ciatalgia</li>
+                                        <li>Dolor Muscular</li>
+                                        <li>Artritis</li>
+                                        <li>Par&aacute;lisis Facial</li>                                        
+                                    </ul>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -227,40 +239,30 @@
 					</div>
 					<div class="box to-animate">
 						
-						<h3>Consulta Gerontol&oacute;gica</h3>
-                              <div class="text-justify"><p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p></div>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+						<h3>Medicina Complementaria</h3>
+                              <div class="text-justify"><p>Abordaje terap&eacute;utico del <b>Adulto Mayor</b> a trav&eacute;s de terapias complementarias, como son:</p></div>
+                                    <ul>
+                                        <li>Acupuntura</li>
+                                        <li>Biomagnetismmo</li>
+                                        <li>Auriculoterapia</li>
+                                        <li>Moxibusti&oacute;n</li>
+                                        <li>Cupping</li>
+                                    </ul>
+                              <div class="text-justify"><p>Esto es con la finalidad de brindar atenci&oacute;n complementando tratamiento farmacol&oacute;gico y as&iacute; proporcionar una mejor calidad de vida.</p></div>
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="box to-animate">
 						
-						<h3>Consulta Gerontol&oacute;gica</h3>
-						      <div class="text-justify"><p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p></div>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                        </ul>
-					</div>
+						<h3>Rehabilitaci&oacute;n F&iacute;sica</h3>
+						      <div class="text-justify"><p>Consiste en un proceso puesto en marcha que pretende mmejorar el nivel funcional para aquellas personas que presentan deficiencias e incapacidad con la finalidad de restablecer la perdida funcional tras un evento que haya modificado las capacidades f&iacute;sicas para un funcionamiento &oacute;ptimo en interaci&oacute;n con el entorno, previniendo y/o diminuyendo el deterioro funcional</p></div>
+                    </div>
 					<div class="box to-animate">
 						
-						<h3>Consulta Gerontol&oacute;gica</h3>
+						<h3> Gerontol&oacute;gica</h3>
 						      <div class="text-justify"><p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p></div>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                        
+                        
 					</div>
 				</div>
 			</div>
