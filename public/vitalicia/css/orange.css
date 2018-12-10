@@ -23,13 +23,13 @@ body {
 }
 
 a {
-  color: #ff6600;
+  color: #C71585;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #ff6600;
+  color: #A569BD;
   outline: none;
 }
 
@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
   }
   #insideV-header .navbar-brand {
-    color: #ff6600 !important;
+    color: #A569BD !important;
   }
   #insideV-header #navbar li a {
     color: rgba(0, 0, 0, 0.5) !important;
@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.3s;
   }
   #insideV-header #navbar li a:hover {
-    color: #ff6600 !important;
+    color: #A569BD !important;
   }
   #insideV-header #navbar li a span:before {
     background: transparent !important;
@@ -95,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
   #insideV-header #navbar li.active a {
     background: transparent;
     background: none;
-    color: #ff6600 !important;
+    color: #A569BD !important;
   }
   #insideV-header #navbar li.active a span:before {
     visibility: visible;
@@ -124,7 +124,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #ff6600;
+  background-color: #A569BD;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
@@ -177,7 +177,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
 }
 #insideV-header.navbar-fixed-top .navbar-brand {
-  color: #ff6600;
+  color: #A569BD;
 }
 #insideV-header.navbar-fixed-top #navbar li a {
   color: rgba(0, 0, 0, 0.5);
@@ -186,12 +186,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
 }
 #insideV-header.navbar-fixed-top #navbar li a:hover {
-  color: #ff6600;
+  color: #A569BD;
 }
 #insideV-header.navbar-fixed-top #navbar li.active a {
   background: transparent;
   background: none;
-  color: #ff6600;
+  color: #A569BD;
 }
 #insideV-header.navbar-fixed-top #navbar li.active a span:before {
   visibility: visible;
@@ -220,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #adadad;
 }
 #insideV-header .navbar-default .brand-slogan em {
-  color: #ff6600;
+  color: #A569BD;
   font-style: normal;
 }
 #insideV-header a {
@@ -252,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 80px;
   height: 2px;
-  background: #ff6600;
+  background: #A569BD;
   left: 50%;
   margin-left: -40px;
   bottom: 0;
@@ -352,7 +352,7 @@ _______________________________________________________________________________
 
 #insideV-our-services .box {
   padding: 30px;
-  background: #FF8C00;
+  background: #A569BD;
   text-align:left;
   color: #000;
   margin-bottom: 70px;
@@ -396,7 +396,7 @@ table, th, td {
   text-decoration: none;
 }
 .insideV-nav-toggle.active i::before, .insideV-nav-toggle.active i::after {
-  background: #ff6600;
+  background: #A569BD;
 }
 .insideV-nav-toggle:hover, .insideV-nav-toggle:focus, .insideV-nav-toggle:active {
   outline: none;
@@ -410,18 +410,18 @@ table, th, td {
   *display: inline;
   width: 25px;
   height: 3px;
-  color: #ff6600;
+  color: #A569BD;
   font: bold 14px/.4 Helvetica;
   text-transform: uppercase;
   text-indent: -55px;
-  background: #ff6600;
+  background: #A569BD;
   transition: all .2s ease-out;
 }
 .insideV-nav-toggle i::before, .insideV-nav-toggle i::after {
   content: '';
   width: 25px;
   height: 3px;
-  background: #ff6600;
+  background: #A569BD;
   position: absolute;
   left: 0;
   -webkit-transition: 0.2s;
@@ -529,14 +529,14 @@ table, th, td {
   transition: 0.3s;
 }
 .btn.btn-primary {
-  background: #ff6600;
+  background: #A569BD;
   color: #fff;
   border: none !important;
   border: 2px solid transparent !important;
 }
 .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
   box-shadow: none;
-  background: #ff6600;
+  background: #A569BD;
 }
 .btn:hover, .btn:active, .btn:focus {
   background: #393e46 !important;
@@ -576,11 +576,11 @@ table, th, td {
   border-bottom: none;
 }
 .social li a.social-box {
-  background: #ff6600;
+  background: #A569BD;
   color: #fff;
 }
 .social li a.social-circle {
-  background: #ff6600;
+  background: #A569BD;
   color: #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -591,11 +591,11 @@ table, th, td {
   background: #393e46 !important;
 }
 .social.social-box a {
-  background: #ff6600;
+  background: #A569BD;
   color: #fff;
 }
 .social.social-circle a {
-  background: #ff6600;
+  background: #A569BD;
   color: #fff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;

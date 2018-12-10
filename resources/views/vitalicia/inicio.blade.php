@@ -152,7 +152,7 @@
 				</div>
 				<div class="col-md-12">
 					<div class="row row-bottom-padded-lg">
-						<div class="col-md-4 text-center to-animate">
+						<div class="col-md-6 text-center to-animate">
 							<div class="person">
 								<img src="vitalicia/images/Cax.jpg" class="img-responsive img-rounded" alt="Person">
 								<h3 class="name">Lic. Maritza Garc&iacute;a Palomares</h3>
@@ -164,7 +164,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="col-md-4 text-center to-animate">
+						<div class="col-md-6 text-center to-animate">
 							<div class="person">
 								<img src="vitalicia/images/Victor.jpg" class="img-responsive img-rounded" alt="Person">
 								<h3 class="name">Lic. Gabriela Garc&iacute;a Palomares</h3>
@@ -175,18 +175,6 @@
 									<li><a href="#"><i class="icon-facebook"></i></a></li>
 									<li><a href="#"><i class="icon-instagram"></i></a></li>	
 								</ul>
-							</div>
-						</div>
-						<div class="col-md-4 text-center to-animate">
-							<div class="person">
-								<img src="vitalicia/images/Juan.jpg" class="img-responsive img-rounded" alt="Person">
-								<h3 class="name"></h3>
-								<div class="position"></div>
-								<p>Siguelo en Redes Sociales</p>
-								<ul class="social social-circle">
-									<li><a href="#"><i class="icon-facebook"></i></a></li>
-									<li><a href="#"><i class="icon-instagram"></i></a></li>
-                                </ul>
 							</div>
 						</div>
 					</div>
@@ -296,18 +284,18 @@
                 <ul class="list-icons">        
                 <h3><li>
                     <i class="icon-direction"></i>
-                    <strong>Dirección: </strong>Carretera Departamento
+                    <strong>Dirección: </strong>Jos&eacute; Vicente Villada Pte. 620, San Francisco, San Mateo Atenco, CP 52104
                 </li>
                 <li>
                     <i class="icon-phone"></i>
-                    <strong>Tel&eacute;fono: </strong>(722) XXX XXXX
+                    <strong>Tel&eacute;fono: </strong>(722) 649 6728
                 </li>
                 <li>
                     <i class="icon-note"></i>
-                    <a href="mailto:info@net-itmx.xyz"><strong>Escr&iacute;benos</strong></a>
+                    <a href="mailto:info@vitalicia.com.mx"><strong>Escr&iacute;benos</strong></a>
                     </li></h3></ul>
                        <div class="row">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.6658107232124!2d-99.4781863492173!3d19.34030258687272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d20a14878a64eb%3A0x65bdb503fdce37bc!2sUniversidad+Tecnol%C3%B3gica+del+Valle+de+Toluca!5e0!3m2!1ses!2smx!4v1468889599064" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>            
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1026.864827276789!2d-99.53832028494408!3d19.25814157636629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdf4ce3d4fa411%3A0x8fdc2e4c71229c5c!2sJos%C3%A9+Vicente+Villada+Pte.+620%2C+San+Francisco%2C+52104+San+Mateo+Atenco%2C+M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1544402478420" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>          
                         </div>
                         <div class="row">
                             <h3><strong>Escr&iacute;benos tu comentarios</strong></h3>
@@ -365,16 +353,15 @@
 		<div class="container">
 			<div class="row row-bottom-padded-sm">
 				<div class="col-md-12">
-					<p class="copyright text-center">Derechos reservados &copy; 2016 | Net IT Solutions.</p>
+					<p class="copyright text-center">Derechos reservados &copy; 2018 | Vitalicia.</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<ul class="social social-circle">
 						<li><a href="#"><i class="icon-twitter"></i></a></li>
-						<li><a href="https://goo.gl/4crpdT"><i class="icon-facebook"></i></a></li>
-						<li><a href="https://goo.gl/oe3qxn"><i class="icon-youtube"></i></a></li>
-						<li><a href="SiteMap.html"><i class="icon-map"></i></a></li>
+						<li><a href="https://goo.gl/Bc1qmz"><i class="icon-facebook"></i></a></li>
+						<!--li><a href="#"><i class="icon-youtube"></i></a></li-->
 					</ul>
 				</div>
 			</div>
