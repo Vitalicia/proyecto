@@ -14,6 +14,7 @@
             Contrase&ntilde;a 
             <br>{!! $errors->first('contrasena','<span class=error>:message</span>')!!}
                 <input type="password" name="contrasena">
+                <p class="help-text" id="passwordHelpText">Tu contrase&ntilde;a debe contener como m&iacute;nimo 10 caracteres.</p>
             
             Correo Electr&oacute;nico
             <br>{!! $errors->first('correo','<span class=error>:message</span>')!!}

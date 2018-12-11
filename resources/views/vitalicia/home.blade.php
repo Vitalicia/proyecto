@@ -11,12 +11,12 @@
   @if(Session::get('sesiontipo')=="1")
     <li class="tabs-title"><a href="#usuarios">Usuarios</a></li>
   @endif
-  <li class="tabs-title"><a href="#pacientes">Pacientes</a></li>
+
   @if(Session::get('sesiontipo')=="1")
     <li class="tabs-title"><a href="#medicamentos">Medicamentos</a></li>
   @endif
   @if(Session::get('sesiontipo')=="1")
-    <li class="tabs-title"><a href="#Npacientes">Npacientes</a></li>
+    <li class="tabs-title"><a href="#Npacientes">Pacientes</a></li>
   @endif
 </ul>
 
@@ -111,35 +111,6 @@
             </table>
   </div>
 
-  <!--Contenido de la Tab 3-->
-  <div class="tabs-panel" id="pacientes">
-        <div class="table-scroll">
-        <table class="hover">
-                <tr>
-                <th>ID</th>
-                <th>Fecha Pacientes</th>
-                <th>Datos</th>
-                <th>Medicamentos</th>
-                <th>Alimentacion</th>
-                <th>Signos</th>
-                <th>Geriatricos</th>
-                <th>Actividades</th>
-                </tr>
-            @foreach($pacientesd as $patt)
-                <tr>
-                    <td>{{$patt->idpaciente}}</td>
-                    <td>{{$patt->fechapaciente}}</td>
-                    <td>{{$patt->nombre}}</td>
-                    <td>{{$patt->medicamento}}</td>
-                    <td>{{$patt->alimentacion}}</td>
-                    <td>{{$patt->signos}}</td>
-                    <td>{{$patt->valorg}}</td>
-                    <td>{{$patt->act1}}</td>
-                </tr>
-            @endforeach
-        </table>
-        </div>
-  </div>
     
   <!--Contenido de la Tab 4-->
   <div class="tabs-panel" id="medicamentos">
@@ -184,23 +155,38 @@
   <div class="table-scroll">
         <table class="hover">
             <tr>
-            <th>ID</th>
-            <th>Avtividad1</th><th>Hora1</th>
-            <th>Avtividad2</th><th>Hora2</th>
-            <th>Avtividad3</th><th>Hora3</th>
-            <th>Menu</th><th>Consumo</th>
-            <th>Observaciones</th><th>Hcomida</th>
-            <th>Tcomida</th>  
-            <th>Tgeriatrico1</th><th>Tgeriatrico2</th>
-            <th>Tgeriatrico3</th>
-            <th>TA</th><th>FC</th><th>FR</th><th>TEMP</th><th>SPO2</th>
-            <th>Glucosa</th><th>Protesis</th>
-            <th>Cuidador</th><th>Fecha y hora</th>
-            <th>Nmedica</th><th>Usuario</th>
+            <th>Paciente</th>
+            <th>Actividad 1</th>
+            <th>Hora</th>
+            <th>Actividad 2</th>
+            <th>Hora</th>
+            <th>Actividad 3</th>
+            <th>Hora</th>
+            <th>Men&uacute;</th>
+            <th>Consumo</th>
+            <th>Observaciones</th>
+            <th>Hora de la comida</th>
+            <th>Tipo de comida</th>  
+            <th>Geri&aacute;trico 1</th>
+            <th>Geri&aacute;trico 2</th>
+            <th>Geri&aacute;trico 3</th>
+            <th>TA</th>
+            <th>FC</th>
+            <th>FR</th>
+            <th>Temperatura</th>
+            <th>SPO2</th>
+            <th>Glucosa</th>
+            <th>Protesis</th>
+            <th>Cuidador</th>
+            <th>Fecha de Registro</th>
+            <th>Medicamento</th>
+            <th>Indicaci&oacute;n</th>
+            <th>Presentaci&oacute;n</th>
+            <th>Operaciones</th>
             </tr>
             @foreach($npacientes as $nm)
                 <tr>
-                    <td>{{$nm->idnp}}</td>
+                    <td>{{$nm->usuario}}</td>
                     <td>{{$nm->actividad1}}</td>
                     <td>{{$nm->hora1}}</td>
                     <td>{{$nm->actividad2}}</td>
@@ -225,9 +211,28 @@
                     <td>{{$nm->cuidadornombre}}</td>
                     <td>{{$nm->fechacuidador}}</td>
                     <td>{{$nm->nmedica}}</td>
+<<<<<<< HEAD
                     <td>{{$nm->usuario}}</td>
                     
                     </tr>
+=======
+                    <td>{{$nm->amindicacion}}</td>
+                    <td>{{$nm->ampresen}}</td>
+                    @if($nm->deleted_at=="")
+                                <td>
+                                    <a href="#">
+                                        <button type="button" class="button small success">Modificar</button>
+                                    </a> 
+                                </td>
+                        @else
+                                <td>    
+                                    <a href="{{URL::action('vitalicia@efisicausu',['idu'=>$usu->idu])}}"> 
+                                        <button type="button" class="button small alert">Eliminar</button> 
+                                    </a> 
+                                </td>
+                        @endif
+                </tr>
+>>>>>>>
             @endforeach
         </table>
     </div>
