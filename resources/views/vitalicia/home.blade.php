@@ -192,6 +192,7 @@
             <th>Observaciones</th><th>Hcomida</th>
             <th>Tcomida</th>  
             <th>Tgeriatrico1</th><th>Tgeriatrico2</th>
+            <th>Tgeriatrico3</th>
             <th>TA</th><th>FC</th><th>FR</th><th>TEMP</th><th>SPO2</th>
             <th>Glucosa</th><th>Protesis</th>
             <th>Cuidador</th><th>Fecha</th>
