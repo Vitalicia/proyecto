@@ -175,7 +175,6 @@
         </table>
     </div>
     </div>
-</div>
 
 <!--Contenido de la Tab 5-->
 <div class="tabs-panel" id="Npacientes">
