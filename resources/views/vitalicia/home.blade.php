@@ -226,6 +226,7 @@
                     <td>{{$nm->fechacuidador}}</td>
                     <td>{{$nm->nmedica}}</td>
                     <td>{{$nm->usuario}}</td>
+                    
                     </tr>
             @endforeach
         </table>
