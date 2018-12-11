@@ -42,6 +42,9 @@ Route::get('/efisicausu/{idu}','vitalicia@efisicausu')->name('efisicausu');//eli
 
 Route::get('/modificapac/{idpaciente}','vitalicia@modificapac')->name('modificapac');
 Route::POST('/guardamodificapac','vitalicia@guardamodificapac')->name('guardamodificapac'); // guardar la modificacion de pacientes
+// NPACIENTES MODIFICACIONES
+Route::get('/modifinpacientes/{idpaciente}','vitalicia@modifinpacientes')->name('modifinpacientes');
+Route::POST('/guardamodifinpacientes','vitalicia@guardamodifinpacientes')->name('guardamodifinpacientes'); // guardar la modificacion de pacientes
 
 
 //RUTAS PARA REGISTRO DE PACIENTE Y CONSULTAS
