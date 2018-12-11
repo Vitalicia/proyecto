@@ -1266,13 +1266,13 @@ public function eliminausu($idu)
             
             $tipousu = usuarios::where('idu','=','idu')->get();
 
-            $otrostipos = usuarios::where('idu','!=',$idu)->get();
+           
 
             $idame=$amedica=[0]->idame;
 
             $otromedi = amedicamentos::where('idame','!=',$idame)->get();
 
-            $medd = amedicamentos::where('idame','!=',$idame)->get();
+           
 
 
             
@@ -1285,10 +1285,10 @@ public function eliminausu($idu)
             ->with('mnpacientes',$mnpacientes[0])
             ->with('idu',$idu)
             ->with('tipousu',$tipousu[0]->usuario)
-            ->with('otrostipos',$otrostipos)
+  
             ->with('idame',$idame)
-            ->with('otromedi',$otromedi)
-            ->with('medd',$medd[0]->nmedica);
+            ->with('otromedi',$otromedi[0]->nmedica)
+       
 
 
     
