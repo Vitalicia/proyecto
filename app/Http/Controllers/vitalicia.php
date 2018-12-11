@@ -1324,8 +1324,8 @@ public function guardamodifinpacientes(Request $request)
             
 
                   $npacm = npacientes::find($idnp);
+                  $npacm->idnp = $request->idnp;
                  
-                  $npacm->idamedicamento = $request->idamedicamento;
                   $npacm->actividad1 = $request->actividad1;    
                   $npacm->hora1 = $request->hora1;
                   $npacm->actividad2 = $request->actividad2;
