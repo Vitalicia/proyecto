@@ -20,6 +20,7 @@ use App\signos;
 use App\pacientes;
 use App\amedicamentos;
 use App\actividades;
+use App\npacientes;
 use Session;
 
 
@@ -101,7 +102,51 @@ INNER JOIN usuarios	AS u ON u.`idu`=p.`idu`");
                 return view ('vitalicia.datpacientes')
                         ->with('usuarios',$pausu)
                     ->with('amedicamentos',$amedicamentos);
+    }
+    
+    
+    ///////////////////////////////////////////////////////////////////////////
+    
+    public function guardanpaciente(Request $request)
+    {   
+        if( Session::get('sesionidu')!="")
+        {
+                $request->all(); //Procesa los datos del formulario
+            
+                    
+                $npac = new npacientes;
+                $npac->idd = $request->idd;
+                $npac->nombre = $request->nombre;
+                $npac->ap = $request->ap;
+                $npac->am = $request->am;    
+                $npac->edad = $request->edad;
+                $npac->telefono = $request->telefono;
+                $npac->calle = $request->calle;
+                $npac->numero = $request->numero;
+                $npac->calle1 = $request->calle1;
+                $npac->calle2 = $request->calle2;
+                $npac->colonia = $request->colonia;
+                $npac->municipio = $request->municipio;
+                $npac->ciudad = $request->ciudad;
+                $npac->cp = $request->cp;
+                $npac->referencia = $request->referencia;
+                $npac->archivo = $img2;
+                $npac->idu = $request->idu;
+                $npac->save();
+
+
+                return redirect()->route('confirmacion');
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
     } 
+    
+    
+    /////////////////////////
     
     
         //INICIO
