@@ -1254,21 +1254,29 @@ public function eliminausu($idu)
 
   public function modifinpacientes($idnp)
   {
- if( Session::get('sesionidu')!="")
-           {
-      $npacientesm = npacientes::where('idnp','=',$idnp)
-                               ->get();
-               //return $datosm;
-          return view ('vitalicia.modnpacientes')
-          ->with('npacientesm',$npacientesm[0]);
-  }
-  else
-           {
-                   Session::flash('error', 'Favor de loguearse antes de 
-          continuar');
-           return redirect()->route('login');
-           }            
-}
+  if( Session::get('sesionidu')!="")
+		 {
+           $mnpacientes = npacientes::where('idnp','=',$idnp)
+                                 ->get();
+            $idnp = $mnpacientes[0]->idnp;
+            
+            //$tipousu = tipos::where('idt','=','idt')->get();
+
+            $usuarios = usuarios::where('idu','!=',$idu)->get();
+            
+            return view ('vitalicia.modusuarios')
+            ->with('mnpacientes',$mnpacientes[0])
+            ->with('idnp',$idnp)
+            //->with('tipousu',$tipousu[0]->tipo)
+            ->with('usuarios',$usuarios);
+      }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
+    }
 
 public function guardamodifinpacientes(Request $request)
 {
