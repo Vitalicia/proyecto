@@ -15,18 +15,19 @@
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="{{ asset('vitalicia/css/animate.css') }}">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="{{ asset('vitalicia/css/icomoon.css') }}">
 	<!-- Simple Line Icons -->
-	<link rel="stylesheet" href="../css/simple-line-icons.css">
+    <link rel="stylesheet" href="{{ asset('vitalicia/css/simple-line-icons.css') }}">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="{{ asset('vitalicia/css/bootstrap.css') }}">
 
-	<link rel="stylesheet" href="../css/orange.css">
+
+    <link rel="stylesheet" href="{{ asset('vitalicia/css/orange.css') }}">
 
 	<!-- Modernizr JS -->
-	<script src="../js/modernizr-2.6.2.min.js"></script>
+    <script src="{{ asset('vitalicia/js/modernizr-2.6.2.min.js') }}"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="../js/respond.min.js"></script>
@@ -170,19 +171,25 @@
         
         
 	<!-- jQuery -->
-	<script src="../js/jquery.min.js"></script>
+	<!--script src="../js/jquery.min.js"></script-->
+    <script src="{{ asset('vitalicia/js/jquery.min.js') }}"></script>
 	<!-- jQuery Easing -->
-	<script src="../js/jquery.easing.1.3.js"></script>
+	<!--script src="../js/jquery.easing.1.3.js"></script-->
+    <script src="{{ asset('vitalicia/js/jquery.easing.1.3.js') }}"></script>
 	<!-- Bootstrap -->
-	<script src="../js/bootstrap.min.js"></script>
+	<!--script src="../js/bootstrap.min.js"></script-->
+    <script src="{{ asset('vitalicia/js/bootstrap.min.js') }}"></script>
 	<!-- Waypoints -->
-	<script src="../js/jquery.waypoints.min.js"></script>
+	<!--script src="../js/jquery.waypoints.min.js"></script-->
+    <script src="{{ asset('vitalicia/js/jquery.waypoints.min.js') }}"></script>
 	<!-- Owl Carousel -->
-	<script src="../js/owl.carousel.min.js"></script>
+	<!--script src="../js/owl.carousel.min.js"></script-->
+    <script src="{{ asset('vitalicia/js/owl.carousel.min.js') }}"></script>
 
 
 	<!-- Main JS (Do not remove) -->
-	<script src="../js/main.js"></script>
+	<!--script src="../js/main.js"></script-->
+    <script src="{{ asset('vitalicia/js/main.js') }}"></script>
 
 	</body>
 </html>
