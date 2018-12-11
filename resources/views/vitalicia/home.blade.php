@@ -84,15 +84,17 @@
                         <td>{{$usu->contrasena='********'}}</td>
                         <td>{{$usu->tip}}</td>
                         <td>{{$usu->correo}}</td>
-                        @if($datt->deleted_at=="")
+                        @if($usu->deleted_at=="")
                                 <td>
                                     <a href="{{URL::action('vitalicia@modificausua',['idu'=>$usu->idu])}}">
-                                        <button type="button" class="button small success">Modificar</button></a> 
-
+                                        <button type="button" class="button small success">Modificar</button>
+                                    </a> 
                                     <a href="{{URL::action('vitalicia@eliminausu',['idu'=>$usu->idu])}}"> 
                                         <button type="button" class="button small secondary">Inhabilitar</button>
                                     </a>
+                                </td>
                         @else
+                                <td>    
                                     <a href="{{URL::action('vitalicia@restaurusu',['idu'=>$usu->idu])}}"> 
                                         <button type="button" class="button small primary">Restaurar</button> 
                                     </a> 
@@ -145,30 +147,29 @@
             <th>Medicamento</th>
             <th>Indicacion</th>
             <th>Presentación</th>
-            <th>Terminotx</th>
-            <th>Horario</th>
-            <th>Nmedica</th>
             </tr>
-            @foreach($medicamentosm as $medi)
+            @foreach($medicam as $med)
                 <tr>
-                    <td>{{$medi->idmedicamento}}</td>
-                    <td>{{$medi->nombre}}</td>
-                    <td>{{$medi->indicacion}}</td>
-                    <td>{{$medi->presen}}</td>
-                    <td>{{$medi->terminotx}}</td>
-                    <td>{{$medi->tipohorario}}</td>
-                    <td>{{$medi->nmedica}}</td>
-                    <td>
-                   <a href="{{URL::action('vitalicia@eliminamedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
-                       <button type="button" class="button small secondary">Inhabilitar</button> 
-                    </a>
-                     <a href="{{URL::action('vitalicia@restauramedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
-                         <button type="button" class="button small primary">Restaurar</button>  
-                    </a> 
-                    <a href="{{URL::action('vitalicia@efisicamedi',['idmedicamento'=>$medi->idmedicamento])}}"> 
-                        <button type="button" class="button small alert">Eliminar</button> 
-                    </a> 
-                    </td>
+                    <td>{{$med->idamedicamento}}</td>
+                    <td>{{$med->nmedica}}</td>
+                    <td>{{$med->mindicacion}}</td>
+                    <td>{{$med->mpresen}}</td>
+                    @if($med->deleted_at=="")
+                            <td>
+                           <a href="{{URL::action('vitalicia@eliminamedi',['idamedicamento'=>$med->idamedicamento])}}"> 
+                               <button type="button" class="button small secondary">Inhabilitar</button> 
+                            </a>
+                            </td>
+                    @else
+                            <td>
+                             <a href="{{URL::action('vitalicia@restauramedi',['idamedicamento'=>$med->idamedicamento])}}"> 
+                                 <button type="button" class="button small primary">Restaurar</button>  
+                            </a> 
+                            <a href="{{URL::action('vitalicia@efisicamedi',['idamedicamento'=>$med->idamedicamento])}}"> 
+                                <button type="button" class="button small alert">Eliminar</button> 
+                            </a> 
+                            </td>
+                    @endif
                 </tr>
             @endforeach
         </table>

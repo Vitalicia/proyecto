@@ -33,7 +33,7 @@ class vitalicia extends Controller
 		 {
 
          
-        $usuariosd=\DB::select("SELECT u.idu,u.usuario,u.contrasena,u.correo,t.tipo as tip
+        $usuariosd=\DB::select("SELECT u.idu,u.usuario,u.contrasena,u.correo,u.deleted_at,t.tipo AS tip
         FROM usuarios AS u
         INNER JOIN tipos AS t ON t.idt =  u.idt");
 
@@ -52,16 +52,13 @@ class vitalicia extends Controller
           INNER JOIN geriatricos AS g ON g.idgeriatricos=p.idgeriatricos
           INNER JOIN actividades AS v ON v.idactividades=p.idactividades");
 
-        $medicamentosm=\DB::select("SELECT m.`idmedicamento`,m.`nombre`,m.`indicacion`,m.`presen`,m.`terminotx`,h.`tipohorario`,am.`nmedica`
-        FROM medicamentos AS m
-        INNER JOIN horarios AS h ON h.idh=m.`idh`
-        INNER JOIN amedicamentos AS am ON am.idamedicamento=m.`idamedicamento`");
-
+        $medicam = amedicamentos::withTrashed()->orderBy('idamedicamento','asc')->get();
+            
      
             return view ('vitalicia.home')
             ->with('usuariosd',$usuariosd)
             ->with('datosd',$datosd)
-            ->with('medicamentosm',$medicamentosm)
+            ->with('medicam',$medicam)
             ->with('pacientesd',$pacientesd);
         }
         else
@@ -866,7 +863,7 @@ class vitalicia extends Controller
 		 {
    
        
-        $usuariosd=\DB::select("SELECT u.idu,u.usuario,u.contrasena,u.correo,t.tipo as tip
+        $usuariosd=\DB::select("SELECT u.idu,u.usuario,u.contrasena,u.correo,u.deleted_at,t.tipo as tip
             FROM usuarios AS u
             INNER JOIN tipos AS t ON t.idt =  u.idt");
             return view ('vitalicia.cusuarios')
@@ -962,16 +959,19 @@ class vitalicia extends Controller
     {
         if( Session::get('sesionidu')!="")
 		 {
-            $usuario = usuarios::where('idu','=',$idu)
+           $usuario = usuarios::where('idu','=',$idu)
                                  ->get();
+            $idt = $usuario[0]->idt;
+            
+            //$tipousu = tipos::where('idt','=','idt')->get();
 
-           $idt= $usuario[0]->idt;
-           $turnos = turnos::where('idturno','!=',$idt)->get();
-                 //return $datosm;
+            $otrostipos = tipos::where('idt','!=',$idt)->get();
+            
             return view ('vitalicia.modusuarios')
             ->with('usuario',$usuario[0])
             ->with('idt',$idt)
-            ->with('turnos',$turnos[0]->tipoturno);
+            //->with('tipousu',$tipousu[0]->tipo)
+            ->with('otrostipos',$otrostipos);
       }
         else
 		 {
@@ -1119,12 +1119,12 @@ public function eliminausu($idu)
    
    }
 
-   public function eliminamedi($idmedicamento)
+   public function eliminamedi($idamedicamento)
 	{
        
         if( Session::get('sesionidu')!="")
 		 {
-                medicamentos::find($idmedicamento)->delete();
+                amedicamentos::find($idamedicamento)->delete();
                 return redirect()->route('confirmacion');
         }
         else
@@ -1135,11 +1135,11 @@ public function eliminausu($idu)
 		 }
     }
         
-        public function restauramedi($idmedicamento)
+        public function restauramedi($idamedicamento)
 	{
          if( Session::get('sesionidu')!="")
 		 {
-                medicamentos::withTrashed()->where('idmedicamento',$idmedicamento)->restore();
+                amedicamentos::withTrashed()->where('idamedicamento',$idamedicamento)->restore();
                 return redirect()->route('confirmacion');
         }
         else
@@ -1150,11 +1150,11 @@ public function eliminausu($idu)
 		 }
     }
         
-     public function efisicamedi($idmedicamento)
+     public function efisicamedi($idamedicamento)
 	{
 		 if( Session::get('sesionidu')!="")
 		 {
-                medicamentos::withTrashed()->where('idmedicamento',$idmedicamento)->forceDelete();
+                amedicamentos::withTrashed()->where('idamedicamento',$idamedicamento)->forceDelete();
                 return redirect()->route('confirmacion');
         }
         else
