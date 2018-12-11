@@ -1258,15 +1258,15 @@ public function eliminausu($idu)
 		 {
            $mnpacientes = npacientes::where('idnp','=',$idnp)
                                  ->get();
-            $idnp = $mnpacientes[0]->idnp;
+            $idu = $mnpacientes[0]->idu;
             
             //$tipousu = tipos::where('idt','=','idt')->get();
 
-            $usuarios = usuarios::where('idnp','!=',$idnp)->get();
+            $usuarios = usuarios::where('idu','!=',$idu)->get();
             
             return view ('vitalicia.modusuarios')
             ->with('mnpacientes',$mnpacientes[0])
-            ->with('idnp',$idnp)
+            ->with('idu',$idu)
             //->with('tipousu',$tipousu[0]->tipo)
             ->with('usuarios',$usuarios);
 
