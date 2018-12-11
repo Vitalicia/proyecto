@@ -1249,6 +1249,7 @@ public function eliminausu($idu)
 		 }
     }
 
+    
   
     
 }
