@@ -1264,17 +1264,12 @@ public function eliminausu($idu)
                                  ->get();
             $idu = $mnpacientes[0]->idu;
             
-            //$tipousu = tipos::where('idt','=','idt')->get();
+            $tipousu = usuarios::where('idt','=','idt')->get();
 
-            $usuarios = usuarios::where('idu','!=',$idu)->get();
-
-            $idamedicamento=$usuarios[0]->idamedicamento;
-
-            $amedicamentos=amedicamentos::where('idamedicamento','!=',$idamedicamento)->get();
-
-            $idmedi=$amedicamentos[0]->idmedi;
+            $otrostipos = usuarios::where('idt','!=',$idt)->get();
 
             
+
 
             
             
@@ -1282,10 +1277,9 @@ public function eliminausu($idu)
             return view ('vitalicia.modnpacientes')
             ->with('mnpacientes',$mnpacientes[0])
             ->with('idu',$idu)
-            ->with('usuarios',$usuarios[0])
-            ->with('idamedicamento',$idamedicamento)
-            ->with('amedicamentos',$amedicamentos[0]->nmedica)
-            ->with('idmedi',$idmedi);
+            ->with('tipousu',$tipousu[0]->usuario)
+            ->with('otrostipos',$otrostipos);
+    
 
 
 
