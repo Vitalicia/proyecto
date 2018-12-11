@@ -24,7 +24,7 @@
            
        
             Tipo de Usuario<select name = 'idt'>
-              <option value = '{{$usuario->idt}}'>{{$idt}}</option>
+              <option value = '{{$usuario->tipo}}'>{{$idt}}</option>
               @foreach($otrostipos as $tp)
                <option value = '{{$tp->idt}}'>{{$tp->tipo}}</option>
               @endforeach
