@@ -11,12 +11,12 @@
   @if(Session::get('sesiontipo')=="1")
     <li class="tabs-title"><a href="#usuarios">Usuarios</a></li>
   @endif
-  <li class="tabs-title"><a href="#pacientes">Pacientes</a></li>
+
   @if(Session::get('sesiontipo')=="1")
     <li class="tabs-title"><a href="#medicamentos">Medicamentos</a></li>
   @endif
   @if(Session::get('sesiontipo')=="1")
-    <li class="tabs-title"><a href="#Npacientes">Npacientes</a></li>
+    <li class="tabs-title"><a href="#Npacientes">Pacientes</a></li>
   @endif
 </ul>
 
@@ -111,35 +111,6 @@
             </table>
   </div>
 
-  <!--Contenido de la Tab 3-->
-  <div class="tabs-panel" id="pacientes">
-        <div class="table-scroll">
-        <table class="hover">
-                <tr>
-                <th>ID</th>
-                <th>Fecha Pacientes</th>
-                <th>Datos</th>
-                <th>Medicamentos</th>
-                <th>Alimentacion</th>
-                <th>Signos</th>
-                <th>Geriatricos</th>
-                <th>Actividades</th>
-                </tr>
-            @foreach($pacientesd as $patt)
-                <tr>
-                    <td>{{$patt->idpaciente}}</td>
-                    <td>{{$patt->fechapaciente}}</td>
-                    <td>{{$patt->nombre}}</td>
-                    <td>{{$patt->medicamento}}</td>
-                    <td>{{$patt->alimentacion}}</td>
-                    <td>{{$patt->signos}}</td>
-                    <td>{{$patt->valorg}}</td>
-                    <td>{{$patt->act1}}</td>
-                </tr>
-            @endforeach
-        </table>
-        </div>
-  </div>
     
   <!--Contenido de la Tab 4-->
   <div class="tabs-panel" id="medicamentos">
