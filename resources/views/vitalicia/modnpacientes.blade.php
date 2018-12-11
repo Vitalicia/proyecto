@@ -67,7 +67,7 @@
 
                 <b>Actividad 2</b>
             <br>{!! $errors->first('actividad2','<span class=error>:message</span>')!!}
-                <input type="text" name="actividad2" value="{{$mnpacientes->actividad2)}}">
+                <input type="text" name="actividad2" value="{{$mnpacientes->actividad2}}">
 
                 <b>Hora de la Actividad 2</b>
             <br>{!! $errors->first('hora2','<span class=error>:message</span>')!!}
