@@ -176,5 +176,62 @@
     </div>
     </div>
 </div>
+
+<!--Contenido de la Tab 5-->
+<div class="tabs-panel" id="Npacientes">
+  <div class="table-scroll">
+        <table class="hover">
+            <tr>
+            <th>ID</th>
+            <th>Avtividad1</th><th>Hora1</th>
+            <th>Avtividad2</th><th>Hora2</th>
+            <th>Avtividad3</th><th>Hora3</th>
+            <th>Menu</th><th>Consumo</th>
+            <th>Observaciones</th><th>Hcomida</th>
+            <th>Avtividad1</th><th>Hora1</th>
+            <th>Tcomida</th>
+            <th>Tgeriatrico1</th><th>Tgeriatrico2</th>
+            <th>TA</th><th>FC</th><th>FR</th><th>TEMP</th><th>SPO2</th>
+            <th>Glucosa</th><th>Protesis</th>
+            <th>Cuidador</th><th>Fecha</th>
+            <th>Nmedica</th><th>Usuario</th>
+            </tr>
+            @foreach($npacientes as $nm)
+                <tr>
+                    <td>{{$nm->idnp}}</td>
+                    <td>{{$nm->actividad1}}</td>
+                    <td>{{$nm->hora1}}</td>
+                    <td>{{$nm->actividad2}}</td>
+                    <td>{{$nm->hora2}}</td>
+                    <td>{{$nm->actividad3}}</td>
+                    <td>{{$nm->hora3}}</td>
+                    <td>{{$nm->menu}}</td>
+                    <td>{{$nm->consumo}}</td>
+                    <td>{{$nm->observaciones}}</td>
+                    <td>{{$nm->horacomida}}</td>
+                    <td>{{$nm->tipocomida}}</td>
+                    <td>{{$nm->tgeriatrico1}}</td>
+                    <td>{{$nm->tgeriatrico2}}</td>
+                    <td>{{$nm->tgeriatrico3}}</td>
+                    <td>{{$nm->ta}}</td>
+                    <td>{{$nm->fc}}</td>
+                    <td>{{$nm->fr}}</td>
+                    <td>{{$nm->temp}}</td>
+                    <td>{{$nm->spo2}}</td>
+                    <td>{{$nm->glucosa}}</td>
+                    <td>{{$nm->protesis}}</td>
+                    <td>{{$nm->cuidadornombre}}</td>
+                    <td>{{$nm->fechacuidador}}</td>
+                    <td>{{$nm->nmedica}}</td>
+                    <td>{{$nm->usuario}}</td>
+                    </tr>
+            @endforeach
+        </table>
+    </div>
+    </div>
+</div>
+                    
+
+                    
 @stop    
     
