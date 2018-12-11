@@ -1279,6 +1279,9 @@ public function eliminausu($idu)
             ->with('amedicamentos',$amedicamentos[0]->nmedica)
             ->with('otroamedicamentos',$otroamedicamentos);
 
+
+            
+
             
       }
         else
