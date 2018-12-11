@@ -1266,9 +1266,7 @@ public function eliminausu($idu)
             
             $tipousu = usuarios::where('idu','=','idu')->get();
 
-           
-
-            $idame=$amedica=[0]->idame;
+            $idame=$tipousu=[0]->idame;
 
             $otromedi = amedicamentos::where('idame','!=',$idame)->get();
 
