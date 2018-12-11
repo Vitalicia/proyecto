@@ -1260,32 +1260,22 @@ public function eliminausu($idu)
   {
   if( Session::get('sesionidu')!="")
 		 {
-           $mnpacientes = npacientes::where('idnp','=',$idnp)
+           $npaci = npacientes::where('idnp','=',$idnp)
                                  ->get();
-            $idu = $mnpacientes[0]->idu;
+            $idusu = $npaci[0]->idusu;
             
-            $tipousu = usuarios::where('idu','=','idu')->get();
+            //$tipousu = tipos::where('idt','=','idt')->get();
 
-            $idame=$tipousu=[0]->idame;
+            $usua = usuarios::where('idu','!=',$idu)->get();
 
-            $otromedi = amedicamentos::where('idame','!=',$idame)->get();
-
-           
-
-
-            
-
-
-            
-            
+            $otrusu = usuarios::where('idu','!=',$idu)
+		                 ->get(); 
             
             return view ('vitalicia.modnpacientes')
-            ->with('mnpacientes',$mnpacientes[0])
-            ->with('idu',$idu)
-            ->with('tipousu',$tipousu[0]->usuario)
-  
-            ->with('idame',$idame)
-            ->with('otromedi',$otromedi[0]->nmedica);
+            ->with('npaci',$npaci[0])
+            ->with('idusu',$idusu)
+            ->with('usua',$usua[0]->tipo)
+            ->with('otrusu',$otrusu);
        
 
 
