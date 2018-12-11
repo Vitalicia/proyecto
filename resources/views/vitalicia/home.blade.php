@@ -130,9 +130,12 @@
                     <td>{{$med->mpresen}}</td>
                     @if($med->deleted_at=="")
                             <td>
-                           <a href="{{URL::action('vitalicia@eliminamedi',['idamedicamento'=>$med->idamedicamento])}}"> 
-                               <button type="button" class="button small secondary">Inhabilitar</button> 
-                            </a>
+                                <a href="#">
+                                        <button type="button" class="button small success">Modificar</button>
+                                </a>
+                                <a href="{{URL::action('vitalicia@eliminamedi',['idamedicamento'=>$med->idamedicamento])}}"> 
+                                   <button type="button" class="button small secondary">Inhabilitar</button> 
+                                </a>
                             </td>
                     @else
                             <td>
