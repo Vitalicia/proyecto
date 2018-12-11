@@ -21,6 +21,51 @@
                             @endforeach
                         </select>
             
+            Indicaci&oacute;n
+            @if($errors->first('amindicacion')) 
+            <br>{!! $errors->first('amindicacion','<span class=error>:message</span>')!!}
+            @endif
+                <select name="presen">
+                  <option value="default">Elige una opci&oacute;n</option>
+                  <option value="1 Dosis">1 Dosis</option>
+                  <option value="Polvos">Polvos</option>
+                  <option value="Capsulas">Capsulas o Comprimidos</option>
+                  <option value="Tabletas">Tabletas</option>
+                  <option value="Pildoras">Pildoras</option>
+                  <option value="Grageas">Grageas</option>
+                  <option value="Supositorios">Supositorios</option>
+                  <option value="Óvulos">Óvulos</option>
+                  <option value="Pomada">Pomada</option>
+                  <option value="Crema">Crema</option>
+                  <option value="Líquida">Líquida</option>
+                  <option value="Soluciones">Soluciones</option>
+                  <option value="Jarabe">Jarabe</option>
+                  <option value="Enemas">Enemas</option>
+                </select>
+            
+            
+            Presentación
+            @if($errors->first('ampresen')) 
+            <br>{!! $errors->first('ampresen','<span class=error>:message</span>')!!}
+            @endif
+                <select name="presen">
+                  <option value="default">Elige una opci&oacute;n</option>
+                  <option value="Solida">Solida</option>
+                  <option value="Polvos">Polvos</option>
+                  <option value="Capsulas">Capsulas o Comprimidos</option>
+                  <option value="Tabletas">Tabletas</option>
+                  <option value="Pildoras">Pildoras</option>
+                  <option value="Grageas">Grageas</option>
+                  <option value="Supositorios">Supositorios</option>
+                  <option value="Óvulos">Óvulos</option>
+                  <option value="Pomada">Pomada</option>
+                  <option value="Crema">Crema</option>
+                  <option value="Líquida">Líquida</option>
+                  <option value="Soluciones">Soluciones</option>
+                  <option value="Jarabe">Jarabe</option>
+                  <option value="Enemas">Enemas</option>
+                </select>
+            
             Actividad 1
             <br>{!! $errors->first('actividad1','<span class=error>:message</span>')!!}
                 <input type="text" name="actividad1" value="{{old('actividad1')}}">
