@@ -4,7 +4,7 @@
 <br>
 @stop
 @section('form1')
-        <form action="{{route('gusu')}}" method = "POST" enctype="multipart/form-data" >
+        <form action="{{route('gnpaci')}}" method = "POST" enctype="multipart/form-data" >
             {{csrf_field()}}
             
             <b>Paciente</b>
@@ -120,9 +120,9 @@
             @endif
                 <select name="tgeriatrico1">
                   <option value="default">Elige una opci&oacute;n</option>
-                  <option value="Desayuno">Micci&oacute;n</option>
-                  <option value="Almuerzo">Evacuaci&oacute;n</option>
-                  <option value="Comida">Ninguna</option>
+                  <option value="Miccion">Micci&oacute;n</option>
+                  <option value="Evacuacion">Evacuaci&oacute;n</option>
+                  <option value="Ninguna">Ninguna</option>
                 </select>
                 
                 <b>Geri&aacute;trico 2</b> 
@@ -131,9 +131,9 @@
             @endif
                 <select name="tgeriatrico2">
                   <option value="default">Elige una opci&oacute;n</option>
-                  <option value="Desayuno">Micci&oacute;n</option>
-                  <option value="Almuerzo">Evacuaci&oacute;n</option>
-                  <option value="Comida">Ninguna</option>
+                  <option value="Miccion">Micci&oacute;n</option>
+                  <option value="Evacuacion">Evacuaci&oacute;n</option>
+                  <option value="Ninguna">Ninguna</option>
                 </select>
                 
                 <b>Geri&aacute;trico 3</b> 
@@ -142,18 +142,18 @@
             @endif
                 <select name="tgeriatrico3">
                   <option value="default">Elige una opci&oacute;n</option>
-                  <option value="Desayuno">Micci&oacute;n</option>
-                  <option value="Almuerzo">Evacuaci&oacute;n</option>
-                  <option value="Comida">Ninguna</option>
+                  <option value="Miccion">Micci&oacute;n</option>
+                  <option value="Evacuacion">Evacuaci&oacute;n</option>
+                  <option value="Ninguna">Ninguna</option>
                 </select>
                 
                 <b>ta</b>
             <br>{!! $errors->first('ta','<span class=error>:message</span>')!!}
                 <input type="text" name="ta" value="{{old('ta')}}">
             
-                <b>tf</b>
-            <br>{!! $errors->first('tf','<span class=error>:message</span>')!!}
-                <input type="text" name="tf" value="{{old('tf')}}">
+                <b>fc</b>
+            <br>{!! $errors->first('fc','<span class=error>:message</span>')!!}
+                <input type="text" name="fc" value="{{old('fc')}}">
 @stop
 @section('form3')                
                         
@@ -178,12 +178,12 @@
                 <input type="text" name="protesis" value="{{old('protesis')}}">
                 
                 <b>Nombre del Cuidador</b>
-            <br>{!! $errors->first('consumo','<span class=error>:message</span>')!!}
-                <input type="text" name="consumo" value="{{old('consumo')}}">
+            <br>{!! $errors->first('cuidadornombre','<span class=error>:message</span>')!!}
+                <input type="text" name="cuidadornombre" value="{{old('cuidadornombre')}}">
                 
                 <b>Fecha de Registro </b>
             <br>{!! $errors->first('fechacuidador','<span class=error>:message</span>')!!}
-                <input type="date" name="fechacuidador" value="{{old('observaciones')}}">
+                <input type="date" name="fechacuidador" value="{{old('fechacuidador')}}">
 
         <input type="submit" class="button" value="Guardar">
         <input type="reset" class="button alert" value="Borrar">

@@ -101,7 +101,7 @@ INNER JOIN usuarios	AS u ON u.`idu`=p.`idu`");
         
                 return view ('vitalicia.datpacientes')
                         ->with('usuarios',$pausu)
-                    ->with('amedicamentos',$amedicamentos);
+                        ->with('amedicamentos',$amedicamentos);
     }
     
     
@@ -115,23 +115,34 @@ INNER JOIN usuarios	AS u ON u.`idu`=p.`idu`");
             
                     
                 $npac = new npacientes;
-                $npac->idd = $request->idd;
-                $npac->nombre = $request->nombre;
-                $npac->ap = $request->ap;
-                $npac->am = $request->am;    
-                $npac->edad = $request->edad;
-                $npac->telefono = $request->telefono;
-                $npac->calle = $request->calle;
-                $npac->numero = $request->numero;
-                $npac->calle1 = $request->calle1;
-                $npac->calle2 = $request->calle2;
-                $npac->colonia = $request->colonia;
-                $npac->municipio = $request->municipio;
-                $npac->ciudad = $request->ciudad;
-                $npac->cp = $request->cp;
-                $npac->referencia = $request->referencia;
-                $npac->archivo = $img2;
+                $npac->idnp = $request->idnp;
+                $npac->idamedicamento = $request->medicam;
                 $npac->idu = $request->idu;
+                $npac->actividad1 = $request->actividad1;    
+                $npac->hora1 = $request->hora1;
+                $npac->actividad2 = $request->actividad2;
+                $npac->hora2 = $request->hora2;
+                $npac->actividad3 = $request->actividad3;
+                $npac->hora3 = $request->hora3;
+                $npac->menu = $request->menu;
+                $npac->consumo = $request->consumo;
+                $npac->observaciones = $request->observaciones;
+                $npac->horacomida = $request->horacomida;
+                $npac->tipocomida = $request->tipocomida;
+                $npac->tgeriatrico1 = $request->tgeriatrico1;
+                $npac->tgeriatrico2 = $request->tgeriatrico2;
+                $npac->tgeriatrico3 = $request->tgeriatrico3;
+                $npac->ta = $request->ta;
+                $npac->fc = $request->fc;
+                $npac->fr = $request->fr;
+                $npac->temp = $request->temp;
+                $npac->spo2 = $request->spo2;
+                $npac->glucosa = $request->glucosa;
+                $npac->protesis = $request->protesis;
+                $npac->cuidadornombre = $request->cuidadornombre;
+                $npac->fechacuidador = $request->fechacuidador;
+                $npac->amindicacion = $request->amindicacion;
+                $npac->ampresen = $request->ampresen;
                 $npac->save();
 
 
