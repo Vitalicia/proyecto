@@ -195,7 +195,7 @@
             <th>Tgeriatrico3</th>
             <th>TA</th><th>FC</th><th>FR</th><th>TEMP</th><th>SPO2</th>
             <th>Glucosa</th><th>Protesis</th>
-            <th>Cuidador</th><th>Fecha</th>
+            <th>Cuidador</th><th>Fecha y hora</th>
             <th>Nmedica</th><th>Usuario</th>
             </tr>
             @foreach($npacientes as $nm)
