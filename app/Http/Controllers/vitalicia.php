@@ -1274,10 +1274,6 @@ public function eliminausu($idu)
             ->with('usuarios',$usuarios)
             ->with('idamedicamento',$idamedicamento)
             ->with('amedicamentos',$amedicamentos);
-            
-
-
-
 
             
       }
@@ -1329,8 +1325,6 @@ public function guardamodifinpacientes(Request $request)
 
                   $npacm = npacientes::find($idnp);
                   $npacm->idnp = $request->idnp;
-                  $npacm->idamedicamento = $request->medicam;
-                  $npacm->idu = $request->idu;
                   $npacm->actividad1 = $request->actividad1;    
                   $npacm->hora1 = $request->hora1;
                   $npacm->actividad2 = $request->actividad2;
@@ -1354,6 +1348,8 @@ public function guardamodifinpacientes(Request $request)
                   $npacm->protesis = $request->protesis;
                   $npacm->cuidadornombre = $request->cuidadornombre;
                   $npacm->fechacuidador = $request->fechacuidador;
+                  $npacm->idamedicamento = $request->idamedicamento;
+                  $npacm->idu = $request->idu;
                   $npacm->amindicacion = $request->amindicacion;
                   $npacm->ampresen = $request->ampresen;
                   $npacm->save();
