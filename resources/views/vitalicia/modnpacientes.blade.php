@@ -184,7 +184,7 @@
                 
                 <b>Fecha de Registro </b>
             <br>{!! $errors->first('fechacuidador','<span class=error>:message</span>')!!}
-                <input type="date" name="fechacuidador" value="{{$mnpacientes->fechacuidador}}">
+                <input type="TEXT" name="fechacuidador" value="{{$mnpacientes->fechacuidador}}">
 
         <input type="submit" class="button" value="Guardar">
         <input type="reset" class="button alert" value="Borrar">
