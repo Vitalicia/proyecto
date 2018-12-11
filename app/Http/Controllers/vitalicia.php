@@ -1263,11 +1263,16 @@ public function eliminausu($idu)
             //$tipousu = tipos::where('idt','=','idt')->get();
 
             $usuarios = usuarios::where('idu','!=',$idu)->get();
+
+            $amedicamentos=amedicamentos::where('idamedicamento','!=',$idamedicamento)->get();
+            $idamedicamento = $amedicamentos[0]->idamedicamento;
             
             return view ('vitalicia.modnpacientes')
             ->with('mnpacientes',$mnpacientes[0])
             ->with('idu',$idu)
+            ->with('idamedicamento',$idamedicamento)
             //->with('tipousu',$tipousu[0]->tipo)
+            ->with('amedicamentos',$amedicamentos)
             ->with('usuarios',$usuarios);
 
 
