@@ -1290,7 +1290,7 @@ public function guardamodifinpacientes(Request $request)
  if( Session::get('sesionidu')!="")
            {
           $idnp =  $request->idnp;
-          $idamedicamento = $request->idamedicamento;
+         
           $idu = $request->idu;
           $actividad1 = $request->actividad1;
           $hora1 = $request->hora1;
