@@ -16,13 +16,12 @@
                 </select>
             
             <b>Medicamento</b> <select name = 'medicam'>
-                            <option value = '{{$idu->$amedicamentos}}'></option>
+                            
                             @foreach($otroamedicamentos as $amed)
-                            <option value = '{{$amed->idamedicamento}}'>{{$amed->nmedica}}</option>
+                            <option value = '{{$amed->idamedicamento}}'>{{$amed->nmdica}}</option>
                             @endforeach
                         </select>
 
-            
             <b>Indicaci&oacute;n</b>
             @if($errors->first('amindicacion')) 
             <br>{!! $errors->first('amindicacion','<span class=error>:message</span>')!!}
