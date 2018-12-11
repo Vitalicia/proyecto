@@ -52,6 +52,15 @@ class vitalicia extends Controller
           INNER JOIN geriatricos AS g ON g.idgeriatricos=p.idgeriatricos
           INNER JOIN actividades AS v ON v.idactividades=p.idactividades");
 
+$npacientes=\DB::select(" SELECT p.`idnp`,p.`actividad1`,p.`hora1`,p.`actividad2`,
+p.`hora2`,p.`actividad3`,p.`hora3`,p.`menu`,p.`consumo`,p.`observaciones`,p.`horacomida`,
+p.`tipocomida`,p.`tgeriatrico1`,p.`tgeriatrico2`,p.`tgeriatrico3`,p.`ta`,
+p.`fc`,p.`fr`,p.`temp`,p.`spo2`,p.`glucosa`,p.`protesis`,p.`cuidadornombre`,
+p.`fechacuidador`,ame.`nmedica`,u.`usuario`
+FROM npacientes AS p
+INNER JOIN amedicamentos AS ame ON ame.`idamedicamento`=p.`idamedicamento`
+INNER JOIN usuarios	AS u ON u.`idu`=p.`idu`");
+
         $medicam = amedicamentos::withTrashed()->orderBy('idamedicamento','asc')->get();
             
      
@@ -59,6 +68,7 @@ class vitalicia extends Controller
             ->with('usuariosd',$usuariosd)
             ->with('datosd',$datosd)
             ->with('medicam',$medicam)
+            ->with('npacientes',$npacientes)
             ->with('pacientesd',$pacientesd);
         }
         else
