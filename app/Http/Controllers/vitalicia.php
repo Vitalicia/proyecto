@@ -1057,8 +1057,9 @@ class vitalicia extends Controller
             return view ('vitalicia.modusuarios')
             ->with('usuario',$usuario[0])
             ->with('idt',$idt)
-            //->with('tipousu',$tipousu[0]->tipo)
-            ->with('otrostipos',$otrostipos[0]->tipo);
+            ->with('tipos',$tipos[0]->tipo)
+            ->with('otrostipos',$otrostipos);
+
       }
         else
 		 {
