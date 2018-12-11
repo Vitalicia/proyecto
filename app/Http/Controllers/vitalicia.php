@@ -1055,7 +1055,7 @@ class vitalicia extends Controller
             ->with('usuario',$usuario[0])
             ->with('idt',$idt)
             //->with('tipousu',$tipousu[0]->tipo)
-            ->with('otrostipos',$otrostipos);
+            ->with('otrostipos',$otrostipos[0]->tipo);
       }
         else
 		 {
