@@ -1049,9 +1049,9 @@ class vitalicia extends Controller
             
             //$tipousu = tipos::where('idt','=','idt')->get();
 
-            $tipos = carreras::where('idt','!=',$idt)->get();
+            $tipos = tipos::where('idt','!=',$idt)->get();
 
-            $otrostipos = carreras::where('idt','!=',$idt)
+            $otrostipos = tipos::where('idt','!=',$idt)
 		                 ->get(); 
             
             return view ('vitalicia.modusuarios')
