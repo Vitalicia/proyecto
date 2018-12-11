@@ -53,21 +53,6 @@
               <li>
                 <a href="{{route('getpacientes')}}">Familiares</a>
               </li>
-                            
-              @if(Session::get('sesiontipo')=="1")
-              <li>
-                    
-                    <a href="#">Consultas</a>
-                    <ul class="menu">
-                        @if(Session::get('sesiontipo')=="1")
-                        <li><a href="{{route('getdatos')}}">Datos</a></li>
-                        <li><a href="{{route('getusuarios')}}">Usuarios</a></li>
-                        @endif
-                        <li><a href="{{route('getpacientes')}}">Pacientes</a></li>
-                    </ul>
-                    
-                </li>
-              @endif
                 
               @if(Session::get('sesiontipo')=="1")
               <li>
