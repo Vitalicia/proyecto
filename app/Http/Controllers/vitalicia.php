@@ -1250,6 +1250,105 @@ public function eliminausu($idu)
     }
 
     
+  //jhsjfhj
+
+  public function modifinpacientes($idnp)
+  {
+ if( Session::get('sesionidu')!="")
+           {
+      $npacientesm = npacientes::where('idnp','=',$idnp)
+                               ->get();
+               //return $datosm;
+          return view ('vitalicia.modnpacientes')
+          ->with('npacientesm',$npacientesm[0]);
+  }
+  else
+           {
+                   Session::flash('error', 'Favor de loguearse antes de 
+          continuar');
+           return redirect()->route('login');
+           }            
+}
+
+public function guardamodifinpacientes(Request $request)
+{
+ if( Session::get('sesionidu')!="")
+           {
+          $idnp =  $request->idnp;
+          $idamedicamento = $request->idamedicamento;
+          $idu = $request->idu;
+          $actividad1 = $request->actividad1;
+          $hora1 = $request->hora1;
+          $actividad2 = $request->actividad2;
+          $hora2 = $request->hora2;
+          $actividad3 = $request->actividad3;
+          $hora3 = $request->hora3;
+          $menu = $request->menu;
+          $consumo = $request->consumo;
+          $observaciones = $request->observaciones;
+          $horacomida = $request->horacomida;
+          $tipocomida = $request->tipocomida;
+          $tgeriatrico1 = $request->tgeriatrico1;
+          $tgeriatrico2 = $request->tgeriatrico2;
+          $tgeriatrico3 = $request->tgeriatrico3;
+          $ta = $request->ta;
+          $fc = $request->fc;
+          $fr = $request->fr;
+          $temp = $request->temp;
+          $spo2 = $request->spo2;
+          $glucosa = $request->glucosa;
+          $protesis = $request->protesis;
+          $cuidadornombre = $request->cuidadornombre;
+          $fechacuidador = $request->fechacuidador;
+          $amindicacion = $request->amindicacion;
+          $ampresen = $request->ampresen;
+         
+
+         
+
+            
+
+                  $npacm = npacientes::find($idnp);
+                  $npacm->idnp = $request->idnp;
+                  $npacm->idamedicamento = $request->medicam;
+                  $npacm->idu = $request->idu;
+                  $npacm->actividad1 = $request->actividad1;    
+                  $npacm->hora1 = $request->hora1;
+                  $npacm->actividad2 = $request->actividad2;
+                  $npacm->hora2 = $request->hora2;
+                  $npacm->actividad3 = $request->actividad3;
+                  $npacm->hora3 = $request->hora3;
+                  $npacm->menu = $request->menu;
+                  $npacm->consumo = $request->consumo;
+                  $npacm->observaciones = $request->observaciones;
+                  $npacm->horacomida = $request->horacomida;
+                  $npacm->tipocomida = $request->tipocomida;
+                  $npacm->tgeriatrico1 = $request->tgeriatrico1;
+                  $npacm->tgeriatrico2 = $request->tgeriatrico2;
+                  $npacm->tgeriatrico3 = $request->tgeriatrico3;
+                  $npacm->ta = $request->ta;
+                  $npacm->fc = $request->fc;
+                  $npacm->fr = $request->fr;
+                  $npacm->temp = $request->temp;
+                  $npacm->spo2 = $request->spo2;
+                  $npacm->glucosa = $request->glucosa;
+                  $npacm->protesis = $request->protesis;
+                  $npacm->cuidadornombre = $request->cuidadornombre;
+                  $npacm->fechacuidador = $request->fechacuidador;
+                  $npacm->amindicacion = $request->amindicacion;
+                  $npacm->ampresen = $request->ampresen;
+                  $npacm->save();
+                    
+                  return redirect()->route('confirmacion');
   
+ }
+  else
+           {
+                   Session::flash('error', 'Favor de loguearse antes de 
+          continuar');
+           return redirect()->route('login');
+           }
+  
+}
     
 }
