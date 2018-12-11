@@ -826,9 +826,5 @@ public function eliminausu($idu)
     }
 
   
-    public function efisi($idmedicamento)
-   
-{
-        
-}
+    
 }
