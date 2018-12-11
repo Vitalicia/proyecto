@@ -86,6 +86,24 @@ INNER JOIN usuarios	AS u ON u.`idu`=p.`idu`");
          
     } 
     
+       public function registropacientes()
+    {   
+           
+        $amedicamentos = amedicamentos::withTrashed()->orderBy('nmedica','asc')
+                        
+                          ->get();
+            
+           $pausu = usuarios::where('idt','=','4')
+                                    ->orderBy('usuario','asc')
+                                    ->get();
+                    
+        
+                return view ('vitalicia.datpacientes')
+                        ->with('usuarios',$pausu)
+                    ->with('amedicamentos',$amedicamentos);
+    } 
+    
+    
         //INICIO
        public function confirmacion()
     {

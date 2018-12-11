@@ -46,7 +46,7 @@
                 
               @if(Session::get('sesiontipo')=="1" or "2")
               <li>
-                        <a href="{{route('paci')}}">Pacientes</a>
+                        <a href="{{route('regpacientes')}}">Pacientes</a>
               </li>
               @endif
                 

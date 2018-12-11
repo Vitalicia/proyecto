@@ -7,6 +7,7 @@ Route::get('/spacientes','vitalicia@spaciente')->name('paci');
 Route::get('/confirmacion','vitalicia@confirmacion')->name('confirmacion'); // Confirma el guardado de los datos
 
 //RUTA PAR LAS ALTAS
+Route::get('/registropacientes','vitalicia@registropacientes')->name('regpacientes');
 Route::get('/registroUsuario','vitalicia@rUsuario')->name('rusu');
 Route::get('/usuario','vitalicia@usuario')->name('usu');
 Route::get('/registromedicamento','vitalicia@rmedicamento')->name('rmed');//dar de alta un medicamento
