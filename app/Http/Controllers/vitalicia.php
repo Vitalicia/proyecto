@@ -1264,7 +1264,7 @@ public function eliminausu($idu)
 
             $usuarios = usuarios::where('idu','!=',$idu)->get();
             
-            return view ('vitalicia.modusuarios')
+            return view ('vitalicia.modnpacientes')
             ->with('mnpacientes',$mnpacientes[0])
             ->with('idu',$idu)
             //->with('tipousu',$tipousu[0]->tipo)
