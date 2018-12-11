@@ -211,11 +211,6 @@
                     <td>{{$nm->cuidadornombre}}</td>
                     <td>{{$nm->fechacuidador}}</td>
                     <td>{{$nm->nmedica}}</td>
-<<<<<<< HEAD
-                    <td>{{$nm->usuario}}</td>
-                    
-                    </tr>
-=======
                     <td>{{$nm->amindicacion}}</td>
                     <td>{{$nm->ampresen}}</td>
                     @if($nm->deleted_at=="")
@@ -232,7 +227,6 @@
                                 </td>
                         @endif
                 </tr>
->>>>>>>
             @endforeach
         </table>
     </div>
