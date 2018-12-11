@@ -18,7 +18,7 @@
     <div class="top-bar">
       <div class="row">
         <div class="top-bar-left">
-	       <a class="navbar-brand" href="{{route('home')}}"><img src="vitalicia.jpg" width="70" height="200" alt="Vitalicia"></a>  
+	       <a class="navbar-brand" href="{{route('home')}}"><img src="vitalicia.jpg" width="70" height="200" alt="Vitalicia"></a> 
         </div>
           
 
@@ -26,42 +26,42 @@
  
         <div class="top-bar-right">
             <ul class="dropdown menu" data-dropdown-menu>
+              <li>@if (Session::has('sesionname'))
+                  <div><h5 class="subheader">¡Hola {{ Session::get('sesionname')}}!</h5></div>
+                  @endif
+              </li>
+                
               <li>
                 <a href="{{route('home')}}">Vitalicia</a>
               </li>    
                 
+              @if(Session::get('sesiontipo')=="1")
               <li>
                 <a href="{{route('cmedicamentos')}}">Nuevo Medicamento</a>
               </li>    
+              @endif 
+              <!--li>
+                <a href="#">Datos Generales</a>
+              </li-->
                 
+              @if(Session::get('sesiontipo')=="1" or "2")
               <li>
-                <a href="{{route('rusu')}}">Datos Generales</a>
+                        <a href="{{route('paci')}}">Pacientes</a>
               </li>
+              @endif
                 
-              
-              <li>
-                <a href="{{route('paci')}}">Pacientes</a>
-              </li>
-              
               <li>
                 <a href="{{route('getpacientes')}}">Familiares</a>
               </li>
-                            
-                <li>
-                    <a href="#">Consultas</a>
-                    <ul class="menu">
-                        <li><a href="{{route('getdatos')}}">Datos</a></li>
-                        <li><a href="{{route('getusuarios')}}">Usuarios</a></li> 
-                        <li><a href="{{route('getpacientes')}}">Pacientes</a></li>
-                    </ul>   
-                </li>
-              
+                
+              @if(Session::get('sesiontipo')=="1")
               <li>
-                <a href="{{route('usu')}}">Iniciar Sesi&oacute;n</a>
+                <a href="{{route('usu')}}">Nuevo Usuario</a>
               </li>
+              @endif
                 
               <li>
-                <!--a href="#">Cerrar Sesi&oacute;n</a-->
+                <a href="{{URL::action('usuariosc@cerrarsesion')}}">Cerrar Sesi&oacute;n</a>
               </li>
             </ul>
         </div>
@@ -73,7 +73,7 @@
     <hr>
 
             
-    <div class="row large-8" align="center">
+    <div class="row large-10" align="center">
             @yield('encabezado')
     </div>
         

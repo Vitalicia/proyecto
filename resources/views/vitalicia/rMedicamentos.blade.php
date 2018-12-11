@@ -8,7 +8,14 @@
             <!--Clave--> 
                 <input type="text" name='idmedicamento' value="{{$iddm}}" readonly= 'readonly' style='visibility:hidden'>
           
-
+            Paciente
+            <br>
+                <select name = 'idu'>
+                @foreach($usuarios as $usua)
+                <option value ='{{$usua->idu}}'>{{$usua->usuario}}</option>
+                @endforeach
+                </select>
+            
             Medicamento<select name = 'medicam'>
             @foreach($amedicamentos as $amed)
             <option value = '{{$amed->idamedicamento}}'>{{$amed->nmedica}}</option>

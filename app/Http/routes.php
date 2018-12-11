@@ -1,8 +1,8 @@
 <?php
 
 //RUTA PARA INICIO
-Route::get('/','vitalicia@home')->name('home');
-Route::get('/inicio','vitalicia@main')->name('main');
+Route::get('/','vitalicia@inicio')->name('inicio');
+Route::get('/inicio','vitalicia@home')->name('home');
 Route::get('/spacientes','vitalicia@spaciente')->name('paci');
 Route::get('/confirmacion','vitalicia@confirmacion')->name('confirmacion'); // Confirma el guardado de los datos
 
@@ -86,6 +86,11 @@ Route::get('/cusuarios','vitalicia@getusuarios')->name('getusuarios');
 //Catalogo de alta de Medicamentos
 Route::get('/altaMedicamentos','vitalicia@cmedicamentos')->name('cmedicamentos');
 
+//Rutas de Sesion
+Route::get('/login','usuariosc@login')->name('login');
+Route::POST('/iniciasesion','usuariosc@iniciasesion')->name('iniciasesion');
+Route::get('/principal','usuariosc@principal')->name('principal');
+Route::get('/cerrarsesion','usuariosc@cerrarsesion')->name('cerrarsesion');
 
 
 

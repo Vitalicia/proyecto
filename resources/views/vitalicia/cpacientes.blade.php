@@ -1,6 +1,7 @@
 @extends('vitalicia.principal')
 @section('encabezado')
-<h1>Consulta Pacientes</h1>
+<h2 class="subheader">Consulta de Pacientes</h2>
+<br>
 @stop
 @section('complete')
 {{csrf_field()}}

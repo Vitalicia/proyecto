@@ -22,10 +22,15 @@
                 
 
            
-            seleccione turno <select name ='idt'>
-            <option value ='{{$idt}}'>{{$turnos}}</option>
-            <br>
-           
+       
+            Tipo de Usuario<select name = 'idt'>
+              <option value = '{{$usuario->idt}}'>{{$idt}}</option>
+              @foreach($otrostipos as $tp)
+               <option value = '{{$tp->idt}}'>{{$tp->tipo}}</option>
+              @endforeach
+              </select>
+<br>
+
                 
                 <input type="submit" class="button" value="Guardar">
            
