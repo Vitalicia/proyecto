@@ -190,8 +190,7 @@
             <th>Avtividad3</th><th>Hora3</th>
             <th>Menu</th><th>Consumo</th>
             <th>Observaciones</th><th>Hcomida</th>
-            <th>Avtividad1</th><th>Hora1</th>
-            <th>Tcomida</th>
+            <th>Tcomida</th>  
             <th>Tgeriatrico1</th><th>Tgeriatrico2</th>
             <th>TA</th><th>FC</th><th>FR</th><th>TEMP</th><th>SPO2</th>
             <th>Glucosa</th><th>Protesis</th>
