@@ -7,7 +7,7 @@
         <form action="{{route('gusu')}}" method = "POST" enctype="multipart/form-data" >
             {{csrf_field()}}
             
-            Usuario
+            <b>Paciente</b>
             <br>
                 <select name = 'idu'>
                 @foreach($usuarios as $usup)
@@ -15,13 +15,13 @@
                 @endforeach
                 </select>
             
-            Medicamento <select name = 'medicam'>
+            <b>Medicamento</b> <select name = 'medicam'>
                             @foreach($amedicamentos as $amed)
                             <option value = '{{$amed->idamedicamento}}'>{{$amed->nmedica}}</option>
                             @endforeach
                         </select>
             
-            Indicaci&oacute;n
+            <b>Indicaci&oacute;n</b>
             @if($errors->first('amindicacion')) 
             <br>{!! $errors->first('amindicacion','<span class=error>:message</span>')!!}
             @endif
@@ -34,7 +34,7 @@
                 </select>
             
             
-            Presentación
+                <b>Presentación</b>
             @if($errors->first('ampresen')) 
             <br>{!! $errors->first('ampresen','<span class=error>:message</span>')!!}
             @endif
@@ -56,104 +56,136 @@
                   <option value="Enemas">Enemas</option>
                 </select>
             
-            Actividad 1
+                <b>Actividad 1</b>
             <br>{!! $errors->first('actividad1','<span class=error>:message</span>')!!}
                 <input type="text" name="actividad1" value="{{old('actividad1')}}">
 
-            Hora de la Actividad 1
+                <b>Hora de la Actividad 1</b>
             <br>{!! $errors->first('hora1','<span class=error>:message</span>')!!}
                 <input type="text" name="hora1" value="{{old('hora1')}}">
 
-            Actividad 2
+                <b>Actividad 2</b>
             <br>{!! $errors->first('actividad2','<span class=error>:message</span>')!!}
                 <input type="text" name="actividad2" value="{{old('actividad2')}}">
 
-            Hora de la Actividad 2
+                <b>Hora de la Actividad 2</b>
             <br>{!! $errors->first('hora2','<span class=error>:message</span>')!!}
                 <input type="text" name="hora2" value="{{old('hora2')}}">
 
-            Actividad 3
+                <b>Actividad 3</b>
             <br>{!! $errors->first('actividad3','<span class=error>:message</span>')!!}
                 <input type="text" name="actividad3" value="{{old('actividad3')}}">
 
-            Hora de la Actividad 3
+                <b>Hora de la Actividad 3</b>
             <br>{!! $errors->first('hora3hora3','<span class=error>:message</span>')!!}
                 <input type="text" name="hora3" value="{{old('hora3')}}">
 
-            Comida (Men&uacute;) 
-            <br>{!! $errors->first('menu','<span class=error>:message</span>')!!}
-                <input type="text" name="menu" value="{{old('menu')}}">
+            
                 
 
             
             <input type="text" name='idnp' value="" readonly= 'readonly' style='visibility:hidden'>
 @stop
 @section('form2')               
-            Consumo
+                <b>Comida (Men&uacute;) </b>
+            <br>{!! $errors->first('menu','<span class=error>:message</span>')!!}
+                <input type="text" name="menu" value="{{old('menu')}}">
+            
+                <b>Consumo</b>
             <br>{!! $errors->first('consumo','<span class=error>:message</span>')!!}
                 <input type="text" name="consumo" value="{{old('consumo')}}">
                 
-            Observaciones 
+                <b>Observaciones</b> 
             <br>{!! $errors->first('observaciones','<span class=error>:message</span>')!!}
                 <input type="text" name="observaciones" value="{{old('observaciones')}}">
 
-            Hora de Comida
+                <b>Hora de Comida</b>
             <br>{!! $errors->first('horacomida','<span class=error>:message</span>')!!}
                 <input type="text" name="horacomida" value="{{old('horacomida')}}">
             
-            Tipo de Comida 
+                <b>Tipo de Comida</b> 
+            @if($errors->first('tipocomida')) 
             <br>{!! $errors->first('tipocomida','<span class=error>:message</span>')!!}
-                <input type="text" name="tipocomida" value="{{old('tipocomida')}}">
+            @endif
+                <select name="tipocomida">
+                  <option value="default">Elige una opci&oacute;n</option>
+                  <option value="Desayuno">Desayuno</option>
+                  <option value="Almuerzo">Almuerzo</option>
+                  <option value="Comida">Comida</option>
+                </select>
                  
-            Geri&aacute;trico 1 
+                <b>Geri&aacute;trico 1</b> 
+            @if($errors->first('tgeriatrico1')) 
             <br>{!! $errors->first('tgeriatrico1','<span class=error>:message</span>')!!}
-                <input type="text" name="tgeriatrico1" value="{{old('tgeriatrico1')}}">
+            @endif
+                <select name="tgeriatrico1">
+                  <option value="default">Elige una opci&oacute;n</option>
+                  <option value="Desayuno">Micci&oacute;n</option>
+                  <option value="Almuerzo">Evacuaci&oacute;n</option>
+                  <option value="Comida">Ninguna</option>
+                </select>
                 
-            Geri&aacute;trico 2 
+                <b>Geri&aacute;trico 2</b> 
+            @if($errors->first('tgeriatrico2')) 
             <br>{!! $errors->first('tgeriatrico2','<span class=error>:message</span>')!!}
-                <input type="text" name="tgeriatrico2" value="{{old('tgeriatrico2')}}">
+            @endif
+                <select name="tgeriatrico2">
+                  <option value="default">Elige una opci&oacute;n</option>
+                  <option value="Desayuno">Micci&oacute;n</option>
+                  <option value="Almuerzo">Evacuaci&oacute;n</option>
+                  <option value="Comida">Ninguna</option>
+                </select>
                 
-            Geri&aacute;trico 3 
+                <b>Geri&aacute;trico 3</b> 
+            @if($errors->first('tgeriatrico3')) 
             <br>{!! $errors->first('tgeriatrico3','<span class=error>:message</span>')!!}
-                <input type="text" name="tgeriatrico3" value="{{old('tgeriatrico3')}}">
+            @endif
+                <select name="tgeriatrico3">
+                  <option value="default">Elige una opci&oacute;n</option>
+                  <option value="Desayuno">Micci&oacute;n</option>
+                  <option value="Almuerzo">Evacuaci&oacute;n</option>
+                  <option value="Comida">Ninguna</option>
+                </select>
                 
-            ta
+                <b>ta</b>
             <br>{!! $errors->first('ta','<span class=error>:message</span>')!!}
                 <input type="text" name="ta" value="{{old('ta')}}">
-@stop
-@section('form3')                
-            tf
+            
+                <b>tf</b>
             <br>{!! $errors->first('tf','<span class=error>:message</span>')!!}
                 <input type="text" name="tf" value="{{old('tf')}}">
-                
-            fr
+@stop
+@section('form3')                
+                        
+                <b>fr</b>
             <br>{!! $errors->first('fr','<span class=error>:message</span>')!!}
                 <input type="text" name="fr" value="{{old('fr')}}">
                 
-            Temp 
+                <b>Temp</b>
             <br>{!! $errors->first('temp','<span class=error>:message</span>')!!}
                 <input type="text" name="temp" value="{{old('temp')}}">
                 
-            Spo2 
+                <b>Spo2</b> 
             <br>{!! $errors->first('spo2','<span class=error>:message</span>')!!}
                 <input type="text" name="spo2" value="{{old('spo2')}}">
             
-            Glucosa
+                <b>Glucosa</b>
             <br>{!! $errors->first('glucosa','<span class=error>:message</span>')!!}
                 <input type="text" name="glucosa" value="{{old('glucosa')}}">
 
-            Pr&oacute;tesis
+                <b>Pr&oacute;tesis</b>
             <br>{!! $errors->first('protesis','<span class=error>:message</span>')!!}
                 <input type="text" name="protesis" value="{{old('protesis')}}">
                 
-            Nombre del Cuidador
+                <b>Nombre del Cuidador</b>
             <br>{!! $errors->first('consumo','<span class=error>:message</span>')!!}
                 <input type="text" name="consumo" value="{{old('consumo')}}">
                 
-            Horario 
+                <b>Horario </b>
             <br>{!! $errors->first('observaciones','<span class=error>:message</span>')!!}
                 <input type="text" name="observaciones" value="{{old('observaciones')}}">
 
         <input type="submit" class="button" value="Guardar">
+        <input type="reset" class="button alert" value="Borrar">
         </form>
 @stop
