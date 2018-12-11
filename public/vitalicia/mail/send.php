@@ -1,16 +1,16 @@
+
 <!DOCTYPE html>
-<html>
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Net IT | Galer&iacute;a</title>
+	<title>Vitalicia</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Web de servicios tecnológicos" />
-	<meta name="keywords" content="Network, Information, technology, networking, source, responsive" />
-	<meta name="author" content="Net IT Solutions" />
+	<meta name="description" content="Centro de Asistencia Gerontológica" />
+	<meta name="keywords" content="estancia, adultos mayores, gerontología, cuidado" />
+	<meta name="author" content="Victor Díaz" />
 
 	<!-- favicon -->
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" href="vitalicia/favicon.ico">
 
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
 	
@@ -99,10 +99,10 @@
 		require("class.phpmailer.php");
 		$mail = new PHPMailer();
         $mail->Host = "localhost";
-		$mail->From = "noreply@net-itmx.xyz";
-		$mail->Subject = "Contacto Net IT Solutions";
+		$mail->From = "noreply@vitalicia.com.mx";
+		$mail->Subject = "Contacto Vitalicia";
 		$mail->ReplyTo = $email;
-		$mail->AddAddress("contacto@net-itmx.xyz");
+		$mail->AddAddress("contacto@vitalicia.com.mx");
 		
 		
 		//var_dump($mail);
@@ -120,7 +120,7 @@
 			
 			echo '<div id="emailsuccess">¡Gracias por tu mensaje!</div>';
 			 
-			header('refresh: 2; url= http://www.net-itmx.xyz');
+			header('refresh: 2; url= http://vitalicia.com.mx');
 			exit();
 			 
 			/* Make sure that code below does not get executed when we redirect. 
@@ -151,16 +151,15 @@
 		<div class="container">
 			<div class="row row-bottom-padded-sm">
 				<div class="col-md-12">
-					<p class="copyright text-center">Derechos reservados &copy; 2016 | Net IT Solutions.</p>
+					<p class="copyright text-center">Derechos reservados &copy; 2018 | Vitalicia.</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<ul class="social social-circle">
 						<li><a href="#"><i class="icon-twitter"></i></a></li>
-						<li><a href="https://goo.gl/4crpdT"><i class="icon-facebook"></i></a></li>
-						<li><a href="https://goo.gl/oe3qxn"><i class="icon-youtube"></i></a></li>
-						<li><a href="SiteMap.html"><i class="icon-map"></i></a></li>
+						<li><a href="https://goo.gl/Bc1qmz"><i class="icon-facebook"></i></a></li>
+						<!--li><a href="#"><i class="icon-youtube"></i></a></li-->
 					</ul>
 				</div>
 			</div>
