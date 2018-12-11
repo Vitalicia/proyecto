@@ -1287,7 +1287,7 @@ public function eliminausu($idu)
             ->with('tipousu',$tipousu[0]->usuario)
   
             ->with('idame',$idame)
-            ->with('otromedi',$otromedi[0]->nmedica)
+            ->with('otromedi',$otromedi[0]->nmedica);
        
 
 
