@@ -50,10 +50,6 @@
               </li>
               @endif
                 
-              <li>
-                <a href="{{route('getpacientes')}}">Familiares</a>
-              </li>
-                
               @if(Session::get('sesiontipo')=="1")
               <li>
                 <a href="{{route('usu')}}">Nuevo Usuario</a>
