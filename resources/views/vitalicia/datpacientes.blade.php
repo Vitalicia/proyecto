@@ -62,7 +62,7 @@
 
                 <b>Hora de la Actividad 1</b>
             <br>{!! $errors->first('hora1','<span class=error>:message</span>')!!}
-                <input type="text" name="hora1" value="{{old('hora1')}}">
+                <input type="time" name="hora1" value="{{old('hora1')}}">
 
                 <b>Actividad 2</b>
             <br>{!! $errors->first('actividad2','<span class=error>:message</span>')!!}
@@ -70,7 +70,7 @@
 
                 <b>Hora de la Actividad 2</b>
             <br>{!! $errors->first('hora2','<span class=error>:message</span>')!!}
-                <input type="text" name="hora2" value="{{old('hora2')}}">
+                <input type="time" name="hora2" value="{{old('hora2')}}">
 
                 <b>Actividad 3</b>
             <br>{!! $errors->first('actividad3','<span class=error>:message</span>')!!}
@@ -78,7 +78,7 @@
 
                 <b>Hora de la Actividad 3</b>
             <br>{!! $errors->first('hora3hora3','<span class=error>:message</span>')!!}
-                <input type="text" name="hora3" value="{{old('hora3')}}">
+                <input type="time" name="hora3" value="{{old('hora3')}}">
 
             
                 
@@ -101,7 +101,7 @@
 
                 <b>Hora de Comida</b>
             <br>{!! $errors->first('horacomida','<span class=error>:message</span>')!!}
-                <input type="text" name="horacomida" value="{{old('horacomida')}}">
+                <input type="time" name="horacomida" value="{{old('horacomida')}}">
             
                 <b>Tipo de Comida</b> 
             @if($errors->first('tipocomida')) 
@@ -181,9 +181,9 @@
             <br>{!! $errors->first('consumo','<span class=error>:message</span>')!!}
                 <input type="text" name="consumo" value="{{old('consumo')}}">
                 
-                <b>Horario </b>
-            <br>{!! $errors->first('observaciones','<span class=error>:message</span>')!!}
-                <input type="text" name="observaciones" value="{{old('observaciones')}}">
+                <b>Fecha de Registro </b>
+            <br>{!! $errors->first('fechacuidador','<span class=error>:message</span>')!!}
+                <input type="date" name="fechacuidador" value="{{old('observaciones')}}">
 
         <input type="submit" class="button" value="Guardar">
         <input type="reset" class="button alert" value="Borrar">
