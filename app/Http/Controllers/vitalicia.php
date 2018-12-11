@@ -620,7 +620,7 @@ class vitalicia extends Controller
                  'edad'=>'required|integer|min:18',
                  'cp'=>['regex:/^[0-9]{5}$/'],
                  'beca'=>['regex:/^[0-9]+[.][0-9]{2}$/'],
-                 'archivo'=>'image|mimes:jpeg,png,gif'
+                 'archivo'=>'image|mimes:jpeg,png,gif,jpg'
                      ]);
 
                      $file = $request->file('archivo');
