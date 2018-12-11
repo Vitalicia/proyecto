@@ -620,7 +620,7 @@ class vitalicia extends Controller
                  'edad'=>'required|integer|min:18',
                  'cp'=>['regex:/^[0-9]{5}$/'],
                  'beca'=>['regex:/^[0-9]+[.][0-9]{2}$/'],
-                 'archivo'=>'image|mimes:jpeg,png,gif,jpg'
+                 'archivo'=>'image|mimes:jpeg,png,gif'
                      ]);
 
                      $file = $request->file('archivo');
@@ -1264,23 +1264,26 @@ public function eliminausu($idu)
 
             $usuarios = usuarios::where('idu','!=',$idu)->get();
 
-            $idamedicamento=$usuarios[0]->idamedicamento;
+            $idusu=$usuarios[0]->idusu;
 
             $amedicamentos=amedicamentos::where('idamedicamento','!=',$idamedicamento)->get();
 
+            $idmedi=$amedicamentos[0]->idmedi;
+
             
-            $otroamedicamentos=amedicamentos::where('idamedicamento','!=',$idamedicamento)->get();
+
+            
+            
             
             return view ('vitalicia.modnpacientes')
             ->with('mnpacientes',$mnpacientes[0])
             ->with('idu',$idu)
-            ->with('usuarios',$usuarios)
-            ->with('idamedicamento',$idamedicamento)
+            ->with('usuarios',$usuarios[0])
+            ->with('idusu',$idusu)
             ->with('amedicamentos',$amedicamentos[0]->nmedica)
-            ->with('otroamedicamentos',$otroamedicamentos);
+            ->with('idmedi',$idmedi);
 
 
-            
 
             
       }
