@@ -16,10 +16,12 @@
                 </select>
             
             <b>Medicamento</b> <select name = 'medicam'>
-                            @foreach($amedicamentos as $amed)
+                            <option value = '{{$idamedicamento->amedicamentos}}'></option>
+                            @foreach($otroamedicamentos as $amed)
                             <option value = '{{$amed->idamedicamento}}'>{{$amed->nmedica}}</option>
                             @endforeach
                         </select>
+
             
             <b>Indicaci&oacute;n</b>
             @if($errors->first('amindicacion')) 
