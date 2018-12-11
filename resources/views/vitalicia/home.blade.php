@@ -15,6 +15,9 @@
   @if(Session::get('sesiontipo')=="1")
     <li class="tabs-title"><a href="#medicamentos">Medicamentos</a></li>
   @endif
+  @if(Session::get('sesiontipo')=="1")
+    <li class="tabs-title"><a href="#Npacientes">Npacientes</a></li>
+  @endif
 </ul>
 
 <div class="tabs-content" data-tabs-content="collapsing-tabs">
