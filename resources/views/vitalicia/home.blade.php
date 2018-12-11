@@ -50,7 +50,7 @@
                     <td>{{$datt->ciudad}}</td>
                     <td>{{$datt->cp}}</td>
                     <td>{{$datt->referencia}}</td>
-                    <td><img src = "{{asset('archivos/'.$datt->archivo)}}" height =200 width=200></td>
+                    <td><img src = "{{asset('archivos/'.$datt->archivo)}}" height =100 width=100></td>
                     @if($datt->deleted_at=="")
                         <td>
                             <a href="{{URL::action('vitalicia@eliminam',['idd'=>$datt->idd])}}"> 
