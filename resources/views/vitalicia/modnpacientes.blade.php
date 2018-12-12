@@ -11,9 +11,11 @@
             
             Paciente<select name = 'idu'>
 
-        <input type="text" name="actividad1" value=" {{$usuarios->usuario}}">
+        <input type="text" name="usuario" value=" {{$otrousario->usuario}}">
 
-    
+     
+           
+            
 
             <b>Indicaci&oacute;n</b>
             @if($errors->first('amindicacion')) 
