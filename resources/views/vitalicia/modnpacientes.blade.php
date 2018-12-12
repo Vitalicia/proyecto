@@ -81,34 +81,34 @@
 
                 <b>Hora de Comida</b>
             <br>{!! $errors->first('horacomida','<span class=error>:message</span>')!!}
-                <input type="time" name="horacomida" value="{{$mnpacientes->horacomida}}">
+                <input type="text" name="horacomida" value="{{$mnpacientes->horacomida}}">
             
                 <b>Tipo de Comida</b> 
             @if($errors->first('tipocomida')) 
             <br>{!! $errors->first('tipocomida','<span class=error>:message</span>')!!}
             @endif
-            <input type="time" name="horacomida" value="{{$mnpacientes->tipocomida}}">
+            <input type="text" name="horacomida" value="{{$mnpacientes->tipocomida}}">
                 
                  
                 <b>Geri&aacute;trico 1</b> 
             @if($errors->first('tgeriatrico1')) 
             <br>{!! $errors->first('tgeriatrico1','<span class=error>:message</span>')!!}
             @endif
-            <input type="time" name="horacomida" value="{{$mnpacientes->tgeriatrico1}}">
+            <input type="text" name="horacomida" value="{{$mnpacientes->tgeriatrico1}}">
 
                 
                 <b>Geri&aacute;trico 2</b> 
             @if($errors->first('tgeriatrico2')) 
             <br>{!! $errors->first('tgeriatrico2','<span class=error>:message</span>')!!}
             @endif
-            <input type="time" name="horacomida" value="{{$mnpacientes->tgeriatrico2}}">
+            <input type="text" name="horacomida" value="{{$mnpacientes->tgeriatrico2}}">
 
                 
                 <b>Geri&aacute;trico 3</b> 
             @if($errors->first('tgeriatrico3')) 
             <br>{!! $errors->first('tgeriatrico3','<span class=error>:message</span>')!!}
             @endif
-            <input type="time" name="horacomida" value="{{$mnpacientes->tgeriatrico3}}">
+            <input type="text" name="horacomida" value="{{$mnpacientes->tgeriatrico3}}">
 
                
                 
