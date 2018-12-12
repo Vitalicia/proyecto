@@ -1256,29 +1256,22 @@ public function eliminausu($idu)
   {
   if( Session::get('sesionidu')!="")
 		 {
-           $mnpacientes = npacientes::where('idnp','=',$idnp)
-                                 ->get();
-            $idu = $mnpacientes[0]->idu;
-            
-            //$tipousu = tipos::where('idt','=','idt')->get();
+           
 
-            $usuarios = usuarios::where('idu','!=',$idu)->get();
-
-            $idamedicamento = $mnpacientes[0]->idamedicamento;
-            $medicamentos = amedicamentos::where('idamedicamento','!=',$idamedicamento) ->get();
-            
-
-                //$tipousu = tipos::where('idt','=','idt')->get();
-
-                //$usuarios = usuarios::where('idu','!=',$idu)->get();
-            
-            return view ('vitalicia.modnpacientes')
-            ->with('mnpacientes',$mnpacientes[0])
-            ->with('idu',$idu)
-            ->with('usuarios',$usuarios)
-            ->with('idamedicamento',$idamedicamento)
-            ->with('medicamentos',$medicamentos);
-            //->with('otroamedicamentos',$otroamedicamentos);
+                        $pacien = npacientes::where('idnp','=',$idnp)
+		                     ->get();
+		                     
+		$idu = $pacien[0]->idu;
+		$usuarios = usuarios::where('idu','=',$idu)->get();
+		
+		$otrousario = usuarios::where('idu','!=',$idu)
+		                 ->get(); 
+		
+		return view ('sistema.modnpacientes')
+		->with('pacien',$pacien[0])
+	    ->with('idu',$idu)
+	    ->with('usuarios',$usuarios[0]->usuario)
+		->with('otrousario',$otrousario);
 
 
             
