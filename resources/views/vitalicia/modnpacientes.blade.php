@@ -28,7 +28,7 @@
             <br>{!! $errors->first('amindicacion','<span class=error>:message</span>')!!}
             @endif
                 <select name="amindicacion">
-                  <option value="default">Elige una opci&oacute;n</option>
+                  <option value="{{$mnpacientes->amindicacion}}"></option>
                   <option value="1 Dosis">1 Dosis</option>
                   <option value="2 Dosis">2 Dosis</option>
                   <option value="3 Dosis">3 Dosis</option>
