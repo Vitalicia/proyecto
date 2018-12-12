@@ -1289,36 +1289,7 @@ public function eliminausu($idu)
 public function guardamodifinpacientes(Request $request)
 {
  
-          $idnp =  $request->idnp;
-      
-          $idu = $request->idu;
-          $actividad1 = $request->actividad1;
-          $hora1 = $request->hora1;
-          $actividad2 = $request->actividad2;
-          $hora2 = $request->hora2;
-          $actividad3 = $request->actividad3;
-          $hora3 = $request->hora3;
-          $menu = $request->menu;
-          $consumo = $request->consumo;
-          $observaciones = $request->observaciones;
-          $horacomida = $request->horacomida;
-          $tipocomida = $request->tipocomida;
-          $tgeriatrico1 = $request->tgeriatrico1;
-          $tgeriatrico2 = $request->tgeriatrico2;
-          $tgeriatrico3 = $request->tgeriatrico3;
-          $ta = $request->ta;
-          $fc = $request->fc;
-          $fr = $request->fr;
-          $temp = $request->temp;
-          $spo2 = $request->spo2;
-          $glucosa = $request->glucosa;
-          $protesis = $request->protesis;
-          $cuidadornombre = $request->cuidadornombre;
-          $fechacuidador = $request->fechacuidador;
-          $amindicacion = $request->amindicacion;
-          $ampresen = $request->ampresen;
-         
-
+       
          
 
             
