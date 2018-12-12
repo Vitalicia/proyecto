@@ -1288,8 +1288,7 @@ public function eliminausu($idu)
 
 public function guardamodifinpacientes(Request $request)
 {
- if( Session::get('sesionidu')!="")
-           {
+ 
           $idnp =  $request->idnp;
       
           $idu = $request->idu;
@@ -1359,13 +1358,7 @@ public function guardamodifinpacientes(Request $request)
                   return redirect()->route('confirmacion');
   
  }
-  else
-           {
-                   Session::flash('error', 'Favor de loguearse antes de 
-          continuar');
-           return redirect()->route('login');
-           }
   
-}
+
     
 }
