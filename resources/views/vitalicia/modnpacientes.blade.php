@@ -17,7 +17,6 @@
       <input type ="text" name="usuario" value='{{$otu->usuario}}'>
       @endforeach
 
-            <br>
            
             
 
@@ -26,8 +25,7 @@
             <input type="text" name="amindicacion" value=" {{$mnpacientes->amindicacion}}">
          
             
-               <br>
-                <b>Presentación</b>
+              <b>Presentación</b>
               <br>{!! $errors->first('ampresen','<span class=error>:message</span>')!!}
               <input type="text" name="ampresen" value=" {{$mnpacientes->ampresen}}">
             
