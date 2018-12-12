@@ -22,12 +22,13 @@
                 
 
            
-           Tipo Usuario<select name = 'idt'>
-      <option value = '{{$idt}}'>{{$tipousu}}</option>
-	  @foreach($otrostipos as $ti)
-	   <option value = '{{$ti->idt}}'>{{$ti->tipo}}</option>
-	  @endforeach
-      </select>
+       
+            Tipo de Usuario<select name = 'idt'>
+              <option value = '{{$usuario->tipo}}'>{{$idt}}</option>
+              @foreach($otrostipos as $tp)
+               <option value = '{{$tp->idt}}'>{{$tp->tipo}}</option>
+              @endforeach
+              </select>
 <br>
 
                 

@@ -1043,18 +1043,18 @@ class vitalicia extends Controller
     {
         if( Session::get('sesionidu')!="")
 		 {
-                  $usuario = usuarios::where('idu','=',$idu)
+           $usuario = usuarios::where('idu','=',$idu)
                                  ->get();
-                  $idt = $usuario[0]->idt;
+            $idt = $usuario[0]->idt;
             
-                  $tipousu = tipos::where('idt','=','idt')->get();
+            //$tipousu = tipos::where('idt','=','idt')->get();
 
-             $otrostipos = tipos::where('idt','!=',$idt)->get();
+            $otrostipos = tipos::where('idt','!=',$idt)->get();
             
             return view ('vitalicia.modusuarios')
             ->with('usuario',$usuario[0])
             ->with('idt',$idt)
-            ->with('tipousu',$tipousu[0]->tipo)
+            //->with('tipousu',$tipousu[0]->tipo)
             ->with('otrostipos',$otrostipos);
       }
         else
@@ -1280,7 +1280,7 @@ public function eliminausu($idu)
                         ->with('otrousario',$otrousario)
                         ->with('idamedicamento',$idamedicamento)
                         ->with('amedica',$amedica[0]->nmedica)
-                        ->with('otromedi',$otromedi);
+                       ->with('otromedi',$otromedi);
 
 
             
