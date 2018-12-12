@@ -23,8 +23,8 @@
 
            
            Tipo Usuario<select name = 'idu'>
-      <option value = '{{$idu}}'>{{$carrera}}</option>
-	  @foreach($tipousu as $ti)
+      <option value = '{{$idu}}'>{{$tipousu}}</option>
+	  @foreach($otrostipos as $ti)
 	   <option value = '{{$ti->idu}}'>{{$ti->tipo}}</option>
 	  @endforeach
       </select>
