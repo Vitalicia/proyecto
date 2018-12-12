@@ -12,9 +12,15 @@
       
 
 
-        Paciente
+        <b>Paciente</b>
         @foreach($otrousario as $otu)
       <input type ="text" name="usuario" value='{{$otu->usuario}}'>
+      @endforeach
+
+      
+      <b>Medicamento</b>
+        @foreach($otromedi as $otrm)
+      <input type ="text" name="usuario" value='{{$otrm->nmedica}}'>
       @endforeach
 
            

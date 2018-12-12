@@ -1268,16 +1268,16 @@ public function eliminausu($idu)
                                  
                         $idamedicamento =$mnpacientes[0]->idamedicamento;
 
-                        $amedica= amedicamentos::where('idamedicamento','=',$idamedicamento)->get();
-
-                        $otromedi = amedicamentos::where('idamedicamento','!=',$idamedicamento)->get(); 
+                    
+                        $otromedi = amedicamentos::where('idamedicamento','=',$idamedicamento)->get(); 
 
 		
 		        return view ('vitalicia.modnpacientes')
 		        ->with('mnpacientes',$mnpacientes[0])
 	                ->with('idu',$idu)
-	              
-                        ->with('otrousario',$otrousario);
+                        ->with('otrousario',$otrousario)
+                        ->with('otromedi',$otromedi);
+                        
                         
 
             
