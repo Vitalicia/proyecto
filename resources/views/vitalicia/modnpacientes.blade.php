@@ -27,7 +27,7 @@
             <input type="text" name="amindicacion" value=" {{$mnpacientes->amindicacion}}">
             @endif
             
-               
+               <br><br>
                 <b>Presentación</b>
             @if($errors->first('ampresen')) 
             <br>{!! $errors->first('ampresen','<span class=error>:message</span>')!!}
