@@ -1292,7 +1292,7 @@ public function eliminausu($idu)
 		 }
     }
 
-public function guardamodifinpacientes(Request $request)
+public function update(Request $request)
 {
  if( Session::get('sesionidu')!="")
            {
@@ -1331,7 +1331,7 @@ public function guardamodifinpacientes(Request $request)
             
 
                   $npacm = npacientes::find($idnp);
-                  $npacm->idnp = $request->idnp;
+                  $npacm->update($request->all());
             
                   $npacm->actividad1 = $request->actividad1;    
                   $npacm->hora1 = $request->hora1;

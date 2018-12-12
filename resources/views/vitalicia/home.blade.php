@@ -219,7 +219,7 @@
                     @if($nm->deleted_at=="")
                                 <td>
                                     
-                                <a href="{{URL::action('vitalicia@modifinpacientes',['idnp'=>$nm->idnp])}}">
+                                <a href="{{URL::action('vitalicia@update',['idnp'=>$nm->idnp])}}">
                                         <button type="button" class="button small success">Modificar</button>
 
                                        

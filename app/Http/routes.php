@@ -48,7 +48,7 @@ Route::POST('/guardamodifinpacientes','vitalicia@guardamodifinpacientes')->name(
 
 // medicamentos MODIFICACIONES
 Route::get('/modime/{idamedicamento}','vitalicia@modime')->name('modime');
-Route::POST('/guardamodime','vitalicia@guardamodime')->name('guardamodime'); // guardar 
+Route::POST('/update','vitalicia@update')->name('update'); // guardar 
 
 
 //RUTAS PARA REGISTRO DE PACIENTE Y CONSULTAS
