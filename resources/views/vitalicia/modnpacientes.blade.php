@@ -14,7 +14,9 @@
 
         Paciente
         @foreach($otrousario as $otu)
-      <option type ="text" name="actividad1" value='{{$otu->idu}}'>{{$otu->usuario}}>
+      <input type ="text" name="usuario" value='{{$otu->idu}}'>{{$otu->usuario}}/>
+
+         
 	    @endforeach
 
             <br>
