@@ -33,24 +33,7 @@
             <br>{!! $errors->first('ampresen','<span class=error>:message</span>')!!}
             <input type="text" name="ampresen" value=" {{$mnpacientes->ampresen}}">
             @endif
-                <select name="ampresen">
-                  <option value="default">Elige una opci&oacute;n</option>
-                  <option value="Solida">Solida</option>
-                  <option value="Polvos">Polvos</option>
-                  <option value="Capsulas">Capsulas o Comprimidos</option>
-                  <option value="Tabletas">Tabletas</option>
-                  <option value="Pildoras">Pildoras</option>
-                  <option value="Grageas">Grageas</option>
-                  <option value="Supositorios">Supositorios</option>
-                  <option value="Óvulos">Óvulos</option>
-                  <option value="Pomada">Pomada</option>
-                  <option value="Crema">Crema</option>
-                  <option value="Líquida">Líquida</option>
-                  <option value="Soluciones">Soluciones</option>
-                  <option value="Jarabe">Jarabe</option>
-                  <option value="Enemas">Enemas</option>
-                </select>
-            
+                
                 <b>Actividad 1</b>
             <br>{!! $errors->first('actividad1','<span class=error>:message</span>')!!}
                 <input type="text" name="actividad1" value=" {{$mnpacientes->actividad1}}">
