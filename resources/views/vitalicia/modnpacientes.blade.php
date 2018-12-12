@@ -24,19 +24,14 @@
             <b>Indicaci&oacute;n</b>
             @if($errors->first('amindicacion')) 
             <br>{!! $errors->first('amindicacion','<span class=error>:message</span>')!!}
+            <input type="text" name="amindicacion" value=" {{$mnpacientes->amindicacion}}">
             @endif
-                <select name="amindicacion">
-                  <option value="default">Elige una opci&oacute;n</option>
-                  <option value="1 Dosis">1 Dosis</option>
-                  <option value="2 Dosis">2 Dosis</option>
-                  <option value="3 Dosis">3 Dosis</option>
-                  <option value="Otra">Otra</option>
-                </select>
             
-            
+               
                 <b>Presentación</b>
             @if($errors->first('ampresen')) 
             <br>{!! $errors->first('ampresen','<span class=error>:message</span>')!!}
+            <input type="text" name="ampresen" value=" {{$mnpacientes->ampresen}}">
             @endif
                 <select name="ampresen">
                   <option value="default">Elige una opci&oacute;n</option>
