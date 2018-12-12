@@ -101,19 +101,16 @@
             @if($errors->first('tgeriatrico2')) 
             <br>{!! $errors->first('tgeriatrico2','<span class=error>:message</span>')!!}
             @endif
-            <input type="time" name="horacomida" value="{{$mnpacientes->tgeriatrico1}}">
+            <input type="time" name="horacomida" value="{{$mnpacientes->tgeriatrico2}}">
 
                 
                 <b>Geri&aacute;trico 3</b> 
             @if($errors->first('tgeriatrico3')) 
             <br>{!! $errors->first('tgeriatrico3','<span class=error>:message</span>')!!}
             @endif
-                <select name="tgeriatrico3">
-                  <option value="default">Elige una opci&oacute;n</option>
-                  <option value="Miccion">Micci&oacute;n</option>
-                  <option value="Evacuacion">Evacuaci&oacute;n</option>
-                  <option value="Ninguna">Ninguna</option>
-                </select>
+            <input type="time" name="horacomida" value="{{$mnpacientes->tgeriatrico3}}">
+
+               
                 
                 <b>ta</b>
             <br>{!! $errors->first('ta','<span class=error>:message</span>')!!}
