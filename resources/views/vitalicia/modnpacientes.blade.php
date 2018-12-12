@@ -4,7 +4,7 @@
 <br>
 @stop
 @section('form1')
-        <form action="{{route('update')}}" method = "POST" enctype="multipart/form-data" >
+        <form action="{{route('guardamodifinpacientes')}}" method = "POST" enctype="multipart/form-data" >
             {{csrf_field()}}
             
             <br>
