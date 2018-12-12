@@ -1047,14 +1047,14 @@ class vitalicia extends Controller
                                  ->get();
             $idt = $usuario[0]->idt;
             
-            //$tipousu = tipos::where('idt','=','idt')->get();
+            $tipousu = tipos::where('idt','=',$idt)->get();
 
             $otrostipos = tipos::where('idt','!=',$idt)->get();
             
             return view ('vitalicia.modusuarios')
             ->with('usuario',$usuario[0])
             ->with('idt',$idt)
-            //->with('tipousu',$tipousu[0]->tipo)
+            ->with('tipousu',$tipousu[0]->tipo)
             ->with('otrostipos',$otrostipos);
       }
         else
