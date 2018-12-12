@@ -1292,7 +1292,7 @@ public function eliminausu($idu)
 		 }
     }
 
-public function update($idnp)
+public function modifinpacientes($idnp)
 {
  if( Session::get('sesionidu')!="")
            {
@@ -1302,7 +1302,7 @@ public function update($idnp)
             
 
                   $npacm = npacientes::find($idnp);
-                  $npacm->update($request->all());
+                  $npacm->$request->all();
             
                   
                   return redirect()->route('confirmacion');
