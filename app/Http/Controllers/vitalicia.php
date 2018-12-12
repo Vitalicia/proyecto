@@ -1258,6 +1258,8 @@ public function eliminausu($idu)
   {
   if( Session::get('sesionidu')!="")
 		 {
+           
+                       
                         $mnpacientes = npacientes::where('idnp','=',$idnp) ->get();
 		                     
                         $idu = $mnpacientes[0]->idu;
@@ -1274,8 +1276,8 @@ public function eliminausu($idu)
 		        return view ('vitalicia.modnpacientes')
 		        ->with('mnpacientes',$mnpacientes[0])
 	                ->with('idu',$idu)
-	                ->with('usuarios',$usuarios[0])
-                        ->with('otrousario',$otrousario);
+	              
+                        ->with('otrousario',$otrousario[0]);
                         
 
             
