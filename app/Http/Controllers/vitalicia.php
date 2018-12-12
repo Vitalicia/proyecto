@@ -1258,31 +1258,29 @@ public function eliminausu($idu)
 		 {
            
 
-                        $mnpacientes = npacientes::where('idnp','=',$idnp)
-		                     ->get();
+                        $mnpacientes = npacientes::where('idnp','=',$idnp) ->get();
 		                     
-		$idu = $mnpacientes[0]->idu;
-		$usuarios = usuarios::where('idu','=',$idu)->get();
+                        $idu = $mnpacientes[0]->idu;
+                
+		        $usuarios = usuarios::where('idu','=',$idu)->get();
 		
-		$otrousario = usuarios::where('idu','!=',$idu)
-                                 ->get(); 
+		        $otrousario = usuarios::where('idu','!=',$idu)->get(); 
                                  
-                $idamedicamento =$usuarios[0]->idamedicamento;
+                        $idamedicamento =$mnpacientes[0]->idamedicamento;
 
-                $amedica= amedicamentos::where('idamedicamento','=',$idamedicamento)->get();
+                        $amedica= amedicamentos::where('idamedicamento','=',$idamedicamento)->get();
 
-                $otromedi = amedicamentos::where('idamedicamento','!=',$idamedicamento)
-                                 ->get(); 
+                        $otromedi = amedicamentos::where('idamedicamento','!=',$idamedicamento)->get(); 
 
 		
-		return view ('vitalicia.modnpacientes')
-		->with('mnpacientes',$mnpacientes[0])
-	    ->with('idu',$idu)
-	    ->with('usuarios',$usuarios[0]->usuario)
-                ->with('otrousario',$otrousario)
-                ->with('idamedicamento',$idamedicamento)
-                ->with('amedica',$amedica[0]->nmedica)
-                ->with('otromedi',$otromedi);
+		        return view ('vitalicia.modnpacientes')
+		        ->with('mnpacientes',$mnpacientes[0])
+	                ->with('idu',$idu)
+	                ->with('usuarios',$usuarios[0]->usuario)
+                        ->with('otrousario',$otrousario)
+                        ->with('idamedicamento',$idamedicamento)
+                        ->with('amedica',$amedica[0]->nmedica)
+                        ->with('otromedi',$otromedi);
 
 
             
