@@ -1262,7 +1262,7 @@ public function eliminausu($idu)
 		                     
                         $idu = $mnpacientes[0]->idu;
                 
-		        $usuarios = usuarios::where('idu','=',$idu)->get();
+		        $usuarios = usuarios::where('idu','=','4')->get();
 		
 		        $otrousario = usuarios::where('idu','!=',$idu)->get(); 
                                  
