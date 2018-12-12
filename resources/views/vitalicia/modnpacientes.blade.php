@@ -14,10 +14,8 @@
 
         Paciente
         @foreach($otrousario as $otu)
-      <input type ="text" name="usuario" value='{{$otu->idu}}'>{{$otu->usuario}}/>
-
-         
-	    @endforeach
+      <input type ="text" name="usuario" value='{{$otu->usuario}}'>
+      @endforeach
 
             <br>
            
