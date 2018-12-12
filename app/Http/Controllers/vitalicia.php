@@ -1265,13 +1265,22 @@ public function eliminausu($idu)
 		$usuarios = usuarios::where('idu','=',$idu)->get();
 		
 		$otrousario = usuarios::where('idu','!=',$idu)
-		                 ->get(); 
+                                 ->get(); 
+                                 
+                $idamedicamento =$mnpacientes[0]->idamedicamento;
+                $amedica= amedicamentos::where('idamedicamento','=',$idamedicamento)->get();
+                $otromedi = amedicamentos::where('idamedicamento','!=',$idamedicamento)
+                                 ->get(); 
+
 		
 		return view ('vitalicia.modnpacientes')
 		->with('mnpacientes',$mnpacientes[0])
 	    ->with('idu',$idu)
 	    ->with('usuarios',$usuarios[0]->usuario)
-		->with('otrousario',$otrousario);
+                ->with('otrousario',$otrousario)
+                ->with('idamedicamento',$idamedicamento)
+                ->with('amedica',$amedica[0]->nmedica)
+                ->with('otromedi',$otromedi);
 
 
             
@@ -1286,18 +1295,47 @@ public function eliminausu($idu)
 		 }
     }
 
-    
-public function guardamodifinpacientes($idnp,Request $request)
+public function guardamodifinpacientes(Request $request)
 {
-          
+ if( Session::get('sesionidu')!="")
+           {
+          $idnp =  $request->idnp;
+          $idamedicamento = $request->idamedicamento;
+          $idu = $request->idu;
+          $actividad1 = $request->actividad1;
+          $hora1 = $request->hora1;
+          $actividad2 = $request->actividad2;
+          $hora2 = $request->hora2;
+          $actividad3 = $request->actividad3;
+          $hora3 = $request->hora3;
+          $menu = $request->menu;
+          $consumo = $request->consumo;
+          $observaciones = $request->observaciones;
+          $horacomida = $request->horacomida;
+          $tipocomida = $request->tipocomida;
+          $tgeriatrico1 = $request->tgeriatrico1;
+          $tgeriatrico2 = $request->tgeriatrico2;
+          $tgeriatrico3 = $request->tgeriatrico3;
+          $ta = $request->ta;
+          $fc = $request->fc;
+          $fr = $request->fr;
+          $temp = $request->temp;
+          $spo2 = $request->spo2;
+          $glucosa = $request->glucosa;
+          $protesis = $request->protesis;
+          $cuidadornombre = $request->cuidadornombre;
+          $fechacuidador = $request->fechacuidador;
+          $amindicacion = $request->amindicacion;
+          $ampresen = $request->ampresen;
+         
 
          
 
             
 
                   $npacm = npacientes::find($idnp);
-            
-             
+                  $npacm->idnp = $request->idnp;
+                  $npacm->idamedicamento = $request->idamedicamento;
                   $npacm->actividad1 = $request->actividad1;    
                   $npacm->hora1 = $request->hora1;
                   $npacm->actividad2 = $request->actividad2;
@@ -1330,7 +1368,13 @@ public function guardamodifinpacientes($idnp,Request $request)
                   return redirect()->route('confirmacion');
   
  }
+  else
+           {
+                   Session::flash('error', 'Favor de loguearse antes de 
+          continuar');
+           return redirect()->route('login');
+           }
   
-
+}
     
 }
