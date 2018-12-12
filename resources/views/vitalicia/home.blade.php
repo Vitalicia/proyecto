@@ -130,7 +130,7 @@
                     <td>{{$med->mpresen}}</td>
                     @if($med->deleted_at=="")
                             <td>
-                                <a href="#">
+                            <a href="{{URL::action('vitalicia@modime',['idamedicamento'=>$med->idamedicamento])}}"> 
                                         <button type="button" class="button small success">Modificar</button>
                                 </a>
                                 <a href="{{URL::action('vitalicia@eliminamedi',['idamedicamento'=>$med->idamedicamento])}}"> 

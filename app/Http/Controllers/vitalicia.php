@@ -1373,5 +1373,54 @@ public function guardamodifinpacientes(Request $request)
            }
   
 }
-    
+public function modime($idamedicamento)
+{
+if( Session::get('sesionidu')!="")
+         {
+    $amedi = amedicamentos::where('idamedicamento','=',$idamedicamento)
+                             ->get();
+             //return $datosm;
+        return view ('vitalicia.modmedicamentos')
+        ->with('datosm',$datosm[0]);
+}
+else
+         {
+                 Session::flash('error', 'Favor de loguearse antes de 
+        continuar');
+         return redirect()->route('login');
+         }            
+}
+
+public function guardamodime(Request $request)
+{
+if( Session::get('sesionidu')!="")
+         {
+
+
+        $idamedicamento =  $request->idamedicamento;
+        $nmedica = $request->nmedica;
+        $mindicacion = $request->mindicacion;
+        $mpresen = $request->mpresen;
+       
+
+
+            
+            $mame = datos::find($idamedicamento);
+            $mame->idamedicamento = $request->idamedicamento;
+                
+        $mame->nmedica = $request->nmedica;
+        $mame->mindicacion =$request->mindicacion;
+        $mame->mpresen= $request->mpresen;
+                
+                $mame->save();
+                return redirect()->route('confirmacion');
+}
+else
+         {
+                 Session::flash('error', 'Favor de loguearse antes de 
+        continuar');
+         return redirect()->route('login');
+         }
+
+}
 }
