@@ -24,16 +24,18 @@
             <b>Indicaci&oacute;n</b>
             @if($errors->first('amindicacion')) 
             <br>{!! $errors->first('amindicacion','<span class=error>:message</span>')!!}
-            <input type="text" name="amindicacion" value=" {{$mnpacientes->amindicacion}}">
             @endif
+            <input type="text" name="amindicacion" value=" {{$mnpacientes->amindicacion}}">
+         
             
                <br><br>
                 <b>Presentación</b>
             @if($errors->first('ampresen')) 
             <br>{!! $errors->first('ampresen','<span class=error>:message</span>')!!}
-            <input type="text" name="ampresen" value=" {{$mnpacientes->ampresen}}">
             @endif
                 
+            <input type="text" name="ampresen" value=" {{$mnpacientes->ampresen}}">
+            
                 <b>Actividad 1</b>
             <br>{!! $errors->first('actividad1','<span class=error>:message</span>')!!}
                 <input type="text" name="actividad1" value=" {{$mnpacientes->actividad1}}">
