@@ -15,14 +15,7 @@
 	  @endforeach
       </select>
             <br>
-            Medicamento<select name = 'idamedicamento'>
-      <option value = '{{$idamedicamento}}'>{{$amedica}}</option>
-	  @foreach($otromedi as $otme)
-	   <option value = '{{$otme->idamedicamento}}'>{{$otme->nmedica}}</option>
-	  @endforeach
-      </select>
-            
-            
+           
             
 
             <b>Indicaci&oacute;n</b>
