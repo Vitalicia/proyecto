@@ -80,25 +80,25 @@
                 <b>Tipo de Comida</b> 
           
             <br>{!! $errors->first('tipocomida','<span class=error>:message</span>')!!}
-            <input type="time" name="tipocomida" value="{{$mnpacientes->tipocomida}}">
+            <input type="text" name="tipocomida" value="{{$mnpacientes->tipocomida}}">
 
                  
                 <b>Geri&aacute;trico 1</b> 
            <br>{!! $errors->first('tgeriatrico1','<span class=error>:message</span>')!!}
-            <input type="time" name="tgeriatrico1" value="{{$mnpacientes->tgeriatrico1}}">
+            <input type="text" name="tgeriatrico1" value="{{$mnpacientes->tgeriatrico1}}">
 
                 
                 <b>Geri&aacute;trico 2</b> 
         
             <br>{!! $errors->first('tgeriatrico2','<span class=error>:message</span>')!!}
-            <input type="time" name="tgeriatrico2" value="{{$mnpacientes->tgeriatrico2}}">
+            <input type="text" name="tgeriatrico2" value="{{$mnpacientes->tgeriatrico2}}">
 
 
                 
                 <b>Geri&aacute;trico 3</b> 
        
             <br>{!! $errors->first('tgeriatrico3','<span class=error>:message</span>')!!}
-            <input type="time" name="tgeriatrico3" value="{{$mnpacientes->tgeriatrico3}}">
+            <input type="text" name="tgeriatrico3" value="{{$mnpacientes->tgeriatrico3}}">
 
                 
                 <b>ta</b>
