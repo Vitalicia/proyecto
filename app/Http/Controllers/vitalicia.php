@@ -1259,16 +1259,16 @@ public function eliminausu($idu)
                         $paci = npacientes::where('idnp','=',$idnp)
                         ->get();
                         
-   $idame = $paci[0]->idame;
-   $amedicamento = amedicamentos::where('idamedicamento','=',$idame)->get();
+   $idamedicamento = $paci[0]->idamedicamento;
+   $amedicamento = amedicamentos::where('idamedicamento','=',$idamedicamento)->get();
    
-   $otromedi = amedicamentos::where('idame','!=',$idame)
+   $otromedi = amedicamentos::where('idamedicamento','!=',$idamedicamento)
                     ->get(); 
    //return $carrera;
    //return $maestro;
    return view ('sistema.modificamaestro')
    ->with('paci',$paci[0])
-->with('idame',$idame)
+->with('idamedicamento',$idamedicamento)
 ->with('amedicamento',$amedicamento[0]->nmedica)
    ->with('otromedi',$otromedi);
 
