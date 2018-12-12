@@ -1045,7 +1045,7 @@ class vitalicia extends Controller
 		 {
                   $usuario = usuarios::where('idu','=',$idu)
                                  ->get();
-                  $idt = $usuario->idt;
+                  $idt = $usuario[0]->idt;
             
                   $tipousu = tipos::where('idt','=','idt')->get();
 
