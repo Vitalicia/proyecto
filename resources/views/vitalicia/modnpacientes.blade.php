@@ -8,7 +8,7 @@
             {{csrf_field()}}
             
             <br>
-            Paciente<select name = 'idu'>
+            Pacient<select name = 'idu'>
       <option value = '{{$idu}}'>{{$usuarios}}</option>
 	  @foreach($otrousario as $otu)
 	   <option value = '{{$otu->idu}}'>{{$otu->usuario}}</option>
