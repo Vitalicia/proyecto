@@ -8,15 +8,12 @@
             {{csrf_field()}}
             
             <br>
-            Paciente<select name = 'idu'>
-      <option value = '{{$idu}}'>{{$usuarios}}</option>
-	  @foreach($otrousario as $otu)
-	   <option value = '{{$otu->idu}}'>{{$otu->usuario}}</option>
-	  @endforeach
-      </select>
-            <br>
-           
             
+            Paciente<select name = 'idu'>
+
+        <input type="text" name="actividad1" value=" {{$usuarios->usuario}}">
+
+    
 
             <b>Indicaci&oacute;n</b>
             @if($errors->first('amindicacion')) 
