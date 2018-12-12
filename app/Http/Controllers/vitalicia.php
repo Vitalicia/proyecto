@@ -1266,7 +1266,7 @@ public function eliminausu($idu)
                     ->get(); 
    //return $carrera;
    //return $maestro;
-   return view ('sistema.modnpacientes')
+   return view ('vitalicia.modnpacientes')
    ->with('paci',$paci[0])
 ->with('idamedicamento',$idamedicamento)
 ->with('amedicamento',$amedicamento[0]->nmedica)
