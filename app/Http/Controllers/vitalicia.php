@@ -53,14 +53,16 @@ class vitalicia extends Controller
           INNER JOIN geriatricos AS g ON g.idgeriatricos=p.idgeriatricos
           INNER JOIN actividades AS v ON v.idactividades=p.idactividades");
 
-        $npacientes=\DB::select(" SELECT p.`idnp`,p.`actividad1`,p.`hora1`,p.`actividad2`,
+        $npacientes=\DB::select("SELECT p.`idnp`,p.`actividad1`,p.`hora1`,p.`actividad2`,
         p.`hora2`,p.`actividad3`,p.`hora3`,p.`menu`,p.`consumo`,p.`observaciones`,p.`horacomida`,
         p.`tipocomida`,p.`tgeriatrico1`,p.`tgeriatrico2`,p.`tgeriatrico3`,p.`ta`,
         p.`fc`,p.`fr`,p.`temp`,p.`spo2`,p.`glucosa`,p.`protesis`,p.`cuidadornombre`,
-        p.`fechacuidador`,p.`amindicacion`,p.`ampresen`,p.deleted_at,ame.`nmedica`,u.`usuario`
-        FROM npacientes AS p
-        INNER JOIN amedicamentos AS ame ON ame.`idamedicamento`=p.`idamedicamento`
-        INNER JOIN usuarios	AS u ON u.`idu`=p.`idu`");
+        p.`fechacuidador`,u.`usuario`,ame.`nmedica`,p.`amindicacion`,p.`ampresen`,p.deleted_at
+        FROM npacientes AS p,tipos AS t,amedicamentos AS ame, usuarios AS u
+        WHERE ame.`idamedicamento`=p.`idamedicamento`
+        AND p.`idu`=u.`idu`
+        AND u.`idt`=t.`idt`
+        AND t.`idt`=4");
 
         $medicam = amedicamentos::withTrashed()->orderBy('idamedicamento','asc')->get();
             
