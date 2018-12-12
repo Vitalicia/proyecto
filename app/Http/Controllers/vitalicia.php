@@ -1296,17 +1296,17 @@ public function guardamodifinpacientes(Request $request)
 {
  if( Session::get('sesionidu')!="")
            {
-          $idnp =  $request->idnp;
+          $idnp                     =  $request->idnp;
        
-          $idu = $request->idu;
-          $actividad1 = $request->actividad1;
-          $hora1 = $request->hora1;
-          $actividad2 = $request->actividad2;
-          $hora2 = $request->hora2;
-          $actividad3 = $request->actividad3;
-          $hora3 = $request->hora3;
-          $menu = $request->menu;
-          $consumo = $request->consumo;
+          $idu                      = $request->idu;
+          $actividad1               = $request->actividad1;
+          $hora1                    = $request->hora1;
+          $actividad2               = $request->actividad2;
+          $hora2                    = $request->hora2;
+          $actividad3               = $request->actividad3;
+          $hora3                    = $request->hora3;
+          $menu                     = $request->menu;
+          $consumo                  = $request->consumo;
           $observaciones = $request->observaciones;
           $horacomida = $request->horacomida;
           $tipocomida = $request->tipocomida;
