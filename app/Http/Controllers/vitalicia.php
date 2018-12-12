@@ -1381,7 +1381,7 @@ if( Session::get('sesionidu')!="")
                              ->get();
              //return $datosm;
         return view ('vitalicia.modmedicamentos')
-        ->with('datosm',$datosm[0]);
+        ->with('amedi',$amedi[0]);
 }
 else
          {
