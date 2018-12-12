@@ -1298,7 +1298,7 @@ public function guardamodifinpacientes(Request $request)
            {
           $idnp                     =  $request->idnp;
        
-          $idu                      = $request->idu;
+         
           $actividad1               = $request->actividad1;
           $hora1                    = $request->hora1;
           $actividad2               = $request->actividad2;
@@ -1307,8 +1307,8 @@ public function guardamodifinpacientes(Request $request)
           $hora3                    = $request->hora3;
           $menu                     = $request->menu;
           $consumo                  = $request->consumo;
-          $observaciones = $request->observaciones;
-          $horacomida = $request->horacomida;
+          $observaciones            = $request->observaciones;
+          $horacomida              = $request->horacomida;
           $tipocomida = $request->tipocomida;
           $tgeriatrico1 = $request->tgeriatrico1;
           $tgeriatrico2 = $request->tgeriatrico2;
@@ -1322,6 +1322,7 @@ public function guardamodifinpacientes(Request $request)
           $protesis = $request->protesis;
           $cuidadornombre = $request->cuidadornombre;
           $fechacuidador = $request->fechacuidador;
+          $idu                      = $request->idu;
           $amindicacion = $request->amindicacion;
           $ampresen = $request->ampresen;
          
