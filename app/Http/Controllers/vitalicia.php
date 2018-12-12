@@ -1289,7 +1289,10 @@ public function eliminausu($idu)
 public function guardamodifinpacientes(Request $request)
 {
  
-       
+          $idnp =  $request->idnp;
+      
+          
+
          
 
             
