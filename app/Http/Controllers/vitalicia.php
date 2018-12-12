@@ -1292,7 +1292,7 @@ public function eliminausu($idu)
 		 }
     }
 
-public function modifinpacientes($idnp)
+public function guardamodifinpacientes($idnp)
 {
  if( Session::get('sesionidu')!="")
            {
