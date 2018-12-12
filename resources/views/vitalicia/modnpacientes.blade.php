@@ -7,6 +7,9 @@
         <form action="{{route('guardamodifinpacientes')}}" method = "POST" enctype="multipart/form-data" >
             {{csrf_field()}}
             
+
+            Clave<input type = 'text' name = 'idnp' value="{{$mnpacientes->idnp}}" readonly ='readonly'>
+<br>
             <br>
             Paciente<select name = 'idu'>
       <option value = '{{$idu}}'>{{$usuarios}}</option>
