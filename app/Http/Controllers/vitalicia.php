@@ -1256,10 +1256,10 @@ public function eliminausu($idu)
   {
   if( Session::get('sesionidu')!="")
 		 {
-                        $paci = npacientes::where('idnp','=',$idnp)
-                        ->get();
+$paci = npacientes::where('idnp','=',$idnp)->get();
                         
    $idamedicamento = $paci[0]->idamedicamento;
+   
    $amedicamento = amedicamentos::where('idamedicamento','=',$idamedicamento)->get();
    
    $otromedi = amedicamentos::where('idamedicamento','!=',$idamedicamento)
