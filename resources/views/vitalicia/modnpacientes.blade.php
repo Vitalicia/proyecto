@@ -9,7 +9,7 @@
             
 
 Medicamento<select name = 'idnp'>
-      <option value = '{{$idame}}'>{{$amedicamento}}</option>
+      <option value = '{{$idamedicamento}}'>{{$amedicamento}}</option>
 	  @foreach($otromedi as $oc)
 	   <option value = '{{$oc->idamedicamento}}'>{{$oc->nmedica}}</option>
 	  @endforeach
