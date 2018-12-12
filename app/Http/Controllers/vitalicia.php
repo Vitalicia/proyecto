@@ -1405,7 +1405,7 @@ if( Session::get('sesionidu')!="")
 
 
             
-            $mame = datos::find($idamedicamento);
+            $mame = amedicamentos::find($idamedicamento);
             $mame->idamedicamento = $request->idamedicamento;
                 
         $mame->nmedica = $request->nmedica;
