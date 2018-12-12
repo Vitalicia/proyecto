@@ -1256,28 +1256,21 @@ public function eliminausu($idu)
   {
   if( Session::get('sesionidu')!="")
 		 {
-           $mnpacientes = npacientes::where('idnp','=',$idnp)
-                                 ->get();
-            $idu = $mnpacientes[0]->idu;
-            
-            //$tipousu = tipos::where('idt','=','idt')->get();
-
-            $usuarios = usuarios::where('idu','!=',$idu)->get();
-
-            $idamedicamento=$usuarios[0]->idamedicamento;
-
-            $amedicamentos=amedicamentos::where('idamedicamento','!=',$idamedicamento)->get();
-
-            
-            $otroamedicamentos=amedicamentos::where('idamedicamento','!=',$idamedicamento)->get();
-            
-            return view ('vitalicia.modnpacientes')
-            ->with('mnpacientes',$mnpacientes[0])
-            ->with('idu',$idu)
-            ->with('usuarios',$usuarios)
-            ->with('idamedicamento',$idamedicamento)
-            ->with('amedicamentos',$amedicamentos[0]->nmedica)
-            ->with('otroamedicamentos',$otroamedicamentos);
+                        $paci = npacientes::where('idnp','=',$idnp)
+                        ->get();
+                        
+   $idame = $maestro[0]->idame;
+   $amedicamento = amedicamentos::where('idame','=',$idame)->get();
+   
+   $otromedi = amedicamentos::where('idame','!=',$idame)
+                    ->get(); 
+   //return $carrera;
+   //return $maestro;
+   return view ('sistema.modificamaestro')
+   ->with('maestro',$paci[0])
+->with('idame',$idame)
+->with('amedicamento',$amedicamento[0]->nmedica)
+   ->with('otromedi',$otromedi);
 
 
             
