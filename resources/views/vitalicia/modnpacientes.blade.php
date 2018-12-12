@@ -17,7 +17,7 @@
             
             <b>Medicamento</b> <select name = 'medicam'>
                             
-                            @foreach($otroamedicamentos as $amed)
+                            @foreach($idamedicamentos as $amed)
                             <option value = '{{$amed->idamedicamento}}'>{{$amed->nmdica}}</option>
                             @endforeach
                         </select>
