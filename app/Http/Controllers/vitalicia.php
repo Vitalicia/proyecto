@@ -1286,11 +1286,9 @@ public function eliminausu($idu)
 		 }
     }
 
-public function guardamodifinpacientes(Request $request)
+    
+public function guardamodifinpacientes($idnp,Request $request)
 {
- 
-          $idnp =  $request->idnp;
-      
           
 
          
@@ -1298,10 +1296,7 @@ public function guardamodifinpacientes(Request $request)
             
 
                   $npacm = npacientes::find($idnp);
-                  if(!is_null($product) {
-                        //redirect or show an error message    
-                     }
-                        
+            
              
                   $npacm->actividad1 = $request->actividad1;    
                   $npacm->hora1 = $request->hora1;
