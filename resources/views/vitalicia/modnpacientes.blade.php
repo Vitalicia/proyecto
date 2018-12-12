@@ -30,7 +30,7 @@
                 <select name="amindicacion">
                   <option value="{{$mnpacientes->amindicacion}}"></option>
                   @foreach($mnpacientes as $md)
-                  <option value = '{{$md->idnp}}'>{{$md->amindicacion}}</option>
+                  <option value = '{{$md->amindicacion}}'>{{$md->amindicacion}}</option>
 	  @endforeach
 
                   <option value="1 Dosis">1 Dosis</option>
