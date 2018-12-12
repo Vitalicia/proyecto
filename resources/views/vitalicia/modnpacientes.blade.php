@@ -15,12 +15,7 @@
 	  @endforeach
       </select>
             
-            <b>Medicamento</b> <select name = 'medicam'>
-                            
-                            @foreach($medicamentos as $amed)
-                            <option value = '{{$amed->idamedicamento}}'>{{$amed->nmdica}}</option>
-                            @endforeach
-                        </select>
+            
 
             <b>Indicaci&oacute;n</b>
             @if($errors->first('amindicacion')) 
