@@ -27,19 +27,8 @@
             @if($errors->first('amindicacion')) 
             <br>{!! $errors->first('amindicacion','<span class=error>:message</span>')!!}
             @endif
-                <select name="amindicacion">
-                  <option value="{{$mnpacientes->amindicacion}}"></option>
-                  @foreach($mnpacientes as $md)
-                  <option value = '{{$md->amindicacion}}'>{{$md->amindicacion}}</option>
-	  @endforeach
-
-                  <option value="1 Dosis">1 Dosis</option>
-                  <option value="2 Dosis">2 Dosis</option>
-                  <option value="3 Dosis">3 Dosis</option>
-                  <option value="Otra">Otra</option>
-                </select>
-            
-            
+            <input type = 'text' name = 'idnp' value="{{$mnpacientes->amindicacion}}" readonly ='readonly'>
+            <br>
                 <b>Presentación</b>
             @if($errors->first('ampresen')) 
             <br>{!! $errors->first('ampresen','<span class=error>:message</span>')!!}
