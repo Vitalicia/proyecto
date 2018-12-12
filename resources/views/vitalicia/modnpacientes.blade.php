@@ -7,9 +7,6 @@
         <form action="{{route('guardamodifinpacientes')}}" method = "POST" enctype="multipart/form-data" >
             {{csrf_field()}}
             
-
-            Clave<input type = 'text' name = 'idnp' value="{{$mnpacientes->idnp}}" readonly ='readonly'>
-<br>
             <br>
             Paciente<select name = 'idu'>
       <option value = '{{$idu}}'>{{$usuarios}}</option>
@@ -18,7 +15,12 @@
 	  @endforeach
       </select>
             <br>
-           
+            Medicamento<select name = 'idamedicamento'>
+      <option value = '{{$idamedicamento}}'>{{$amedica}}</option>
+	  @foreach($otromedi as $otme)
+	   <option value = '{{$otme->idamedicamento}}'>{{$otme->nmedica}}</option>
+	  @endforeach
+      </select>
             
             
             
@@ -27,14 +29,37 @@
             @if($errors->first('amindicacion')) 
             <br>{!! $errors->first('amindicacion','<span class=error>:message</span>')!!}
             @endif
-            <input type = 'text' name = 'amindicacion' value="{{$mnpacientes->amindicacion}}">
-            <br>
+                <select name="amindicacion">
+                  <option value="default">Elige una opci&oacute;n</option>
+                  <option value="1 Dosis">1 Dosis</option>
+                  <option value="2 Dosis">2 Dosis</option>
+                  <option value="3 Dosis">3 Dosis</option>
+                  <option value="Otra">Otra</option>
+                </select>
+            
+            
                 <b>Presentación</b>
             @if($errors->first('ampresen')) 
             <br>{!! $errors->first('ampresen','<span class=error>:message</span>')!!}
             @endif
-            <input type = 'text' name = 'amindicacion' value="{{$mnpacientes->ampresen}}">
-               
+                <select name="ampresen">
+                  <option value="default">Elige una opci&oacute;n</option>
+                  <option value="Solida">Solida</option>
+                  <option value="Polvos">Polvos</option>
+                  <option value="Capsulas">Capsulas o Comprimidos</option>
+                  <option value="Tabletas">Tabletas</option>
+                  <option value="Pildoras">Pildoras</option>
+                  <option value="Grageas">Grageas</option>
+                  <option value="Supositorios">Supositorios</option>
+                  <option value="Óvulos">Óvulos</option>
+                  <option value="Pomada">Pomada</option>
+                  <option value="Crema">Crema</option>
+                  <option value="Líquida">Líquida</option>
+                  <option value="Soluciones">Soluciones</option>
+                  <option value="Jarabe">Jarabe</option>
+                  <option value="Enemas">Enemas</option>
+                </select>
+            
                 <b>Actividad 1</b>
             <br>{!! $errors->first('actividad1','<span class=error>:message</span>')!!}
                 <input type="text" name="actividad1" value=" {{$mnpacientes->actividad1}}">
@@ -81,36 +106,51 @@
 
                 <b>Hora de Comida</b>
             <br>{!! $errors->first('horacomida','<span class=error>:message</span>')!!}
-                <input type="text" name="horacomida" value="{{$mnpacientes->horacomida}}">
+                <input type="time" name="horacomida" value="{{$mnpacientes->horacomida}}">
             
                 <b>Tipo de Comida</b> 
             @if($errors->first('tipocomida')) 
             <br>{!! $errors->first('tipocomida','<span class=error>:message</span>')!!}
             @endif
-            <input type="text" name="horacomida" value="{{$mnpacientes->tipocomida}}">
-                
+                <select name="tipocomida">
+                  <option value="default">Elige una opci&oacute;n</option>
+                  <option value="Desayuno">Desayuno</option>
+                  <option value="Almuerzo">Almuerzo</option>
+                  <option value="Comida">Comida</option>
+                </select>
                  
                 <b>Geri&aacute;trico 1</b> 
             @if($errors->first('tgeriatrico1')) 
             <br>{!! $errors->first('tgeriatrico1','<span class=error>:message</span>')!!}
             @endif
-            <input type="text" name="horacomida" value="{{$mnpacientes->tgeriatrico1}}">
-
+                <select name="tgeriatrico1">
+                  <option value="default">Elige una opci&oacute;n</option>
+                  <option value="Miccion">Micci&oacute;n</option>
+                  <option value="Evacuacion">Evacuaci&oacute;n</option>
+                  <option value="Ninguna">Ninguna</option>
+                </select>
                 
                 <b>Geri&aacute;trico 2</b> 
             @if($errors->first('tgeriatrico2')) 
             <br>{!! $errors->first('tgeriatrico2','<span class=error>:message</span>')!!}
             @endif
-            <input type="text" name="horacomida" value="{{$mnpacientes->tgeriatrico2}}">
-
+                <select name="tgeriatrico2">
+                  <option value="default">Elige una opci&oacute;n</option>
+                  <option value="Miccion">Micci&oacute;n</option>
+                  <option value="Evacuacion">Evacuaci&oacute;n</option>
+                  <option value="Ninguna">Ninguna</option>
+                </select>
                 
                 <b>Geri&aacute;trico 3</b> 
             @if($errors->first('tgeriatrico3')) 
             <br>{!! $errors->first('tgeriatrico3','<span class=error>:message</span>')!!}
             @endif
-            <input type="text" name="horacomida" value="{{$mnpacientes->tgeriatrico3}}">
-
-               
+                <select name="tgeriatrico3">
+                  <option value="default">Elige una opci&oacute;n</option>
+                  <option value="Miccion">Micci&oacute;n</option>
+                  <option value="Evacuacion">Evacuaci&oacute;n</option>
+                  <option value="Ninguna">Ninguna</option>
+                </select>
                 
                 <b>ta</b>
             <br>{!! $errors->first('ta','<span class=error>:message</span>')!!}
