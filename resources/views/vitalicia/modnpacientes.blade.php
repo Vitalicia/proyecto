@@ -29,6 +29,8 @@
             @endif
                 <select name="amindicacion">
                   <option value="{{$mnpacientes->amindicacion}}"></option>
+                  @foreach($mnpacientes as $md)
+                  <option value = '{{$md->idnp}}'>{{$md->amindicacion}}</option>
                   <option value="1 Dosis">1 Dosis</option>
                   <option value="2 Dosis">2 Dosis</option>
                   <option value="3 Dosis">3 Dosis</option>
