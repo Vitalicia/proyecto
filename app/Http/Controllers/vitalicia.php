@@ -1277,12 +1277,12 @@ public function eliminausu($idu)
 		
 		return view ('vitalicia.modnpacientes')
 		->with('mnpacientes',$mnpacientes[0])
-	        ->with('idu',$idu)
-	       ->with('usuarios',$usuarios[0]->usuario)
+	    ->with('idu',$idu)
+	    ->with('usuarios',$usuarios[0]->usuario)
                 ->with('otrousario',$otrousario)
-                ->with('idamedicamento',$idamedicamento[0])
-                ->with('amedica',$amedica)
-                ->with('otromedi',$otromedi[0]->nmedica);
+                ->with('idamedicamento',$idamedicamento)
+                ->with('amedica',$amedica[0]->nmedica)
+                ->with('otromedi',$otromedi);
 
 
             
