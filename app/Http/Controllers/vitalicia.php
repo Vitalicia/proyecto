@@ -1333,35 +1333,7 @@ public function update(Request $request)
                   $npacm = npacientes::find($idnp);
                   $npacm->update($request->all());
             
-                  $npacm->actividad1 = $request->actividad1;    
-                  $npacm->hora1 = $request->hora1;
-                  $npacm->actividad2 = $request->actividad2;
-                  $npacm->hora2 = $request->hora2;
-                  $npacm->actividad3 = $request->actividad3;
-                  $npacm->hora3 = $request->hora3;
-                  $npacm->menu = $request->menu;
-                  $npacm->consumo = $request->consumo;
-                  $npacm->observaciones = $request->observaciones;
-                  $npacm->horacomida = $request->horacomida;
-                  $npacm->tipocomida = $request->tipocomida;
-                  $npacm->tgeriatrico1 = $request->tgeriatrico1;
-                  $npacm->tgeriatrico2 = $request->tgeriatrico2;
-                  $npacm->tgeriatrico3 = $request->tgeriatrico3;
-                  $npacm->ta = $request->ta;
-                  $npacm->fc = $request->fc;
-                  $npacm->fr = $request->fr;
-                  $npacm->temp = $request->temp;
-                  $npacm->spo2 = $request->spo2;
-                  $npacm->glucosa = $request->glucosa;
-                  $npacm->protesis = $request->protesis;
-                  $npacm->cuidadornombre = $request->cuidadornombre;
-                  $npacm->fechacuidador = $request->fechacuidador;
                   
-                  $npacm->idu = $request->idu;
-                  $npacm->amindicacion = $request->amindicacion;
-                  $npacm->ampresen = $request->ampresen;
-                  $npacm->save();
-                    
                   return redirect()->route('confirmacion');
   
  }
