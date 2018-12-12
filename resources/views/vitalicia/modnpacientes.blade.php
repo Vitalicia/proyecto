@@ -27,7 +27,7 @@
             @if($errors->first('amindicacion')) 
             <br>{!! $errors->first('amindicacion','<span class=error>:message</span>')!!}
             @endif
-            <input type = 'text' name = 'amindicacion' value="{{$mnpacientes->amindicacion}}" readonly ='readonly'>
+            <input type = 'text' name = 'amindicacion' value="{{$mnpacientes->amindicacion}}">
             <br>
                 <b>Presentación</b>
             @if($errors->first('ampresen')) 
