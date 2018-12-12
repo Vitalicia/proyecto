@@ -1049,17 +1049,13 @@ class vitalicia extends Controller
             
             //$tipousu = tipos::where('idt','=','idt')->get();
 
-            $tipos = tipos::where('idt','!=',$idt)->get();
-
-            $otrostipos = tipos::where('idt','!=',$idt)
-		                 ->get(); 
+            $otrostipos = tipos::where('idt','!=',$idt)->get();
             
             return view ('vitalicia.modusuarios')
             ->with('usuario',$usuario[0])
             ->with('idt',$idt)
-            ->with('tipos',$tipos[0]->tipo)
+            //->with('tipousu',$tipousu[0]->tipo)
             ->with('otrostipos',$otrostipos);
-
       }
         else
 		 {
@@ -1260,28 +1256,31 @@ public function eliminausu($idu)
   {
   if( Session::get('sesionidu')!="")
 		 {
-           $npaci = npacientes::where('idnp','=',$idnp)
+           $mnpacientes = npacientes::where('idnp','=',$idnp)
                                  ->get();
-            $idusu = $npaci[0]->idusu;
+            $idu = $mnpacientes[0]->idu;
             
             //$tipousu = tipos::where('idt','=','idt')->get();
 
-            $usua = usuarios::where('idu','!=',$idu)->get();
+            $usuarios = usuarios::where('idu','!=',$idu)->get();
 
-            $otrusu = usuarios::where('idu','!=',$idu)
-		                 ->get(); 
+            $idamedicamento=$usuarios[0]->idamedicamento;
+
+            $amedicamentos=amedicamentos::where('idamedicamento','!=',$idamedicamento)->get();
+
+            
+            $otroamedicamentos=amedicamentos::where('idamedicamento','!=',$idamedicamento)->get();
             
             return view ('vitalicia.modnpacientes')
-            ->with('npaci',$npaci[0])
-            ->with('idusu',$idusu)
-            ->with('usua',$usua[0]->tipo)
-            ->with('otrusu',$otrusu);
-       
+            ->with('mnpacientes',$mnpacientes[0])
+            ->with('idu',$idu)
+            ->with('usuarios',$usuarios)
+            ->with('idamedicamento',$idamedicamento)
+            ->with('amedicamentos',$amedicamentos[0]->nmedica)
+            ->with('otroamedicamentos',$otroamedicamentos);
 
 
-    
-
-
+            
 
             
       }

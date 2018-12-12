@@ -7,20 +7,17 @@
         <form action="{{route('guardamodifinpacientes')}}" method = "POST" enctype="multipart/form-data" >
             {{csrf_field()}}
             
-         
+            <b>Paciente</b>
             <br>
-            Paciente<select name = 'idu'>
-                <option value = '{{$idu}}'>{{$tipousu}}</option>
-                @foreach($otrostipos as $usup)
+                <select name = 'idu'>
+                @foreach($usuarios as $usup)
                 <option value ='{{$usup->idu}}'>{{$usup->usuario}}</option>
                 @endforeach
                 </select>
-
-                 
             
             <b>Medicamento</b> <select name = 'medicam'>
-                            <option value = '{{$idamedicamento}}'>{{$amedica}}</option>
-                            @foreach($medd as $amed)
+                            
+                            @foreach($otroamedicamentos as $amed)
                             <option value = '{{$amed->idamedicamento}}'>{{$amed->nmdica}}</option>
                             @endforeach
                         </select>
