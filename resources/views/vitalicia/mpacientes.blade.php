@@ -16,7 +16,7 @@
 
         <b>Nombre</b>
   
-	  @foreach($otrodato as $od)
+	  @foreach($otrod as $od)
     <input type ="text" name="nombre" value='{{$od->nombre}}'>
     @endforeach
       
