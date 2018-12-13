@@ -16,7 +16,7 @@
 
         <b>Nombre</b>
         <select name = 'idd'>
-      <option value = '{{$idd}}'>{{$otrod}}</option>
+     
 	  @foreach($otrodato as $od)
 	   <option value = '{{$od->idd}}'>{{$od->nombre}}</option>
 	  @endforeach
