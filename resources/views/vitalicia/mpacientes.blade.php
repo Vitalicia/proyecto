@@ -104,6 +104,20 @@ Fecha<input type="text" name="fechapaciente" value="{{$pacientesb->fechapaciente
 	  @endforeach
       </select>
 
+       Geriátrico 2 <select name = 'idgeriatricos'>
+      <option value = '{{$idgeriatricos}}'>{{$geri2}}</option>
+	  @foreach($otroger as $otr)
+	   <option value = '{{$otr->idgeriatricos}}'>{{$otr->valorg1}}</option>
+	  @endforeach
+      </select>
+
+      Geriátrico 3 <select name = 'idgeriatricos'>
+      <option value = '{{$idgeriatricos}}'>{{$geri3}}</option>
+	  @foreach($otroger as $otr)
+	   <option value = '{{$otr->idgeriatricos}}'>{{$otr->valorg2}}</option>
+	  @endforeach
+      </select>
+
       
 
         <input type="submit" class="button" value="Guardar">

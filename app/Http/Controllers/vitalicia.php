@@ -1418,6 +1418,10 @@ if( Session::get('sesionidu')!="")
 
                       $geri = geriatricos::where('idgeriatricos','=',$idgeriatricos)->get();
 
+                      $geri2 = geriatricos::where('idgeriatricos','=',$idgeriatricos)->get();
+
+                      $geri3 = geriatricos::where('idgeriatricos','=',$idgeriatricos)->get();
+
                       $otroger = geriatricos::where('idgeriatricos','!=',$idgeriatricos)->get();
 
 
@@ -1441,6 +1445,8 @@ if( Session::get('sesionidu')!="")
                       ->with('hor',$hor[0]->hora)
                       ->with('idgeriatricos',$idgeriatricos)
                       ->with('geri',$geri[0]->valorg)
+                      ->with('geri2',$geri2[0]->valorg1)
+                      ->with('geri3',$geri3[0]->valorg2)
                       ->with('otroger',$otroger)
                       ->with('otral',$otral)
                       ->with('otrodato',$otrodato);
