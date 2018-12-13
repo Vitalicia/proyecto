@@ -240,7 +240,7 @@
         </table>
     </div>
     </div>
-</div>
+
                     
 <!--Contenido de la Tab 6-->
 <div class="tabs-panel" id="mispaciente">
