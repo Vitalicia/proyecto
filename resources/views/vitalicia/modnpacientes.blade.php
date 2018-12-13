@@ -18,13 +18,7 @@
       @endforeach
 
       
-      <b>Medicamento</b>
-        <option value = '{{$idamedicamento}}'>{{$otromedi}}</option>
-	  @foreach($otro as $oc)
-	   <option value = '{{$oc->idamedicamento}}'>{{$oc->nmedica}}</option>
-	  @endforeach
-      </select>
-
+     
            
             
 
