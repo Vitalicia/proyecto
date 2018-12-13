@@ -15,13 +15,15 @@
 
 
         <b>Nombre</b>
-        <select name = 'idd'>
-      <option value = '{{$idd}}'>{{$otrod}}</option>
+  
 	  @foreach($otrodato as $od)
-	   <option value = '{{$od->idd}}'>{{$od->nombre}}</option>
-	  @endforeach
-      </select>
-      <br>
+    <input type ="text" name="nombre" value='{{$od->nombre}}'>
+    @endforeach
+      
+      
+
+        
+
       
         <input type="submit" class="button" value="Guardar">
         <input type="reset" class="button alert" value="Borrar">
