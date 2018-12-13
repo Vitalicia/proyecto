@@ -252,10 +252,7 @@
             <th>Fecha</th>
             <th>actividad1</th>
             <th>Hora1</th>
-            <th>actividad2</th>
-            <th>Hora2</th>
-            <th>actividad3</th>
-            <th>Hora3</th>
+            
             <th>Menu</th>
             <th>Consumo</th>
             <th>Observaciones</th>
@@ -269,10 +266,7 @@
                     <td>{{$mis->fechapaciente}}</td>
                     <td>{{$mis->act1}}</td>
                     <td>{{$mis->hora1}}</td>
-                    <td>{{$mis->act2}}</td>
-                    <td>{{$mis->hora2}}</td>
-                    <td>{{$mis->act3}}</td>
-                    <td>{{$mis->hora3}}</td>
+                    
                     <td>{{$mis->menu}}</td>
                     <td>{{$mis->consumo}}</td>
                     <td>{{$mis->observaciones}}</td>

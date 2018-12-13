@@ -17,51 +17,15 @@ Fecha<input type="text" name="fechapaciente" value="{{$pacientesb->fechapaciente
 
     
 
-        Actividad1 <select name = 'idactividades'>
-      <option value = '{{$idactividades}}'>{{$otrod}}</option>
+        Actividad1 Hora1<select name = 'idactividades'>
+      <option value = '{{$idactividades}}'>{{$otrod}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{$ahora1}}</option>
 	  @foreach($otrodato as $oc)
-	   <option value = '{{$oc->idactividades}}'>{{$oc->act1}}</option>
+	   <option value = '{{$oc->idactividades}}'>{{$oc->act1}}&nbsp;&nbsp;&nbsp;{{$oc->hora1}}</option>
 	  @endforeach
       </select>
       
       
-      Hora1 <select name = 'idactividades'>
-      <option value = '{{$idactividades}}'>{{$ahora1}}</option>
-	  @foreach($otrodato as $oc)
-	   <option value = '{{$oc->idactividades}}'>{{$oc->hora1}}</option>
-	  @endforeach
-      </select>
-
-
-      Actividad2 <select name = 'idactividades'>
-      <option value = '{{$idactividades}}'>{{$act2}}</option>
-	  @foreach($otrodato as $oc)
-	   <option value = '{{$oc->idactividades}}'>{{$oc->act2}}</option>
-	  @endforeach
-      </select>
-
-      Hora2 <select name = 'idactividades'>
-      <option value = '{{$idactividades}}'>{{$ahora2}}</option>
-	  @foreach($otrodato as $oc)
-	   <option value = '{{$oc->idactividades}}'>{{$oc->hora2}}</option>
-	  @endforeach
-      </select>
-
-       Actividad3 <select name = 'idactividades'>
-      <option value = '{{$idactividades}}'>{{$act3}}</option>
-	  @foreach($otrodato as $oc)
-	   <option value = '{{$oc->idactividades}}'>{{$oc->act3}}</option>
-	  @endforeach
-      </select>
-
-
-      Hora3 <select name = 'idactividades'>
-      <option value = '{{$idactividades}}'>{{$ahora3}}</option>
-	  @foreach($otrodato as $oc)
-	   <option value = '{{$oc->idactividades}}'>{{$oc->hora3}}</option>
-	  @endforeach
-      </select>
-
+      
       @stop
 
       @section('form2')
