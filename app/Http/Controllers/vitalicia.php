@@ -1266,10 +1266,10 @@ public function eliminausu($idu)
 		
 		        $otrousario = usuarios::where('idu','=',$idu)->get(); 
                                  
-                        $idamedicamento =$mnpacientes[0]->idamedicamento;
+                        $idmedicamento =$mnpacientes[0]->idmedicamento;
 
                     
-                        $otromedi = amedicamentos::where('idamedicamento','=',$idamedicamento)->get(); 
+                        $otromedi = medicamentos::where('idmedicamento','=',$idmedicamento)->get(); 
 
 		
 		        return view ('vitalicia.modnpacientes')
