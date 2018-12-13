@@ -249,7 +249,7 @@
             <tr>
             <th>ID</th>
             <th>Fecha</th>
-            <th>Nombre</th>
+            <th>Paciente</th>
             <th>Actividad1</th>
             <th>Hora1</th>
             <th>Actividad2</th>
