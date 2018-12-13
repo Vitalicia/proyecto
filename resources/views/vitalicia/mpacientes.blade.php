@@ -13,7 +13,7 @@
     
     Fecha<input type="text" name="fechapaciente" value="{{$pacientesb->fechapaciente}}">
 
-    Nombre<input type="text" name="nombre" value="{{$pacientesb->pacientes}}">
+    Pacientes<input type="text" name="nombre" value="{{$pacientesb->pacientes}}">
 
 
 
