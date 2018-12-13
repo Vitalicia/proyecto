@@ -20,7 +20,7 @@
       
       <b>Medicamento</b>
         @foreach($otromedi as $otrm)
-      <input type ="text" name="usuario" value='{{$otrm->nombre}}'>
+      <input type ="text" name="nmedica" value='{{$otrm->nmedica}}'>
       @endforeach
 
            
