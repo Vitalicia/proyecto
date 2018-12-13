@@ -63,9 +63,10 @@ class vitalicia extends Controller
         AND p.`idu`=u.`idu`
         AND u.`idt`=t.`idt`");
 
-        $mispa=\DB::select("SELECT p.`idpaciente`,p.`pacientes`,p.`fechapaciente`,a.`act1`,a.`hora1`,a.`act2`,a.`hora2`,a.`act3`,a.`hora3`
+        $mispa=\DB::select("SELECT p.`idpaciente`,p.`pacientes`,p.`fechapaciente`,a.`act1`,a.`hora1`,a.`act2`,a.`hora2`,a.`act3`,a.`hora3`,al.`menu`,al.`consumo`,al.`observaciones`
         FROM pacientes AS p
-        INNER JOIN actividades AS a ON a.`idactividades`=p.`idactividades`");
+        INNER JOIN actividades AS a ON a.`idactividades`=p.`idactividades`
+        INNER JOIN alimentaciones AS al ON al.`idalimentacion`=p.`idalimentacion`");
 
         $medicam = amedicamentos::withTrashed()->orderBy('idamedicamento','asc')->get();
             
@@ -1389,13 +1390,44 @@ if( Session::get('sesionidu')!="")
 
                       $ahora1 = actividades::where('idactividades','=',$idactividades)->get();
 
+                      $act2 = actividades::where('idactividades','=',$idactividades)->get();
+
+                      $ahora2 = actividades::where('idactividades','=',$idactividades)->get();
+
+                      $act3 = actividades::where('idactividades','=',$idactividades)->get();
+
+                      $ahora3 = actividades::where('idactividades','=',$idactividades)->get();
+
                       $otrodato = actividades::where('idactividades','!=',$idactividades)->get(); 
+
+                      $idalimentacion = $pacientesb[0]->idalimentacion;
+
+                      $alim = alimentaciones::where('idalimentacion','=',$idalimentacion)->get();
+
+                      $cons = alimentaciones::where('idalimentacion','=',$idalimentacion)->get();
+
+                      $obsr = alimentaciones::where('idalimentacion','=',$idalimentacion)->get();
+
+                      $otral = alimentaciones::where('idalimentacion','!=',$idalimentacion)->get();
+
+                      
+
+                    
                                
                       return view ('vitalicia.mpacientes')
                       ->with('pacientesb',$pacientesb[0])
                       ->with('idactividades',$idactividades)
                       ->with('otrod',$otrod[0]->act1)
                       ->with('ahora1',$ahora1[0]->hora1)
+                      ->with('act2',$act2[0]->act2)
+                      ->with('ahora2',$ahora1[0]->hora2)
+                      ->with('act3',$act3[0]->act3)
+                      ->with('ahora3',$ahora3[0]->hora3)
+                      ->with('idalimentacion',$idalimentacion)
+                      ->with('alim',$alim[0]->menu)
+                      ->with('cons',$cons[0]->consumo)
+                      ->with('obsr',$obsr[0]->observaciones)
+                      ->with('otral',$otral)
                       ->with('otrodato',$otrodato);
                  
                       
@@ -1422,6 +1454,7 @@ if( Session::get('sesionidu')!="")
         $pacientes                      = $request->pacientes;
         $fechapaciente                  = $request->fechapaciente;
         $idactividades                  = $request->idactividades;
+        $idalimentacion                  = $request->idalimentacion;
         
        
 
@@ -1432,6 +1465,7 @@ if( Session::get('sesionidu')!="")
             $misp->pacientes            = $request->pacientes;
             $misp->fechapaciente        = $request->fechapaciente;
             $misp->idactividades        = $request->idactividades;
+            $misp->idalimentacion        = $request->idalimentacion;
            
         
                 

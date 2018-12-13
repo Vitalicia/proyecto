@@ -256,6 +256,9 @@
             <th>Hora2</th>
             <th>actividad3</th>
             <th>Hora3</th>
+            <th>Menu</th>
+            <th>Consumo</th>
+            <th>Observaciones</th>
             
 
             </tr>
@@ -270,6 +273,9 @@
                     <td>{{$mis->hora2}}</td>
                     <td>{{$mis->act3}}</td>
                     <td>{{$mis->hora3}}</td>
+                    <td>{{$mis->menu}}</td>
+                    <td>{{$mis->consumo}}</td>
+                    <td>{{$mis->observaciones}}</td>
                     
                    
                    
