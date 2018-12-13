@@ -19,9 +19,11 @@
 
       
       <b>Medicamento</b>
+      <select name = 'idamedicamento'>
         @foreach($otromedi as $otrm)
-      <input type ="text" name="nmedica" value='{{$otrm->nmedica}}'>
-      @endforeach
+        <option value = '{{$otrm}}'>{{$nmedica}}</option>
+        @endforeach
+        </select>
 
            
             
