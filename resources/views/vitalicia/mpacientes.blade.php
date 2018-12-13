@@ -8,12 +8,13 @@
             {{csrf_field()}}
             
          
-            Clave<input type = 'text' name = 'idpaciente' value="{{$pacientesb->idpaciente}}" readonly ='readonly'>
+            Clave<input type = 'text' name = 'idpaciente' value="{{$pacientesb->idpaciente}}" readonly ='readonly' style='visibility:hidden'>
 <br>
-    
+Pacientes<input type="text" name="pacientes" value="{{$pacientesb->pacientes}}">
+
     Fecha<input type="text" name="fechapaciente" value="{{$pacientesb->fechapaciente}}">
 
-    Pacientes<input type="text" name="nombre" value="{{$pacientesb->pacientes}}">
+    
 
 
 

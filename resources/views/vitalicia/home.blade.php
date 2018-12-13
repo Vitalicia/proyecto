@@ -248,27 +248,18 @@
         <table class="hover">
             <tr>
             <th>ID</th>
-            <th>Fecha</th>
             <th>Paciente</th>
-            <th>Actividad1</th>
-            <th>Hora1</th>
-            <th>Actividad2</th>
-            <th>Hora2</th>
-            <th>Actividad3</th>
-            <th>Hora3</th>
+            <th>Fecha</th>
+            
 
             </tr>
             @foreach($mispa as $mis)
                 <tr>
                     <td>{{$mis->idpaciente}}</td>
-                    <td>{{$mis->fechapaciente}}</td>
                     <td>{{$mis->pacientes}}</td>
-                    <td>{{$mis->act1}}</td>
-                    <td>{{$mis->hora1}}</td>
-                    <td>{{$mis->act2}}</td>
-                    <td>{{$mis->hora2}}</td>
-                    <td>{{$mis->act3}}</td>
-                    <td>{{$mis->hora3}}</td>
+                    <td>{{$mis->fechapaciente}}</td>
+                    
+                   
                    
                             <td>
                             <a href="{{URL::action('vitalicia@modifimispa',['idpaciente'=>$mis->idpaciente])}}"> 

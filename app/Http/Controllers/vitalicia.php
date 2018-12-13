@@ -1416,15 +1416,17 @@ if( Session::get('sesionidu')!="")
 
 
         $idpaciente                     = $request->idpaciente;
-        $fechapaciente                  = $request->fechapaciente;
         $pacientes                      = $request->pacientes;
+        $fechapaciente                  = $request->fechapaciente;
+       
 
 
             
             $misp                       = pacientes::find($idpaciente);
             $misp->idpaciente           = $request->idpaciente;
-            $misp->fechapaciente        = $request->fechapaciente;
             $misp->pacientes            = $request->pacientes;
+            $misp->fechapaciente        = $request->fechapaciente;
+           
         
                 
                 $misp->save();
