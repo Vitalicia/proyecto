@@ -1383,16 +1383,19 @@ if( Session::get('sesionidu')!="")
                      
                       $pacientesb= pacientes::where('idpaciente','=',$idpaciente) ->get();
                                    
-                      $idd = $pacientesb[0]->idd;
+                      $idactividades = $pacientesb[0]->idactividades;
               
-                      $otrod = datos::where('idd','=',$idd)->get();
+                      $otrod = actividades::where('idactividades','=',$idactividades)->get();
 
-                      $otrodato = datos::where('idd','!=',$idd)->get(); 
+                      $ahora1 = actividades::where('idactividades','=',$idactividades)->get();
+
+                      $otrodato = actividades::where('idactividades','!=',$idactividades)->get(); 
                                
                       return view ('vitalicia.mpacientes')
                       ->with('pacientesb',$pacientesb[0])
-                      ->with('idd',$idd)
-                      ->with('otrod',$otrod)
+                      ->with('idactividades',$idactividades)
+                      ->with('otrod',$otrod[0]->act1)
+                      ->with('ahora1',$ahora1[0]->hora1)
                       ->with('otrodato',$otrodato);
                  
                       
@@ -1418,6 +1421,8 @@ if( Session::get('sesionidu')!="")
         $idpaciente                     = $request->idpaciente;
         $pacientes                      = $request->pacientes;
         $fechapaciente                  = $request->fechapaciente;
+        $idactividades                  = $request->idactividades;
+        
        
 
 
@@ -1426,6 +1431,7 @@ if( Session::get('sesionidu')!="")
             $misp->idpaciente           = $request->idpaciente;
             $misp->pacientes            = $request->pacientes;
             $misp->fechapaciente        = $request->fechapaciente;
+            $misp->idactividades        = $request->idactividades;
            
         
                 

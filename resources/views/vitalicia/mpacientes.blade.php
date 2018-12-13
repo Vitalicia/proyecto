@@ -8,25 +8,28 @@
             {{csrf_field()}}
             
          
-            Clave<input type = 'text' name = 'idpaciente' value="{{$pacientesb->idpaciente}}" readonly ='readonly' style='visibility:hidden'>
-<br>
+<!--Clave--><input type = 'text' name = 'idpaciente' value="{{$pacientesb->idpaciente}}" readonly ='readonly' style='visibility:hidden'>
+
 Pacientes<input type="text" name="pacientes" value="{{$pacientesb->pacientes}}">
 
-    Fecha<input type="text" name="fechapaciente" value="{{$pacientesb->fechapaciente}}">
+Fecha<input type="text" name="fechapaciente" value="{{$pacientesb->fechapaciente}}">
 
     
 
-
-
-      <!--  <b>Nombre</b>
-        <select name = 'idd'>
-     
-	  @foreach($otrod as $od)
-	   <option value = '{{$od->idd}}'>{{$od->nombre}}</option>
+        Actividad1 <select name = 'idactividades'>
+      <option value = '{{$idactividades}}'>{{$otrod}}</option>
+	  @foreach($otrodato as $oc)
+	   <option value = '{{$oc->idactividades}}'>{{$oc->act1}}</option>
 	  @endforeach
-      </select>-->
-      <br>
+      </select>
       
+      
+      Hora1 <select name = 'idactividades'>
+      <option value = '{{$idactividades}}'>{{$ahora1}}</option>
+	  @foreach($otrodato as $oc)
+	   <option value = '{{$oc->idactividades}}'>{{$oc->hora1}}</option>
+	  @endforeach
+      </select>
       
         <input type="submit" class="button" value="Guardar">
         <input type="reset" class="button alert" value="Borrar">
