@@ -1276,9 +1276,9 @@ public function eliminausu($idu)
 		        return view ('vitalicia.modnpacientes')
 		        ->with('mnpacientes',$mnpacientes[0])
 	                ->with('idu',$idu)
-                        ->with('otromedi',$otromedi[0]->nmedica)
+                        ->with('otromedi',$otromedi)
                         ->with('idamedicamento',$idamedicamento)
-                        ->with('otro',$otro);
+                        ->with('otro',$otro[0]->nmedica);
                         
                         
 
