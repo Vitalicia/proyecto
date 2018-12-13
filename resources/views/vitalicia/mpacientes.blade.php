@@ -15,10 +15,10 @@
 
 
         <b>actividad</b>
-        <select name = 'iddd'>
-      <option value = '{{$iddd}}'>{{$otrod}}</option>
+        <select name = 'idd'>
+      <option value = '{{$idd}}'>{{$otrod}}</option>
 	  @foreach($otrodato as $od)
-	   <option value = '{{$od->iddd}}'>{{$od->nombre}}</option>
+	   <option value = '{{$od->idd}}'>{{$od->nombre}}</option>
 	  @endforeach
       </select>
       <br>
