@@ -1409,4 +1409,34 @@ if( Session::get('sesionidu')!="")
                return redirect()->route('login');
                }
   }
+
+  public function guardamodifimispa(Request $request)
+{
+if( Session::get('sesionidu')!="")
+         {
+
+
+        $idpaciente                     = $request->idpaciente;
+        $fechapaciente                  = $request->fechapaciente;
+        $idd                            = $request->idd;
+
+
+            
+            $misp                       = pacientes::find($idpaciente);
+            $misp->idpaciente           = $request->idpaciente;
+            $misp->fechapaciente        = $request->fechapaciente;
+            $misp->idd                  = $request->idd;
+        
+                
+                $mame->save();
+                return redirect()->route('confirmacion');
+}
+else
+         {
+                 Session::flash('error', 'Favor de loguearse antes de 
+        continuar');
+         return redirect()->route('login');
+         }
+
+}
 }
