@@ -1369,4 +1369,39 @@ else
          }
 
 }
+
+public function modifimispa($idpaciente)
+{
+if( Session::get('sesionidu')!="")
+               {
+         
+                     
+                      $pacientesb= pacientes::where('idpaciente','=',$idpaciente) ->get();
+                                   
+                      $iddd = $pacientesb[0]->iddd;
+              
+                      $otrod = datos::where('iddd','=',$iddd)->get();
+
+                      $otrodato = datos::where('iddd','!=',$iddd)->get(); 
+                               
+                      return view ('vitalicia.mpacientes')
+                      ->with('pacientesb',$pacientesb[0])
+                      ->with('iddd',$iddd)
+                      ->with('otrod',$otrod[0]->nombre)
+                      ->with('otrodato',$otrodato);
+                      
+                      
+                      
+
+          
+
+          
+    }
+      else
+               {
+                       Session::flash('error', 'Favor de loguearse antes de 
+              continuar');
+               return redirect()->route('login');
+               }
+  }
 }

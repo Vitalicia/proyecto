@@ -51,6 +51,12 @@ Route::get('/modime/{idamedicamento}','vitalicia@modime')->name('modime');
 Route::POST('/guardamodime','vitalicia@guardamodime')->name('guardamodime'); // guardar 
 
 
+//haber si si
+
+Route::get('/modifimispa/{idpaciente}','vitalicia@modifimispa')->name('modifimispa');
+Route::POST('/guardamodifimispa','vitalicia@guardamodifimispa')->name('guardamodifimispa'); // guardar 
+
+
 //RUTAS PARA REGISTRO DE PACIENTE Y CONSULTAS
 Route::get('/rPaciente','vitalicia@rPaciente')->name('rpac');
 
