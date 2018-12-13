@@ -87,25 +87,6 @@ Fecha<input type="text" name="fechapaciente" value="{{$pacientesb->fechapaciente
 	  @endforeach
       </select>
 
-      Hora Comida <select name = 'idalimentacion'>
-      <option value = '{{$idalimentacion}}'>{{$hor}}</option>
-	  @foreach($otral as $ome)
-	   <option value = '{{$ome->idalimentacion}}'>{{$ome->hora}}</option>
-	  @endforeach
-      </select>
-
-      
-
-      
-      Geriátrico 1 <select name = 'idgeriatricos'>
-      <option value = '{{$idgeriatricos}}'>{{$geri}}</option>
-	  @foreach($otroger as $otr)
-	   <option value = '{{$otr->idgeriatricos}}'>{{$otr->valorg}}</option>
-	  @endforeach
-      </select>
-
-      
-
         <input type="submit" class="button" value="Guardar">
         <input type="reset" class="button alert" value="Borrar">
         </form>

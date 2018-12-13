@@ -63,12 +63,10 @@ class vitalicia extends Controller
         AND p.`idu`=u.`idu`
         AND u.`idt`=t.`idt`");
 
-        $mispa=\DB::select("SELECT p.`idpaciente`,p.`pacientes`,p.`fechapaciente`,a.`act1`,a.`hora1`,a.`act2`,a.`hora2`,a.`act3`,a.`hora3`,al.`menu`,al.`consumo`,al.`observaciones`,
-        al.`hora`,g.`valorg`,g.`valorg1`,g.`valorg2`
-                FROM pacientes AS p
-                INNER JOIN actividades AS a ON a.`idactividades`=p.`idactividades`
-                INNER JOIN alimentaciones AS al ON al.`idalimentacion`=p.`idalimentacion`
-                INNER JOIN geriatricos AS g ON g.`idgeriatricos`=p.`idgeriatricos`");
+        $mispa=\DB::select("SELECT p.`idpaciente`,p.`pacientes`,p.`fechapaciente`,a.`act1`,a.`hora1`,a.`act2`,a.`hora2`,a.`act3`,a.`hora3`,al.`menu`,al.`consumo`,al.`observaciones`
+        FROM pacientes AS p
+        INNER JOIN actividades AS a ON a.`idactividades`=p.`idactividades`
+        INNER JOIN alimentaciones AS al ON al.`idalimentacion`=p.`idalimentacion`");
 
         $medicam = amedicamentos::withTrashed()->orderBy('idamedicamento','asc')->get();
             
@@ -1410,18 +1408,7 @@ if( Session::get('sesionidu')!="")
 
                       $obsr = alimentaciones::where('idalimentacion','=',$idalimentacion)->get();
 
-                      $hor = alimentaciones::where('idalimentacion','=',$idalimentacion)->get();
-
                       $otral = alimentaciones::where('idalimentacion','!=',$idalimentacion)->get();
-
-                      $idgeriatricos = $pacientesb[0]->idgeriatricos;
-
-                      $geri = geriatricos::where('idgeriatricos','=',$idgeriatricos)->get();
-
-                      $otroger = geriatricos::where('idgeriatricos','!=',$idgeriatricos)->get();
-
-
-
 
                       
 
@@ -1440,12 +1427,8 @@ if( Session::get('sesionidu')!="")
                       ->with('alim',$alim[0]->menu)
                       ->with('cons',$cons[0]->consumo)
                       ->with('obsr',$obsr[0]->observaciones)
-                      ->with('hor',$hor[0]->hora)
-                      ->with('idgeriatricos',$idgeriatricos)
-                      ->with('geri',$geri[0]->valorg)
-                      ->with('otrodato',$otrodato)
                       ->with('otral',$otral)
-                      ->with('otroger',$otroger);
+                      ->with('otrodato',$otrodato);
                  
                       
 
@@ -1472,7 +1455,6 @@ if( Session::get('sesionidu')!="")
         $fechapaciente                  = $request->fechapaciente;
         $idactividades                  = $request->idactividades;
         $idalimentacion                  = $request->idalimentacion;
-        $idgeriatricos                  = $request->idgeriatricos;
         
        
 
@@ -1484,7 +1466,6 @@ if( Session::get('sesionidu')!="")
             $misp->fechapaciente        = $request->fechapaciente;
             $misp->idactividades        = $request->idactividades;
             $misp->idalimentacion        = $request->idalimentacion;
-            $misp->idgeriatricos        = $request->idgeriatricos;
            
         
                 
