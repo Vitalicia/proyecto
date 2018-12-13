@@ -18,6 +18,9 @@
   @if(Session::get('sesiontipo')=="1")
     <li class="tabs-title"><a href="#Npacientes">Pacientes</a></li>
   @endif
+  @if(Session::get('sesiontipo')=="1")
+    <li class="tabs-title"><a href="#mispaciente">Mispacientes</a></li>
+  @endif
 </ul>
 
 <div class="tabs-content" data-tabs-content="collapsing-tabs">
@@ -240,7 +243,7 @@
 </div>
                     
 <!--Contenido de la Tab 6-->
-<div class="tabs-panel" id="idpaciente">
+<div class="tabs-panel" id="mispaciente">
   <div class="table-scroll">
         <table class="hover">
             <tr>
