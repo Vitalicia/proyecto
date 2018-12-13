@@ -1392,7 +1392,7 @@ if( Session::get('sesionidu')!="")
                       return view ('vitalicia.mpacientes')
                       ->with('pacientesb',$pacientesb[0])
                       ->with('idd',$idd)
-                      ->with('otrod',$otrod[0])
+                      ->with('otrod',$otrod)
                       ->with('otrodato',$otrodato);
                  
                       
