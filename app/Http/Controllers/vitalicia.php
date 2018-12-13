@@ -1428,7 +1428,7 @@ if( Session::get('sesionidu')!="")
             $misp->idd                  = $request->idd;
         
                 
-                $mame->save();
+                $misp->save();
                 return redirect()->route('confirmacion');
 }
 else
