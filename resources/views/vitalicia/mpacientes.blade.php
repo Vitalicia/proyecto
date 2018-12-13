@@ -11,10 +11,10 @@
             Clave<input type = 'text' name = 'idpaciente' value="{{$pacientesb->idpaciente}}" readonly ='readonly'>
 <br>
     
-    Fecha<input type="time" name="fechapaciente" value="{{$pacientesb->fechapaciente}}">
+    Fecha<input type="text" name="fechapaciente" value="{{$pacientesb->fechapaciente}}">
 
 
-        <b>actividad</b>
+        <b>Nombre</b>
         <select name = 'idd'>
       <option value = '{{$idd}}'>{{$otrod}}</option>
 	  @foreach($otrodato as $od)
@@ -22,6 +22,7 @@
 	  @endforeach
       </select>
       <br>
+      
         <input type="submit" class="button" value="Guardar">
         <input type="reset" class="button alert" value="Borrar">
         </form>
