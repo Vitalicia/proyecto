@@ -13,14 +13,17 @@
     
     Fecha<input type="text" name="fechapaciente" value="{{$pacientesb->fechapaciente}}">
 
+    Nombre<input type="text" name="nombre" value="{{$pacientesb->nombre}}">
 
-        <b>Nombre</b>
+
+
+      <!--  <b>Nombre</b>
         <select name = 'idd'>
      
-	  @foreach($otrodato as $od)
+	  @foreach($otrod as $od)
 	   <option value = '{{$od->idd}}'>{{$od->nombre}}</option>
 	  @endforeach
-      </select>
+      </select>-->
       <br>
       
       

@@ -262,7 +262,7 @@
                 <tr>
                     <td>{{$mis->idpaciente}}</td>
                     <td>{{$mis->fechapaciente}}</td>
-                    <td>{{$mis->nombre}}</td>
+                    <td>{{$mis->pacientes}}</td>
                     <td>{{$mis->act1}}</td>
                     <td>{{$mis->hora1}}</td>
                     <td>{{$mis->act2}}</td>
