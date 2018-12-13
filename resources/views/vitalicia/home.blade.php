@@ -259,6 +259,9 @@
             <th>Menu</th>
             <th>Consumo</th>
             <th>Observaciones</th>
+            <th>Hora de Comida</th>
+            <th>Geriátrico 1</th>
+            
             
 
             </tr>
@@ -276,6 +279,9 @@
                     <td>{{$mis->menu}}</td>
                     <td>{{$mis->consumo}}</td>
                     <td>{{$mis->observaciones}}</td>
+                    <td>{{$mis->hora}}</td>
+                    <td>{{$mis->valorg}}</td>
+                    
                     
                    
                    

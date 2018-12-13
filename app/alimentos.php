@@ -10,5 +10,6 @@ class alimentos extends Model
     use SoftDeletes;
     protected $primaryKey ='idalimentos';
     protected $fillable = ['idalimentos','tipoalimento'];
+    protected $date=['deleted_at'];
   
 }
