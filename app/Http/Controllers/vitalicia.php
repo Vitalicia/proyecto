@@ -1383,19 +1383,18 @@ if( Session::get('sesionidu')!="")
                      
                       $pacientesb= pacientes::where('idpaciente','=',$idpaciente) ->get();
                                    
-                      $iddd = $pacientesb[0]->iddd;
+                      $idd = $pacientesb[0]->iddd;
               
-                      $otrod = datos::where('idd','=',$iddd)->get();
+                      $otrod = datos::where('idd','=',$idd)->get();
 
-                      $otrodato = datos::where('idd','!=',$iddd)->get(); 
+                      $otrodato = datos::where('idd','!=',$idd)->get(); 
                                
                       return view ('vitalicia.mpacientes')
                       ->with('pacientesb',$pacientesb[0])
-                      ->with('iddd',$iddd)
+                      ->with('idd',$idd)
                       ->with('otrod',$otrod[0]->nombre)
                       ->with('otrodato',$otrodato);
-                      
-                      
+                 
                       
 
           
