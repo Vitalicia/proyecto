@@ -1268,7 +1268,7 @@ public function eliminausu($idu)
                         $idamedicamento =$mnpacientes[0]->idamedicamento;
 
                     
-                        $otromedi = amedicamentos::where('idamedicamento','!=',$idamedicamento)->get(); 
+                        $otromedi = amedicamentos::where('idamedicamento','=',$idamedicamento)->get(); 
 
 		
 		        return view ('vitalicia.modnpacientes')
