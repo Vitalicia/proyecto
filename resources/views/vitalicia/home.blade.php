@@ -249,6 +249,7 @@
             <tr>
             <th>ID</th>
             <th>Fecha</th>
+            <th>Nombre</th>
             <th>Actividad1</th>
             <th>Hora1</th>
             <th>Actividad2</th>
@@ -261,6 +262,7 @@
                 <tr>
                     <td>{{$mis->idpaciente}}</td>
                     <td>{{$mis->fechapaciente}}</td>
+                    <td>{{$mis->nombre}}</td>
                     <td>{{$mis->act1}}</td>
                     <td>{{$mis->hora1}}</td>
                     <td>{{$mis->act2}}</td>
