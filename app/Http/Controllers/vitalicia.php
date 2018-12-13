@@ -1384,7 +1384,7 @@ if( Session::get('sesionidu')!="")
                      
                       $pacientesb= pacientes::where('idpaciente','=',$idpaciente) ->get();
                                    
-                      $idd = $pacientesb[0]->iddd;
+                      $idd = $pacientesb[0]->idd;
               
                       $otrod = datos::where('idd','=',$idd)->get();
 
