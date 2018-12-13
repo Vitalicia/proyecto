@@ -9,6 +9,6 @@ class pacientes extends Model
 {
     use SoftDeletes;
     protected $primaryKey ='idpaciente';
-    protected $fillable = ['idpaciente','fechapaciente','idd','idmedicamento','idalimentacion','ids','idgeriatricos','idactividades',];
+    protected $fillable = ['idpaciente','fechapaciente','pacientes','idd','idmedicamento','idalimentacion','ids','idgeriatricos','idactividades',];
     protected $date=['deleted_at'];
 }
