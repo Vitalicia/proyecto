@@ -219,7 +219,7 @@
                     @if($nm->deleted_at=="")
                                 <td>
                                     
-                                <a href="{{URL::action('vitalicia@modifimispa',['idpaciente'=>$nm->idpaciente])}}">
+                                <a href="{{URL::action('vitalicia@modifinpacientes',['idnp'=>$nm->idnp])}}">
                                         <button type="button" class="button small success">Modificar</button>
 
                                        
@@ -239,6 +239,42 @@
     </div>
 </div>
                     
+<!--Contenido de la Tab 6-->
+<div class="tabs-panel" id="idpaciente">
+  <div class="table-scroll">
+        <table class="hover">
+            <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Actividad1</th>
+            <th>Hora1</th>
+            <th>Actividad2</th>
+            <th>Hora2</th>
+            <th>Actividad3</th>
+            <th>Hora3</th>
+
+            </tr>
+            @foreach($mispa as $mis)
+                <tr>
+                    <td>{{$mis->idpaciente}}</td>
+                    <td>{{$mis->fechapaciente}}</td>
+                    <td>{{$mis->act1}}</td>
+                    <td>{{$mis->hora1}}</td>
+                    <td>{{$mis->act2}}</td>
+                    <td>{{$mis->hora2}}</td>
+                    <td>{{$mis->act3}}</td>
+                    <td>{{$mis->hora3}}</td>
+                   
+                            <td>
+                            <a href="{{URL::action('vitalicia@modifimispa',['idpaciente'=>$mis->idpaciente])}}"> 
+                                        <button type="button" class="button small success">Modificar</button>
+                                </a>
+                                       </td>
+                </tr>
+            @endforeach
+        </table>
+    </div>
+    </div>
 
                     
 @stop    

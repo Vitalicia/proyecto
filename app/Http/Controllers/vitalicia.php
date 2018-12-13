@@ -63,6 +63,10 @@ class vitalicia extends Controller
         AND p.`idu`=u.`idu`
         AND u.`idt`=t.`idt`");
 
+        $mispa=\DB::select("SELECT p.`idpaciente`,p.`fechapaciente`,a.`act1`,a.`hora1`,a.`act2`,a.`hora2`,a.`act3`,a.`hora3`
+        FROM pacientes AS p
+        INNER JOIN actividades AS a ON a.`idactividades`=p.`idactividades`");
+
         $medicam = amedicamentos::withTrashed()->orderBy('idamedicamento','asc')->get();
             
      
@@ -71,6 +75,7 @@ class vitalicia extends Controller
             ->with('datosd',$datosd)
             ->with('medicam',$medicam)
             ->with('npacientes',$npacientes)
+            ->with('mispa',$mispa)
             ->with('pacientesd',$pacientesd);
         }
         else
