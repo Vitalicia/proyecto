@@ -1385,9 +1385,9 @@ if( Session::get('sesionidu')!="")
                                    
                       $iddd = $pacientesb[0]->iddd;
               
-                      $otrod = datos::where('iddd','=',$iddd)->get();
+                      $otrod = datos::where('idd','=',$iddd)->get();
 
-                      $otrodato = datos::where('iddd','!=',$iddd)->get(); 
+                      $otrodato = datos::where('idd','!=',$iddd)->get(); 
                                
                       return view ('vitalicia.mpacientes')
                       ->with('pacientesb',$pacientesb[0])
