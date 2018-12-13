@@ -261,8 +261,8 @@
             <th>Observaciones</th>
             <th>Hora de Comida</th>
             <th>Geriátrico 1</th>
-            <th>Geriátrico 2</th>
-            <th>Geriátrico 3</th>
+           
+           
             
             
 
@@ -283,8 +283,7 @@
                     <td>{{$mis->observaciones}}</td>
                     <td>{{$mis->hora}}</td>
                     <td>{{$mis->valorg}}</td>
-                    <td>{{$mis->valorg1}}</td>
-                    <td>{{$mis->valorg2}}</td>
+                  
                     
                     
                    
