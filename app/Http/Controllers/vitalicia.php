@@ -61,8 +61,7 @@ class vitalicia extends Controller
         FROM npacientes AS p,tipos AS t,amedicamentos AS ame, usuarios AS u
         WHERE ame.`idamedicamento`=p.`idamedicamento`
         AND p.`idu`=u.`idu`
-        AND u.`idt`=t.`idt`
-        AND t.`idt`=4");
+        AND u.`idt`=t.`idt`");
 
         $medicam = amedicamentos::withTrashed()->orderBy('idamedicamento','asc')->get();
             
