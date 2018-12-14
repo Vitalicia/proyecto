@@ -53,10 +53,13 @@ class vitalicia extends Controller
           INNER JOIN geriatricos AS g ON g.idgeriatricos=p.idgeriatricos
           INNER JOIN actividades AS v ON v.idactividades=p.idactividades");
 
-        $npacientes=\DB::select("SELECT	p.`idnp`,u.`usuario` AS paciente,p.`actividad1`,p.`hora1`,
-        p.`actividad2`,p.`hora2`,p.`actividad3`,p.`hora3`,p.`deleted_at`
+        $npacientes=\DB::select("SELECT	p.`idnp`,u.`usuario` AS paciente,p.`actividad1`,p.`hora1`,p.`actividad2`,p.`hora2`,p.`actividad3`,p.`hora3`,
+        p.`menu`,p.`consumo`,p.`observaciones`,p.`horacomida`,p.`tipocomida`,p.`tgeriatrico1`,p.`tgeriatrico2`,p.`tgeriatrico3`,
+        p.`ta`,p.`fc`,p.`fr`,p.`temp`,p.`spo2`,p.`glucosa`,p.`protesis`,p.`cuidadornombre`,p.`fechacuidador`,a.`nmedica`,
+        p.`amindicacion`,p.`ampresen`,p.`deleted_at`
         FROM npacientes AS p
-        INNER JOIN usuarios AS u ON u.`idu`=p.`idu`");
+        INNER JOIN usuarios AS u ON u.`idu`=p.`idu`
+        INNER JOIN amedicamentos AS a ON a.`idamedicamento`=p.`idamedicamento`");
 
         $mispa=\DB::select("SELECT p.`idpaciente`,p.`pacientes`,p.`fechapaciente`,a.`act1`,a.`hora1`,a.`act2`,a.`hora2`,a.`act3`,a.`hora3`,al.`menu`,al.`consumo`,al.`observaciones`
         FROM pacientes AS p
@@ -1267,6 +1270,12 @@ public function eliminausu($idu)
                         $otrousario = usuarios::where('idu','=',$idu)->get(); 
                         
                         $ursu = usuarios::where('idu','!=',$idu)->get(); 
+
+                        $idamedicamento = $mnpacientes[0]->idamedicamento;
+
+                        $medi = amedicamentos::where('idamedicamento','=',$idamedicamento)->get(); 
+
+                        $otromedic = amedicamentos::where('idamedicamento','!=',$idamedicamento)->get(); 
                                  
                    
 
@@ -1275,7 +1284,11 @@ public function eliminausu($idu)
 		        ->with('mnpacientes',$mnpacientes[0])
                         ->with('idu',$idu)
                         ->with('otrousario',$otrousario[0]->usuario)
-                        ->with('ursu',$ursu);
+                        ->with('ursu',$ursu)
+                        ->with('idamedicamento',$idamedicamento)
+                        ->with('medi',$medi[0]->nmedica)
+                        ->with('otromedic',$otromedic);
+
                       
                         
 
@@ -1306,6 +1319,26 @@ public function eliminausu($idu)
                 $hora2                    = $request->hora2;
                 $actividad3               = $request->actividad3;
                 $hora3                    = $request->hora3;
+                $menu                    = $request->menu;
+                $consumo                    = $request->consumo;
+                $observaciones                    = $request->observaciones;
+                $horacomida                    = $request->horacomida;
+                $tipocomida                    = $request->tipocomida;
+                $tgeriatrico1                    = $request->tgeriatrico1;
+                $tgeriatrico2                    = $request->tgeriatrico2;
+                $tgeriatrico2                    = $request->tgeriatrico3;
+                $ta                    = $request->ta;
+                $fc                    = $request->fc;
+                $fr                    = $request->fr;
+                $temp                    = $request->temp;
+                $spo2                    = $request->spo2;
+                $glucosa                    = $request->glucosa;
+                $protesis                    = $request->protesis;
+                $cuidadornombre                    = $request->cuidadornombre;
+                $fechacuidador                    = $request->fechacuidador;
+                $idamedicamento                    = $request->idamedicamento;
+                $amindicacion                    = $request->amindicacion;
+                $ampresen                   = $request->ampresen;
             
 
                   $npacm = npacientes::find($idnp);
@@ -1319,6 +1352,28 @@ public function eliminausu($idu)
                   $npacm->actividad3      = $request->actividad3;
                   $npacm->hora3           = $request->hora3;
 
+
+                  $npacm->menu                    = $request->menu;
+                  $npacm->consumo                    = $request->consumo;
+                  $npacm->observaciones                    = $request->observaciones;
+                  $npacm->horacomida                    = $request->horacomida;
+                  $npacm->tipocomida                    = $request->tipocomida;
+                  $npacm->tgeriatrico1                    = $request->tgeriatrico1;
+                  $npacm->tgeriatrico2                    = $request->tgeriatrico2;
+                  $npacm->tgeriatrico2                    = $request->tgeriatrico3;
+                  $npacm->ta                    = $request->ta;
+                  $npacm->fc                    = $request->fc;
+                  $npacm->fr                    = $request->fr;
+                  $npacm->temp                    = $request->temp;
+                  $npacm->spo2                    = $request->spo2;
+                  $npacm->glucosa                    = $request->glucosa;
+                  $npacm->protesis                    = $request->protesis;
+                  $npacm->cuidadornombre                    = $request->cuidadornombre;
+                  $npacm->fechacuidador                    = $request->fechacuidador;
+                  $npacm->idamedicamento                    = $request->idamedicamento;
+                  $npacm->amindicacion                    = $request->amindicacion;
+                  $npacm->ampresen                    = $request->ampresen;
+              
                   $npacm->save();      
                   return redirect()->route('confirmacion');
   

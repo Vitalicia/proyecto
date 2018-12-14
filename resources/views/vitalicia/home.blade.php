@@ -18,9 +18,7 @@
   @if(Session::get('sesiontipo')=="1")
     <li class="tabs-title"><a href="#Npacientes">Pacientes</a></li>
   @endif
-  @if(Session::get('sesiontipo')=="1")
-    <li class="tabs-title"><a href="#mispaciente">Mispacientes</a></li>
-  @endif
+  
 </ul>
 
 <div class="tabs-content" data-tabs-content="collapsing-tabs">
@@ -166,10 +164,10 @@
           <th>Actividad 1</th>
             <th>Hora</th>
             <th>Actividad 2</th>
-            <th>Hora</th>
+            <th>Hora2</th>
             <th>Actividad 3</th>
-              <th>Hora</th>
-         <!--   <th>Men&uacute;</th>
+              <th>Hora3</th>
+            <th>Men&uacute;</th>
             <th>Consumo</th>
             <th>Observaciones</th>
             <th>Hora de la comida</th>
@@ -185,10 +183,10 @@
             <th>Glucosa</th>
             <th>Protesis</th>
             <th>Cuidador</th>
-            <th>Fecha de Registro</th>
+           <th>Fecha de Registro</th>
             <th>Medicamento</th>
-            <th>Indicaci&oacute;n</th>
-            <th>Presentaci&oacute;n</th>-->
+           <th>Indicaci&oacute;n</th>
+            <th>Presentaci&oacute;n</th>
             <th>Operaciones</th>
             </tr>
             @foreach($npacientes as $nm)
@@ -201,6 +199,26 @@
                     <td>{{$nm->hora2}}</td>
                     <td>{{$nm->actividad3}}</td>
                     <td>{{$nm->hora3}}</td>
+                    <td>{{$nm->menu}}</td>
+                    <td>{{$nm->consumo}}</td>
+                    <td>{{$nm->observaciones}}</td>
+                    <td>{{$nm->horacomida}}</td>
+                    <td>{{$nm->tipocomida}}</td>
+                    <td>{{$nm->tgeriatrico1}}</td>
+                    <td>{{$nm->tgeriatrico2}}</td>
+                    <td>{{$nm->tgeriatrico3}}</td>
+                    <td>{{$nm->ta}}</td>
+                    <td>{{$nm->fc}}</td>
+                    <td>{{$nm->fr}}</td>
+                    <td>{{$nm->temp}}</td>
+                    <td>{{$nm->spo2}}</td>
+                    <td>{{$nm->glucosa}}</td>
+                    <td>{{$nm->protesis}}</td>
+                    <td>{{$nm->cuidadornombre}}</td>
+                    <td>{{$nm->fechacuidador}}</td>
+                    <td>{{$nm->nmedica}}</td>
+                    <td>{{$nm->amindicacion}}</td>
+                    <td>{{$nm->ampresen}}</td>-->
                    
                     @if($nm->deleted_at=="")
                                 <td>
@@ -224,52 +242,7 @@
     </div>
     </div>
 
-                    
-<!--Contenido de la Tab 6-->
-<div class="tabs-panel" id="mispaciente">
-  <div class="table-scroll">
-        <table class="hover">
-            <tr>
-            <th>ID</th>
-            <th>Paciente</th>
-            <th>Fecha</th>
-            <th>actividad1</th>
-            <th>Hora1</th>
-            <th>actividad2</th>
-            <th>Hora2</th>
-            
-            <th>Menu</th>
-            <th>Consumo</th>
-            <th>Observaciones</th>
-            
-
-            </tr>
-            @foreach($mispa as $mis)
-                <tr>
-                    <td>{{$mis->idpaciente}}</td>
-                    <td>{{$mis->pacientes}}</td>
-                    <td>{{$mis->fechapaciente}}</td>
-                    <td>{{$mis->act1}}</td>
-                    <td>{{$mis->hora1}}</td>
-                    <td>{{$mis->act2}}</td>
-                    <td>{{$mis->hora2}}</td>
-                    
-                    <td>{{$mis->menu}}</td>
-                    <td>{{$mis->consumo}}</td>
-                    <td>{{$mis->observaciones}}</td>
-                    
-                   
-                   
-                            <td>
-                            <a href="{{URL::action('vitalicia@modifimispa',['idpaciente'=>$mis->idpaciente])}}"> 
-                                        <button type="button" class="button small success">Modificar</button>
-                                </a>
-                                       </td>
-                </tr>
-            @endforeach
-        </table>
-    </div>
-    </div>
+   
 
                     
 @stop    
