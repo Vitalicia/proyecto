@@ -315,12 +315,7 @@
                     <p>Consiste en un proceso puesto en marcha que pretende mmejorar el nivel funcional para aquellas personas que presentan deficiencias e incapacidad con la finalidad de restablecer la perdida funcional tras un evento que haya modificado las capacidades f&iacute;sicas para un funcionamiento &oacute;ptimo en interaci&oacute;n con el entorno, previniendo y/o diminuyendo el deterioro funcional</p>
 				</div>
                 <!------>
-                <div class="col-md-6 to-animate text-justify">
-					<h2>Consulta Gerontol&oacute;gica</h2>
-                    <p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p><p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p>
-				</div><div class="col-md-6 to-animate">
-					<img src="vitalicia/images/gerontologia.jpg" class="img-responsive img-rounded" alt="Vitalicia">
-				</div>
+                
 				
                 <!------>
     </div>
