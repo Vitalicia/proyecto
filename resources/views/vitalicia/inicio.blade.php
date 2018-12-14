@@ -272,6 +272,84 @@
 <!--Fin Servicios--->
         
         
+<!--Contacto--->
+
+<div id="insideV-press" data-section="press">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="single-animate animate-press-1">Press Releases</h2>
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 subtext single-animate animate-press-2">
+							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<!-- Press Item -->
+					<div class="insideV-press-item to-animate">
+						<div class="insideV-press-img" style="background-image: url(images/img_7.jpg)">
+						</div>
+						<div class="insideV-press-text">
+							<h3 class="h2 insideV-press-title">Simplicity <span class="insideV-border"></span></h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
+							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
+						</div>
+					</div>
+					<!-- Press Item -->
+				</div>
+
+				<div class="col-md-6">
+					<!-- Press Item -->
+					<div class="insideV-press-item to-animate">
+						<div class="insideV-press-img" style="background-image: url(images/img_8.jpg)">
+						</div>
+						<div class="insideV-press-text">
+							<h3 class="h2 insideV-press-title">Versatile <span class="insideV-border"></span></h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
+							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
+						</div>
+					</div>
+					<!-- Press Item -->
+				</div>
+				
+				<div class="col-md-6">
+					<!-- Press Item -->
+					<div class="insideV-press-item to-animate">
+						<div class="insideV-press-img" style="background-image: url(vitalicia/images/vitalicia3.jpg);">
+						</div>
+						<div class="insideV-press-text">
+							<h3 class="h2 insideV-press-title">Aesthetic <span class="insideV-border"></span></h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
+							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
+						</div>
+					</div>
+					<!-- Press Item -->
+				</div>
+
+				<div class="col-md-6">
+					<!-- Press Item -->
+					<div class="insideV-press-item to-animate">
+						<div class="insideV-press-img" style="background-image: url(images/img_10.jpg);">
+						</div>
+						<div class="insideV-press-text">
+							<h3 class="h2 insideV-press-title">Creative <span class="insideV-border"></span></h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
+							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
+						</div>
+					</div>
+					<!-- Press Item -->
+				</div>
+
+			</div>
+		</div>
+	</div>
+        
+<!--Contacto--->  
+        
+        
 <!--Contacto--->  
         
       <div id="insideV-contact" data-section="contacto">
