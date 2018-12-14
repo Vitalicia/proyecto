@@ -33,7 +33,7 @@
 
             Tel&eacute;fono
             <br>{!! $errors->first('telefono','<span class=error>:message</span>')!!}
-                <input type="text" name="telefono" value="{{old('telefono')}}">
+                <input type="tel" name="telefono" value="{{old('telefono')}}">
             
             <input type="text" name='idd' value="{{$idds}}" readonly= 'readonly' style='visibility:hidden'>
 @stop
