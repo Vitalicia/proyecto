@@ -187,7 +187,7 @@
 <!--Servicios--->   
         
          
-	<div id="insideV-our-services" data-section="servicios">
+	<!---div id="insideV-our-services" data-section="servicios">
 		<div class="container">
 			<div class="row row-bottom-padded-sm">
 				<div class="col-md-12 section-heading text-center">
@@ -267,86 +267,65 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div-->
 
 <!--Fin Servicios--->
         
         
 <!--Contacto--->
-
-<div id="insideV-press" data-section="press">
-		<div class="container">
-			<div class="row">
+<div id="insideV-our-services" data-section="servicios">
+    <div class="container">
+    <div class="row row-bottom-padded-lg" id="about-us">
 				<div class="col-md-12 section-heading text-center">
-					<h2 class="single-animate animate-press-1">Press Releases</h2>
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2 subtext single-animate animate-press-2">
-							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
-						</div>
-					</div>
+					<h2 class="to-animate">Servicios</h2>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<!-- Press Item -->
-					<div class="insideV-press-item to-animate">
-						<div class="insideV-press-img" style="background-image: url(vitalicia/images/vitalicia3.jpg)">
-						</div>
-						<div class="insideV-press-text">
-							<h3 class="h2 insideV-press-title">Simplicity <span class="insideV-border"></span></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
-						</div>
-					</div>
-					<!-- Press Item -->
+				<div class="col-md-6 to-animate">
+					<img src="vitalicia/images/massage.jpg" class="img-responsive img-rounded" alt="Vitalicia">
 				</div>
-
-				<div class="col-md-6">
-					<!-- Press Item -->
-					<div class="insideV-press-item to-animate">
-						<div class="insideV-press-img" style="background-image: url(vitalicia/images/img_8.jpg)">
-						</div>
-						<div class="insideV-press-text">
-							<h3 class="h2 insideV-press-title">Versatile <span class="insideV-border"></span></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
-						</div>
-					</div>
-					<!-- Press Item -->
+				<div class="col-md-6 to-animate text-justify">
+					<h2>Acupuntura</h2>
+                    <ul>
+                                        <li>Depresi&oacute;n</li>
+                                        <li>Insomnio</li>
+                                        <li>Estr&eacute;s</li>
+                                        <li>Ansiedad</li>
+                                        <li>Colitis</li>
+                                        <li>Gastritis</li>
+                                        <li>Fibromialgia</li>
+                                        <li>Ciatalgia</li>
+                                        <li>Dolor Muscular</li>
+                                        <li>Artritis</li>
+                                        <li>Par&aacute;lisis Facial</li>                                        
+                                    </ul>
+				</div>
+                <!------>
+				<div class="col-md-6 to-animate text-justify">
+					<h2>Consulta Gerontol&oacute;gica</h2>
+                    <p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p><p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p>
+				</div><div class="col-md-6 to-animate">
+					<img src="vitalicia/images/gerontologia.jpg" class="img-responsive img-rounded" alt="Vitalicia">
 				</div>
 				
-				<div class="col-md-6">
-					<!-- Press Item -->
-					<div class="insideV-press-item to-animate">
-						<div class="insideV-press-img" style="background-image: url(vitalicia/images/vitalicia3.jpg);">
-						</div>
-						<div class="insideV-press-text">
-							<h3 class="h2 insideV-press-title">Aesthetic <span class="insideV-border"></span></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
-						</div>
-					</div>
-					<!-- Press Item -->
+                <!------>
+                <div class="col-md-6 to-animate">
+					<img src="vitalicia/images/vitalicia4.jpg" class="img-responsive img-rounded" alt="Vitalicia">
 				</div>
-
-				<div class="col-md-6">
-					<!-- Press Item -->
-					<div class="insideV-press-item to-animate">
-						<div class="insideV-press-img" style="background-image: url(vitalicia/images/img_10.jpg);">
-						</div>
-						<div class="insideV-press-text">
-							<h3 class="h2 insideV-press-title">Creative <span class="insideV-border"></span></h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
-						</div>
-					</div>
-					<!-- Press Item -->
+				<div class="col-md-6 to-animate text-justify">
+					<h2>Rehabilitaci&oacute;n F&iacute;sica</h2>
+                    <p>Consiste en un proceso puesto en marcha que pretende mmejorar el nivel funcional para aquellas personas que presentan deficiencias e incapacidad con la finalidad de restablecer la perdida funcional tras un evento que haya modificado las capacidades f&iacute;sicas para un funcionamiento &oacute;ptimo en interaci&oacute;n con el entorno, previniendo y/o diminuyendo el deterioro funcional</p>
 				</div>
-
-			</div>
-		</div>
-	</div>
-        
+                <!------>
+                <div class="col-md-6 to-animate text-justify">
+					<h2>Consulta Gerontol&oacute;gica</h2>
+                    <p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p><p>Consistiendo en una valoraci&oacute;n personalizada del <b>Adulto Mayor</b> en cuanto a su estado f&iacute;sico, cognitivo, psicol&oacute;gico, social, nutricional, as&iacute; como situaci&oacute;n emocional de su cuidador, con el objetivo de indentificar s&iacute;ndromes  geri&aacute;tricos para su atenci&oacute;n y prevenci&oacute;n</p>
+				</div><div class="col-md-6 to-animate">
+					<img src="vitalicia/images/gerontologia.jpg" class="img-responsive img-rounded" alt="Vitalicia">
+				</div>
+				
+                <!------>
+    </div>
+</div>    
+</div>
 <!--Contacto--->  
         
         

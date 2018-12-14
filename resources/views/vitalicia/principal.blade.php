@@ -32,17 +32,20 @@
               </li>
                 
               <li>
-                <a href="{{route('home')}}">Vitalicia</a>
+                <a href="{{route('home')}}">Consultas</a>
               </li>    
                 
               @if(Session::get('sesiontipo')=="1")
               <li>
                 <a href="{{route('cmedicamentos')}}">Nuevo Medicamento</a>
               </li>    
-              @endif 
-              <!--li>
-                <a href="#">Datos Generales</a>
-              </li-->
+              @endif
+                
+               @if(Session::get('sesiontipo')=="1" or "2")
+              <li>
+                        <a href="{{route('rusu')}}">Datos Generales</a>
+              </li>
+              @endif
                 
               @if(Session::get('sesiontipo')=="1" or "2")
               <li>
