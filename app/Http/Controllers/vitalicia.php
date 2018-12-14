@@ -1436,109 +1436,51 @@ else
          }
 
 }
-
-public function modifimispa($idpaciente)
-{
-if( Session::get('sesionidu')!="")
-               {
-         
-                     
-                      $pacientesb= pacientes::where('idpaciente','=',$idpaciente) ->get();
-                                   
-                      $idactividades = $pacientesb[0]->idactividades;
-              
-                      $otrod = actividades::where('idactividades','=',$idactividades)->get();
-
-                      $ahora1 = actividades::where('idactividades','=',$idactividades)->get();
-
-                      $act2 = actividades::where('idactividades','=',$idactividades)->get();
-
-                      $ahora2 = actividades::where('idactividades','=',$idactividades)->get();
-
-                      $act3 = actividades::where('idactividades','=',$idactividades)->get();
-
-                      $ahora3 = actividades::where('idactividades','=',$idactividades)->get();
-
-                      $otrodato = actividades::where('idactividades','!=',$idactividades)->get(); 
-
-                      $idalimentacion = $pacientesb[0]->idalimentacion;
-
-                      $alim = alimentaciones::where('idalimentacion','=',$idalimentacion)->get();
-
-                      $cons = alimentaciones::where('idalimentacion','=',$idalimentacion)->get();
-
-                      $obsr = alimentaciones::where('idalimentacion','=',$idalimentacion)->get();
-
-                      $otral = alimentaciones::where('idalimentacion','!=',$idalimentacion)->get();
-
-                      
-
-                    
-                               
-                      return view ('vitalicia.mpacientes')
-                      ->with('pacientesb',$pacientesb[0])
-                      ->with('idactividades',$idactividades)
-                      ->with('otrod',$otrod[0]->act1)
-                      ->with('ahora1',$ahora1[0]->hora1)
-                      ->with('act2',$act2[0]->act2)
-                      ->with('ahora2',$ahora1[0]->hora2)
-                      ->with('act3',$act3[0]->act3)
-                      ->with('ahora3',$ahora3[0]->hora3)
-                      ->with('idalimentacion',$idalimentacion)
-                      ->with('alim',$alim[0]->menu)
-                      ->with('cons',$cons[0]->consumo)
-                      ->with('obsr',$obsr[0]->observaciones)
-                      ->with('otral',$otral)
-                      ->with('otrodato',$otrodato);
-                 
-                      
-
-          
-
-          
-    }
-      else
-               {
-                       Session::flash('error', 'Favor de loguearse antes de 
-              continuar');
-               return redirect()->route('login');
-               }
-  }
-
-  public function guardamodifimispa(Request $request)
-{
-if( Session::get('sesionidu')!="")
-         {
-
-
-        $idpaciente                     = $request->idpaciente;
-        $pacientes                      = $request->pacientes;
-        $fechapaciente                  = $request->fechapaciente;
-        $idactividades                  = $request->idactividades;
-        $idalimentacion                  = $request->idalimentacion;
-        
+public function efisicapasi($idnp)
+	{
        
-
-
-            
-            $misp                       = pacientes::find($idpaciente);
-            $misp->idpaciente           = $request->idpaciente;
-            $misp->pacientes            = $request->pacientes;
-            $misp->fechapaciente        = $request->fechapaciente;
-            $misp->idactividades        = $request->idactividades;
-            $misp->idalimentacion        = $request->idalimentacion;
-           
-        
-                
-                $misp->save();
+        if( Session::get('sesionidu')!="")
+		 {
+                npacientes::find($idnp)->delete();
                 return redirect()->route('confirmacion');
-}
-else
-         {
-                 Session::flash('error', 'Favor de loguearse antes de 
-        continuar');
-         return redirect()->route('login');
-         }
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
+    }
+        
+        public function restapaci($idnp)
+	{
+         if( Session::get('sesionidu')!="")
+		 {
+                npacientes::withTrashed()->where('idnp',$idnp)->restore();
+                return redirect()->route('confirmacion');
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
+    }
+        
+     public function eliminpaci($idnp)
+	{
+		 if( Session::get('sesionidu')!="")
+		 {
+                        npacientes::withTrashed()->where('idnp',$idnp)->forceDelete();
+                return redirect()->route('confirmacion');
+        }
+        else
+		 {
+			 Session::flash('error', 'Favor de loguearse antes de 
+		continuar');
+		 return redirect()->route('login');
+		 }
+    }
 
-}
+  
 }

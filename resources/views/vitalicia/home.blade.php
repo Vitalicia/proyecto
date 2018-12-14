@@ -224,14 +224,22 @@
                                 <td>
                                     
                                 <a href="{{URL::action('vitalicia@modifinpacientes',['idnp'=>$nm->idnp])}}">
-                                        <button type="button" class="button small success">Modificar</button>
+                                        <button type="button" class="button small success">Modificar</button></a>
+
+                                <a href="{{URL::action('vitalicia@efisicapasi',['idnp'=>$nm->idnp])}}"> 
+                                <button type="button" class="button small secondary">Inhabilitar</button> 
+                               </a>
 
                                        
-                                    </a> 
+                                
                                 </td>
                         @else
-                                <td>    
-                                    <a href="{{URL::action('vitalicia@efisicausu',['idu'=>$usu->idu])}}"> 
+                                <td> 
+
+                                <a href="{{URL::action('vitalicia@restapaci',['idnp'=>$nm->idnp])}}"> 
+                                 <button type="button" class="button small primary">Restaurar</button>  
+                            </a>  
+                                    <a href="{{URL::action('vitalicia@eliminpaci',['idnp'=>$nm->idnp])}}"> 
                                         <button type="button" class="button small alert">Eliminar</button> 
                                     </a> 
                                 </td>

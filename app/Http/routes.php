@@ -46,6 +46,10 @@ Route::POST('/guardamodificapac','vitalicia@guardamodificapac')->name('guardamod
 Route::get('/modifinpacientes/{idnp}','vitalicia@modifinpacientes')->name('modifinpacientes');
 Route::POST('/guardamodifinpacientes','vitalicia@guardamodifinpacientes')->name('guardamodifinpacientes'); // guardar la modificacion de pacientes
 
+Route::get('/eliminpaci/{idnp}','vitalicia@eliminpaci')->name('eliminpaci'); //eliminar los ususrios
+Route::get('/restapaci/{idnp}','vitalicia@restapaci')->name('restapaci');//restuaracion de los ususros
+Route::get('/efisicapasi/{idnp}','vitalicia@efisicapasi')->name('efisicapasi');//eliminacion fisica de usuarios
+
 // medicamentos MODIFICACIONES
 Route::get('/modime/{idamedicamento}','vitalicia@modime')->name('modime');
 Route::POST('/guardamodime','vitalicia@guardamodime')->name('guardamodime'); // guardar 
