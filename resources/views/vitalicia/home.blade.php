@@ -163,13 +163,13 @@
             <tr>
             <th>Clave</th>
             <th>Paciente</th>
-      <!--      <th>Actividad 1</th>
+          <th>Actividad 1</th>
             <th>Hora</th>
             <th>Actividad 2</th>
             <th>Hora</th>
             <th>Actividad 3</th>
-            <th>Hora</th>
-            <th>Men&uacute;</th>
+              <th>Hora</th>
+         <!--   <th>Men&uacute;</th>
             <th>Consumo</th>
             <th>Observaciones</th>
             <th>Hora de la comida</th>
@@ -195,6 +195,12 @@
                 <tr>
                     <td>{{$nm->idnp}}</td>
                     <td>{{$nm->paciente}}</td>
+                    <td>{{$nm->actividad1}}</td>
+                    <td>{{$nm->hora1}}</td>
+                    <td>{{$nm->actividad2}}</td>
+                    <td>{{$nm->hora2}}</td>
+                    <td>{{$nm->actividad3}}</td>
+                    <td>{{$nm->hora3}}</td>
                    
                     @if($nm->deleted_at=="")
                                 <td>

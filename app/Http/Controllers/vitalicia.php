@@ -53,7 +53,8 @@ class vitalicia extends Controller
           INNER JOIN geriatricos AS g ON g.idgeriatricos=p.idgeriatricos
           INNER JOIN actividades AS v ON v.idactividades=p.idactividades");
 
-        $npacientes=\DB::select("SELECT	p.`idnp`,u.`usuario` AS paciente,p.`deleted_at`
+        $npacientes=\DB::select("SELECT	p.`idnp`,u.`usuario` AS paciente,p.`actividad1`,p.`hora1`,
+        p.`actividad2`,p.`hora2`,p.`actividad3`,p.`hora3`,p.`deleted_at`
         FROM npacientes AS p
         INNER JOIN usuarios AS u ON u.`idu`=p.`idu`");
 
@@ -1289,7 +1290,7 @@ public function eliminausu($idu)
 		 return redirect()->route('login');
 		 }
     }
-
+ // aqui man  no te pases jeje 
            public function guardamodifinpacientes(Request $request)
 {
  if( Session::get('sesionidu')!="")
@@ -1299,12 +1300,24 @@ public function eliminausu($idu)
 
                 $idnp                     = $request->idnp;
                 $idu                      = $request->idu;
+                $actividad1               = $request->actividad1;
+                $hora1                    = $request->hora1;
+                $actividad2               = $request->actividad2;
+                $hora2                    = $request->hora2;
+                $actividad3               = $request->actividad3;
+                $hora3                    = $request->hora3;
             
 
                   $npacm = npacientes::find($idnp);
 
-                  $npacm->idnp           = $request->idnp;
-                  $npacm->idu           = $request->idu;
+                  $npacm->idnp            = $request->idnp;
+                  $npacm->idu             = $request->idu;
+                  $npacm->actividad1      = $request->actividad1;
+                  $npacm->hora1           = $request->hora1;
+                  $npacm->actividad2      = $request->actividad2;
+                  $npacm->hora2           = $request->hora2;
+                  $npacm->actividad3      = $request->actividad3;
+                  $npacm->hora3           = $request->hora3;
 
                   $npacm->save();      
                   return redirect()->route('confirmacion');
