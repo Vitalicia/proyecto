@@ -161,8 +161,9 @@
   <div class="table-scroll">
         <table class="hover">
             <tr>
+            <th>Clave</th>
             <th>Paciente</th>
-            <th>Actividad 1</th>
+      <!--      <th>Actividad 1</th>
             <th>Hora</th>
             <th>Actividad 2</th>
             <th>Hora</th>
@@ -187,38 +188,14 @@
             <th>Fecha de Registro</th>
             <th>Medicamento</th>
             <th>Indicaci&oacute;n</th>
-            <th>Presentaci&oacute;n</th>
+            <th>Presentaci&oacute;n</th>-->
             <th>Operaciones</th>
             </tr>
             @foreach($npacientes as $nm)
                 <tr>
-                    <td>{{$nm->usuario}}</td>
-                    <td>{{$nm->actividad1}}</td>
-                    <td>{{$nm->hora1}}</td>
-                    <td>{{$nm->actividad2}}</td>
-                    <td>{{$nm->hora2}}</td>
-                    <td>{{$nm->actividad3}}</td>
-                    <td>{{$nm->hora3}}</td>
-                    <td>{{$nm->menu}}</td>
-                    <td>{{$nm->consumo}}</td>
-                    <td>{{$nm->observaciones}}</td>
-                    <td>{{$nm->horacomida}}</td>
-                    <td>{{$nm->tipocomida}}</td>
-                    <td>{{$nm->tgeriatrico1}}</td>
-                    <td>{{$nm->tgeriatrico2}}</td>
-                    <td>{{$nm->tgeriatrico3}}</td>
-                    <td>{{$nm->ta}}</td>
-                    <td>{{$nm->fc}}</td>
-                    <td>{{$nm->fr}}</td>
-                    <td>{{$nm->temp}}</td>
-                    <td>{{$nm->spo2}}</td>
-                    <td>{{$nm->glucosa}}</td>
-                    <td>{{$nm->protesis}}</td>
-                    <td>{{$nm->cuidadornombre}}</td>
-                    <td>{{$nm->fechacuidador}}</td>
-                    <td>{{$nm->nmedica}}</td>
-                    <td>{{$nm->amindicacion}}</td>
-                    <td>{{$nm->ampresen}}</td>
+                    <td>{{$nm->idnp}}</td>
+                    <td>{{$nm->paciente}}</td>
+                   
                     @if($nm->deleted_at=="")
                                 <td>
                                     

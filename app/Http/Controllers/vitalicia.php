@@ -53,15 +53,9 @@ class vitalicia extends Controller
           INNER JOIN geriatricos AS g ON g.idgeriatricos=p.idgeriatricos
           INNER JOIN actividades AS v ON v.idactividades=p.idactividades");
 
-        $npacientes=\DB::select("SELECT p.`idnp`,p.`actividad1`,p.`hora1`,p.`actividad2`,
-        p.`hora2`,p.`actividad3`,p.`hora3`,p.`menu`,p.`consumo`,p.`observaciones`,p.`horacomida`,
-        p.`tipocomida`,p.`tgeriatrico1`,p.`tgeriatrico2`,p.`tgeriatrico3`,p.`ta`,
-        p.`fc`,p.`fr`,p.`temp`,p.`spo2`,p.`glucosa`,p.`protesis`,p.`cuidadornombre`,
-        p.`fechacuidador`,u.`usuario`,ame.`nmedica`,p.`amindicacion`,p.`ampresen`,p.deleted_at
-        FROM npacientes AS p,tipos AS t,amedicamentos AS ame, usuarios AS u
-        WHERE ame.`idamedicamento`=p.`idamedicamento`
-        AND p.`idu`=u.`idu`
-        AND u.`idt`=t.`idt`");
+        $npacientes=\DB::select("SELECT	p.`idnp`,u.`usuario` AS paciente,p.`deleted_at`
+        FROM npacientes AS p
+        INNER JOIN usuarios AS u ON u.`idu`=p.`idu`");
 
         $mispa=\DB::select("SELECT p.`idpaciente`,p.`pacientes`,p.`fechapaciente`,a.`act1`,a.`hora1`,a.`act2`,a.`hora2`,a.`act3`,a.`hora3`,al.`menu`,al.`consumo`,al.`observaciones`
         FROM pacientes AS p
@@ -1269,24 +1263,19 @@ public function eliminausu($idu)
 		                     
                         $idu = $mnpacientes[0]->idu;
 		
-		        $otrousario = usuarios::where('idu','=',$idu)->get(); 
+                        $otrousario = usuarios::where('idu','=',$idu)->get(); 
+                        
+                        $ursu = usuarios::where('idu','!=',$idu)->get(); 
                                  
-                        $idamedicamento =$mnpacientes[0]->idamedicamento;
-
-                    
-                        $otromedi = amedicamentos::where('idamedicamento','=',$idamedicamento)->get(); 
-
-                        $otro = amedicamentos::where('idamedicamento','!=',$idamedicamento)->get(); 
+                   
 
 		
 		        return view ('vitalicia.modnpacientes')
 		        ->with('mnpacientes',$mnpacientes[0])
                         ->with('idu',$idu)
-                        ->with('otrousario',$otrousario)
-                        ->with('otromedi',$otromedi)
-                        ->with('idamedicamento',$idamedicamento)
-                        ->with('otro',$otro[0]->nmedica);
-                        
+                        ->with('otrousario',$otrousario[0]->usuario)
+                        ->with('ursu',$ursu);
+                      
                         
 
             
@@ -1301,19 +1290,23 @@ public function eliminausu($idu)
 		 }
     }
 
-public function guardamodifinpacientes($idnp)
+           public function guardamodifinpacientes(Request $request)
 {
  if( Session::get('sesionidu')!="")
            {
         
          
 
+                $idnp                     = $request->idnp;
+                $idu                      = $request->idu;
             
 
                   $npacm = npacientes::find($idnp);
-                  $npacm->$request->all();
-            
-                  
+
+                  $npacm->idnp           = $request->idnp;
+                  $npacm->idu           = $request->idu;
+
+                  $npacm->save();      
                   return redirect()->route('confirmacion');
   
  }

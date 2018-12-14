@@ -83,13 +83,13 @@
     </div>
     
     <div class="row">
-            <div class="medium-5 columns">
+            <div class="medium-4 columns">
             @yield('form1')
             </div>
-            <div class="medium-5 columns">
+            <div class="medium-4 columns">
             @yield('form2')
             </div>
-            <div class="medium-5 columns">
+            <div class="medium-4 columns">
             @yield('form3')
             </div>
     </div>
