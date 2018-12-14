@@ -49,7 +49,7 @@
             }
 
             div.img:hover {
-                border: 1px solid #FF8C00;
+                border: 1px solid #A569BD;
             }
 
             div.img img {
@@ -60,7 +60,7 @@
             div.desc {
                 padding: 15px;
                 text-align: center;
-                background-color:darkorange;
+                background-color:plum;
                 color: whitesmoke;
             }
                 
@@ -107,58 +107,58 @@
 				</div>
 			</div>
              <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
             <div class="img">
-               <a target="_blank" href="Gallery/Gallery%201.html">
-                 <img src="Gallery/img/Planta%20Baja.png" alt="Trolltunga Norway" width="300" height="200">
+               <a target="_blank" href="#">
+                 <img src="vitalicia/Gallery/img/vitalicia.jpg" alt="Trolltunga Norway" width="800" height="800">
                </a>
-               <div class="desc">Plano de la Planta baja de la Facultad de Derecho.</div>
+               <div class="desc">Convivencia</div>
             </div>
                  </div>
                     
-            <div class="col-md-4">        
+            <div class="col-md-6">        
             <div class="img">
-              <a target="_blank" href="Gallery/Gallery%202.html">
-                <img src="Gallery/img/Primer%20Planta.png" alt="Forest" width="600" height="400">
+              <a target="_blank" href="#">
+                <img src="vitalicia/Gallery/img/vitalicia2.jpg" alt="Forest" width="600" height="400">
               </a>
-              <div class="desc">Plano del primer piso de la Facultad de Derecho.</div>
+              <div class="desc">Estimulaci&oacute;n</div>
             </div>
                  </div>
 
-            <div class="col-md-4">    
+            <div class="col-md-6">    
             <div class="img">
-              <a target="_blank" href="Gallery/Gallery%203.html">
-                <img src="Gallery/img/Segunda%20Planta.png" alt="Northern Lights" width="600" height="400">
+              <a target="_blank" href="#">
+                <img src="vitalicia/Gallery/img/vitalicia3.jpg" alt="Northern Lights" width="600" height="400">
               </a>
-              <div class="desc">Plano del segundo piso de la Facultad de Derecho.</div>
+              <div class="desc">Actividades</div>
             </div>
                  </div>
                  
-            <div class="col-md-4">    
+            <div class="col-md-6">    
             <div class="img">
-              <a target="_blank" href="Gallery/Gallery%204.html">
-                <img src="Gallery/img/Tercer%20Planta.png" alt="Northern Lights" width="600" height="400">
+              <a target="_blank" href="#">
+                <img src="vitalicia/Gallery/img/vitalicia4.jpg" alt="Northern Lights" width="600" height="400">
               </a>
-              <div class="desc">Plano del segundo piso de la Facultad de Derecho.</div>
+              <div class="desc">Rehabilitaci&oacute;n</div>
             </div>
                  </div>
                  
                  
-            <div class="col-md-4">    
+            <div class="col-md-6">    
             <div class="img">
-              <a target="_blank" href="Gallery/Gallery%205.html">
-                <img src="Gallery/img/Facultad%20de%20Derecho%20PB%20y%20Piso%201.png" alt="Northern Lights" width="600" height="400">
+              <a target="_blank" href="#">
+                <img src="vitalicia/Gallery/img/vitalicia5.jpg" alt="Northern Lights" width="600" height="400">
               </a>
-              <div class="desc">Topolog&iacute;a de la planta baja y primer piso en Packet Tracer</div>
+              <div class="desc">Actividades Recreativas</div>
             </div>
                  </div>
                  
-            <div class="col-md-4">    
+            <div class="col-md-6">    
             <div class="img">
-              <a target="_blank" href="Gallery/Gallery%206.html">
-                <img src="Gallery/img/Facultad%20de%20Derecho%20Piso%202%20y%203.png" alt="Northern Lights" width="600" height="400">
+              <a target="_blank" href="#">
+                <img src="vitalicia/Gallery/img/vitalicia6.jpg" alt="Northern Lights" width="600" height="400">
               </a>
-              <div class="desc">Topolog&iacute;a del segundo y tercer piso en Packet Tracer</div>
+              <div class="desc">Festejo del 1 de Noviembre</div>
             </div>
                  </div>
                  
@@ -211,7 +211,7 @@
 				<div class="col-md-12 text-center">
 					<ul class="social social-circle">
 						<li><a href="#"><i class="icon-twitter"></i></a></li>
-						<li><a href="https://goo.gl/Bc1qmz"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
 						<!--li><a href="#"><i class="icon-youtube"></i></a></li-->
 					</ul>
 				</div>
