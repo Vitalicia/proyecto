@@ -90,7 +90,15 @@ class vitalicia extends Controller
     {
                 return view ('vitalicia.inicio');
          
-    } 
+    }
+    
+    
+     //Galeria
+       public function galeria()
+    {
+                return view ('vitalicia.galeria');
+         
+    }
     
        public function registropacientes()
     {   

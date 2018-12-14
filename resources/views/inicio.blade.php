@@ -51,7 +51,7 @@
 		            <li><a href="#" data-nav-section="nosotros"><span>Nosotros</span></a></li>
 		            <li><a href="#" data-nav-section="servicios"><span>Servicios</span></a></li>
 		            <li><a href="#" data-nav-section="contacto"><span>Contacto</span></a></li>
-                    <li><a href="{{URL::action('vitalicia@galeria')}}" data-nav-section="gallery"><span>Galer&iacute;a</span></a></li>
+                    <li><a href="#" data-nav-section="gallery"><span>Galer&iacute;a</span></a></li>
                     <li><a href="{{URL::action('usuariosc@login')}}"><span>Iniciar Sesión</span></a></li>
 		          </ul>
 		        </div>

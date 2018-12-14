@@ -281,12 +281,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #insideV-our-services,
-#insideV-about-us,{
+#insideV-about-us,
+#insideV-features,
+#insideV-testimonials,
+#insideV-pricing,
+#insideV-press {
   padding: 7em 0;
 }
 @media screen and (max-width: 480px) {
   #insideV-our-services,
-  #insideV-about-us, {
+  #insideV-about-us,
+  #insideV-features,
+  #insideV-testimonials,
+  #insideV-pricing,
+  #insideV-press {
     padding: 5em 0;
   }
 }
@@ -346,8 +354,9 @@ INICIO DE ESTILO DE SERVICIOS
 _______________________________________________________________________________
 
 
-#insideV-our-services{
-  background: #FFF;
+#insideV-our-services,
+#insideV-press {
+  background: #f4f4f4;
 }
 
 #insideV-our-services .box {
@@ -376,6 +385,103 @@ table, th, td {
         td {
     padding: 1px;
 }
+
+
+
+
+#insideV-features {
+  padding: 7em 0;
+}
+@media screen and (max-width: 768px) {
+  #insideV-features {
+    padding: 4em 0;
+  }
+}
+#insideV-features .insideV-service {
+  margin-bottom: 30px;
+  float: left;
+}
+#insideV-features .insideV-service .insideV-icon {
+  float: left;
+  width: 20%;
+}
+#insideV-features .insideV-service .insideV-icon i {
+  font-size: 40px;
+  color: #5585b5;
+}
+#insideV-features .insideV-service .insideV-desc {
+  width: 80%;
+  float: right;
+}
+#insideV-features .insideV-service .insideV-desc h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+#insideV-press .insideV-press-item {
+  background: #fff;
+  float: left;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+}
+@media screen and (max-width: 480px) {
+  #insideV-press .insideV-press-item {
+    display: block !important;
+  }
+}
+#insideV-press .insideV-press-item .insideV-press-text,
+#insideV-press .insideV-press-item .insideV-press-img {
+  width: 50%;
+}
+@media screen and (max-width: 480px) {
+  #insideV-press .insideV-press-item .insideV-press-text,
+  #insideV-press .insideV-press-item .insideV-press-img {
+    height: inherit;
+    float: none !important;
+    width: 100%;
+    display: block !important;
+  }
+}
+#insideV-press .insideV-press-item .insideV-press-text {
+  float: left;
+  padding: 20px;
+}
+#insideV-press .insideV-press-item .insideV-press-text .insideV-press-title {
+  margin: 0 0 20px 0;
+  padding: 0 0 10px 0;
+  font-weight: 400;
+  font-size: 20px;
+  color: #444;
+  position: relative;
+}
+#insideV-press .insideV-press-item .insideV-press-text .insideV-press-title .insideV-border {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 30px;
+  background: #5585b5;
+}
+#insideV-press .insideV-press-item .insideV-press-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-size: cover;
+}
+
+
+-------
 
 
 
