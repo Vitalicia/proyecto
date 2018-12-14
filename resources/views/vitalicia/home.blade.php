@@ -218,7 +218,7 @@
                     <td>{{$nm->fechacuidador}}</td>
                     <td>{{$nm->nmedica}}</td>
                     <td>{{$nm->amindicacion}}</td>
-                    <td>{{$nm->ampresen}}</td>-->
+                    <td>{{$nm->ampresen}}</td>
                    
                     @if($nm->deleted_at=="")
                                 <td>
