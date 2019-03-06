@@ -49,7 +49,6 @@
 	<header role="banner" >
 			<div class="container">
 				<!-- <div class="row"> -->
-			    <nav class="navbar navbar-default">
 		        <div class="navbar-header">
 		        	<!-- Mobile Toggle Menu Button -->
 					<a href="#" class="js-insideV-nav-toggle insideV-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
@@ -60,7 +59,6 @@
 		            <li class="active"><a href="{{URL::action('vitalicia@inicio')}}" data-nav-section="inicio"><span>Regresar</span></a></li>
 		          </ul>
 		        </div>
-			    </nav>
 			  </div>
 	</header>
 
