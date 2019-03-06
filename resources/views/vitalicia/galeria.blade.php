@@ -27,57 +27,21 @@
 	<link rel="stylesheet" href="vitalicia/css/bootstrap.css">
 
 	<link rel="stylesheet" href="vitalicia/css/orange.css">
-
+        
+    <!-- Gallery info-->
+        
+    <link rel="stylesheet" href="vitalicia/css/gallery.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <!-- Gallery info-->    
+        
 	<!-- Modernizr JS -->
 	<script src="vitalicia/js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
-        
-        <!----------------------------------------------------------
-        Estilo de Galería
-        ---------------------------------------------------------->
-            <style>
-            div.img {
-                margin: 5px;
-                border: 1px solid #ccc;
-                float: left;
-                width: auto;
-
-            }
-
-            div.img:hover {
-                border: 1px solid #A569BD;
-            }
-
-            div.img img {
-                width: 100%;
-                height: auto;
-            }
-
-            div.desc {
-                padding: 15px;
-                text-align: center;
-                background-color:plum;
-                color: whitesmoke;
-            }
-                
-            div.scroll {
-            background-color: #FFF;
-            width: 500px;
-            height: 100px;
-            overflow: scroll;
-            text-align: justify;
-            }
-
-            </style>
-        
-                
-        <!----------------------------------------------------------
-        Fin estilo de Galería
-        ---------------------------------------------------------->
         
         
 	</head>
@@ -93,109 +57,127 @@
 		        </div>
 		        <div id="navbar" class="navbar-collapse collapse">
 		          <ul class="nav navbar-nav navbar-right">
-		            <li class="active"><a href="{{URL::action('vitalicia@inicio')}}" data-nav-section="inicio"><span>Inicio</span></a></li>
+		            <li class="active"><a href="{{URL::action('vitalicia@inicio')}}" data-nav-section="inicio"><span>Regresar</span></a></li>
 		          </ul>
 		        </div>
 			    </nav>
 			  </div>
 	</header>
 
-         <div class="container">  
-             <div class="row row-bottom-padded-sm">
+        <div class="container">  
 				<div class="col-md-12 section-heading text-center">
 					<h2>Vitalicia</h2>
 				</div>
-			</div>
-             <div class="row">
-                <div class="col-md-6">
-            <div class="img">
-               <a target="_blank" href="#">
-                 <img src="vitalicia/Gallery/img/vitalicia.jpg" alt="Trolltunga Norway" width="800" height="800">
-               </a>
-               <div class="desc">Convivencia</div>
-            </div>
-                 </div>
-                    
-            <div class="col-md-6">        
-            <div class="img">
-              <a target="_blank" href="#">
-                <img src="vitalicia/Gallery/img/vitalicia2.jpg" alt="Forest" width="600" height="400">
-              </a>
-              <div class="desc">Estimulaci&oacute;n</div>
-            </div>
-                 </div>
-
-            <div class="col-md-6">    
-            <div class="img">
-              <a target="_blank" href="#">
-                <img src="vitalicia/Gallery/img/vitalicia3.jpg" alt="Northern Lights" width="600" height="400">
-              </a>
-              <div class="desc">Actividades</div>
-            </div>
-                 </div>
-                 
-            <div class="col-md-6">    
-            <div class="img">
-              <a target="_blank" href="#">
-                <img src="vitalicia/Gallery/img/vitalicia4.jpg" alt="Northern Lights" width="600" height="400">
-              </a>
-              <div class="desc">Rehabilitaci&oacute;n</div>
-            </div>
-                 </div>
-                 
-                 
-            <div class="col-md-6">    
-            <div class="img">
-              <a target="_blank" href="#">
-                <img src="vitalicia/Gallery/img/vitalicia5.jpg" alt="Northern Lights" width="600" height="400">
-              </a>
-              <div class="desc">Actividades Recreativas</div>
-            </div>
-                 </div>
-                 
-            <div class="col-md-6">    
-            <div class="img">
-              <a target="_blank" href="#">
-                <img src="vitalicia/Gallery/img/vitalicia6.jpg" alt="Northern Lights" width="600" height="400">
-              </a>
-              <div class="desc">Festejo del 1 de Noviembre</div>
-            </div>
-                 </div>
-                 
-            <!--div class="col-md-4">    
-            <div class="img">
-              <a target="_blank" href="Gallery/Gallery%207.html">
-                <img src="images/EducacionControlada.jpg" alt="Northern Lights" width="600" height="400">
-              </a>
-              <div class="desc">Add a description of the image here</div>
-            </div>
-                 </div>
-                 
-                 
-            <div class="col-md-4">    
-            <div class="img">
-              <a target="_blank" href="Gallery/Gallery%208.html">
-                <img src="images/EducacionControlada.jpg" alt="Northern Lights" width="600" height="400">
-              </a>
-              <div class="desc">Add a description of the image here</div>
-            </div>
-                 </div>
-
-            <div class="col-md-4">    
-            <div class="img">
-              <a target="_blank" href="images/EducacionControlada.jpg">
-                <img src="images/EducacionControlada.jpg" alt="Mountains" width="600" height="400">
-              </a>
-              <div class="desc">Topolog&iacute;a de la planta baja y primer piso en Packet Tracer</div>
-            </div>
-                 </div-->
-      
-	             <!--/div>
-                    <div class="col-md-12" align=center>
-					<div class="scroll">Este apartado es el de la galería y en el cual se muestran los proyectos realizados para distinas empresas e instituciones. En primer instancia se muestran las imágenes del proyecto realiazado a la Universidad de Alicante.</div>
-     				</div-->
-                </div>
         </div>
+                
+                 <div class="container gallery-container">
+
+                        <div class="tz-gallery">
+
+                            <div class="row">
+
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="thumbnail">
+                                        <a class="lightbox" href="vitalicia/Gallery/img/vitalicia.jpg">
+                                            <img src="vitalicia/Gallery/img/vitalicia.jpg" alt="Vitalicia">
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="thumbnail">
+                                        <a class="lightbox" href="vitalicia/Gallery/img/vitalicia2.jpg">
+                                            <img src="vitalicia/Gallery/img/vitalicia2.jpg" alt="Vitalicia">
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="thumbnail">
+                                        <a class="lightbox" href="vitalicia/Gallery/img/vitalicia3.jpg">
+                                            <img src="vitalicia/Gallery/img/vitalicia3.jpg" alt="Vitalicia">
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="thumbnail">
+                                        <a class="lightbox" href="vitalicia/Gallery/img/vitalicia4.jpg">
+                                            <img src="vitalicia/Gallery/img/vitalicia4.jpg" alt="Vitalicia">
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="thumbnail">
+                                        <a class="lightbox" href="vitalicia/Gallery/img/vitalicia5.jpg">
+                                            <img src="vitalicia/Gallery/img/vitalicia5.jpg" alt="Vitalicia">
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="thumbnail">
+                                        <a class="lightbox" href="vitalicia/Gallery/img/vitalicia6.jpg">
+                                            <img src="vitalicia/Gallery/img/vitalicia6.jpg" alt="Vitalicia">
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="thumbnail">
+                                        <a class="lightbox" href="vitalicia/Gallery/img/vitalicia14.jpg">
+                                            <img src="vitalicia/Gallery/img/vitalicia14.jpg" alt="Vitalicia">
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="thumbnail">
+                                        <a class="lightbox" href="vitalicia/Gallery/img/vitalicia8.jpg">
+                                            <img src="vitalicia/Gallery/img/vitalicia8.jpg" alt="Vitalicia">
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="thumbnail">
+                                        <a class="lightbox" href="vitalicia/Gallery/img/vitalicia14.jpg">
+                                            <img src="vitalicia/Gallery/img/vitalicia14.jpg" alt="Vitalicia">
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="thumbnail">
+                                        <a class="lightbox" href="vitalicia/Gallery/img/vitalicia10.jpg">
+                                            <img src="vitalicia/Gallery/img/vitalicia10.jpg" alt="Vitalicia">
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="thumbnail">
+                                        <a class="lightbox" href="vitalicia/Gallery/img/vitalicia11.jpg">
+                                            <img src="vitalicia/Gallery/img/vitalicia11.jpg" alt="Vitalicia">
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="thumbnail">
+                                        <a class="lightbox" href="vitalicia/Gallery/img/vitalicia13.jpg">
+                                            <img src="vitalicia/Gallery/img/vitalicia13.jpg" alt="Vitalicia">
+                                        </a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                 
+              
 
 <!--Inicio Footer--->
         
@@ -236,6 +218,12 @@
 
 	<!-- Main JS (Do not remove) -->
 	<script src="vitalicia/js/main.js"></script>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+
 
 	</body>
 </html>
