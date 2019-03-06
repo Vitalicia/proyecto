@@ -2,8 +2,8 @@
 
 //RUTA PARA INICIO
 Route::get('/','vitalicia@inicio')->name('inicio');
-Route::get('/galeria','vitalicia@galeria')->name('galeria');
 Route::get('/inicio','vitalicia@home')->name('home');
+Route::get('/galeria','vitalicia@galeria')->name('galeria');
 Route::get('/spacientes','vitalicia@spaciente')->name('paci');
 Route::get('/confirmacion','vitalicia@confirmacion')->name('confirmacion'); // Confirma el guardado de los datos
 

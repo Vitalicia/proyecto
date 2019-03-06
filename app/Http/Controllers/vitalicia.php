@@ -90,19 +90,19 @@ class vitalicia extends Controller
     {
                 return view ('vitalicia.inicio');
          
-    }
+    } 
     
     
      //Galeria
-       public function galeria()
-    {
-                return view ('vitalicia.galeria');
-         
-    }
-    
+     public function galeria()
+     {
+                 return view ('vitalicia.galeria');
+          
+     }
        public function registropacientes()
     {   
-           
+        if( Session::get('sesionidu')!="")
+        {   
         $amedicamentos = amedicamentos::withTrashed()->orderBy('nmedica','asc')
                         
                           ->get();
@@ -115,7 +115,14 @@ class vitalicia extends Controller
                 return view ('vitalicia.datpacientes')
                         ->with('usuarios',$pausu)
                         ->with('amedicamentos',$amedicamentos);
-    }
+                }
+                else
+                         {
+                                 Session::flash('error', 'Favor de loguearse antes de 
+                        continuar');
+                         return redirect()->route('login');
+                         }
+            }
     
     
     ///////////////////////////////////////////////////////////////////////////
@@ -126,6 +133,26 @@ class vitalicia extends Controller
         {
                 $request->all(); //Procesa los datos del formulario
             
+                $this->validate($request,[
+                        'cuidadornombre' => 'required',
+                        'actividad1' => 'required',
+                        'actividad2' => 'required',
+                        'actividad3' => 'required',
+                        'menu' => 'required',
+                        'consumo' => 'required',
+                        'observaciones' => 'required',
+                        'horacomida' => 'required',
+                        'tipocomida' => 'required',
+                        'tgeriatrico1' => 'required',
+                        'tgeriatrico2' => 'required',
+                        'tgeriatrico3' => 'required',
+                        'ta' => 'integer',
+                        'fc' => 'integer',
+                        'fr' => 'integer',
+                        'temp' => ['regex:/^[0-9]+[.][0-9]{2}$/'],
+                        'spo2' => 'required',
+                        'glucosa' => 'required'
+                 ]);
                     
                 $npac = new npacientes;
                 $npac->idnp = $request->idnp;
@@ -627,14 +654,26 @@ class vitalicia extends Controller
 
 
 
-
-                 $this->validate($request,[
-                 'nombre'=>['regex:/^[A-Z][A-Z,a-z, ,ñ,é,ó,á,í,ú]+$/'],
-                 'edad'=>'required|integer|min:18',
-                 'cp'=>['regex:/^[0-9]{5}$/'],
-                 'beca'=>['regex:/^[0-9]+[.][0-9]{2}$/'],
-                 'archivo'=>'image|mimes:jpeg,png,gif'
-                     ]);
+                //HAY QUE REVISAR LAS VALIDACIONES
+                /* $this->validate($request,[
+                        'idd'=>'required|numeric',
+                        'idu'=>'required|numeric',
+                        'nombre' => ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                        'ap' => ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                        'am' => ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                        'edad' => 'required|integer',
+                        'telefono' => ['regex:/^[0-9]{10}$/'], 
+                        'calle' => 'required',
+                        'numero' => 'required|integer',
+                        'calle1' => 'required',
+                        'calle2' => 'required',
+                        'colonia' => 'required',
+                        'municipio' => 'required',
+                        'ciudad' => 'required',
+                        'cp' => ['regex:/^[0-9]{5}$/'],
+                        'referencia' => 'required',
+                        'archivo'=>'image|mimes:jpeg,png,gif,jpg'
+                     ]);*/
 
                      $file = $request->file('archivo');
                      if($file!="")
@@ -1023,13 +1062,10 @@ class vitalicia extends Controller
         $mindicacion= $request->mindicacion;
         
         $this->validate($request,[
-                'nmedica'=> ['regex:/^[A-Z][A-Z,a-z, ,ñ,á,é,í,ó,ú]+$/'],
-                'nmedica'=> 'required',
-                'mpresen'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
-                'mpresen'=> 'required',
-                'mindicacion'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
-                'mindicacion'=> 'required'
-         ]);
+                'nmedica'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'mindicacion'=> 'required',
+                'mpresen' => ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/']
+             ]);
                
 
                 $amed = new amedicamentos;
@@ -1348,6 +1384,9 @@ public function eliminausu($idu)
                 $amindicacion                    = $request->amindicacion;
                 $ampresen                   = $request->ampresen;
             
+            
+             //Elimine la validacion, tenemos que charcarla bien           
+            
 
                   $npacm = npacientes::find($idnp);
 
@@ -1400,9 +1439,18 @@ if( Session::get('sesionidu')!="")
          {
     $amedi = amedicamentos::where('idamedicamento','=',$idamedicamento)
                              ->get();
-             //return $datosm;
+        $idamedicamento = $amedi[0]->idamedicamento;
+
+        $idame = amedicamentos::where('idamedicamento','=',$idamedicamento)->get();
+
+        $otromedi = amedicamentos::where('idamedicamento','!=',$idamedicamento)->get();
+            
+                             //return $datosm;
         return view ('vitalicia.modmedicamentos')
-        ->with('amedi',$amedi[0]);
+        ->with('amedi',$amedi[0])
+        ->with('idamedicamento',$idamedicamento)
+        ->with('idame',$idame[0]->mpresen)
+        ->with('otromedi',$otromedi);
 }
 else
          {
@@ -1424,7 +1472,11 @@ if( Session::get('sesionidu')!="")
         $mpresen = $request->mpresen;
        
 
-
+        $this->validate($request,[
+                'nmedica'=> ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/'],
+                'mindicacion'=> 'required',
+                'mpresen' => ['regex:/^[A-Z][A-Z,a-z, , ñ,á,é,í,ó,ú]+$/']
+             ]);
             
             $mame = amedicamentos::find($idamedicamento);
             $mame->idamedicamento = $request->idamedicamento;

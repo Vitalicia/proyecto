@@ -39,13 +39,11 @@
               <li>
                 <a href="{{route('cmedicamentos')}}">Nuevo Medicamento</a>
               </li>    
-              @endif
-                
-               @if(Session::get('sesiontipo')=="1" or "2")
+              @endif 
+              
               <li>
-                        <a href="{{route('rusu')}}">Datos Generales</a>
+                <a href="{{route('rusu')}}">Datos Generales</a>
               </li>
-              @endif
                 
               @if(Session::get('sesiontipo')=="1" or "2")
               <li>

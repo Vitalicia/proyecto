@@ -104,9 +104,9 @@
                 <input type="time" name="horacomida" value="{{old('horacomida')}}">
             
                 <b>Tipo de Comida</b> 
-            @if($errors->first('tipocomida')) 
+             
             <br>{!! $errors->first('tipocomida','<span class=error>:message</span>')!!}
-            @endif
+           
                 <select name="tipocomida">
                   <option value="default">Elige una opci&oacute;n</option>
                   <option value="Desayuno">Desayuno</option>
@@ -115,9 +115,9 @@
                 </select>
                  
                 <b>Geri&aacute;trico 1</b> 
-            @if($errors->first('tgeriatrico1')) 
+            
             <br>{!! $errors->first('tgeriatrico1','<span class=error>:message</span>')!!}
-            @endif
+           
                 <select name="tgeriatrico1">
                   <option value="default">Elige una opci&oacute;n</option>
                   <option value="Miccion">Micci&oacute;n</option>
@@ -126,9 +126,9 @@
                 </select>
                 
                 <b>Geri&aacute;trico 2</b> 
-            @if($errors->first('tgeriatrico2')) 
+            
             <br>{!! $errors->first('tgeriatrico2','<span class=error>:message</span>')!!}
-            @endif
+            
                 <select name="tgeriatrico2">
                   <option value="default">Elige una opci&oacute;n</option>
                   <option value="Miccion">Micci&oacute;n</option>
@@ -137,9 +137,9 @@
                 </select>
                 
                 <b>Geri&aacute;trico 3</b> 
-            @if($errors->first('tgeriatrico3')) 
+           
             <br>{!! $errors->first('tgeriatrico3','<span class=error>:message</span>')!!}
-            @endif
+            
                 <select name="tgeriatrico3">
                   <option value="default">Elige una opci&oacute;n</option>
                   <option value="Miccion">Micci&oacute;n</option>
