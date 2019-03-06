@@ -215,10 +215,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-12 to-animate">
-					<img src="vitalicia/images/vitalicia.jpg" class="img-responsive img-rounded" alt="Vitalicia">
-				</div>
-			
+            <div class="row">
+                <div class="col-md-12 to-animate">
+                        <img src="vitalicia/images/vitalicia.jpg" class="img-responsive img-rounded" alt="Vitalicia">
+                </div>
+            </div>
+            <div class="row">
 			<div class="row row-bottom-padded-sm">
 				<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 insideV-service to-animate">
 					<div class="insideV-icon"><i class="icon-options"></i></div>
@@ -251,19 +253,18 @@
 				</div>
 				
 			</div>
-			<div class="row">
+			</div>
 				<div class="col-md-4 col-md-offset-4 single-animate animate-features-3">
 					<a href="mailto:info@vitalicia.com.mx" class="btn btn-primary btn-block">M&aacute;s Informaci&oacute;n</a>
 				</div>
-			</div>
+			
 		</div>
-	</div>
+</div>
 
 
 <!----->
 <div id="insideV-features">
 		<div class="container">
-			<div class="row">
 				<div class="col-md-12 section-heading text-center">
 					<h2 class="single-animate animate-features-1">Centro de Asistencia Gerontol&oacute;gica</h2>
 					<div class="row">
@@ -272,11 +273,12 @@
 						</div>
 					</div>
 				</div>
-			</div>
 			<div class="col-md-12 to-animate">
 					<img src="vitalicia/images/image2.jpg" class="img-responsive img-rounded" alt="Vitalicia">
-				</div>
-			<div class="row row-bottom-padded-sm">
+            </div>
+        </div>
+            <div class="container">
+			<div class="row row-bottom-padded-sm">   
 				<div class="col-md-6 col-sm-6 col-xs-6 col-xxs-12 insideV-service to-animate">
 					<div class="insideV-icon"><i class="icon-options"></i></div>
 					<div class="insideV-desc">
@@ -310,8 +312,7 @@
                         </ul>
 					</div>
 				</div>
-				
-			</div>
+        </div>
 			<div class="row">
 				<div class="col-md-4 col-md-offset-4 single-animate animate-features-3">
 					<a href="mailto:info@vitalicia.com.mx" class="btn btn-primary btn-block">M&aacute;s Informaci&oacute;n</a>
