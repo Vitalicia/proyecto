@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
     <title>Vitalicia | Inicio</title>
     <!--link rel="stylesheet" href="css/foundation.css"-->
       <link rel="stylesheet" href="{{ asset('css/foundation.css') }}">
@@ -13,7 +13,18 @@
     <!--link rel="shortcut icon" href="favicon.ico"-->  
       <link rel="stylesheet" href="{{ asset('favicon.ico') }}">
 
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  
+  
   </head>
   <body>
     
@@ -105,11 +116,35 @@
             </div>
 </div>
 
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-5"></div>
+      <div class="col-sm-3 col-md-2">@yield('form4')</div>
+      <div class="col-sm-3 col-md-2">@yield('form5')</div>
+      <div class="col-sm-3 col-md-3 "></div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-3 ">@yield('form6')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-3 ">@yield('form7')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-3 ">@yield('form8')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-2 ">@yield('form9')</div>
+      <div class="col-sm-3 col-md-2 ">@yield('form10')</div>
+      <div class="col-sm-3 col-md-6 "></div>
+      <div class="col-sm-3 col-md-2 ">@yield('form11')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-3 ">@yield('form12')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-4 ">@yield('form13')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-4 ">@yield('form14')</div>
+      
+    </div>  
+  </div>
+</div>
 
 
-
-           
-    
     
     <div class="row">
             <div class="large-4 columns">

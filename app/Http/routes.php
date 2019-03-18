@@ -117,5 +117,16 @@ Route::get('/principal','usuariosc@principal')->name('principal');
 Route::get('/cerrarsesion','usuariosc@cerrarsesion')->name('cerrarsesion');
 
 
+//RUTAS PARAS LAS modulos
+//Route::get('/certificado','modulos@certificado')->name('certi');
+
+
+
+Route::get('/certificado','modulos@cdoctor')->name('certi');
+
+Route::get('/comboca','modulos@comboca')->name('comboca');
+
+Route::get('/datusua','modulos@datusua')->name('datusua');
+
 
 
