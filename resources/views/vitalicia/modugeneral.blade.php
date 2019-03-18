@@ -42,11 +42,13 @@ $(document).ready(function(){
       case 'Si': 
         
         $('#tipalergia').html("<div id='al'><b>Tipo de Alergia:<input type= 'text' name='alerg'></b></div>");
+        $('.obser').html("<div id='otob'><b>Observaciones:<textarea name='comentarios' rows='2' cols='40'>Escribe aquí tus comentarios</textarea></b></div>");
         $('#ob').remove();
       break;
       case 'No': 
 
     $('.obser').html("<div id='ob'><b>Observaciones:<textarea name='comentarios' rows='2' cols='40'>Escribe aquí tus comentarios</textarea></b></div>");
+    $('#otob').remove();
     $('#al').remove();
       break;
 
