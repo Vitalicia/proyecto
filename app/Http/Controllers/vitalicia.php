@@ -113,7 +113,7 @@ class vitalicia extends Controller
                     
         
                 return view ('vitalicia.datpacientes')
-                        ->with('usuarios',$pausu)
+                        ->with('pausu',$pausu)
                         ->with('amedicamentos',$amedicamentos);
                 }
                 else
@@ -250,7 +250,7 @@ class vitalicia extends Controller
             }
         
         
-        $rdusu = usuarios::withTrashed()->orderBy('usuario','asc')
+        $rdusu = usuarios::withTrashed()->where('idt','!=','4')
                         
                           ->get();
         

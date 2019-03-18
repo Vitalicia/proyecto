@@ -10,7 +10,7 @@
             <b>Paciente</b>
             <br>
                 <select name = 'idu'>
-                @foreach($usuarios as $usup)
+                @foreach($pausu as $usup)
                 <option value ='{{$usup->idu}}'>{{$usup->usuario}}</option>
                 @endforeach
                 </select>
