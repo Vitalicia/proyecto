@@ -30,10 +30,14 @@
         
     <!-- Gallery info-->
         
-    <link rel="stylesheet" href="vitalicia/css/gallery.css">
+    <!--link rel="stylesheet" href="vitalicia/css/gallery.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css"-->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />    
+        
     <!-- Gallery info-->    
         
 	<!-- Modernizr JS -->
@@ -68,7 +72,7 @@
 				</div>
         </div>
                 
-                 <div class="container gallery-container">
+                 <!--div class="container gallery-container">
 
                         <div class="tz-gallery">
 
@@ -172,10 +176,104 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div-->
 
                  
-              
+<!-- -->
+
+<section class="gallery-block compact-gallery">
+        <div class="container">
+            <div class="heading">
+                <h2>Compact Gallery</h2>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="vitalicia/Gallery/img/vitalicia1.jpg">
+                        <img class="img-fluid image" src="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="vitalicia/Gallery/img/vitalicia5.jpg">
+                        <img class="img-fluid image" src="vitalicia/Gallery/img/vitalicia5.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <img class="img-fluid image" src="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <img class="img-fluid image" src="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                        </a>
+                    </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <img class="img-fluid image" src="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <img class="img-fluid image" src="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <img class="img-fluid image" src="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <img class="img-fluid image" src="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <img class="img-fluid image" src="vitalicia/Gallery/img/vitalicia4.jpg">
+                        <span class="description">
+                            <span class="description-heading">Lorem Ipsum</span>
+                            <span class="description-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- -->              
 
 <!--Inicio Footer--->
         
@@ -217,11 +315,14 @@
 	<!-- Main JS (Do not remove) -->
 	<script src="vitalicia/js/main.js"></script>
         
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
 <script>
     baguetteBox.run('.tz-gallery');
-</script>
+</script-->
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.compact-gallery', { animation: 'slideIn'});
+    </script>
 	</body>
 </html>
