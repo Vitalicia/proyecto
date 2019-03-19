@@ -7,6 +7,7 @@ Route::get('/galeria','vitalicia@galeria')->name('galeria');
 Route::get('/spacientes','vitalicia@spaciente')->name('paci');
 Route::get('/confirmacion','vitalicia@confirmacion')->name('confirmacion'); // Confirma el guardado de los datos
 
+
 //RUTA PAR LAS ALTAS
 Route::get('/registropacientes','vitalicia@registropacientes')->name('regpacientes');
 Route::get('/registroUsuario','vitalicia@rUsuario')->name('rusu');
@@ -118,15 +119,16 @@ Route::get('/cerrarsesion','usuariosc@cerrarsesion')->name('cerrarsesion');
 
 
 //RUTAS PARAS LAS modulos
-//Route::get('/certificado','modulos@certificado')->name('certi');
-
-
+Route::get('/confirmacion','modulos@confirmacion2')->name('confirmacion2'); // Confirma el guardado de los datos
 
 Route::get('/certificado','modulos@cdoctor')->name('certi');
 
 Route::get('/comboca','modulos@comboca')->name('comboca');
 
 Route::get('/datusua','modulos@datusua')->name('datusua');
+
+Route::post('/guardatosdel','modulos@guardatosdel')->name('guardatosdel');
+
 
 
 

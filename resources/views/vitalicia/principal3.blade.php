@@ -1,7 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="es" dir="ltr">
+
   <head>
     <meta charset="utf-8" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
   
     <title>Vitalicia | Inicio</title>
     <!--link rel="stylesheet" href="css/foundation.css"-->
@@ -11,7 +13,7 @@
     <!--link rel="stylesheet" href="css/app.css"-->
       <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <!--link rel="shortcut icon" href="favicon.ico"-->  
-      <link rel="stylesheet" href="{{ asset('favicon.ico') }}">
+
 
       <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -125,7 +127,15 @@
       <div class="col-sm-3 col-md-5 "></div>
       <div class="col-sm-3 col-md-3 ">@yield('form6')</div>
       <div class="col-sm-3 col-md-5 "></div>
-      <div class="col-sm-3 col-md-3 ">@yield('form7')</div>
+      <div class="col-sm-3 col-md-3 ">@yield('form6.1')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-3 ">@yield('form6.2')</div>
+      <div class="col-sm-3 col-md-4 "></div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-1 ">@yield('form7')</div>
+      <div class="col-sm-3 col-md-1 ">@yield('form7.1')</div>
+      <div class="col-sm-3 col-md-1 ">@yield('form7.2')</div>
+      <div class="col-sm-3 col-md-1 ">@yield('form7.3')</div>
       <div class="col-sm-3 col-md-5 "></div>
       <div class="col-sm-3 col-md-3 ">@yield('form8')</div>
       <div class="col-sm-3 col-md-5 "></div>
@@ -139,6 +149,11 @@
       <div class="col-sm-3 col-md-4 ">@yield('form13')</div>
       <div class="col-sm-3 col-md-5 "></div>
       <div class="col-sm-3 col-md-4 ">@yield('form14')</div>
+      <div class="col-sm-3 col-md-6 "></div>
+      <div class="col-sm-3 col-md-4 ">@yield('form15')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-4 ">@yield('form16')</div>
+      
       
     </div>  
   </div>
