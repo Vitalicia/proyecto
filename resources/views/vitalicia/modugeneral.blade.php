@@ -5,7 +5,7 @@
 
     
 </head>
-<font color="D133FF"><h1>Certificados</h1></font>
+<font color="D133FF"><h1>Medición de Signos Vitales</h1></font>
 @stop
 @section('form4')
 <?php
@@ -286,7 +286,7 @@ $('.obser').hide();
             @section('form14')
 
             <br>
-           <h2> Imprimir certificado  <input type=image src="../public/pdf.png" width="80" height="80"> </h2>
+           <h2> Imprimir Información  <input type=image src="../public/pdf.png" width="80" height="80"> </h2>
             
             @stop
 
