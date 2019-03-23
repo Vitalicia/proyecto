@@ -61,7 +61,7 @@
 
               @if(Session::get('sesiontipo')=="1")
               <li>
-                <a href="{{route('certi')}}">Certificados</a>
+                <a href="{{route('certi')}}">Signos Vitales</a>
               </li>
               @endif
                 
