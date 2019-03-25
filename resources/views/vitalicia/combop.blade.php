@@ -33,7 +33,7 @@
   <tr>
 
 
- <th>IDU</th>   <th>Edad</th>     <th>Sexo</th>     <th>Talla</th>    <th>Peso</th> 
+ <th>IDDD</th>   <th>Edad</th>     <th>Sexo</th>     <th>Talla</th>    <th>Peso</th> <th>Alergia</th> 
 
 
 </tr>
@@ -41,43 +41,23 @@
 
 
 <tr>
+@foreach($resultado as $res)
 
-<td>{{$usuarios->idu}}</td>
-<td>{{$usuarios->edad}}</td>
-<td>{{$usuarios->sexo}}</td>
-<td>{{$dapacientes->talla}}</td>
-<td>{{$dapacientes->peso}}</td>
+<td>{{$res->iddd}}</td>
+<td>{{$res->edad}}</td>
+<td>{{$res->sexo}}</td>
+<td>{{$res->talla}}</td>
+<td>{{$res->peso}}</td>
+<td>{{$res->tipalergia}}</td>
 
-
-</tr>
-
-</table>
-
-<br>
-
-<table id="customers">
-
-<tr>
-
-<th>T:A:</th>   <th>F:C</th>     <th>F:R</th>    
 
 </tr>
+@endforeach
 
-<tr>
-
-<td>{{$dapacientes->ta}}</td>
-<td>{{$dapacientes->fc}}</td>
-<td>{{$dapacientes->fr}}</td>
-
-</tr>
 
 </table>
 
 
-
-
-  
-</table>
 
 </body>
 </html>

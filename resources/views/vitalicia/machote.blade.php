@@ -12,8 +12,130 @@
       <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <!--link rel="shortcut icon" href="favicon.ico"-->  
       <link rel="stylesheet" href="{{ asset('favicon.ico') }}">
+      <style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 500px 160px 160px 200px;
+  grid-gap: 10px;
+  padding: 1px;
+}
 
- 
+.grid-container > div {
+  
+  text-align: center;
+  
+}
+</style>
+
+<style>
+.grid-2 {
+  display: grid;
+  grid-template-columns: 500px 160px 160px 200px;
+  grid-gap: 10px;
+  padding: 1px;
+}
+
+.grid-2 > div {
+  
+  text-align: center;
+  
+}
+</style>
+
+<style>
+.grid-3 {
+  display: grid;
+  grid-template-columns: 500px 330px 160px 200px;
+  grid-gap: 10px;
+  padding: 1px;
+}
+
+.grid-3 > div {
+  
+  text-align: center;
+  
+}
+</style>
+
+<style>
+.grid-4 {
+  display: grid;
+  grid-template-columns: 500px 75px 75px 75px 75px auto;
+  grid-gap: 10px;
+  padding: 1px;
+}
+
+.grid-4 > div {
+  text-align: center;
+}
+
+.item1 {
+  grid-column: 0 / 5;
+}
+</style>
+
+<style>
+.grid-5 {
+  display: grid;
+  grid-template-columns: 500px 103.3px 103.3px 103.3px 75px auto;
+  grid-gap: 10px;
+  padding: 1px;
+}
+
+.grid-5 > div {
+  text-align: center;
+}
+
+.item1 {
+  grid-column: 0 / 5;
+}
+</style>
+
+<style>
+.grid-6 {
+  display: grid;
+  grid-template-columns: 500px 160px 160px 200px;
+  grid-gap: 10px;
+  padding: 1px;
+}
+
+.grid-6 > div {
+  
+  text-align: center;
+  
+}
+</style>
+
+<style>
+.grid-7 {
+  display: grid;
+  grid-template-columns: 500px 330px;
+  grid-gap: 10px;
+  padding: 1px;
+}
+
+.grid-7 > div {
+  
+  text-align: center;
+  
+}
+</style>
+
+<style>
+.grid-8 {
+  display: grid;
+  grid-template-columns: 500px 330px;
+  grid-gap: 10px;
+  padding: 1px;
+}
+
+.grid-8 > div {
+  
+  text-align: center;
+  
+}
+</style>
+
   </head>
   <body>
     
@@ -73,17 +195,22 @@
       </div>
     </div>
     <br>
-     <div align="center">
-     @yield('micabeza')
-     </div>
+
       
-    <hr>
+ 
 
             
     <div class="row large-10" align="center">
             @yield('encabezado')
     </div>
         
+
+
+    <div align="center">
+     @yield('micabeza')
+     </div>
+
+    
         
     <div class="row medium-8 large-5 columns">
             @yield('contenido')
@@ -106,6 +233,41 @@
 </div>
 
 
+
+
+      <div class="col-sm-3 col-md-3 ">@yield('form6')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-3 ">@yield('form6.1')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-3 ">@yield('form6.2')</div>
+      <div class="col-sm-3 col-md-4 "></div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-1 ">@yield('form7')</div>
+      <div class="col-sm-3 col-md-1 ">@yield('form7.1')</div>
+      <div class="col-sm-3 col-md-1 ">@yield('form7.2')</div>
+      <div class="col-sm-3 col-md-1 ">@yield('form7.3')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-3 ">@yield('form8')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-2 ">@yield('form9')</div>
+      <div class="col-sm-3 col-md-2 ">@yield('form10')</div>
+      <div class="col-sm-3 col-md-6 "></div>
+      <div class="col-sm-3 col-md-2 ">@yield('form11')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-3 ">@yield('form12')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-4 ">@yield('form13')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-4 ">@yield('form14')</div>
+      <div class="col-sm-3 col-md-6 "></div>
+      <div class="col-sm-3 col-md-4 ">@yield('form15')</div>
+      <div class="col-sm-3 col-md-5 "></div>
+      <div class="col-sm-3 col-md-4 ">@yield('form16')</div>
+      
+      
+    </div>  
+  </div>
+</div>
 
 
            

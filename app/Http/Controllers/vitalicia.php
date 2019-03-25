@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Requests\formValidation;
 use App\tipos;
-use App\datos;
 use App\usuarios;
 use App\medicamentos;
 use App\horarios;
@@ -21,6 +20,8 @@ use App\pacientes;
 use App\amedicamentos;
 use App\actividades;
 use App\npacientes;
+use App\detalles;
+use App\datos;
 use Session;
 
 

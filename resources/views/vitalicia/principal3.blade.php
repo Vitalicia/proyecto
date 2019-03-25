@@ -2,9 +2,8 @@
 <html lang="es" dir="ltr">
 
   <head>
-    <meta charset="utf-8" />
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-  
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vitalicia | Inicio</title>
     <!--link rel="stylesheet" href="css/foundation.css"-->
       <link rel="stylesheet" href="{{ asset('css/foundation.css') }}">
@@ -21,77 +20,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
- 
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  
-  
-  
   </head>
+  
   <body>
     
-    <div class="top-bar">
-      <div class="row">
-        <div class="top-bar-left">
-	       <a class="navbar-brand" href="{{route('home')}}"><img src="vitalicia.jpg" width="70" height="200" alt="Vitalicia"></a> 
-        </div>
-          
-
-
- 
-        <div class="top-bar-right">
-            <ul class="dropdown menu" data-dropdown-menu>
-              <li>@if (Session::has('sesionname'))
-                  <div><h5 class="subheader">¡Hola {{ Session::get('sesionname')}}!</h5></div>
-                  @endif
-              </li>
-                
-              <li>
-                <a href="{{route('home')}}">Consultas</a>
-              </li>    
-                
-              @if(Session::get('sesiontipo')=="1")
-              <li>
-                <a href="{{route('cmedicamentos')}}">Nuevo Medicamento</a>
-              </li>    
-              @endif 
-              
-              <li>
-                <a href="{{route('rusu')}}">Datos Generales</a>
-              </li>
-                
-              @if(Session::get('sesiontipo')=="1" or "2")
-              <li>
-                        <a href="{{route('regpacientes')}}">Pacientes</a>
-              </li>
-              @endif
-                
-              @if(Session::get('sesiontipo')=="1")
-              <li>
-                <a href="{{route('usu')}}">Nuevo Usuario</a>
-              </li>
-              @endif
-
-              @if(Session::get('sesiontipo')=="1")
-              <li>
-                <a href="{{route('certi')}}">Certificados</a>
-              </li>
-              @endif
-                
-              <li>
-                <a href="{{URL::action('usuariosc@cerrarsesion')}}">Cerrar Sesi&oacute;n</a>
-              </li>
-            </ul>
-        </div>
-      </div>
-    </div>
-    <br>
-     <div align="center">
-     @yield('micabeza')
-     </div>
-      
-    <hr>
-
+    
             
     <div class="row large-10" align="center">
             @yield('encabezado')
@@ -182,16 +115,8 @@
         </div> 
     </div>
       
-    <hr>
-      
-    <footer>
-        <div class="row">
-            <div class="small-12 medium-6 columns">
-                <p>Copyright &reg; {{date('Y')}} | Vitalicia</p>
-                @yield('pie')
-            </div>
-        </div>
-    </footer>
+  
+  
 
     <!--script src="js/vendor/jquery.js"></script-->
     <script src="{{ asset('js/vendor/jquery.js') }}"></script>

@@ -119,15 +119,14 @@ Route::get('/cerrarsesion','usuariosc@cerrarsesion')->name('cerrarsesion');
 
 
 //RUTAS PARAS LAS modulos
-Route::get('/confirmacion','modulos@confirmacion2')->name('confirmacion2'); // Confirma el guardado de los datos
 
-Route::get('/certificado','modulos@cdoctor')->name('certi');
 
-Route::get('/comboca','modulos@comboca')->name('comboca');
+Route::get('/datos','modulos@datos')->name('datos');
 
-Route::get('/datusua','modulos@datusua')->name('datusua');
+Route::get('/dade','modulos@dade')->name('dade');
 
-Route::post('/guardatosdel','modulos@guardatosdel')->name('guardatosdel');
+Route::get('/guardatosdel','modulos@guardatosdel')->name('guardatosdel');
+
 
 
 
