@@ -61,11 +61,7 @@
 
               @if(Session::get('sesiontipo')=="1")
               <li>
-<<<<<<< HEAD
                 <a href="{{route('datos')}}">Modulo DG</a>
-=======
-                <a href="{{route('certi')}}">Signos Vitales</a>
->>>>>>> f9f51b678e428ccbd3208bb2c1bb98f683c4ef43
               </li>
               @endif
                 
