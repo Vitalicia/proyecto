@@ -1,6 +1,11 @@
 
 @extends('vitalicia.machote')
-
+@section('encabezado')
+<hr>
+<font color="D133FF"><h1>Datos Generales</h1></font>
+<hr>
+@stop
+@section('contenido')
 <html lang="es" dir="ltr">
 <head>
     <meta charset="utf-8">
@@ -111,9 +116,7 @@ $('.obser').hide();
 </script>
     
 <form>
-              <hr>
-              <font color="D133FF"><h1>Certificados</h1></font>
-              <hr>
+              
         
   <div class="grid-container">
   <div></div>
@@ -243,6 +246,7 @@ $('.obser').hide();
 
             </div>
 </form>
+@stop
        
 
 

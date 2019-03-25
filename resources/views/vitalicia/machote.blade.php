@@ -212,7 +212,7 @@
 
     
         
-    <div class="row medium-8 large-5 columns">
+    <div align="center">
             @yield('contenido')
     </div>
       
