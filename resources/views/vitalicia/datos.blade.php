@@ -72,22 +72,18 @@ $('.obser').hide();
 
       $("#fr").keyup(function() {
 
-      $('#idpa4').show();
+      $('#idpa2').show();
+      $('#idpa3').show();
   
        });
 
-      $("#paciente").keydown(function() {
+      $("#visual").keyup(function() {
 
-            $("#edad").val("");
-            $("#sexo").val("");
-            $("#peso").val("");
-            $("#talla").val("");
-            $("#ta").val("");
-            $("#fc").val("");
-            $("#fr").val("");
-      
-  
+      $('#idpa4').show();
+
       });
+
+     
 
     
       $("input[name=alergia]").click(function () {
