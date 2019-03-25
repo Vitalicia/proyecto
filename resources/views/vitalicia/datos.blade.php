@@ -48,24 +48,50 @@ $('.obser').hide();
       
        $("#idc").click(function() {
        $('#idpapi').show(); 
-       $("#idpa").show();
-       $("#idpa1").show();
-       $("#idpa2").show();
-       $("#idpa3").show();
-       $("#idpa4").show();
+       
       
        
        
       
        });
 
+
+       $("#paciente").keyup(function() {
+
+       $("#idpa").show();
+
+       });
+
+      $("#peso").keyup(function() {
+  
+      $("#idpa1").show();
+      $('#tipa').hide();
+      $('.obser').hide(); 
       
-       
+       });
+
+      $("#fr").keyup(function() {
+
+      $('#idpa4').show();
+  
+       });
+
+      $("#paciente").keydown(function() {
+
+            $("#edad").val("");
+            $("#sexo").val("");
+            $("#peso").val("");
+            $("#talla").val("");
+            $("#ta").val("");
+            $("#fc").val("");
+            $("#fr").val("");
+      
+  
+      });
 
     
-    
-        $("input[name=alergia]").click(function () {
-        switch ($('input:radio[name=alergia]:checked').val()) { 
+      $("input[name=alergia]").click(function () {
+      switch ($('input:radio[name=alergia]:checked').val()) { 
 
       case 'Si': 
         
@@ -103,9 +129,18 @@ $('.obser').hide();
             $("#sang").val("");
             $('#ale').val("");
             $('#obs').val("");
+
+            $('#idpapi').hide();
+            $('#idpa').hide();
+            $('#idpa1').hide();
+            $('#idpa2').hide();
+            $('#idpa3').hide();
+            $('#idpa4').hide();
+            $('#tipa').hide();
+            $('.obser').hide();
  
        });
-
+         
   
 
         

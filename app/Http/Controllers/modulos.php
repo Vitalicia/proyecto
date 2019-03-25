@@ -50,6 +50,9 @@ class modulos extends Controller
 
     function datos()
     {
+        if( Session::get('sesionidu')!="")
+		 {
+
          $clavequesigue = detalles::orderBy('ida','desc')
 								->take(1)->get();
          $cuantos = count($clavequesigue);
@@ -67,6 +70,13 @@ class modulos extends Controller
           ->with('cuida',$cuida)
           ->with('ida',$ida);
     }
+        else
+    {
+        Session::flash('error', 'Favor de loguearse antes de 
+   continuar');
+    return redirect()->route('login');
+    }
+}
 
 
     function guardatosdel(Request $request)
