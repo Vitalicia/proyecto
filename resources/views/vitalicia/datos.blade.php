@@ -270,7 +270,7 @@ $('.obser').hide();
   <h3> Imprimir certificado  <input type=image src="../public/pdf.png" width="70" height="70"> </h3>
   
   <br>
-      <button type="button" class="button"  name = "agrega" id="agrega" >Guardar</button>
+      <button type="button" class="button"  name = "agrega" id="agrega" >Guardar 1</button>
   <br>
   </div>
             <div id="guard">
