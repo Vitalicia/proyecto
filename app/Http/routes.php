@@ -128,6 +128,12 @@ Route::get('/dade','modulos@dade')->name('dade');
 Route::get('/guardatosdel','modulos@guardatosdel')->name('guardatosdel');
 
 
+//CITAS
+Route::get('/agendar','ControlCitas@cita')->name('citas');
+Route::get('/combocahorario','ControlCitas@combocahorario')->name('combocahorario');
+Route::POST('/confirma','ControlCitas@confirma')->name('oki');
+//
+
 
 
 
