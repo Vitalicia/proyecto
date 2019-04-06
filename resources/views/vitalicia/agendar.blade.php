@@ -279,14 +279,14 @@
                 <div id='sipaciente' class="col-md-6">
                     <div class="form-group">
                         ¿Cu&aacute;l es el folio que se le hab&iacute;a asignado?
-                            <input type = 'text' name ='folio' id = 'folio' class="form-control input-lg">
+                            <input type = 'text' name ='folio' id = 'folio' placeholder="Folio que se había asignado" class="form-control input-lg">
                     </div>
                 </div>
                 <!------------------->        
                 <div id='nopaciente' class="col-md-6">
                     <div class="form-group">        
                         Tratamiento de Cortes&iacute;a (se&ntilde;ora, se&ntilde;or, se&ntilde;orita, etc)
-                                 <input type = 'text' name ='trato' id = 'trato' class="form-control input-lg">
+                                 <input type = 'text' name ='trato' id = 'trato' placeholder="Señor, Señora, Señorita, etc." class="form-control input-lg">
                     </div>
                 </div>
                 <!------------------->
@@ -301,35 +301,35 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 Apellido Paterno del paciente
-                                    <input type = 'text' name ='app' id = 'app' class="form-control input-lg">
+                                    <input type = 'text' name ='app' id = 'app' placeholder="Apellido Paterno del Paciente" class="form-control input-lg">
                             </div>
                         </div>
                         <!------------------>
                         <div class="col-md-4">
                             <div class="form-group">
                                 Apellido Materno del paciente
-                                    <input type = 'text' name ='apm' id = 'apm' class="form-control input-lg">
+                                    <input type = 'text' name ='apm' id = 'apm' placeholder="Apellido Materno del Paciente" class="form-control input-lg">
                             </div>
                         </div>
                         <!------------------>
                         <div class="col-md-4">
                             <div class="form-group">
                                 Nombre(s) del paciente
-                                    <input type = 'text' name ='nombrepaciente' id = 'nombrepaciente' class="form-control input-lg">
+                                    <input type = 'text' name ='nombrepaciente' id = 'nombrepaciente' placeholder="Nombre(s) del Paciente" class="form-control input-lg">
                             </div>
                         </div>
                         <!------------------>
                         <div class="col-md-4">
                             <div class="form-group">
                                 Direcci&oacute;n del paciente
-                                    <input type = 'text' name ='direccion' id = 'direccion' class="form-control input-lg">
+                                    <input type = 'text' name ='direccion' id = 'direccion' placeholder="Dirección del Paciente" class="form-control input-lg">
                             </div>
                         </div>
                         <!------------------>
                         <div class="col-md-4">
                             <div class="form-group">
                                 Ciudad donde recide el paciente
-                                    <input type = 'text' name ='ciudad' id = 'ciudad' class="form-control input-lg">
+                                    <input type = 'text' name ='ciudad' id = 'ciudad' placeholder="Ciudad del Paciente" class="form-control input-lg">
                             </div>
                         </div>
                         <!------------------>
@@ -348,14 +348,14 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 C&oacute;digo Postal
-                                    <input type = 'text' name ='cp' id = 'cp' class="form-control input-lg">
+                                    <input type = 'text' name ='cp' id = 'cp' placeholder="CP del Paciente" class="form-control input-lg">
                             </div>
                         </div>
                         <!------------------>
                         <div class="col-md-4">
                             <div class="form-group">
                                 Tel&eacute;fono del paciente
-                                    <input type='number' name ='tlpaciente' id='tlpaciente' class="form-control input-lg">
+                                    <input type='number' name ='tlpaciente' id='tlpaciente' placeholder="Teléfono del Paciente" class="form-control input-lg">
                             </div>
                         </div>
                         <!------------------>
