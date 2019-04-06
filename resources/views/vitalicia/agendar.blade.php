@@ -101,7 +101,7 @@
 		        <div id="navbar" class="navbar-collapse collapse">
 		          <ul class="nav navbar-nav navbar-right">
 		            <li><a href="{{URL::action('vitalicia@inicio')}}">Inicio</a></li>
-		            <li><a href="{{URL::action('ControlCitas@cita')}}">Citas</a></li>
+		            <li><a href="{{URL::action('ControlCitas@cita')}}">Agendar Cita</a></li>
                     <li><a href="{{URL::action('vitalicia@galeria')}}">Galer&iacute;a</a></li>
                     <li><a href="{{URL::action('usuariosc@login')}}">Iniciar Sesión</a></li>
 		          </ul>
