@@ -47,6 +47,7 @@
             $('#sipaciente').hide();
             $('#solicitar').hide();
             $('#confirmacion').hide();
+            $('#paciente').hide();
 
             $("#idhc").click(function() {
                  $("#idhora").load('{{url('combocahorario')}}' + '?idhc='  +this.options[this.selectedIndex].value) ;
@@ -63,11 +64,13 @@
             $("#si").click(function() {
                  $('#nopaciente').hide();
                  $('#sipaciente').show();
+                 $('#paciente').hide();
                });
 
             $("#no").click(function() {
                  $('#nopaciente').show();
                  $('#sipaciente').hide();
+                 $('#paciente').show();
                });
 
 
@@ -79,8 +82,10 @@
                         alert("GUARDE SU FOLIO ANTES DE CONTINUAR: " + foli);
                 });    
     
-    
 
+                
+                
+                
 
         });
         </script>
@@ -291,45 +296,45 @@
                 </div>
                 <!------------------->
 </div>
+<div id='paciente'>
 <div class="col-md-12 section-heading text-left">    
             <hr>
                         <div class="row">
                             <h3><strong>Los Siguientes datos favor de llenar con cuidado</strong></h3>
                         </div>
-                        
     
                         <div class="col-md-4">
                             <div class="form-group">
                                 Apellido Paterno del paciente
-                                    <input type = 'text' name ='app' id = 'app' placeholder="Apellido Paterno del Paciente" class="form-control input-lg">
+                                    <input type = 'text' name ='app' id = 'app' placeholder="Apellido Paterno del Paciente" class="form-control input-lg" >
                             </div>
                         </div>
                         <!------------------>
                         <div class="col-md-4">
                             <div class="form-group">
                                 Apellido Materno del paciente
-                                    <input type = 'text' name ='apm' id = 'apm' placeholder="Apellido Materno del Paciente" class="form-control input-lg">
+                                    <input type = 'text' name ='apm' id = 'apm' placeholder="Apellido Materno del Paciente" class="form-control input-lg" >
                             </div>
                         </div>
                         <!------------------>
                         <div class="col-md-4">
                             <div class="form-group">
                                 Nombre(s) del paciente
-                                    <input type = 'text' name ='nombrepaciente' id = 'nombrepaciente' placeholder="Nombre(s) del Paciente" class="form-control input-lg">
+                                    <input type = 'text' name ='nombrepaciente' id = 'nombrepaciente' placeholder="Nombre(s) del Paciente" class="form-control input-lg" >
                             </div>
                         </div>
                         <!------------------>
                         <div class="col-md-4">
                             <div class="form-group">
                                 Direcci&oacute;n del paciente
-                                    <input type = 'text' name ='direccion' id = 'direccion' placeholder="Dirección del Paciente" class="form-control input-lg">
+                                    <input type = 'text' name ='direccion' id = 'direccion' placeholder="Dirección del Paciente" class="form-control input-lg" >
                             </div>
                         </div>
                         <!------------------>
                         <div class="col-md-4">
                             <div class="form-group">
                                 Ciudad donde recide el paciente
-                                    <input type = 'text' name ='ciudad' id = 'ciudad' placeholder="Ciudad del Paciente" class="form-control input-lg">
+                                    <input type = 'text' name ='ciudad' id = 'ciudad' placeholder="Ciudad del Paciente" class="form-control input-lg" >
                             </div>
                         </div>
                         <!------------------>
@@ -337,10 +342,39 @@
                             <div class="form-group">
                                 Estado donde recide el paciente
                                         <select name = 'estado' id= 'estado' class="form-control input-lg">
-                                            <option></option>
-                                            <option>Estado de M&eacute;xico</option>
+                                            <option>Seleccione una Opci&oacute;n</option>
+                                            <option>Aguascalientes</option>
+                                            <option>Baja California</option>
+                                            <option>Baja California Sur</option>
+                                            <option>Campeche</option>
                                             <option>CDMX</option>
+                                            <option>Coahuila de Zaragoza</option>
+                                            <option>Colima</option>
+                                            <option>Chiapas</option>
+                                            <option>Chihuahua</option>
+                                            <option>Durango</option>
+                                            <option>Estado de M&eacute;xico</option>
+                                            <option>Guanajuato</option>
+                                            <option>Guerrero</option>
+                                            <option>Hidalgo</option>
+                                            <option>Jalisco</option>
+                                            <option>Michoac&aacute;n de Ocampo</option>
                                             <option>Morelos</option>
+                                            <option>Nayarit</option>
+                                            <option>Nuevo Le&oacute;n</option>
+                                            <option>Oaxaca</option>
+                                            <option>Puebla</option>
+                                            <option>Quer&eacute;taro</option>
+                                            <option>Quintana Roo</option>
+                                            <option>San Luis Potos&iacute;</option>
+                                            <option>Sinaloa</option>
+                                            <option>Sonora</option>
+                                            <option>Tabasco</option>
+                                            <option>Tamaulipas</option>
+                                            <option>Tlaxcala</option>
+                                            <option>Veracruz</option>
+                                            <option>Yucat&aacute;n</option>
+                                            <option>Zacatecas</option>
                                         </select>
                             </div>
                         </div>
@@ -348,14 +382,14 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 C&oacute;digo Postal
-                                    <input type = 'text' name ='cp' id = 'cp' placeholder="CP del Paciente" class="form-control input-lg">
+                                    <input type = 'text' name ='cp' id = 'cp' placeholder="CP del Paciente" class="form-control input-lg" >
                             </div>
                         </div>
                         <!------------------>
                         <div class="col-md-4">
                             <div class="form-group">
                                 Tel&eacute;fono del paciente
-                                    <input type='number' name ='tlpaciente' id='tlpaciente' placeholder="Teléfono del Paciente" class="form-control input-lg">
+                                    <input type='text' name ='tlpaciente' id='tlpaciente' placeholder="Teléfono del Paciente" class="form-control input-lg" >
                             </div>
                         </div>
                         <!------------------>
@@ -376,6 +410,7 @@
                             </div>
                         </div>            
 </div>
+</div>
 <div class="col-md-12 section-heading text-left">    
             <hr>
             <div class="row">
@@ -384,7 +419,7 @@
             <!-------------------->
             <div class="col-md-12">
                     <div class="form-group">
-                    <textarea placeholder="¿Cuál es la molestia o motivo de su cita?" class="form-control input-lg" name="motivo" id='motivo' rows="5" cols="40" maxlength='300'></textarea>
+                    <textarea placeholder="¿Cuál es la molestia o motivo de su cita?" class="form-control input-lg" name="motivo" id='motivo' rows="5" cols="40" maxlength='300' required></textarea>
                     </div>	
             <!-------------------->
             <Input type='button' class='btn btn-outline' value='¿Toda la información es correcta?' name='ok' id='ok'>
